@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escribinos · San Isidro 2027</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Escribinos qué le falta al programa de gobierno San Isidro 2027, y leé cómo cuidamos lo que escribís.">
+<meta property="og:title" content="Escribinos · San Isidro 2027">
+<meta property="og:description" content="Contanos qué le falta al programa, qué está mal o qué querés que expliquemos mejor. Lo lee una persona.">
+<meta property="og:image" content="https://sanisidro2027.pages.dev/img/og.jpg">
+<meta property="og:url" content="https://sanisidro2027.pages.dev/contacto/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#F5F0E8; --paper:#FBF8F2; --card:#FFFFFF; --ink:#2A211C; --ink-2:#5E534B; --ink-3:#7A6E64; --rule:#DCD2C3;
+  --ox:#7C2E23; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#7C2E23; --sage:#5F7057; --err:#A33A26; --focus:#7C2E23;
+  --serif:"Spectral",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A;
+  --ox:#5E2219; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#E8A08F; --sage:#A3B597; --err:#F0A184; --focus:#E8A08F; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A;
+  --ox:#5E2219; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#E8A08F; --sage:#A3B597; --err:#F0A184; --focus:#E8A08F; color-scheme:dark }
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font:17px/1.55 var(--sans);margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.top{background:var(--ox);color:var(--ox-ink);padding-block:40px 34px}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ox-soft);opacity:.9}
+.top h1{font-size:clamp(2.6rem,6vw,3.6rem);line-height:1.02;margin-top:8px}
+.top .lead{font-size:clamp(1.05rem,1.8vw,1.2rem);max-width:36em;margin-top:14px;color:var(--ox-soft)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none;max-width:1120px}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.nav a:hover{color:var(--ink);border-color:var(--rule);background:var(--card)}
+main{display:flex;flex-direction:column;gap:44px;padding-block:32px 8px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label{font-weight:700;font-size:16px}
+.f label small{font-weight:500;color:var(--ink-2);font-size:14px}
+textarea,input[type=email]{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;width:100%}
+textarea{min-height:150px;resize:vertical;line-height:1.5}
+.cnt{font-size:13px;color:var(--ink-3);align-self:flex-end;font-variant-numeric:tabular-nums}
+.hint{font-size:14px;color:var(--ink-2)}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+.go{font:inherit;font-weight:700;font-size:16px;background:var(--ox);color:var(--ox-ink);border:0;border-radius:999px;padding:12px 26px;cursor:pointer}
+.go[disabled]{opacity:.6;cursor:default}
+.msg{font-size:15px}
+.msg.bad{color:var(--err);font-weight:600}
+.ok{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.ok h2{font-size:1.6rem}
+.ok p{color:var(--ink-2)}
+.ok .ok-k{color:var(--sage);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.link-btn{font:inherit;font-weight:600;background:none;border:1px solid var(--rule);color:var(--ink);border-radius:999px;padding:9px 18px;cursor:pointer}
+.priv{scroll-margin-top:64px;display:flex;flex-direction:column;gap:22px}
+.priv h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.priv .first{font-size:1.08rem;color:var(--ink-2);max-width:36em}
+.priv .first b{color:var(--ink);font-weight:600}
+.pb{display:grid;grid-template-columns:minmax(0,12rem) minmax(0,1fr);gap:6px 24px;padding-top:18px;border-top:1px solid var(--rule)}
+.pb h3{font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.02em}
+.pb ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px;color:var(--ink-2)}
+.pb li::marker{color:var(--ink-3)}
+@media (max-width:620px){.pb{grid-template-columns:minmax(0,1fr)}}
+footer{padding-block:48px 56px;color:var(--ink-3);font-size:14px;display:flex;flex-direction:column;gap:8px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="kick">Programa de gobierno San Isidro 2027</div>
+    <h1>Escribinos</h1>
+    <p class="lead">Contanos qué le falta al programa, qué está mal o qué querés que expliquemos mejor. Lo lee una persona.</p>
+  </div>
+</header>
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap"><a href="/">Inicio</a><a href="/#programa">El programa completo</a><a href="/cuentas/">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a><a href="#privacidad">Privacidad</a></div>
+</nav>
+<main class="wrap">
+  <form class="card" id="form" novalidate>
+    <div class="f">
+      <label for="texto">Tu mensaje</label>
+      <textarea id="texto" name="texto" maxlength="1500" required placeholder="Por ejemplo: en mi cuadra de Boulogne se inunda cada vez que llueve, y el programa no lo menciona."></textarea>
+      <span class="cnt" id="cnt">0 de 1.500</span>
+    </div>
+    <div class="f">
+      <label for="mail">Tu mail <small>(sólo si querés que te contestemos)</small></label>
+      <input type="email" id="mail" name="mail" maxlength="120" autocomplete="email" placeholder="nombre@mail.com">
+    </div>
+    <div class="trap" aria-hidden="true"><label for="web">No completar</label><input type="text" id="web" name="web" tabindex="-1" autocomplete="off"></div>
+    <p class="hint">No escribas datos personales que no hagan falta: ni DNI, ni dirección, ni teléfono.</p>
+    <div class="row">
+      <button class="go" type="submit" id="go">Enviar</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+  <div class="card ok" id="ok" hidden tabindex="-1">
+    <span class="ok-k">Recibido</span>
+    <h2>Gracias por escribirnos</h2>
+    <p id="ok-p">Lo va a leer una persona. Lo que nos cuentes se usa para mejorar el programa.</p>
+    <button class="link-btn" type="button" id="otro">Escribir otro mensaje</button>
+  </div>
+
+  <section class="priv" id="privacidad" aria-labelledby="priv-h">
+    <h2 id="priv-h">Privacidad</h2>
+    <p class="first">Este sitio es una <b>propuesta de programa de gobierno para San Isidro</b>. No es un sitio de la Municipalidad de San Isidro.</p>
+    <div class="pb"><h3>Qué guardamos</h3><ul>
+      <li>Cuando le preguntás al programa: la pregunta, la respuesta, la página y la fecha. Si contestás «¿Le faltó algo?», también eso.</li>
+      <li>Cuando nos escribís acá: tu mensaje y, si lo dejás, tu mail.</li>
+      <li>No guardamos tu nombre ni tu dirección de internet: sólo una huella cifrada de la conexión, para frenar abusos.</li>
+      <li>No usamos cookies ni publicidad.</li>
+    </ul></div>
+    <div class="pb"><h3>Para qué</h3><ul>
+      <li>Para mejorar el programa: ver qué preguntan los vecinos, qué no supo responder y qué respondió mal. Cada cambio lo revisa una persona antes de publicarse.</li>
+      <li>Tu mail, sólo para contestarte. No lo compartimos con nadie.</li>
+    </ul></div>
+    <div class="pb"><h3>Quién lo procesa</h3><ul>
+      <li>El sitio funciona en Cloudflare.</li>
+      <li>Las respuestas las arma un servicio de inteligencia artificial externo: tu pregunta viaja a sus servidores, fuera de la Argentina, para que pueda responderla.</li>
+    </ul></div>
+    <div class="pb"><h3>Cuánto tiempo</h3><ul>
+      <li>Lo guardamos hasta seis meses.</li>
+    </ul></div>
+    <div class="pb"><h3>Si querés que borremos algo</h3><ul>
+      <li>Escribinos desde esta página con la fecha aproximada y lo que escribiste. Como no guardamos quién sos, así lo encontramos.</li>
+    </ul></div>
+  </section>
+</main>
+<footer class="wrap">
+  <p><a href="/">Inicio</a> · <a href="/#programa">El programa completo</a> · <a href="/cuentas/">Las cuentas</a> · <a href="/despliegue/">Plan de despliegue</a></p>
+  <p>Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</p>
+</footer>
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+  var form = $("#form"), tx = $("#texto"), ml = $("#mail"), go = $("#go"), msg = $("#msg"), cnt = $("#cnt");
+  var desde = "";
+  try { var r = new URL(document.referrer); if (r.host === location.host) desde = r.pathname.slice(0, 40); } catch (e) {}
+  function grow(){ tx.style.height = "auto"; tx.style.height = Math.max(150, tx.scrollHeight + 2) + "px"; }
+  tx.addEventListener("input", function(){ cnt.textContent = tx.value.length.toLocaleString("es-AR") + " de 1.500"; grow(); });
+  function say(t, bad){ msg.textContent = t; msg.className = "msg" + (bad ? " bad" : ""); }
+  var ERR = {
+    msg_limit: "Ya mandaste varios mensajes hoy. Probá de nuevo mañana.",
+    msg_daily: "Hoy llegaron muchos mensajes. Probá de nuevo mañana.",
+    rate_limited: "Hubo muchos envíos seguidos. Probá de nuevo en un rato.",
+    bad_mail: "Revisá el mail: parece que le falta algo.",
+    invalid_request: "Revisá el mensaje: tiene que tener entre 3 y 1.500 letras."
+  };
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var t = tx.value.trim(), m = ml.value.trim();
+    if (t.length < 3) { say("Escribí tu mensaje antes de enviarlo.", true); tx.focus(); return; }
+    if (m && !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(m)) { say(ERR.bad_mail, true); ml.focus(); return; }
+    go.disabled = true; say("Enviando…");
+    fetch("/api/contacto", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({texto: t, mail: m, pagina: desde, web: $("#web").value})})
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {ok: r.ok && j.ok, code: j.code}; }); })
+      .then(function(x){
+        go.disabled = false;
+        if (!x.ok) { say(ERR[x.code] || "No se pudo enviar. Probá de nuevo en un rato.", true); return; }
+        say("");
+        $("#ok-p").textContent = m ? "Lo va a leer una persona y, si hace falta, te contestamos a " + m + "." : "Lo va a leer una persona. Lo que nos cuentes se usa para mejorar el programa.";
+        form.hidden = true; $("#ok").hidden = false; $("#ok").focus();
+      })
+      .catch(function(){ go.disabled = false; say("No se pudo enviar. Revisá tu conexión y probá de nuevo.", true); });
+  });
+  $("#otro").addEventListener("click", function(){ tx.value = ""; cnt.textContent = "0 de 1.500"; grow(); $("#ok").hidden = true; form.hidden = false; tx.focus(); });
+})();
+</script>
+</body>
+</html>

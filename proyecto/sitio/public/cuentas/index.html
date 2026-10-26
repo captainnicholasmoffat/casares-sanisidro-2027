@@ -1,0 +1,2049 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Las cuentas · San Isidro 2027</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Las cuentas del programa de gobierno San Isidro 2027: cuánto entra, cuánto sale y cómo se paga cada propuesta, del modelo fiscal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#F5F0E8; --paper:#FBF8F2; --card:#FFFFFF; --ink:#2A211C; --ink-2:#5E534B; --ink-3:#7A6E64; --rule:#DCD2C3; --rule-2:#EAE2D5;
+  --ox:#7C2E23; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#7C2E23; --coral-txt:#B04E2E; --chip:#8F3A2D;
+  --s-new:#7C2E23; --s-base:#5F7057; --s-neutral:#D3C9BB; --s-neutral-2:#B9AD9C; --flow:rgba(124,46,35,.13); --grid:#ECE4D8; --on-new:#FFFFFF; --on-base:#FFFFFF; --amber:#8F6A24; --sand:#EAE0CF;
+  --serif:"Spectral",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A; --rule-2:#352C26;
+  --ox:#5E2219; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#E8A08F; --coral-txt:#F0A184; --chip:#7A3326;
+  --s-new:#E8A08F; --s-base:#A3B597; --s-neutral:#544A41; --s-neutral-2:#6B5F54; --flow:rgba(232,160,143,.16); --grid:#3A302A; --on-new:#1A1512; --on-base:#1A1512; --amber:#D9B169; --sand:#3A3029; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A; --rule-2:#352C26;
+  --ox:#5E2219; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --link:#E8A08F; --coral-txt:#F0A184; --chip:#7A3326;
+  --s-new:#E8A08F; --s-base:#A3B597; --s-neutral:#544A41; --s-neutral-2:#6B5F54; --flow:rgba(232,160,143,.16); --grid:#3A302A; --on-new:#1A1512; --on-base:#1A1512; --amber:#D9B169; --sand:#3A3029; color-scheme:dark }
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font:17px/1.55 var(--sans);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+a{color:var(--link)}
+.tnum{font-variant-numeric:tabular-nums}
+/* Portada */
+.top{background:var(--ox);color:var(--ox-ink);padding-block:40px 34px}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ox-soft);opacity:.9}
+.top h1{font-size:clamp(2.6rem,6vw,4rem);line-height:1.02;margin-top:8px}
+.top .lead{font-size:clamp(1.05rem,1.8vw,1.25rem);max-width:44em;margin-top:14px;color:var(--ox-soft)}
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.trust span{display:inline-flex;align-items:center;gap:8px;font-size:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px}
+.trust svg{width:16px;height:16px;flex:none}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:7px 12px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a.on{color:var(--ink);border-color:var(--rule);background:var(--card)}
+/* Cuatro números */
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-1px;padding-block:28px 8px}
+.tile{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile .l{font-size:14px;color:var(--ink-2);font-weight:600}
+.tile .v{font-size:clamp(1.9rem,3.4vw,2.5rem);font-weight:600;line-height:1.05;letter-spacing:-.02em}
+.tile .v small{font-size:.5em;font-weight:600;color:var(--ink-2);letter-spacing:0}
+.tile .d{font-size:14px;color:var(--ink-2)}
+.tile .d b{color:var(--ink)}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.tiles{grid-template-columns:minmax(0,1fr)}}
+/* Secciones */
+.sec{padding-block:44px 8px;scroll-margin-top:64px}
+.sec-h{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;align-items:baseline}
+.num{font-family:var(--serif);font-size:1.25rem;color:var(--amber);font-weight:600}
+.sec h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.12}
+.take{grid-column:2;font-size:1.08rem;color:var(--ink-2);max-width:46em}
+.take b{color:var(--ink);font-weight:600}
+.panel{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:22px;margin-top:20px;min-width:0}
+.two{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}.sec-h{grid-template-columns:minmax(0,1fr)}.take{grid-column:1}}
+.chart{width:100%;min-width:0}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--sans);fill:var(--ink-2);font-size:12px}
+.chart .val{fill:var(--ink);font-weight:600;font-size:13px}
+.chart .big{fill:var(--ink);font-weight:700;font-size:15px}
+.chart .ax{stroke:var(--rule);stroke-width:1}
+.chart .grid{stroke:var(--grid);stroke-width:1}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--ink-2);margin-bottom:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+.note{font-size:14px;color:var(--ink-2);margin-top:12px}
+.src{font-size:13px;color:var(--ink-3);margin-top:10px}
+.side{display:flex;flex-direction:column;gap:14px}
+.fact{border-left:3px solid var(--s-new);padding:2px 0 2px 14px}
+.fact.b{border-left-color:var(--s-base)}
+.fact b{display:block;font-size:1.6rem;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.fact span{font-size:15px;color:var(--ink-2)}
+/* Puente */
+.bridge{display:flex;gap:2px;height:58px;border-radius:10px;overflow:hidden;margin-top:6px}
+.bridge div{display:flex;align-items:center;padding:0 14px;color:#fff;font-weight:600;font-size:15px;white-space:nowrap;min-width:max-content}
+.bridge .bt{background:var(--s-base);color:var(--on-base)}
+.bridge .bf{background:var(--s-neutral-2);color:var(--ink)}
+.bridge-l{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--ink-2);margin-top:8px;flex-wrap:wrap}
+.eq{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;font-size:15px;color:var(--ink-2);margin-bottom:10px}
+.eq b{font-size:1.5rem;color:var(--ink);font-weight:600}
+/* Barras horizontales */
+.hb{display:flex;flex-direction:column;gap:12px}
+.hb-row{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:4px 14px;align-items:center}
+.hb-l{font-size:15px;line-height:1.3}
+.hb-l small{display:block;font-size:13px;color:var(--ink-3)}
+.hb-t{display:flex;align-items:center;gap:10px;min-width:0}
+.hb-b{height:18px;border-radius:0 4px 4px 0;background:var(--s-neutral);flex:none}
+.hb-b.base{background:var(--s-base)} .hb-b.new{background:var(--s-new)}
+.hb-v{font-size:14px;font-weight:600;white-space:nowrap}
+@media (max-width:560px){.hb-row{grid-template-columns:minmax(0,1fr)}}
+/* Zonas */
+.zbtns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.zbtns button{font:600 15px var(--sans);border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 14px;min-height:42px;cursor:pointer}
+.zbtns button[aria-pressed="true"]{background:var(--ox);border-color:var(--ox);color:var(--ox-ink)}
+.zcard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.zk{background:var(--paper);border:1px solid var(--rule-2);border-radius:14px;padding:14px}
+.zk .l{font-size:13px;color:var(--ink-2);font-weight:600}
+.zk .v{font-size:1.7rem;font-weight:600;line-height:1.15;margin-top:4px}
+.zk .d{font-size:13px;color:var(--ink-2);margin-top:2px}
+@media (max-width:700px){.zcard{grid-template-columns:minmax(0,1fr)}}
+.share{display:flex;height:34px;gap:2px;border-radius:8px;overflow:hidden;margin-top:16px}
+.share div{background:var(--s-neutral);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--ink);min-width:0;overflow:hidden;white-space:nowrap;cursor:pointer}
+.share div.on{background:var(--s-new);color:var(--on-new)}
+/* Metas */
+.metas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.meta{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.meta-h{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+.meta-n{width:34px;height:34px;border-radius:50%;background:var(--ox-soft);color:var(--ox);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+:root[data-theme="dark"] .meta-n{background:var(--rule);color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .meta-n{background:var(--rule);color:var(--ink)}}
+.meta-t{font-family:var(--serif);font-size:1.12rem;line-height:1.35}
+.meta-hv{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center}
+.meta-hv div{background:var(--paper);border-radius:10px;padding:10px 12px;font-size:14px;min-width:0}
+.meta-hv b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:2px}
+.meta-hv .to{color:var(--coral-txt);font-weight:700}
+.meta-c{font-size:13px;color:var(--ink-2)}
+.meta-c b{color:var(--ink)}
+.more{margin-top:16px;font:600 15px var(--sans);border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;padding:10px 18px;cursor:pointer}
+@media (max-width:760px){.metas{grid-template-columns:minmax(0,1fr)}}
+/* Tabla */
+.tw{overflow-x:auto;margin-top:20px;border:1px solid var(--rule);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:14px}
+th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--rule-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:240px;position:sticky;left:0;background:var(--card)}
+thead th{font-size:13px;color:var(--link);font-weight:600;background:var(--sand)}
+thead th:first-child{background:var(--sand)}
+tr.h td{font-weight:700;color:var(--ink);background:var(--paper);font-size:13px;letter-spacing:.04em}
+tr.h td:first-child{background:var(--paper)}
+tr.k td{font-weight:700}
+td.neg{color:var(--coral-txt)}
+/* Cómo está hecho */
+.how{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.how div{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px}
+.how b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.how p{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.how{grid-template-columns:minmax(0,1fr)}}
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px;background:var(--ox);color:var(--ox-ink);border-radius:18px;padding:20px 22px}
+.dl p{flex:1 1 300px;color:var(--ox-soft)}
+.dl a{background:var(--ox-ink);color:var(--ox);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 20px;white-space:nowrap}
+.warn{margin-top:16px;font-size:15px;color:var(--ink-2);border-left:3px solid var(--rule);padding-left:14px}
+footer{padding-block:48px 56px;color:var(--ink-3);font-size:14px}
+/* Sitio */
+.site{background:var(--ox);color:var(--ox-ink);border-bottom:1px solid rgba(255,255,255,.14)}
+.site-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding-block:12px}
+.brand{color:var(--ox-ink);text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.brand b{font-family:var(--serif);font-size:1.2rem;font-weight:500}
+.brand span{font-size:12px;color:var(--ox-soft);letter-spacing:.06em;text-transform:uppercase}
+.site-nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+.site-nav a{color:var(--ox-soft);text-decoration:none;font-size:14px;font-weight:600;padding:4px 0}
+.site-nav a[aria-current]{color:var(--ox-ink);border-bottom:2px solid var(--ox-ink)}
+.top{padding-block:28px 34px}
+/* Preguntar */
+.askbox{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:18px 20px;margin-top:24px;display:flex;flex-direction:column;gap:12px}
+.askbox label{font-weight:700;font-size:16px}
+.askrow{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end}
+.askrow textarea{flex:1 1 360px;min-width:0;font:inherit;font-size:17px;padding:14px 16px;border:1px solid var(--rule);border-radius:10px;background:var(--paper);color:var(--ink);resize:none;min-height:54px}
+.askrow button{min-height:54px;font:600 16px var(--sans);border-radius:10px;padding:0 18px;cursor:pointer}
+.b-mic{border:1px solid var(--rule);background:var(--paper);color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.b-mic svg{width:20px;height:20px}
+.b-go{border:0;background:var(--ox);color:var(--ox-ink)}
+.qchips{display:flex;flex-wrap:wrap;gap:8px}
+.qchips button{font:500 14px var(--sans);border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 12px;cursor:pointer;text-align:left}
+.qchips button:hover{border-color:var(--ox);color:var(--link)}
+.askhint{font-size:13px;color:var(--ink-3)}
+.secq{grid-column:2;justify-self:start;margin-top:6px;display:inline-flex;align-items:center;gap:8px;font:600 14px var(--sans);color:var(--link);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 13px;cursor:pointer}
+.secq svg{width:16px;height:16px}
+.secq:hover{border-color:var(--ox)}
+@media (max-width:860px){.secq{grid-column:1}}
+.chat-bg{position:fixed;inset:0;background:rgba(20,14,10,.35);z-index:30}
+.chat{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--paper);z-index:31;display:flex;flex-direction:column;box-shadow:-12px 0 30px rgba(0,0,0,.18)}
+.chat-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--rule)}
+.chat-top b{font-size:15px}
+.chat-top button{font:600 15px var(--sans);border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;cursor:pointer}
+.chat-frame{flex:1;width:100%;border:0;background:var(--ground)}
+.bq{align-self:flex-end;max-width:85%;background:var(--ox);color:var(--ox-ink);border-radius:16px 16px 4px 16px;padding:10px 14px;font-size:16px}
+.ba{background:var(--card);border:1px solid var(--rule);border-radius:16px 16px 16px 4px;padding:14px 16px;font-size:16px;display:flex;flex-direction:column;gap:10px}
+.ba .where{font-size:14px;color:var(--ink-2);border-top:1px solid var(--rule-2);padding-top:10px}
+.ba .where b{color:var(--ink)}
+.mock{font-size:13px;color:var(--ink-3);background:var(--rule-2);border-radius:8px;padding:8px 10px}
+.chat-in{border-top:1px solid var(--rule);padding:12px 14px;display:flex;gap:8px}
+.chat-in textarea{flex:1;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--card);color:var(--ink);resize:none}
+.chat-in button{font:600 15px var(--sans);border:0;background:var(--ox);color:var(--ox-ink);border-radius:10px;padding:0 14px}
+/* Tooltip */
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:var(--paper);font-size:13px;line-height:1.35;padding:8px 10px;border-radius:8px;max-width:260px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.tip b{display:block;font-size:14px}
+[data-tip]{cursor:default}
+</style>
+<meta property="og:title" content="Las cuentas · San Isidro 2027">
+<meta property="og:description" content="Las cuentas del programa San Isidro 2027: cuánto entra, cuánto sale y cómo se paga cada propuesta, año por año, del modelo fiscal.">
+<meta property="og:image" content="https://sanisidro2027.pages.dev/img/og.jpg">
+<meta property="og:url" content="https://sanisidro2027.pages.dev/cuentas/">
+<meta property="og:type" content="website">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+
+<div class="site mm-bar"><div class="wrap site-in"><a class="brand" href="/"><b>San Isidro 2027</b><span>Programa de gobierno</span></a><button class="mm-btn" type="button" id="mm-open" aria-expanded="false" aria-controls="mm-sheet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Menú</button><nav class="site-nav" aria-label="Sitio"><a href="/#inicio">Preguntale al programa</a><a href="/#programa">El programa completo</a><a href="/cuentas/" aria-current="page">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a></nav></div></div>
+<header class="top">
+  <div class="wrap">
+    <div class="kick">Programa de gobierno San Isidro 2027 · el modelo fiscal</div>
+    <h1>Las cuentas</h1>
+    <p class="lead">Cuánto entra, cuánto sale y cómo se paga cada propuesta, año por año. Todo en millones de pesos de diciembre de 2025: sin inflación, para que cada número se pueda comparar con el de hoy.</p>
+    <div class="trust">
+      <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Parte de 2025 real: reproduce la ejecución con diferencia cero</span>
+      <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Los mismos números que el cuadro 20 del programa</span>
+    </div>
+  </div>
+</header>
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <a href="#como-se-paga">Cómo se paga</a><a href="#resultado">El resultado</a><a href="#se-mueve">Lo que se mueve</a><a href="#entra">Cuánto entra</a><a href="#gasta">En qué se gasta</a><a href="#vecinos">La obra vecinal</a><a href="#zona">Tu zona</a><a href="#empleo">Empleo y vivienda</a><a href="#deuda">La deuda</a><a href="#peor">Si sale peor</a><a href="#metas">Las 20 metas</a><a href="#detalle">El detalle</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <form class="askbox" id="askbox">
+      <label for="q">¿Qué querés saber de las cuentas?</label>
+      <div class="askrow">
+        <textarea id="q" rows="1" placeholder="Por ejemplo: vivo en Béccar, ¿cuánta obra deciden los vecinos de mi zona?"></textarea>
+        <button class="b-mic" type="button" id="b-mic" hidden aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hablar</button>
+        <button class="b-go" type="submit">Preguntar</button>
+      </div>
+      <div class="qchips" id="qchips"></div>
+      <p class="askhint">Responde la misma inteligencia artificial del programa, con los números de esta página, y te dice dónde leerlo. Puede equivocarse: valen el modelo fiscal y el programa. Se abre al costado: no salís de esta página. Este programa aprende: lo que no puede responder lo anotamos sin tus datos, sólo para mejorarlo, y cada cambio lo revisa una persona. No escribas datos personales (<a href="/contacto/#privacidad">privacidad</a>).</p>
+    </form>
+    <div class="tiles" id="tiles"></div>
+  </div>
+
+  <section class="sec wrap" id="como-se-paga">
+    <div class="sec-h"><span class="num">1</span><h2>¿Cómo se paga el programa?</h2>
+      <p class="take" id="take-paga"></p></div>
+    <div class="panel two">
+      <div>
+        <div class="eq" id="eq"></div>
+        <div class="bridge" id="bridge"></div>
+        <div class="bridge-l" id="bridge-l"></div>
+        <p class="note">La tabla nueva es la base de valuación actualizada, con un tope de 25% de suba por boleta y por año, y se cobra como se cobra hoy el ABL. Lo que falta sale del gasto flexible: la parte del presupuesto que no está atada a sueldos, deudas ni contratos firmados.</p>
+      </div>
+      <div>
+        <div class="legend"><span><i style="background:var(--s-new)"></i>Lo que suma el programa al gasto</span><span><i style="background:var(--s-base)"></i>Lo que cobra la tabla nueva</span></div>
+        <div class="chart" id="ch-paga"></div>
+      </div>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hojas Resumen anual y Programas.</p>
+  </section>
+
+  <section class="sec wrap" id="resultado">
+    <div class="sec-h"><span class="num">2</span><h2>El resultado, año por año</h2>
+      <p class="take" id="take-res"></p></div>
+    <div class="panel">
+      <div class="legend"><span><i style="background:var(--s-base)"></i>Superávit: entra más de lo que sale</span><span><i style="background:var(--s-new)"></i>Déficit</span></div>
+      <div class="chart" id="ch-res"></div>
+      <p class="note" id="note-res"></p>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hojas Resumen anual y Escenarios. Ingresos por lo cobrado y gastos por lo devengado, como la cuenta oficial.</p>
+  </section>
+
+  <section class="sec wrap" id="se-mueve">
+    <div class="sec-h"><span class="num">3</span><h2>Lo que se mueve de lugar</h2>
+      <p class="take" id="take-mueve"></p></div>
+    <div class="panel"><div class="chart" id="ch-flow"></div></div>
+    <p class="src">Fuente: modelo fiscal, hoja Programas, año 2031.</p>
+  </section>
+
+  <section class="sec wrap" id="entra">
+    <div class="sec-h"><span class="num">4</span><h2>Cuánto entra</h2>
+      <p class="take" id="take-entra"></p></div>
+    <div class="panel"><div class="hb" id="hb-entra"></div></div>
+    <p class="src">Fuente: modelo fiscal, hoja Resumen anual, año 2031.</p>
+  </section>
+
+  <section class="sec wrap" id="gasta">
+    <div class="sec-h"><span class="num">5</span><h2>En qué se gasta</h2>
+      <p class="take">Los destinos más grandes en 2031. En color, los cuatro que <b>crecen con el programa</b>.</p></div>
+    <div class="panel"><div class="hb" id="hb-gasta"></div>
+      <p class="note">Urbanismo aparece sin restar lo que cede a ambiente, educación, apoyo escolar e inspecciones: el modelo lo resta en una fila aparte (sección 3).</p></div>
+    <p class="src">Fuente: modelo fiscal, hoja Gastos función, año 2031.</p>
+  </section>
+
+  <section class="sec wrap" id="vecinos">
+    <div class="sec-h"><span class="num">6</span><h2>La obra que deciden los vecinos</h2>
+      <p class="take" id="take-vec"></p></div>
+    <div class="panel two">
+      <div>
+        <div class="legend"><span><i style="background:var(--s-new)"></i>La deciden los vecinos</span><span><i style="background:var(--s-neutral)"></i>La decide el Ejecutivo</span></div>
+        <div class="chart" id="ch-vec"></div>
+      </div>
+      <div class="side" id="side-vec"></div>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hoja Vecinal.</p>
+  </section>
+
+  <section class="sec wrap" id="zona">
+    <div class="sec-h"><span class="num">7</span><h2>Tu zona</h2>
+      <p class="take">Elegí tu zona y mirá cuánta obra decide por año y cuántos lugares de formación tiene. Se reparte mitad por población y mitad por necesidad.</p></div>
+    <div class="panel">
+      <div class="zbtns" id="zbtns" role="group" aria-label="Zona"></div>
+      <div class="zcard" id="zcard"></div>
+      <div class="share" id="share" aria-hidden="true"></div>
+      <p class="note">El índice de necesidad mira cuatro cosas en los hogares: necesidades básicas insatisfechas, sin cloaca, sin gas de red y hacinamiento (Censo 2022).</p>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hoja Vecinal; Censo 2022 del INDEC por radio censal.</p>
+  </section>
+
+  <section class="sec wrap" id="empleo">
+    <div class="sec-h"><span class="num">8</span><h2>Empleo y vivienda</h2>
+      <p class="take" id="take-emp"></p></div>
+    <div class="panel two">
+      <div class="chart" id="ch-emp"></div>
+      <div class="side" id="side-emp"></div>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hojas Programas y Resumen anual.</p>
+  </section>
+
+  <section class="sec wrap" id="deuda">
+    <div class="sec-h"><span class="num">9</span><h2>La deuda</h2>
+      <p class="take" id="take-deuda"></p></div>
+    <div class="panel two">
+      <div>
+        <div class="legend"><span><i style="background:var(--s-base)"></i>Deuda que había al 31/12/2025</span><span><i style="background:var(--s-new)"></i>Bono de 2026</span></div>
+        <div class="chart" id="ch-deuda"></div>
+      </div>
+      <div class="side" id="side-deuda"></div>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hojas Deuda y Resumen anual. Capital pendiente al cierre de cada año.</p>
+  </section>
+
+  <section class="sec wrap" id="peor">
+    <div class="sec-h"><span class="num">10</span><h2>¿Y si las cosas salen peor?</h2>
+      <p class="take">El resultado de 2031 cuando cambia una sola cosa por vez. Lo que más pesa es <b>lo que recauda el propio Municipio</b>.</p></div>
+    <div class="panel">
+      <div class="legend"><span><i style="background:var(--s-new)"></i>Peor que lo previsto</span><span><i style="background:var(--s-base)"></i>Mejor que lo previsto</span></div>
+      <div class="chart" id="ch-peor"></div>
+      <p class="note">La línea del medio es lo previsto: +10.236 M en 2031. A la izquierda del cero, el año termina en déficit.</p>
+    </div>
+    <p class="src">Fuente: modelo fiscal, hoja Escenarios (la misma sensibilidad del 3.2 y el 3.6 del programa).</p>
+  </section>
+
+  <section class="sec wrap" id="metas">
+    <div class="sec-h"><span class="num">11</span><h2>Las veinte metas</h2>
+      <p class="take">Cómo está cada cosa hoy, a dónde llega en el año 4 y cómo se comprueba. Donde el modelo no la proyecta, se comprueba en su fuente.</p></div>
+    <div class="metas" id="metas-grid"></div>
+    <button class="more" type="button" id="more">Ver las veinte metas</button>
+  </section>
+
+  <section class="sec wrap" id="detalle">
+    <div class="sec-h"><span class="num">12</span><h2>El detalle, año por año</h2>
+      <p class="take">La cuenta completa del mandato y los cuatro años siguientes, en millones de pesos de diciembre de 2025.</p></div>
+    <div class="tw"><table id="tabla"></table></div>
+    <div class="how" id="how"></div>
+    <p class="warn" id="aviso"></p>
+    <div class="dl"><p>¿Querés ver el mes a mes, los supuestos con su fuente y cada fórmula? Bajá el modelo fiscal completo: trece hojas, de 2028 a 2035.</p><a href="/data/modelo-fiscal-san-isidro-2028-2035.xlsx" id="dl" download>Bajar el Excel</a></div>
+  </section>
+</main>
+<footer class="wrap"><p style="margin-bottom:8px"><a href="/">Inicio</a> · <a href="/#programa">El programa completo</a> · <a href="/despliegue/">Plan de despliegue</a> · <a href="/contacto/">Escribinos</a> · <a href="/contacto/#privacidad">Privacidad</a></p><p style="margin-bottom:8px">Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</p>Los números de esta página salen del modelo fiscal y cambian cuando cambia el modelo.</footer>
+<div class="tip" id="tip" hidden></div>
+<div class="chat-bg" id="chat-bg" hidden></div>
+<aside class="chat" id="chat" hidden aria-label="Preguntale a las cuentas">
+  <div class="chat-top"><b>Preguntale a las cuentas</b><button type="button" id="chat-x">Cerrar</button></div>
+  <iframe class="chat-frame" id="chat-frame" title="Respuesta del programa" src="about:blank"></iframe>
+</aside>
+
+<script>
+var D = {
+"years": [
+2028,
+2029,
+2030,
+2031,
+2032,
+2033,
+2034,
+2035
+],
+"ingresos": {
+"municipal": [
+218222.9,
+222478.2,
+226816.5,
+231239.5,
+235748.6,
+240345.7,
+245032.5,
+249810.6
+],
+"tabla": [
+1636.5,
+4850.9,
+5936.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2
+],
+"provincial": [
+83037.2,
+81552.7,
+80100.7,
+78680.6,
+77291.7,
+75933.3,
+74604.8,
+73305.4
+],
+"nacional": [
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7
+],
+"capital": [
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1
+],
+"total": [
+312448.5,
+318433.6,
+322405.3,
+325455.2,
+328575.4,
+331814.1,
+335172.3,
+338651.1
+]
+},
+"gastos": {
+"total": [
+310872.4,
+312848.4,
+314654.7,
+315219.1,
+315219.1,
+315219.1,
+315219.1,
+315219.1
+],
+"obra": [
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7
+],
+"vecinos": [
+7227.0,
+14453.9,
+21680.9,
+28907.9,
+28907.9,
+28907.9,
+28907.9,
+28907.9
+],
+"empleo": [
+1115.0,
+2300.7,
+3384.4,
+3723.0,
+3723.0,
+3723.0,
+3723.0,
+3723.0
+],
+"vivienda": [
+521.5,
+1311.9,
+2034.5,
+2260.2,
+2260.2,
+2260.2,
+2260.2,
+2260.2
+]
+},
+"resultado": [
+1576.1,
+5585.2,
+7750.6,
+10236.1,
+13356.4,
+16595.1,
+19953.3,
+23432.0
+],
+"ahorro": [
+57899.8,
+62699.2,
+65587.2,
+68298.4,
+71418.7,
+74657.4,
+78015.6,
+81494.3
+],
+"empleo_vivienda": [
+2312.0,
+4118.3,
+5924.6,
+7730.9,
+7730.9,
+7730.9,
+7730.9,
+7730.9
+],
+"programa_suma": [
+1636.5,
+3612.6,
+5418.9,
+5983.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2
+],
+"egresados": [
+0,
+0,
+462,
+824,
+711,
+928,
+928,
+928
+],
+"deuda2025": [
+1857.4,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0
+],
+"bono": [
+11250.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0
+],
+"flotante": [
+3270.1,
+3434.7,
+3585.3,
+3632.3,
+3632.3,
+3632.3,
+3632.3,
+3632.3
+],
+"caja": [
+30501.6,
+55790.3,
+96739.8,
+140513.4,
+187814.2,
+238844.2,
+293760.8,
+352724.2
+],
+"base2025": {
+"resultado": -6051.1,
+"modelo": -6051.1,
+"dif": 0
+},
+"control_cuadro20": {
+"dif": [
+[
+0,
+0,
+0,
+0
+],
+[
+0,
+0,
+0,
+0
+],
+[
+0,
+0,
+0,
+0
+]
+]
+},
+"tabla_cuenta": [
+{
+"h": "I · INGRESOS CORRIENTES (percibido)"
+},
+{
+"l": "Origen municipal: tasas, derechos y rentas",
+"v": [
+218222.9,
+222478.2,
+226816.5,
+231239.5,
+235748.6,
+240345.7,
+245032.5,
+249810.6
+],
+"pct": false
+},
+{
+"l": "Base de valuación actualizada: lo cobrado",
+"v": [
+1636.5,
+4850.9,
+5936.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2
+],
+"pct": false
+},
+{
+"l": "Origen provincial",
+"v": [
+83037.2,
+81552.7,
+80100.7,
+78680.6,
+77291.7,
+75933.3,
+74604.8,
+73305.4
+],
+"pct": false
+},
+{
+"l": "Origen nacional y otros orígenes",
+"v": [
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7,
+7521.7
+],
+"pct": false
+},
+{
+"l": "Total ingresos corrientes",
+"v": [
+310418.4,
+316403.5,
+320375.2,
+323425.1,
+326545.3,
+329784.0,
+333142.2,
+336621.0
+],
+"pct": false
+},
+{
+"l": "IV · Recursos de capital",
+"v": [
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1,
+2030.1
+],
+"pct": false
+},
+{
+"l": "VI · INGRESOS TOTALES",
+"v": [
+312448.5,
+318433.6,
+322405.3,
+325455.2,
+328575.4,
+331814.1,
+335172.3,
+338651.1
+],
+"pct": false
+},
+{
+"h": "II · GASTOS CORRIENTES (devengado)"
+},
+{
+"l": "Personal y aguinaldo",
+"v": [
+111589.5,
+111589.5,
+111589.5,
+111589.5,
+111589.5,
+111589.5,
+111589.5,
+111589.5
+],
+"pct": false
+},
+{
+"l": "Bienes de consumo",
+"v": [
+22096.3,
+22096.3,
+22096.3,
+22096.3,
+22096.3,
+22096.3,
+22096.3,
+22096.3
+],
+"pct": false
+},
+{
+"l": "Servicios no personales",
+"v": [
+110490.8,
+110490.8,
+110490.8,
+110490.8,
+110490.8,
+110490.8,
+110490.8,
+110490.8
+],
+"pct": false
+},
+{
+"l": "Transferencias corrientes",
+"v": [
+7226.9,
+7226.9,
+7226.9,
+7226.9,
+7226.9,
+7226.9,
+7226.9,
+7226.9
+],
+"pct": false
+},
+{
+"l": "Empleo: lo que suma el programa",
+"v": [
+1115.0,
+2300.7,
+3384.4,
+3723.0,
+3723.0,
+3723.0,
+3723.0,
+3723.0
+],
+"pct": false
+},
+{
+"l": "Total gastos corrientes",
+"v": [
+252518.6,
+253704.3,
+254788.0,
+255126.6,
+255126.6,
+255126.6,
+255126.6,
+255126.6
+],
+"pct": false
+},
+{
+"h": "V · GASTOS DE CAPITAL (devengado)"
+},
+{
+"l": "Bienes de uso: obra pública",
+"v": [
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7,
+57815.7
+],
+"pct": false
+},
+{
+"l": "de la cual, decidida por los vecinos",
+"v": [
+7227.0,
+14453.9,
+21680.9,
+28907.9,
+28907.9,
+28907.9,
+28907.9,
+28907.9
+],
+"pct": false
+},
+{
+"l": "Transferencias de capital",
+"v": [
+16.5,
+16.5,
+16.5,
+16.5,
+16.5,
+16.5,
+16.5,
+16.5
+],
+"pct": false
+},
+{
+"l": "Vivienda: lo que suma el programa",
+"v": [
+521.5,
+1311.9,
+2034.5,
+2260.2,
+2260.2,
+2260.2,
+2260.2,
+2260.2
+],
+"pct": false
+},
+{
+"l": "Total gastos de capital",
+"v": [
+58353.7,
+59144.2,
+59866.7,
+60092.4,
+60092.4,
+60092.4,
+60092.4,
+60092.4
+],
+"pct": false
+},
+{
+"l": "VII · GASTOS TOTALES",
+"v": [
+310872.4,
+312848.4,
+314654.7,
+315219.1,
+315219.1,
+315219.1,
+315219.1,
+315219.1
+],
+"pct": false
+},
+{
+"h": "RESULTADO"
+},
+{
+"l": "III · Ahorro corriente",
+"v": [
+57899.8,
+62699.2,
+65587.2,
+68298.4,
+71418.7,
+74657.4,
+78015.6,
+81494.3
+],
+"pct": false
+},
+{
+"l": "VIII · Resultado financiero",
+"v": [
+1576.1,
+5585.2,
+7750.6,
+10236.1,
+13356.4,
+16595.1,
+19953.3,
+23432.0
+],
+"pct": false
+},
+{
+"h": "DEBAJO DE LA LÍNEA: NO ES GASTO EN LA CUENTA OFICIAL"
+},
+{
+"l": "Amortización de la deuda al 31/12/2025",
+"v": [
+1857.4,
+1857.4,
+0,
+0,
+0,
+0,
+0,
+0
+],
+"pct": false
+},
+{
+"l": "Amortización del bono 2026",
+"v": [
+15000.0,
+11250.0,
+0,
+0,
+0,
+0,
+0,
+0
+],
+"pct": false
+},
+{
+"l": "Activos financieros",
+"v": [
+170.1,
+170.1,
+170.1,
+170.1,
+170.1,
+170.1,
+170.1,
+170.1
+],
+"pct": false
+},
+{
+"l": "Flujo de caja del ejercicio",
+"v": [
+23901.6,
+25288.7,
+40949.5,
+43773.6,
+47300.8,
+51030.0,
+54916.6,
+58963.4
+],
+"pct": false
+},
+{
+"l": "Saldo de caja al cierre",
+"v": [
+30501.6,
+55790.3,
+96739.8,
+140513.4,
+187814.2,
+238844.2,
+293760.8,
+352724.2
+],
+"pct": false
+},
+{
+"l": "Deuda al 31/12/2025 que queda, al cierre",
+"v": [
+1857.4,
+0,
+0,
+0,
+0,
+0,
+0,
+0
+],
+"pct": false
+},
+{
+"l": "Bono 2026: capital pendiente al cierre",
+"v": [
+11250.0,
+0,
+0,
+0,
+0,
+0,
+0,
+0
+],
+"pct": false
+},
+{
+"l": "Deuda flotante por rezago de pago, al cierre",
+"v": [
+3270.1,
+3434.7,
+3585.3,
+3632.3,
+3632.3,
+3632.3,
+3632.3,
+3632.3
+],
+"pct": false
+},
+{
+"h": "INDICADORES"
+},
+{
+"l": "Percepción sobre lo facturado",
+"v": [
+0.8932,
+0.8932,
+0.8932,
+0.8932,
+0.8932,
+0.8932,
+0.8932,
+0.8932
+],
+"pct": true
+},
+{
+"l": "Obra vecinal / obra total",
+"v": [
+0.125,
+0.25,
+0.375,
+0.5,
+0.5,
+0.5,
+0.5,
+0.5
+],
+"pct": true
+},
+{
+"l": "Obra vecinal / gasto devengado de 2025",
+"v": [
+0.0223,
+0.0446,
+0.0669,
+0.0891,
+0.0891,
+0.0891,
+0.0891,
+0.0891
+],
+"pct": true
+},
+{
+"l": "Resultado financiero / ingresos totales",
+"v": [
+0.005,
+0.0175,
+0.024,
+0.0315,
+0.0406,
+0.05,
+0.0595,
+0.0692
+],
+"pct": true
+},
+{
+"l": "Rigidez del gasto, en junio",
+"v": [
+0.7256,
+0.7218,
+0.7169,
+0.7158,
+0.7158,
+0.7158,
+0.7158,
+0.7158
+],
+"pct": true
+},
+{
+"l": "Salud / gasto por función, en junio",
+"v": [
+0.2519,
+0.2517,
+0.2486,
+0.2482,
+0.2482,
+0.2482,
+0.2482,
+0.2482
+],
+"pct": true
+},
+{
+"l": "Empleo y vivienda, total anual",
+"v": [
+2312.0,
+4118.3,
+5924.6,
+7730.9,
+7730.9,
+7730.9,
+7730.9,
+7730.9
+],
+"pct": false
+},
+{
+"l": "Lo que el programa suma al gasto",
+"v": [
+1636.5,
+3612.6,
+5418.9,
+5983.2,
+5983.2,
+5983.2,
+5983.2,
+5983.2
+],
+"pct": false
+},
+{
+"l": "Egresados de la formación en el año",
+"v": [
+0,
+0,
+462,
+824,
+711,
+928,
+928,
+928
+],
+"pct": false
+}
+],
+"escenarios": {
+"nada": [
+1576.1,
+4346.9,
+7233.3,
+10236.1,
+13356.4,
+16595.1,
+19953.3,
+23432.0
+],
+"programa": [
+1576.1,
+5585.2,
+7750.6,
+10236.1,
+13356.4,
+16595.1,
+19953.3,
+23432.0
+],
+"dif": [
+0.0,
+1238.3,
+517.3,
+0.0,
+0.0,
+0.0,
+0.0,
+0.0
+]
+},
+"sensibilidad": [
+{
+"var": "Lo que recauda el Municipio: crecimiento real anual",
+"v": [
+{
+"x": 0.0095,
+"res": -3043.5,
+"nota": "Un punto menos por año: el mandato termina en déficit (3.6)"
+},
+{
+"x": 0.0195,
+"res": 10236.1,
+"nota": "El valor del documento: 1,95%"
+},
+{
+"x": 0.0295,
+"res": 24183.2,
+"nota": ""
+}
+]
+},
+{
+"var": "La coparticipación: caída real anual",
+"v": [
+{
+"x": -0.015,
+"res": 12985.1,
+"nota": "Lo único de los tres que no depende del Municipio"
+},
+{
+"x": -0.025,
+"res": 9065.7,
+"nota": ""
+},
+{
+"x": -0.035,
+"res": 5342.3,
+"nota": "Si cae 3,5% por año, 2031 queda en +5.342 M (3.2)"
+}
+]
+},
+{
+"var": "Qué parte de lo facturado se cobra",
+"v": [
+{
+"x": 0.8632,
+"res": -425.8,
+"nota": "Tres puntos menos: −426 M en 2031 (3.6)"
+},
+{
+"x": 0.8932,
+"res": 10236.1,
+"nota": "La de 2025, de todos los ingresos: 89,32%"
+},
+{
+"x": 0.9232,
+"res": 20898.1,
+"nota": ""
+}
+]
+}
+],
+"programas": {
+"total": [
+1636.5,
+3612.6,
+5418.9,
+5983.2
+],
+"ambiente": [
+335.0,
+935.6,
+2662.9,
+3454.6
+],
+"educacion": [
+172.0,
+2064.0,
+2064.0,
+2064.0
+],
+"apoyo": [
+360.0,
+720.0,
+1080.0,
+1080.0
+],
+"inspecciones": [
+102.7,
+168.5,
+168.5,
+168.5
+],
+"contrapartida": [
+-1524.5,
+-4876.5,
+-5975.4,
+-6767.1
+],
+"flex_tabla": [
+-169.8,
+0.0,
+0.0,
+-1242.0
+],
+"empleo": [
+1387.2,
+2471.0,
+3554.8,
+4638.5
+],
+"vivienda": [
+924.8,
+1647.3,
+2369.8,
+3092.4
+]
+},
+"programas_labels": {
+"contrapartida": "Contrapartida · reasignación desde el gasto flexible"
+},
+"zonas": [
+{
+"zona": "Boulogne Sur Mer",
+"poblacion": 74832,
+"indice": 0.34,
+"peso": 0.2964,
+"obra": [
+2142.2,
+4284.4,
+6426.6,
+8568.8
+],
+"cupos": 315
+},
+{
+"zona": "Béccar",
+"poblacion": 63719,
+"indice": 0.3304,
+"peso": 0.2728,
+"obra": [
+1971.8,
+3943.6,
+5915.5,
+7887.3
+],
+"cupos": 307
+},
+{
+"zona": "Martínez",
+"poblacion": 64978,
+"indice": 0.1054,
+"peso": 0.1625,
+"obra": [
+1174.2,
+2348.5,
+3522.7,
+4696.9
+],
+"cupos": 98
+},
+{
+"zona": "San Isidro",
+"poblacion": 45872,
+"indice": 0.103,
+"peso": 0.129,
+"obra": [
+932.3,
+1864.6,
+2796.9,
+3729.3
+],
+"cupos": 96
+},
+{
+"zona": "Villa Adelina",
+"poblacion": 35542,
+"indice": 0.1012,
+"peso": 0.1106,
+"obra": [
+799.6,
+1599.2,
+2398.8,
+3198.3
+],
+"cupos": 94
+},
+{
+"zona": "Acassuso",
+"poblacion": 11035,
+"indice": 0.0199,
+"peso": 0.0286,
+"obra": [
+206.8,
+413.6,
+620.4,
+827.2
+],
+"cupos": 18
+}
+],
+"vecinal_funcionamiento": [
+108.4,
+216.8,
+325.2,
+433.6
+],
+"funciones": [
+{
+"f": "1.1 · Legislativa",
+"v": [
+4571.1,
+4571.1,
+4571.1,
+4571.1
+]
+},
+{
+"f": "1.3 · Dirección superior ejecutiva",
+"v": [
+32551.8,
+32551.8,
+32551.8,
+32551.8
+]
+},
+{
+"f": "1.5 · Relaciones con la comunidad",
+"v": [
+4040.0,
+4040.0,
+4040.0,
+4040.0
+]
+},
+{
+"f": "1.6 · Administración fiscal",
+"v": [
+2241.1,
+2241.1,
+2241.1,
+2241.1
+]
+},
+{
+"f": "1.2 y 1.7 · Judicial y control de gestión",
+"v": [
+994.0,
+994.0,
+994.0,
+994.0
+]
+},
+{
+"f": "2.1 · Seguridad interna",
+"v": [
+32446.0,
+32446.0,
+32446.0,
+32446.0
+]
+},
+{
+"f": "3.1 · Salud",
+"v": [
+78771.9,
+79205.5,
+78217.1,
+78217.1
+]
+},
+{
+"f": "3.2 · Promoción y asistencia social",
+"v": [
+5914.5,
+5914.5,
+5914.5,
+5914.5
+]
+},
+{
+"f": "3.4 · Educación y cultura",
+"v": [
+14518.3,
+16770.3,
+17130.3,
+17130.3
+]
+},
+{
+"f": "3.5 · Ciencia y técnica",
+"v": [
+8155.1,
+8155.1,
+8155.1,
+8155.1
+]
+},
+{
+"f": "3.6 · Trabajo",
+"v": [
+1285.3,
+2471.0,
+3554.8,
+3893.4
+]
+},
+{
+"f": "3.7 · Vivienda y urbanismo",
+"v": [
+12857.2,
+13647.6,
+14370.1,
+14595.8
+]
+},
+{
+"f": "3.8 · Agua potable y alcantarillado",
+"v": [
+3320.2,
+3320.2,
+3320.2,
+3320.2
+]
+},
+{
+"f": "3.9 · Urbanismo",
+"v": [
+70310.3,
+70310.3,
+70310.3,
+70310.3
+]
+},
+{
+"f": "4.3 · Transporte",
+"v": [
+36356.3,
+36356.3,
+36356.3,
+36356.3
+]
+},
+{
+"f": "4.4 · Ecología y medio ambiente",
+"v": [
+1745.1,
+2345.7,
+4073.0,
+4864.6
+]
+},
+{
+"f": "4.7 · Comercio, turismo y otros",
+"v": [
+2216.0,
+2216.0,
+2216.0,
+2216.0
+]
+},
+{
+"f": "5.1 · Servicios de la deuda pública",
+"v": [
+16857.4,
+13107.4,
+0.0,
+0.0
+]
+}
+],
+"metas": [
+{
+"meta": "Reducir a la mitad los hogares sin cloacas en Boulogne y Béccar",
+"hoy": "4.616 hogares (Censo 2022)",
+"a4": "Depende de que se hagan las obras",
+"a8": "—",
+"como": "Registro de conexiones y próximo censo"
+},
+{
+"meta": "Llevar el gasto en empleo y vivienda, sumados, a 7.730,9 M por año",
+"hoy": "505,7 M (2025)",
+"a4": 7730895749.51375,
+"a8": 7730895749.51375,
+"como": "Ejecución presupuestaria por programa"
+},
+{
+"meta": "Llevar el gasto en ambiente al 1,5% del presupuesto",
+"hoy": "0,4% (2025)",
+"a4": 0.0150002112893749,
+"a8": 0.0150002112893749,
+"como": "Gastos por finalidad y función"
+},
+{
+"meta": "50% de la obra pública decidida por comisiones vecinales",
+"hoy": "0%",
+"a4": 0.5,
+"a8": 0.5,
+"como": "Ordenanza y ejecución presupuestaria"
+},
+{
+"meta": "Anotar cada gasto del Municipio con la zona donde se hace, para saber cuánto se gastó en cada zona",
+"hoy": "El dato no existe: ningún municipio del conurbano norte lo produce",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Cuánto se gastó en cada zona: se le pregunta a la inteligencia artificial del Municipio"
+},
+{
+"meta": "La inteligencia artificial del Municipio funcionando, con la partida vecinal, las asambleas pasadas a texto y cada dato cargado el mismo día en que ocurre",
+"hoy": "No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio: cualquiera puede hacerlo"
+},
+{
+"meta": "Turno médico por internet en los tres hospitales, el odontológico y los nueve centros de atención primaria. La inteligencia artificial del Municipio lo va a sacar mientras uno conversa, con recordatorio y lista de espera",
+"hoy": "Ningún centro de salud para personas tiene turno por internet. El único turno de salud por internet es el de castración de mascotas",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "La propia plataforma, consultable por cualquiera"
+},
+{
+"meta": "La inteligencia artificial del Municipio va a comparar sola cada compra de insumos con la compra anterior, con los otros dos hospitales y con lo que cobran los laboratorios y pagan los sanatorios y las obras sociales. Va a avisar cuando algo se salga de lo normal",
+"hoy": "Hoy no hay con qué comparar: se publica el total del expediente, no el precio por unidad",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio, con las compras anteriores y los avisos"
+},
+{
+"meta": "Adjudicar por licitación pública el servicio de recolección de residuos, es decir, darle el contrato a la empresa que gane. El pliego se discute antes del llamado",
+"hoy": "Desde 2004 se llamó a cuatro licitaciones, y ninguna terminó en un contrato. El mismo grupo da el servicio desde 1998",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Boletín Oficial municipal"
+},
+{
+"meta": "Las cámaras que el Municipio ya tiene van a detectar en el momento los hechos violentos. Cuando alguien denuncie un hecho, también van a servir para ver quién estuvo en el lugar y hacia dónde fue. Cualquiera le va a poder preguntar a la inteligencia artificial del Municipio cuántas órdenes de un juez se recibieron para seguir a una persona con las cámaras, y cuántas se cumplieron",
+"hoy": "No hay registro público de que la detección en el momento ni la búsqueda después de un hecho funcionen. Las alertas no se publican",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio: cuánto tarda el patrullero, y las órdenes"
+},
+{
+"meta": "Darle a la dirección de género una partida propia, separada del programa que hoy comparte. Llevar su atención a cada zona, con días fijos, empezando por Boulogne y Béccar",
+"hoy": "Género no tiene partida propia. Discapacidad sí, y gastó 65,9 M en 2025, el 0,020% del gasto. La dirección de género tiene una sola sede, en la ciudad de San Isidro",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Estado de ejecución por programa. Los días y lugares de atención se le preguntan a la inteligencia artificial del Municipio"
+},
+{
+"meta": "Un centro de apoyo escolar gratuito en cada una de las seis localidades",
+"hoy": "Cinco espacios pequeños de apoyo escolar, sólo en Béccar y Boulogne, con unos cien alumnos. En las otras cuatro localidades, ninguno",
+"a4": 6,
+"a8": 6,
+"como": "Ejecución por programa. La matrícula por sede se le pregunta a la inteligencia artificial del Municipio"
+},
+{
+"meta": "Llevar la forma de trabajar del Centro de Formación Laboral (CFL) 404 Barrio La Cava, de Béccar, a las seis zonas, con cinco sedes fijas y una sede móvil en Acassuso. Se suma una tecnicatura de la UNSO, que es una carrera universitaria corta, de dos años. En el segundo año, los alumnos trabajan como pasantes: seis meses en el Municipio y seis en una empresa de San Isidro. Desde el mes 27, cada seis meses egresa un grupo de alumnos con un año de trabajo real. Durante todo el mandato egresan 1.286 personas, y cuando la formación funcione completa van a ser 928 por año. La meta es que de 250 a 300 egresados por año consigan empleo pago En esta hoja, la columna del año 4 da los egresados acumulados, y la del año 8, los egresados de ese año.",
+"hoy": "Hoy hay una sola sede de formación laboral, la del Barrio La Cava. No se publica cuántos alumnos hay ni cuántos consiguen trabajo. El primer registro que se haga va a dar esos dos números, como punto de partida",
+"a4": 1286,
+"a8": 928,
+"como": "Ejecución por programa y convenios de pasantías. La matrícula por sede se le pregunta a la inteligencia artificial del Municipio, y el empleo, al registro de inserción laboral"
+},
+{
+"meta": "El profesor digital, probado seis meses en los primeros centros de apoyo escolar, medido con pruebas sin inteligencia artificial y con el resultado publicado antes de extenderlo",
+"hoy": "No existe: el Municipio no ofrece ningún profesor digital",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "El resultado de la prueba se le pregunta a la inteligencia artificial del Municipio"
+},
+{
+"meta": "Cada funcionario responsable va a contestar, dentro del plazo fijado, lo que los vecinos le plantean a la inteligencia artificial del Municipio",
+"hoy": "No hay forma pública de saber cuánto tarda el Municipio en responder un reclamo",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio: tema por tema y zona por zona, el plazo y la respuesta"
+},
+{
+"meta": "Cada denuncia de un comerciante por coimas, presiones o amenazas va a tener respuesta. Cuando haya delito, la denuncia va a llegar a la fiscalía",
+"hoy": "No existe: el canal es nuevo (5.9)",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio: cuántas denuncias hubo, en qué están y cuántas llegaron a la fiscalía"
+},
+{
+"meta": "Doscientos shows por año, de artistas nuevos de San Isidro. Las bandas tienen prioridad: como máximo, el 10% de los shows son de solistas, y al menos la mitad, de bandas de cuatro músicos o más. Además, espectáculos al aire libre todas las semanas, de lunes a jueves, en los parques y plazas de San Isidro",
+"hoy": "En 2026, un solo espectáculo en un día hábil en la costa, según el Municipio",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "La agenda se consulta en la inteligencia artificial del Municipio. Cuánta gente va se mide con las cámaras que cuentan cada acceso"
+},
+{
+"meta": "Medir el ruido de motos y colectivos con estaciones móviles, y que cualquiera pueda preguntar qué midieron en su zona",
+"hoy": "No se mide, y no hay límites en decibeles para los vehículos que circulan",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Se le pregunta a la inteligencia artificial del Municipio"
+},
+{
+"meta": "Cada asociación inscripta en el Municipio, con su espacio propio en la inteligencia artificial del Municipio",
+"hoy": "No existe",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Cuántas asociaciones lo usan: se le pregunta a la inteligencia artificial del Municipio"
+},
+{
+"meta": "Nadie va a ganar dinero por cada multa que se pone. El dinero de las multas va a ir a un fondo de seguridad vial, que no se puede usar para otra cosa",
+"hoy": "Hasta 2025, las universidades que operaban las cámaras cobraban un porcentaje de lo recaudado",
+"a4": "No la proyecta el modelo",
+"a8": "No la proyecta el modelo",
+"como": "Los contratos, en el Boletín Oficial; el fondo, en la ejecución presupuestaria"
+}
+],
+"guia": {
+"QUÉ ES": "La cuenta del Municipio mes a mes para los cuatro años del mandato (2028–2031) y los cuatro siguientes, con el programa del documento aplicado. Sumada por año, da lo mismo que el capítulo 3 del documento: el cuadro 20, el gráfico 13 y la sensibilidad del 3.2 y el 3.6.",
+"UNIDAD": "Pesos constantes de diciembre de 2025. Sin supuesto de inflación: todo crecimiento que aparece es real.",
+"AÑO BASE": "2025 es la ejecución real, no una estimación: los estados de ejecución de recursos y de gastos, acumulado anual, y el Estado de Situación Económico-Financiera 2025. Reproduce la cuenta oficial con diferencia cero: el control está al pie de la hoja Resumen anual.",
+"LA CUENTA": "Ingresos por lo percibido y gastos por lo devengado, como la cuenta Ahorro-Inversión oficial: 2025 cerró en −6.051 M. La amortización de la deuda y los activos financieros van debajo de la línea, igual que en la cuenta oficial.",
+"QUÉ CRECE": "Lo que recauda el Municipio crece 1,95% real por año. La coparticipación, el 82,4% de lo provincial, cae 2,196% por año; el resto de lo provincial, lo nacional y los recursos de capital quedan constantes. El gasto queda constante en términos reales —cero recomposición salarial y cero servicios nuevos—, salvo el programa.",
+"EL PROGRAMA": "Empleo y vivienda pasan de 505,7 M a 7.730,9 M en cuatro años desde 2028 (25%, 50%, 75% y 100% de lo que falta): 7.225,2 M más por año, 60% a empleo —gasto corriente— y 40% a vivienda —gasto de capital—. Los dos primeros años la formación usa toda la partida de empleo: dos ingresos por año y 1.286 egresados en el mandato.",
+"CÓMO SE PAGA": "Con la base de valuación actualizada, escenario B: la escala de ARBA 10,9% por encima de la neutral y un tope de 25% de suba por boleta y por año, cobrada como se cobra el ABL: 73,97%, el peor caso del rango de 74% a 82%. Cobra 1.637, 4.851 y 5.936 M los tres primeros años y 5.983 M desde el cuarto; entre 5.946 y 5.983 M según cuántas subas frene el mínimo. Lo que falta cada año sale del gasto flexible: 170 M el año 1 y 1.242 M desde el cuarto, el 1,4%. La cobranza no paga el programa.",
+"EL BONO": "El bono de 30.000 M de agosto de 2026 entra en la deuda y en la caja, no en el resultado: su capital va debajo de la línea, en siete cuotas trimestrales entre 2028 y 2029, y su interés no se proyecta porque la tasa es nominal y variable. El documento lo trata igual (3.5 y 3.6).",
+"aviso": "Este modelo proyecta el marco fiscal, no el resultado de las políticas. Tener fondos para una obra no significa que la obra se haga bien ni a tiempo."
+},
+"nota_tabla": "El programa pide 7.225,2 M por año en régimen. La tabla nueva, cobrada como el ABL, da 5.983 M, y lo que falta, 1.242 M, sale del gasto flexible: por eso en 2028 y desde 2031 el resultado es el mismo con y sin programa. En 2029 y 2030 la tabla cobra más de lo que pide la rampa (cuadro 20)."
+};
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+  var NS = "http://www.w3.org/2000/svg";
+  function nf(v, d){ return Number(v).toLocaleString("es-AR", {minimumFractionDigits: d == null ? 1 : d, maximumFractionDigits: d == null ? 1 : d, roundingMode: "halfExpand"}); }
+  function M(v, d){ return (v < 0 ? "−" : "") + nf(Math.abs(v), d) + " M"; }
+  function pct(v, d){ return nf(v * 100, d == null ? 1 : d) + "%"; }
+  function el(t, a, x){ var e = document.createElement(t); if (a) for (var k in a) { if (k === "class") e.className = a[k]; else e.setAttribute(k, a[k]); } if (x != null) e.textContent = x; return e; }
+  function sv(t, a, x){ var e = document.createElementNS(NS, t); if (a) for (var k in a) e.setAttribute(k, a[k]); if (x != null) e.textContent = x; return e; }
+  function css(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var Y = D.years, I4 = [0, 1, 2, 3];
+
+  // Tooltip
+  var tip = $("#tip");
+  document.addEventListener("pointerover", function(ev){ var t = ev.target.closest && ev.target.closest("[data-tip]"); if (!t) { tip.hidden = true; return; } var p = t.getAttribute("data-tip").split("|"); tip.innerHTML = ""; tip.appendChild(el("b", null, p[0])); if (p[1]) tip.appendChild(document.createTextNode(p[1])); tip.hidden = false; });
+  document.addEventListener("pointermove", function(ev){ if (tip.hidden) return; var x = Math.min(ev.clientX + 14, window.innerWidth - tip.offsetWidth - 8), y = ev.clientY + 16; if (y + tip.offsetHeight > window.innerHeight - 8) y = ev.clientY - tip.offsetHeight - 12; tip.style.left = x + "px"; tip.style.top = y + "px"; });
+  document.addEventListener("pointerout", function(ev){ if (ev.target.closest && ev.target.closest("[data-tip]") && !(ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest("[data-tip]"))) tip.hidden = true; });
+
+  function nice(max){ var raw = max / 4, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p; var s = m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10; return s * p; }
+  // Barras verticales (agrupadas o apiladas), con negativos
+  function columns(box, o){
+    var W = Math.max(300, box.clientWidth), H = o.h || 300, padL = 54, padR = 8, padT = 26, padB = 30;
+    var svg = sv("svg", {viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": o.aria || ""});
+    var n = o.cats.length, iw = W - padL - padR, ih = H - padT - padB, band = iw / n;
+    var vals = []; o.series.forEach(function(s){ s.values.forEach(function(v, i){ vals.push(v); }); });
+    var tops = o.stacked ? o.cats.map(function(_, i){ return o.series.reduce(function(a, s){ return a + Math.max(0, s.values[i]); }, 0); }) : vals;
+    var hi = Math.max.apply(null, tops.concat([0])), lo = Math.min.apply(null, vals.concat([0]));
+    var step = nice(Math.max(hi - lo, 1)); hi = Math.ceil(hi / step) * step; lo = Math.floor(lo / step) * step;
+    function yv(v){ return padT + (hi - v) / (hi - lo) * ih; }
+    for (var t = lo; t <= hi + 1e-9; t += step) { svg.appendChild(sv("line", {x1: padL, x2: W - padR, y1: yv(t), y2: yv(t), "class": Math.abs(t) < 1e-9 ? "ax" : "grid"})); svg.appendChild(sv("text", {x: padL - 8, y: yv(t) + 4, "text-anchor": "end"}, nf(t, 0))); }
+    var ns = o.stacked ? 1 : o.series.length, bw = Math.min(o.bw || 28, (band * 0.7 - (ns - 1) * 2) / ns);
+    o.cats.forEach(function(c, i){
+      var cx = padL + band * i + band / 2, acc = 0;
+      svg.appendChild(sv("text", {x: cx, y: H - 8, "text-anchor": "middle"}, c));
+      o.series.forEach(function(s, k){
+        var v = s.values[i]; if (v == null) return;
+        var x = o.stacked ? cx - bw / 2 : cx - (ns * bw + (ns - 1) * 2) / 2 + k * (bw + 2);
+        var y0 = o.stacked ? acc : 0, y1 = y0 + v; if (o.stacked) acc = y1;
+        var top = yv(Math.max(y0, y1)), bot = yv(Math.min(y0, y1)), h = Math.max(1, bot - top - (o.stacked && k > 0 ? 2 : 0));
+        var col = typeof s.color === "function" ? s.color(v, i) : s.color;
+        var r = Math.min(4, bw / 2, h), up = v >= 0;
+        var isTop = !o.stacked || k === o.series.length - 1 || o.series.slice(k + 1).every(function(z){ return !z.values[i]; });
+        var d = up ? "M" + x + "," + bot + "V" + (top + (isTop ? r : 0)) + (isTop ? "Q" + x + "," + top + " " + (x + r) + "," + top + "H" + (x + bw - r) + "Q" + (x + bw) + "," + top + " " + (x + bw) + "," + (top + r) : "H" + (x + bw)) + "V" + bot + "Z"
+                   : "M" + x + "," + top + "V" + (bot - r) + "Q" + x + "," + bot + " " + (x + r) + "," + bot + "H" + (x + bw - r) + "Q" + (x + bw) + "," + bot + " " + (x + bw) + "," + (bot - r) + "V" + top + "Z";
+        var p = sv("path", {d: d, fill: col, "data-tip": (s.name ? s.name + " · " : "") + c + "|" + (o.tipFmt || M)(v)});
+        svg.appendChild(p);
+        var hit = sv("rect", {x: x - 2, y: Math.min(top, bot) - 6, width: bw + 4, height: Math.abs(bot - top) + 12, fill: "transparent", "data-tip": p.getAttribute("data-tip")}); svg.appendChild(hit);
+        if (o.label && o.label(i, k, v)) svg.appendChild(sv("text", {x: x + bw / 2, y: up ? top - 7 : bot + 15, "text-anchor": "middle", "class": "val"}, o.label(i, k, v)));
+      });
+    });
+    if (o.after) o.after(svg, {yv: yv, padL: padL, band: band, W: W, H: H});
+    box.textContent = ""; box.appendChild(svg);
+  }
+  function hbars(box, items, o){
+    var max = Math.max.apply(null, items.map(function(x){ return x.v; })); box.textContent = "";
+    items.forEach(function(it){
+      var r = el("div", {"class": "hb-row"}), l = el("div", {"class": "hb-l"}, it.l); if (it.s) l.appendChild(el("small", null, it.s));
+      var t = el("div", {"class": "hb-t"}), b = el("div", {"class": "hb-b " + (it.c || ""), "data-tip": it.l + "|" + M(it.v)});
+      b.style.width = "calc((100% - 110px) * " + (it.v / max).toFixed(4) + ")";
+      t.appendChild(b); t.appendChild(el("span", {"class": "hb-v tnum"}, (o && o.fmt ? o.fmt(it.v) : M(it.v, 0))));
+      r.appendChild(l); r.appendChild(t); box.appendChild(r);
+    });
+  }
+
+  var R = D.resultado, P = D.programas, IN = D.ingresos, G = D.gastos;
+  // Cuatro números
+  var tiles = [
+    ["Empleo y vivienda, por año", nf(D.empleo_vivienda[3]) + "<small> M</small>", "en 2031. Hoy: <b>505,7 M</b>. Quince veces más."],
+    ["Obra que deciden los vecinos", pct(G.vecinos[3] / G.obra[3], 0), "de la obra pública en el año 4: <b>" + M(G.vecinos[3]) + "</b> por año."],
+    ["Resultado de 2031", "+" + nf(R[3], 0) + "<small> M</small>", "2025 cerró en <b>" + M(D.base2025.resultado, 0) + "</b>."],
+    ["Deuda desde 2029", "0", "La de 2025 y el bono 2026, pagados. <b>Sin deuda nueva.</b>"]
+  ];
+  tiles.forEach(function(t){ var d = el("div", {"class": "tile"}); d.appendChild(el("span", {"class": "l"}, t[0])); var v = el("span", {"class": "v tnum"}); v.innerHTML = t[1]; d.appendChild(v); var x = el("span", {"class": "d"}); x.innerHTML = t[2]; d.appendChild(x); $("#tiles").appendChild(d); });
+
+  // 1 · Cómo se paga
+  var pide = D.empleo_vivienda[3] - 505.7, tabla = IN.tabla[3], flex = -P.flex_tabla[3];
+  $("#take-paga").innerHTML = "Con la <b>tabla nueva</b> de la base de valuación y una parte del <b>gasto flexible</b>. No se pide deuda.";
+  $("#eq").innerHTML = "En régimen, el programa pide <b class='tnum'>" + M(pide) + "</b> por año";
+  var bt = el("div", {"class": "bt", "data-tip": "Lo que cobra la tabla nueva|" + M(tabla)}, "La tabla nueva · " + M(tabla, 0)), bf = el("div", {"class": "bf", "data-tip": "Lo que sale del gasto flexible|" + M(flex)}, M(flex, 0));
+  bt.style.flex = tabla + " 1 0"; bf.style.flex = flex + " 1 0"; $("#bridge").appendChild(bt); $("#bridge").appendChild(bf);
+  $("#bridge-l").innerHTML = "<span>" + pct(tabla / pide, 0) + " lo paga la tabla nueva</span><span>" + pct(flex / pide, 0) + " sale del gasto flexible</span>";
+  function drawPaga(){ columns($("#ch-paga"), {cats: Y.slice(0, 4).map(String), h: 290, series: [{name: "Lo que suma el programa", color: css("--s-new"), values: D.programa_suma.slice(0, 4)}, {name: "Lo que cobra la tabla", color: css("--s-base"), values: IN.tabla.slice(0, 4)}],
+    label: function(i, k, v){ return k === 1 && (i === 1 || i === 2) ? "+" + nf(v - D.programa_suma[i], 0) : null; }, aria: "Lo que suma el programa y lo que cobra la tabla, de 2028 a 2031"}); }
+  // 2 · Resultado
+  $("#take-res").innerHTML = "De <b>" + M(D.base2025.resultado, 0) + "</b> en 2025 a <b>+" + nf(R[3], 0) + " M</b> en 2031, con el programa incluido.";
+  $("#note-res").textContent = "Si nada cambia, el resultado es el mismo salvo en 2029 y 2030: ahí la tabla cobra más de lo que pide el programa y el resultado mejora en " + M(D.escenarios.dif[1], 0) + " y " + M(D.escenarios.dif[2], 0) + ". 2026 y 2027 no están en el modelo.";
+  function drawRes(){ var cats = ["2025"].concat(Y.map(String)), vals = [D.base2025.resultado].concat(R);
+    columns($("#ch-res"), {cats: cats, h: 300, bw: 26, series: [{name: "Resultado financiero", color: function(v){ return v < 0 ? css("--s-new") : css("--s-base"); }, values: vals}],
+      label: function(i){ return [0, 1, 4, 8].indexOf(i) >= 0 ? (vals[i] > 0 ? "+" : "") + M(vals[i], 0) : null; }, aria: "Resultado financiero de 2025 y de 2028 a 2035"}); }
+  // 3 · Lo que se mueve
+  var dest = [["Ambiente", P.ambiente[3], "Llega al 1,5% del presupuesto"], ["Educación", P.educacion[3], "Recupera lo que perdió en 2025"], ["Apoyo escolar", P.apoyo[3], "Seis centros, uno por localidad"], ["Inspecciones grabadas", P.inspecciones[3], "Soportes, datos y grabaciones"]];
+  var origen = -P.contrapartida[3];
+  $("#take-mueve").innerHTML = "<b>" + M(origen) + "</b> por año dejan de ir a mantenimiento y embellecimiento, infraestructura deportiva y arbolado, y pasan a cuatro destinos. No es gasto nuevo: es el mismo dinero, en otro lugar.";
+  function drawFlow(){
+    var box = $("#ch-flow"), W = Math.max(300, box.clientWidth), small = W < 620, H = small ? 500 : 300;
+    var svg = sv("svg", {viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "De dónde sale y a dónde va lo que se reasigna"});
+    var lx = 0, lw = 18, rx = small ? Math.round(W * 0.26) : W * 0.5, rw = 18, gap = small ? 14 : 10, tot = origen, avail = H - (small ? 90 : 20) - gap * (dest.length - 1) - (small ? 50 : 0);
+    var lh = avail + gap * (dest.length - 1), ly = 10, s = avail / tot;
+    var col = css("--s-new"), flow = css("--flow");
+    svg.appendChild(sv("rect", {x: lx, y: ly, width: lw, height: lh, rx: 4, fill: css("--s-neutral-2"), "data-tip": "Mantenimiento y embellecimiento, infraestructura deportiva y arbolado|cede " + M(origen) + " por año"}));
+    var yL = ly, yR = 10;
+    dest.forEach(function(dd){
+      var h = dd[1] * s, hl = dd[1] / tot * lh;
+      var x0 = lx + lw, x1 = rx, c = (x0 + x1) / 2;
+      svg.appendChild(sv("path", {d: "M" + x0 + "," + yL + "C" + c + "," + yL + " " + c + "," + yR + " " + x1 + "," + yR + "V" + (yR + h) + "C" + c + "," + (yR + h) + " " + c + "," + (yL + hl) + " " + x0 + "," + (yL + hl) + "Z", fill: flow, "data-tip": dd[0] + "|" + M(dd[1])}));
+      svg.appendChild(sv("rect", {x: rx, y: yR, width: rw, height: Math.max(3, h), rx: 3, fill: col, "data-tip": dd[0] + "|" + M(dd[1])}));
+      var mh = small ? 46 : 30, ty = yR + Math.max(h, mh) / 2;
+      if (small) { svg.appendChild(sv("text", {x: rx + rw + 10, y: ty - 10, "class": "big"}, dd[0])); svg.appendChild(sv("text", {x: rx + rw + 10, y: ty + 8, "class": "val"}, M(dd[1]))); svg.appendChild(sv("text", {x: rx + rw + 10, y: ty + 24}, dd[2])); }
+      else { svg.appendChild(sv("text", {x: rx + rw + 12, y: ty - 4, "class": "big"}, dd[0] + " · " + M(dd[1]))); svg.appendChild(sv("text", {x: rx + rw + 12, y: ty + 14}, dd[2])); }
+      yL += hl; yR += Math.max(h, mh) + gap;
+    });
+    if (small) { svg.appendChild(sv("text", {x: 0, y: H - 40, "class": "big"}, "Cede " + M(origen) + " por año, en 2031")); svg.appendChild(sv("text", {x: 0, y: H - 22}, "de mantenimiento y embellecimiento,")); svg.appendChild(sv("text", {x: 0, y: H - 6}, "infraestructura deportiva y arbolado")); }
+    else { svg.appendChild(sv("text", {x: lx + lw + 10, y: ly + lh / 2 - 8, "class": "big"}, "Cede " + M(origen))); svg.appendChild(sv("text", {x: lx + lw + 10, y: ly + lh / 2 + 12}, "por año, en 2031")); }
+    box.textContent = ""; box.appendChild(svg);
+  }
+  // 4 · Cuánto entra
+  var tin = IN.total[3];
+  $("#take-entra").innerHTML = "En 2031 entran <b>" + M(tin, 0) + "</b>. Siete de cada diez pesos los cobra el propio Municipio; la parte de la Provincia baja un poco cada año.";
+  hbars($("#hb-entra"), [
+    {l: "Tasas, derechos y rentas del Municipio", s: "crece 1,95% real por año", v: IN.municipal[3]},
+    {l: "Lo que llega de la Provincia", s: "la coparticipación cae 2,2% real por año", v: IN.provincial[3]},
+    {l: "Lo que llega de la Nación y otros", s: "constante", v: IN.nacional[3]},
+    {l: "La tabla nueva", s: "paga el programa", v: IN.tabla[3], c: "base"},
+    {l: "Recursos de capital", s: "constante", v: IN.capital[3]}
+  ]);
+  // 5 · En qué se gasta
+  var crece = {"3.6 · Trabajo": 1, "4.4 · Ecología y medio ambiente": 1, "3.4 · Educación y cultura": 1, "3.7 · Vivienda y urbanismo": 1};
+  var fs = D.funciones.filter(function(f){ return f.v[3] > 0; }).sort(function(a, b){ return b.v[3] - a.v[3]; }).slice(0, 10);
+  Object.keys(crece).forEach(function(k){ if (!fs.some(function(f){ return f.f === k; })) { var f = D.funciones.find(function(x){ return x.f === k; }); if (f) fs.push(f); } });
+  hbars($("#hb-gasta"), fs.map(function(f){ var n = f.f.replace(/^[\d.]+(?: y [\d.]+)? · /, ""); return {l: n, s: crece[f.f] ? "+" + M(f.v[3] - f.v[0], 0) + " desde 2028" : "", v: f.v[3], c: crece[f.f] ? "new" : ""}; }));
+  // 6 · Vecinos
+  $("#take-vec").innerHTML = "Cada año los vecinos deciden una parte más de la obra pública, hasta <b>la mitad en el año 4</b>. No es dinero nuevo: sale de la misma obra pública.";
+  function drawVec(){ columns($("#ch-vec"), {cats: ["Año 1", "Año 2", "Año 3", "Año 4"], stacked: true, h: 290, bw: 44,
+    series: [{name: "La deciden los vecinos", color: css("--s-new"), values: G.vecinos.slice(0, 4)}, {name: "La decide el Ejecutivo", color: css("--s-neutral"), values: I4.map(function(i){ return G.obra[i] - G.vecinos[i]; })}],
+    label: function(i, k){ return k === 1 ? pct(G.vecinos[i] / G.obra[i], 1).replace(",0%", "%") + " vecinal" : null; }, aria: "Obra pública por año, la que deciden los vecinos y la que decide el Ejecutivo"}); }
+  [["b", M(G.obra[3], 0), "de obra pública por año, la misma que hoy"], ["", M(G.vecinos[3], 0), "deciden los vecinos en el año 4"], ["", M(D.vecinal_funcionamiento[3]), "el 1,5% de la partida: lo que cuesta que el sistema funcione, dentro de ella"]].forEach(function(f){ var d = el("div", {"class": "fact " + f[0]}); d.appendChild(el("b", {"class": "tnum"}, f[1])); d.appendChild(el("span", null, f[2])); $("#side-vec").appendChild(d); });
+  // 7 · Tu zona
+  var Z = D.zonas, zsel = 0;
+  function showZ(i){ zsel = i; var z = Z[i], c = $("#zcard"); c.textContent = "";
+    [["Obra que decide en el año 4", M(z.obra[3], 0), "Año 1: " + M(z.obra[0], 0) + " · Año 2: " + M(z.obra[1], 0) + " · Año 3: " + M(z.obra[2], 0)],
+     ["Su parte del total", pct(z.peso, 1), nf(z.poblacion, 0) + " habitantes · índice de necesidad " + pct(z.indice, 1)],
+     ["Lugares de formación por año", nf(z.cupos, 0), "de 928 en todo San Isidro, cuando el programa funcione completo"]].forEach(function(k){ var d = el("div", {"class": "zk"}); d.appendChild(el("div", {"class": "l"}, k[0])); d.appendChild(el("div", {"class": "v tnum"}, k[1])); d.appendChild(el("div", {"class": "d"}, k[2])); c.appendChild(d); });
+    Array.prototype.forEach.call($("#zbtns").children, function(b, j){ b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+    Array.prototype.forEach.call($("#share").children, function(b, j){ b.classList.toggle("on", j === i); });
+  }
+  Z.forEach(function(z, i){ var b = el("button", {type: "button", "aria-pressed": "false"}, z.zona.replace(" Sur Mer", "")); b.addEventListener("click", function(){ showZ(i); }); $("#zbtns").appendChild(b);
+    var s = el("div", {"data-tip": z.zona + "|" + pct(z.peso, 1) + " de la obra vecinal"}, z.peso > 0.08 ? z.zona.replace(" Sur Mer", "") : ""); s.style.flex = z.peso + " 1 0"; s.addEventListener("click", function(){ showZ(i); }); $("#share").appendChild(s); });
+  showZ(0);
+  // 8 · Empleo y vivienda
+  var ev = [505.7].concat(D.empleo_vivienda.slice(0, 4));
+  $("#take-emp").innerHTML = "De <b>505,7 M</b> en 2025 a <b>" + M(D.empleo_vivienda[3]) + "</b> por año en 2031: <b>60% para empleo</b> y <b>40% para vivienda</b> y servicios básicos.";
+  function drawEmp(){ columns($("#ch-emp"), {cats: ["2025", "2028", "2029", "2030", "2031"], h: 290, bw: 34, series: [{name: "Empleo y vivienda", color: css("--s-new"), values: ev}],
+    label: function(i){ return i === 0 || i === 4 ? M(ev[i], 0) : null; }, aria: "Gasto en empleo y vivienda, 2025 y de 2028 a 2031"}); }
+  var eg = D.egresados[2] + D.egresados[3];
+  [["", nf(eg, 0), "egresados de la formación en el mandato: " + nf(D.egresados[2], 0) + " en 2030 y " + nf(D.egresados[3], 0) + " en 2031"], ["", nf(928, 0), "lugares de formación por año, cuando el programa funcione completo"], ["b", M(P.empleo[3], 0), "para empleo en 2031, y " + M(P.vivienda[3], 0) + " para vivienda y servicios básicos"]].forEach(function(f){ var d = el("div", {"class": "fact " + f[0]}); d.appendChild(el("b", {"class": "tnum"}, f[1])); d.appendChild(el("span", null, f[2])); $("#side-emp").appendChild(d); });
+  // 9 · Deuda
+  $("#take-deuda").innerHTML = "<b>Sin deuda nueva.</b> Lo que quedaba de la deuda de 2025 y el bono de 2026 se terminan de pagar en 2029.";
+  function drawDeuda(){ columns($("#ch-deuda"), {cats: Y.slice(0, 4).map(String), stacked: true, h: 260, bw: 44, series: [{name: "Deuda al 31/12/2025", color: css("--s-base"), values: D.deuda2025.slice(0, 4)}, {name: "Bono 2026", color: css("--s-new"), values: D.bono.slice(0, 4)}],
+    label: function(i, k){ var t = D.deuda2025[i] + D.bono[i]; return k === 1 ? (t ? M(t, 0) : "0") : null; }, aria: "Deuda pendiente al cierre de cada año"}); }
+  [["b", "0", "pesos de deuda nueva en todo el mandato"], ["", M(D.flotante[3], 0), "de deuda flotante en 2031: facturas que se pagan con el atraso normal de cada mes"]].forEach(function(f){ var d = el("div", {"class": "fact " + f[0]}); d.appendChild(el("b", {"class": "tnum"}, f[1])); d.appendChild(el("span", null, f[2])); $("#side-deuda").appendChild(d); });
+  // 10 · Si sale peor (tornado)
+  var SN = D.sensibilidad, base = SN[0].v[1].res;
+  var NAMES = ["Lo que recauda el Municipio", "La coparticipación de la Provincia", "Qué parte de lo que se factura se cobra"];
+  function variant(i, w){ var v = SN[i].v; return i === 0 ? (w ? "crece " + pct(v[0].x, 2) + " por año, un punto menos" : "crece " + pct(v[2].x, 2) + " por año, un punto más") : i === 1 ? (w ? "cae " + pct(-v[2].x, 1) + " por año" : "cae " + pct(-v[0].x, 1) + " por año") : (w ? "se cobra el " + pct(v[0].x, 2) + ", tres puntos menos" : "se cobra el " + pct(v[2].x, 2) + ", tres puntos más"); }
+  function drawPeor(){
+    var box = $("#ch-peor"), W = Math.max(320, box.clientWidth), small = W < 640, labW = small ? 0 : 250, rowH = small ? 96 : 74, H = SN.length * rowH + 30;
+    var svg = sv("svg", {viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Resultado de 2031 según tres variables"});
+    var all = []; SN.forEach(function(s){ s.v.forEach(function(x){ all.push(x.res); }); });
+    var lo = Math.min.apply(null, all.concat([0])), hi = Math.max.apply(null, all), padX = 70, x0 = labW + padX, x1 = W - padX;
+    function X(v){ return x0 + (v - lo) / (hi - lo) * (x1 - x0); }
+    svg.appendChild(sv("text", {x: X(0) - 4, y: H - 6, "text-anchor": "end"}, "déficit ← 0"));
+    svg.appendChild(sv("text", {x: X(base) + 4, y: H - 6, "class": "val"}, "previsto +" + nf(base, 0)));
+    SN.forEach(function(s, i){
+      var vs = s.v.map(function(x){ return x.res; }), worse = Math.min.apply(null, vs), better = Math.max.apply(null, vs), y = 8 + i * rowH + (small ? 26 : 10), bh = 22;
+      var ly = small ? y - 10 : y + bh / 2 + 5;
+      svg.appendChild(sv("text", {x: 0, y: ly, "class": "big"}, NAMES[i]));
+      svg.appendChild(sv("line", {x1: X(0), x2: X(0), y1: y - 5, y2: y + bh + 5, "class": "ax"}));
+      svg.appendChild(sv("rect", {x: X(worse), y: y, width: X(base) - X(worse), height: bh, rx: 4, fill: css("--s-new"), "data-tip": "Si " + variant(i, true) + "|2031 queda en " + (worse > 0 ? "+" : "") + M(worse, 0)}));
+      svg.appendChild(sv("rect", {x: X(base), y: y, width: X(better) - X(base), height: bh, rx: 4, fill: css("--s-base"), "data-tip": "Si " + variant(i, false) + "|2031 queda en +" + M(better, 0)}));
+      svg.appendChild(sv("line", {x1: X(base), x2: X(base), y1: y - 5, y2: y + bh + 5, stroke: css("--ink"), "stroke-width": 2}));
+      svg.appendChild(sv("text", {x: X(worse) - 6, y: y + 16, "text-anchor": "end", "class": "val"}, (worse > 0 ? "+" : "−") + nf(Math.abs(worse), 0)));
+      svg.appendChild(sv("text", {x: X(better) + 6, y: y + 16, "class": "val"}, "+" + nf(better, 0)));
+      svg.appendChild(sv("text", {x: X(worse), y: y + bh + 16, "text-anchor": "start"}, "si " + variant(i, true)));
+    });
+    box.textContent = ""; box.appendChild(svg);
+  }
+  // 11 · Metas
+  function metaV(v){ if (v == null) return "—"; if (typeof v === "number") { if (Math.abs(v) >= 1e6) return M(v / 1e6); if (v > 0 && v < 1) return pct(v, 1).replace(",0%", "%"); return nf(v, 0); } return String(v); }
+  var showAll = false;
+  function drawMetas(){ var box = $("#metas-grid"); box.textContent = "";
+    D.metas.forEach(function(m, i){ if (!showAll && i >= 6) return;
+      var c = el("article", {"class": "meta"}), h = el("div", {"class": "meta-h"}); h.appendChild(el("span", {"class": "meta-n"}, String(i + 1))); h.appendChild(el("p", {"class": "meta-t"}, m.meta)); c.appendChild(h);
+      var hv = el("div", {"class": "meta-hv"}), a = el("div"), b = el("div"); a.appendChild(el("b", null, "Hoy")); a.appendChild(document.createTextNode(metaV(m.hoy)));
+      b.appendChild(el("b", null, "Año 4")); b.appendChild(document.createTextNode(typeof m.a4 === "string" && /^No la proyecta/.test(m.a4) ? "Se comprueba en su fuente" : metaV(m.a4)));
+      hv.appendChild(a); hv.appendChild(el("span", {"class": "to", "aria-hidden": "true"}, "→")); hv.appendChild(b); c.appendChild(hv);
+      var cc = el("p", {"class": "meta-c"}); cc.appendChild(el("b", null, "Cómo se comprueba: ")); cc.appendChild(document.createTextNode(m.como || "")); c.appendChild(cc);
+      box.appendChild(c); });
+    $("#more").hidden = showAll;
+  }
+  $("#more").addEventListener("click", function(){ showAll = true; drawMetas(); });
+  // 12 · Tabla
+  (function(){ var t = $("#tabla"), th = el("thead"), tr = el("tr"); tr.appendChild(el("th", null, "Millones de pesos de dic. 2025")); Y.forEach(function(y, i){ tr.appendChild(el("th", null, y + (i < 4 ? " · año " + (i + 1) : ""))); }); th.appendChild(tr); t.appendChild(th);
+    var tb = el("tbody"); D.tabla_cuenta.forEach(function(r){ var row = el("tr", r.h ? {"class": "h"} : (/^(Total|VI ·|VII ·|VIII ·|III ·)/.test(r.l) ? {"class": "k"} : null));
+      if (r.h) { var td = el("td", {colspan: String(Y.length + 1)}, r.h); row.appendChild(td); } else { row.appendChild(el("td", null, r.l.replace(/^\s+/, "· "))); r.v.forEach(function(v){ var s = v == null ? "" : r.pct ? pct(v, 1) : typeof v === "number" ? nf(v, Number.isInteger(v) ? 0 : 1) : String(v); row.appendChild(el("td", v < 0 ? {"class": "neg"} : null, s)); }); }
+      tb.appendChild(row); }); t.appendChild(tb); })();
+  [["Qué es", D.guia["QUÉ ES"]], ["Unidad", D.guia["UNIDAD"]], ["El año base", D.guia["AÑO BASE"]], ["Qué crece y qué no", D.guia["QUÉ CRECE"]]].forEach(function(h){ var d = el("div"); d.appendChild(el("b", null, h[0])); d.appendChild(el("p", null, h[1])); $("#how").appendChild(d); });
+  $("#aviso").textContent = D.guia.aviso;
+
+  // Navegación: marca la sección visible
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  if ("IntersectionObserver" in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) links.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id); }); }); }, {rootMargin: "-40% 0px -55% 0px"}); document.querySelectorAll("section.sec").forEach(function(s){ io.observe(s); }); }
+
+  // Preguntar: caja de arriba, un botón por sección y el panel de la conversación
+  var SECQ = {"como-se-paga": "¿Cómo se paga el programa sin pedir deuda?", "resultado": "¿Por qué 2025 cerró en déficit y 2031 cierra en superávit?", "se-mueve": "¿Qué deja de hacer mantenimiento para pagar ambiente y educación?", "entra": "¿Por qué baja lo que llega de la Provincia?", "gasta": "¿Cuánto se gasta en salud y en qué?", "vecinos": "¿Cómo deciden los vecinos qué obra se hace?", "zona": "Vivo en Béccar, ¿cuánta obra deciden los vecinos de mi zona?", "empleo": "¿Cuántas personas se forman y dónde van a trabajar?", "deuda": "¿El programa pide deuda nueva?", "peor": "¿Qué pasa si el Municipio recauda menos de lo previsto?", "metas": "¿Cómo compruebo si se cumplió una meta?", "detalle": "¿Qué es el gasto flexible?"};
+  var ICON = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  function openChat(q){
+    var f = $("#chat-frame"); f.src = "/?embed=1&q=" + encodeURIComponent(q);
+    $("#chat").hidden = false; $("#chat-bg").hidden = false; $("#chat-x").focus();
+  }
+  function closeChat(){ if ($("#chat").hidden) return; $("#chat").hidden = true; $("#chat-bg").hidden = true; $("#chat-frame").src = "about:blank"; }
+  $("#chat-x").addEventListener("click", closeChat); $("#chat-bg").addEventListener("click", closeChat);
+  document.addEventListener("keydown", function(ev){ if (ev.key === "Escape") closeChat(); });
+  $("#askbox").addEventListener("submit", function(ev){ ev.preventDefault(); var v = $("#q").value.trim(); if (v) openChat(v); });
+  window.addEventListener("hashchange", closeChat);
+  (function(){
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition, b = $("#b-mic"), ta = $("#q");
+    if (!SR) return; b.hidden = false;
+    var on = false, rec = null, base = "", t0 = 0;
+    function lbl(){ b.setAttribute("aria-pressed", on ? "true" : "false"); b.lastChild.textContent = on ? "Terminar" : "Hablar"; }
+    function start(){ rec = new SR(); rec.lang = "es-AR"; rec.interimResults = true; rec.continuous = false; base = ta.value.trim(); var silent = false;
+      rec.onresult = function(ev){ var t = ""; for (var i = 0; i < ev.results.length; i++) t += ev.results[i][0].transcript; ta.value = (base ? base + " " : "") + t.trim(); };
+      rec.onerror = function(ev){ silent = true; if (ev.error === "not-allowed" || ev.error === "service-not-allowed") ta.placeholder = "El navegador no dejó usar el micrófono. Escribí la pregunta."; };
+      rec.onend = function(){ if (on && !silent && Date.now() - t0 < 120000) { try { start(); return; } catch (e) {} } on = false; lbl(); ta.focus(); };
+      rec.start(); }
+    b.addEventListener("click", function(){ if (on) { on = false; try { rec.stop(); } catch (e) {} lbl(); return; } try { t0 = Date.now(); start(); on = true; lbl(); } catch (e) {} });
+    $("#askbox").addEventListener("submit", function(){ if (on) { on = false; try { rec.stop(); } catch (e) {} lbl(); } });
+  })();
+  ["Vivo en Béccar, ¿cuánta obra deciden los vecinos de mi zona?", "¿Cómo se paga el programa sin pedir deuda?", "¿Qué pasa si el Municipio recauda menos de lo previsto?", "¿El programa pide deuda nueva?"].forEach(function(q){ var c = el("button", {type: "button"}, q); c.addEventListener("click", function(){ openChat(q); }); $("#qchips").appendChild(c); });
+  document.querySelectorAll("section.sec").forEach(function(sec){ var q = SECQ[sec.id]; if (!q) return; var bt = el("button", {"class": "secq", type: "button", title: q}); bt.innerHTML = ICON + "<span>Preguntar sobre esto</span>"; bt.addEventListener("click", function(){ openChat(q); }); sec.querySelector(".sec-h").appendChild(bt); });
+
+  function drawAll(){ drawPaga(); drawRes(); drawFlow(); drawVec(); drawEmp(); drawDeuda(); drawPeor(); }
+  drawAll(); drawMetas();
+  var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(drawAll, 150); });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);
+  new MutationObserver(drawAll).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+})();
+</script>
+
+<!-- Menú del celular (opción A, 12 de octubre): barra fija con «Menú» y lista grande. Sólo cambia en pantallas de hasta 760 px. -->
+<style>
+.mm-btn{display:none}
+.mm-sheet{position:fixed;inset:0;z-index:60;background:#7C2E23;color:#FBF8F2;overflow-y:auto;overscroll-behavior:contain}
+.mm-in{min-height:100%;display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto}
+.mm-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid rgba(251,248,242,.22)}
+.mm-top .brand{color:#FBF8F2}
+.mm-list{list-style:none;margin:8px 0 0;padding:0}
+.mm-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;color:#FBF8F2;padding:16px 2px;border-bottom:1px solid rgba(251,248,242,.22)}
+.mm-list b{display:block;font-family:"Spectral","Iowan Old Style",Georgia,serif;font-weight:500;font-size:24px;line-height:1.15}
+.mm-list span{display:block;font-size:14px;color:#F1E3DC;margin-top:2px}
+.mm-list svg{flex:none;width:18px;height:18px;opacity:.8}
+.mm-list em{flex:none;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#F1E3DC;border:1px solid rgba(251,248,242,.35);border-radius:999px;padding:3px 9px}
+.mm-small{display:flex;gap:22px;margin-top:22px;font-size:15px}
+.mm-small a{color:#F1E3DC}
+.mm-note{margin-top:auto;padding-top:28px;font-size:12px;line-height:1.5;color:#F1E3DC;opacity:.85}
+@media (max-width:760px){
+  .mm-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:15}
+  .mm-bar > .wrap{flex-wrap:nowrap;align-items:center;padding-block:10px}
+  .mm-bar .nav,.mm-bar .site-nav{display:none}
+  .mm-btn{display:inline-flex;align-items:center;gap:8px;flex:none;background:rgba(255,255,255,.1);border:1px solid rgba(251,248,242,.28);color:#FBF8F2;border-radius:999px;padding:8px 14px;font:600 15px/1.2 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;cursor:pointer}
+  .mm-btn svg{width:18px;height:18px}
+  .mm-btn:focus-visible,.mm-sheet a:focus-visible,.mm-sheet button:focus-visible{outline:2px solid #FBF8F2;outline-offset:3px}
+  /* Las barras fijas que ya tenían las páginas quedan debajo de la barra nueva */
+  .views{top:var(--mm-h,64px)!important}
+  .nav[aria-label="Secciones"]:not(.mm-bar .nav){top:calc(env(safe-area-inset-top,0px) + var(--mm-h,64px))!important}
+  #inicio,#propuestas,#programa,.sec,[id^="cap-"]{scroll-margin-top:calc(var(--mm-h,64px) + 8px)}
+  #thread .q,#thread .a{scroll-margin-top:calc(var(--mm-h,64px) + 12px)}
+}
+</style>
+<div class="mm-sheet" id="mm-sheet" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="mm-in">
+    <div class="mm-top"><a class="brand" href="/"><b>San Isidro 2027</b><span>Programa de gobierno</span></a><button class="mm-btn" type="button" id="mm-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Cerrar</button></div>
+    <ol class="mm-list">
+      <li><a href="/#inicio" data-p="/"><div><b>Preguntale al programa</b><span>Contá tu problema y te dice qué proponemos</span></div></a></li>
+      <li><a href="/#propuestas" data-p="/"><div><b>Qué proponemos</b><span>Los nueve puntos del programa</span></div></a></li>
+      <li><a href="/#programa" data-p="/"><div><b>El programa completo</b><span>Los seis capítulos, para leer entero</span></div></a></li>
+      <li><a href="/cuentas/" data-p="/cuentas/"><div><b>Las cuentas</b><span>Cuánto entra, cuánto sale y cómo se paga</span></div></a></li>
+      <li><a href="/despliegue/" data-p="/despliegue/"><div><b>Plan de despliegue</b><span>Qué se hace, quién lo hace y en qué orden</span></div></a></li>
+    </ol>
+    <div class="mm-small"><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></div>
+    <p class="mm-note">Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var sh = document.getElementById("mm-sheet"), open = document.getElementById("mm-open"), close = document.getElementById("mm-close"), bar = document.querySelector(".mm-bar");
+  if (!sh || !open || !bar) return;
+  var GO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var here = location.pathname.replace(/index\.html$/, "");
+  sh.querySelectorAll(".mm-list a").forEach(function(a){
+    var cur = here !== "/" && a.getAttribute("data-p") === here;
+    if (cur) a.setAttribute("aria-current", "page");
+    a.insertAdjacentHTML("beforeend", cur ? "<em>Estás acá</em>" : GO);
+  });
+  function h(){ document.documentElement.style.setProperty("--mm-h", bar.getBoundingClientRect().height + "px"); }
+  h(); window.addEventListener("resize", h);
+  function set(v){
+    sh.hidden = !v; open.setAttribute("aria-expanded", v ? "true" : "false");
+    document.documentElement.style.overflow = v ? "hidden" : "";
+    if (v) close.focus(); else open.focus({preventScroll: true});
+  }
+  open.addEventListener("click", function(){ set(true); });
+  close.addEventListener("click", function(){ set(false); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !sh.hidden) set(false); });
+  sh.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ sh.hidden = true; open.setAttribute("aria-expanded", "false"); document.documentElement.style.overflow = ""; }); });
+  window.addEventListener("resize", function(){ if (!sh.hidden && window.innerWidth > 760) set(false); });
+})();
+</script>
+
+</body>
+</html>
