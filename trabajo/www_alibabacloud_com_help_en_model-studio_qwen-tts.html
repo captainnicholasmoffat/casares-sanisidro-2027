@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en" class="transparent alicloud back-to-top new_default">
+<link rel="stylesheet" href="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/css/index.css" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="spm-id" content="a2c63">
+<meta name="data-spm" content="a2c63" />
+<meta name="aplus-core" content="aplus.js">
+<meta name="aplus-ajax" content="chksum">
+<meta name="aplus-waiting" content="MAN">
+<meta name="aplus-pvhash" content="1">
+ <!-- MINOR_LANG_ENTRY_GATE：es/ko/de/tr/vi/th 入口卡点，翻译/内容就绪后把 content 追加 es,ko,de,tr,vi,th -->
+<!-- FR_ENTRY_GATE：fr 已在预发验证分支放开（本分支 FR_ENTRY_ENABLED=true）；线上卡点分支的 content 为 en,zh,tc,ja,id,pt-BR -->
+<meta name="kloud:supported-langs" content="en,zh,tc,ja,id,pt-BR,fr"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="aplus-rhost-v" content="sg.mmstat.com">
+<meta name="aplus-rhost-g" content="sg.mmstat.com">
+<title>
+ Non-real-time speech synthesis - Alibaba Cloud Model Studio - Alibaba Cloud Documentation Center
+
+</title>
+ <meta name="keywords" content="tts,qwen">
+ <meta name="description" content="Non-real-time speech synthesis,Alibaba Cloud Model Studio:Non-real-time speech synthesis converts text to speech through the HTTP API. It is designed for latency-tolerant scenarios such as audiobook production, online education voiceovers, and content creati...">
+ <script>
+window.globalData = {
+website: "intl",
+language: "en",
+nodeId:"2879134",
+channel: "",
+notfound: "",
+statusCode: "",
+errorType: ""
+};
+// UT的全局配置变量，在CDN加载前配置
+window.$ACE_TRACKER_CONFIG = {
+enableHistory: true,
+enableHash: false
+};
+</script>
+<!-- <base href="https://www.alibabacloud.com">-->
+<link rel="canonical" href="https://www.alibabacloud.com/help/en/model-studio/non-realtime-tts-user-guide"/>
+ <meta property="og:title" content="Non-real-time speech synthesis - Alibaba Cloud" />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://www.alibabacloud.com/help/en/model-studio/non-realtime-tts-user-guide" />
+ <meta property="og:image" content="https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp" />
+ <meta property="og:description" content="Non-real-time speech synthesis,Alibaba Cloud Model Studio:Non-real-time speech synthesis converts text to speech through the HTTP API. It is designed for latency-tolerant scenarios such as audiobook production, online education voiceovers, and content creati..." />
+ <link rel="shortcut icon" href="//img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png"/>
+<link rel="stylesheet" href="https://o.alicdn.com/fund/alicloud-pure-layout/css/index.min.css" />
+ <link
+rel="icon"
+href="https://img.alicdn.com/imgextra/i2/O1CN01TFs5Qw27uYvfA6gib_!!6000000007857-55-tps-32-32.svg"
+type="image/x-icon"
+/>
+</head>
+<body data-spm="" class="HAS_ALPS_RESOURCE"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=0aba354717911783366094936ec982&asid=AQAAAABhNsNq05mVeAAAAABb5NkdCptEbw==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+ <script async src="https://o.alicdn.com/fund/alicloud-pure-layout/index.js"></script>
+
+<div id="app">
+<div class="aliyun-app-layout">
+
+<!-- docId:2879134 -->
+<input type="hidden" id="website" value="intl">
+<div class="products-wrapper$tip" data-spm="879954">
+<section id="products" class="intl-product container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="navDocument">
+<div class="doc-nav">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+</div>
+<div class="placeholder-ele">&nbsp;</div>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 doc-content">
+<div class="all-products action" id="J_AllProducts">
+<div class="all-products-head">
+<div class="all-products-title">All Products</div>
+<div class="all-products-search-wrapper">
+<div class="all-products-search focus">
+<input autocomplete="off" class="all-products-search-box-input" id="J_AllProductsSearch" placeholder="Search Product" data-spm-anchor-id="a2c4g.11186623.6.i0.1f753945H9RVzu">
+<i class="icon-search icon-docs icon-docs-search"></i>
+<ul class="all-products-search-result" style="display: none;">
+</ul>
+</div>
+</div>
+</div>
+<div class="all-products-body" id="J_AllProductsBody"></div>
+</div>
+<div class="search-product-modal">
+Search
+</div>
+<div class="breadcrumbs-top" data-spm="a1">
+<div class="row nav-breadcrumb">
+ <div class="col-md-12 hidden-sm hidden-xs">
+<ul class="breadcrumb text-sm">
+<li><a class="active" title="Document Center" href="/help/en">Document Center</a></li>
+ <li><a class="active" title="Alibaba Cloud Model Studio" href="/help/en/model-studio/">Alibaba Cloud Model Studio</a></li>
+ <li><a class="active" title="User Guide (Models)" href="/help/en/model-studio/model-user-guide/">User Guide (Models)</a></li>
+ <li><a class="active" title="Model Playground" href="/help/en/model-studio/model-experience/">Model Playground</a></li>
+ <li><a class="active" title="Speech synthesis" href="/help/en/model-studio/speech-synthesis/">Speech synthesis</a></li>
+ <li><a class="active" title="Non-real-time speech synthesis" href="/help/en/model-studio/non-realtime-tts-user-guide">Non-real-time speech synthesis</a></li>
+ </ul>
+</div>
+ <div class="col-md-4 col-sm-12">
+<button type="button" class="navbar-toggle bc mr0" data-toggle="collapse"
+data-target="#sideMenu-mobile">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+all-products-head <span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<form class="search-bar clearfix" method="GET" action="/s/en">
+<input type="hidden" name="type" value="doc"/>
+<div class="select">
+<p class="select-text">
+<span class="placeholder">This Product</span>
+<i class="icon-docs icon-docs-selected"></i>
+</p>
+<ul class="select-options" style="display:none;">
+<li class="option selected" data-value="h_pid_$productId">This Product</li>
+<li class="option" data-value="">All Products</li>
+</ul>
+<input type="hidden" name="rangeinfo" value="h_pid_2400256"/>
+</div>
+<input autocomplete="off" class="search-key" type="text" placeholder="Search by keyword" name="k"/>
+<ul class="help-top-search-result" style="display: block;"></ul>
+<button class="search-submit" type="submit">
+<i class="icon-docs icon-docs-search"></i>
+</button>
+<div class="collapse-menus select">
+<p class="select-text">
+<span class="placeholder">Alibaba Cloud Model Studio:Non-real-time speech synthesis</span>
+<i class="icon-docs icon-docs-more"></i>
+</p>
+</div>
+</form>
+</div>
+<header id="header-faq" class="clearfix">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+<div class="download-links">
+ </div>
+<h1 class="page-title">Alibaba Cloud Model Studio:Non-real-time speech synthesis</h1>
+<div class="doc-status">
+Last Updated:Sep 28, 2026
+</div>
+</header>
+<article class="product-description markdown-body">
+<div lang="en" class="icms-help-docs-content">
+<div lang="en" class="icms-help-docs-content"><p>Non-real-time speech synthesis converts text to speech through the HTTP API. It is designed for latency-tolerant scenarios such as audiobook production, online education voiceovers, and content creation, and supports a wide range of voices, multiple languages, voice cloning, and voice design.</p>
+<h2 id="overview">Overview <span id="a5e9de808eli8"></span> <span id="f9ec7be148l9g"></span></h2>
+<p>Convert complete text into audio files through the HTTP API. Two output modes are available: non-streaming and streaming.</p>
+<ul>
+<li><strong>Non-streaming</strong> returns an audio file URL valid for 24 hours; <strong>streaming</strong> returns audio data in chunks.</li>
+<li>Multiple languages are supported, including Chinese dialects.</li>
+<li>Supports <a href="/help/en/model-studio/voice-cloning-user-guide">Voice cloning</a> and <a href="/help/en/model-studio/voice-design-user-guide">Voice Design</a> for creating custom voices.</li>
+<li>Supports <a href="/help/en/model-studio/non-realtime-tts-user-guide#nrt_instruct_h3">Instruction control</a> to control speech expressiveness through natural language instructions.</li>
+</ul>
+<p>For low-latency streaming scenarios, see <a href="/help/en/model-studio/realtime-tts-user-guide">Real-time speech synthesis</a>. For model selection recommendations, see <a href="/help/en/model-studio/tts-model">Speech synthesis</a>.</p>
+<p>Audio synthesized on the <strong>voice design</strong> page in the Model Studio console can only be previewed online and cannot be downloaded as an audio file. To download the audio, call the API or the SDK. In non-streaming mode, the response returns an audio file URL valid for 24 hours.</p>
+<h2 id="prerequisites">Prerequisites <span id="nrt00_prereq_h2"></span> <span id="nrt00_prereq_sec"></span></h2>
+<p>Before you begin, complete the following preparations:</p>
+<ul>
+<li><a href="/help/en/model-studio/get-api-key">Configure an API key</a> and <a href="/help/en/model-studio/get-api-key">set it as an environment variable</a></li>
+<li>(Optional) If you call the API through the DashScope SDK, <a href="/help/en/model-studio/install-sdk">install the latest SDK</a></li>
+</ul>
+<h2 id="quick-start">Quick start <span id="e79cb56cfdbbp"></span> <span id="a77dbbb536qli"></span></h2>
+<p>The following examples synthesize speech with <a href="/help/en/model-studio/qwen-audio-3-0-tts-flash">qwen-audio-3.0-tts-flash</a> and the system voice <code>longanhuan_v3.6</code>. For other available voices, see the <a href="/help/en/model-studio/qwen-audio-tts-voice-list">voice list</a>.</p>
+<p>These examples use the Singapore region. Replace <code>{WorkspaceId}</code> with your workspace ID in this region, and set the <code>DASHSCOPE_API_KEY</code> environment variable to an API key from the same region.</p>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs" class="tabbed-content-box section"><section id="non-streaming-output" class="section"><h4 id="non-streaming-output-h4">Non-streaming output</h4><p>In non-streaming mode, <code>output.audio.url</code> contains the download URL for the synthesized audio.</p><pre data-tag="codeblock" id="code-block" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl -X POST &quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer&quot; \
+  -H &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#x27;{
+    &quot;model&quot;: &quot;qwen-audio-3.0-tts-flash&quot;,
+    &quot;input&quot;: {
+        &quot;text&quot;: &quot;Today is a wonderful day.&quot;,
+        &quot;voice&quot;: &quot;longanhuan_v3.6&quot;,
+        &quot;format&quot;: &quot;wav&quot;,
+        &quot;sample_rate&quot;: 24000
+    }
+}&#x27;
+</code></pre></section><section id="streaming-output" class="section"><h4 id="streaming-output-h4">Streaming output</h4><p>Add the <code>X-DashScope-SSE: enable</code> request header to enable streaming output. The service returns audio chunks in SSE events. Each <code>output.audio.data</code> field contains Base64-encoded audio data.</p><pre data-tag="codeblock" id="code-block-2" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl --no-buffer -X POST &quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer&quot; \
+  -H &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -H &quot;X-DashScope-SSE: enable&quot; \
+  -d &#x27;{
+    &quot;model&quot;: &quot;qwen-audio-3.0-tts-flash&quot;,
+    &quot;input&quot;: {
+        &quot;text&quot;: &quot;Today is a wonderful day.&quot;,
+        &quot;voice&quot;: &quot;longanhuan_v3.6&quot;,
+        &quot;format&quot;: &quot;wav&quot;,
+        &quot;sample_rate&quot;: 24000
+    }
+}&#x27;
+</code></pre></section></section>
+<h2 id="advanced-features">Advanced features <span id="12884a10929p9"></span> <span id="d815caea76zx8"></span></h2>
+<h3 id="instruction-control">Instruction control <span id="nrt_instruct_h3"></span> <span id="nrt_instruct_sec"></span></h3>
+<p><strong>Instruction specifications by model</strong>:</p>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-2" class="tabbed-content-box section"><section id="qwen-tts" class="section"><h4 id="qwen-tts-h4">Qwen-TTS</h4><p><strong>Supported models</strong>: Only Qwen3-TTS-Instruct-Flash series models are supported.</p><p><strong>Usage</strong>: Pass the instruction content through the <code>instructions</code> parameter.</p><p><strong>Supported languages for instruction text</strong>: Only Chinese and English are supported.</p><p><strong>Instruction text length limit</strong>: Up to 1,600 tokens.</p></section></section>
+<h3 id="dialects">Dialects <span id="8a7604d333kut"></span> <span id="de110724854ez"></span></h3>
+<p>This section describes how to generate speech in <strong>Chinese dialects</strong> (such as Henan dialect and Sichuan dialect). The configuration method varies by model and voice type.</p>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-3" class="tabbed-content-box section"><section id="qwen-tts-2" class="section"><h4 id="qwen-tts-2-h4">Qwen-TTS</h4><ul>
+<li><strong>System voices</strong>: Use system voices that support dialects. See <a href="/help/en/model-studio/qwen-tts-voice-list">Qwen-TTS voice list</a>.</li>
+<li><strong>Voice cloning voices</strong>: Dialects are not supported.</li>
+<li><strong>Voice design voices</strong>: Dialects are not supported.</li>
+</ul><p><strong>Supported dialects</strong>: See the &quot;Supported languages&quot; section for each model in <a href="/help/en/model-studio/tts-model#tts08_q3tts02">Qwen3-TTS</a>.</p></section></section>
+<h2 id="supported-models-and-regions">Supported models and regions <span id="4a43cc1bb7kxg"></span> <span id="d2ad2470a394c"></span></h2>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-4" class="tabbed-content-box section"><section id="singapore" class="section"><h4 id="singapore-h4">Singapore</h4><p>To call the following models, use an <a href="https://modelstudio.console.alibabacloud.com/model/settings/api-key">API key</a> for the Singapore region:</p><ul>
+<li>
+<p><strong>Qwen-TTS</strong>:</p>
+<ul>
+<li><strong>Qwen3-TTS-Instruct-Flash</strong>: qwen3-tts-instruct-flash (stable version, currently equivalent to qwen3-tts-instruct-flash-2026-01-26), qwen3-tts-instruct-flash-2026-01-26 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-VD</strong>: qwen3-tts-vd-2026-01-26 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-VC</strong>: qwen3-tts-vc-2026-01-22 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-Flash</strong>: qwen3-tts-flash (stable version, currently equivalent to qwen3-tts-flash-2025-11-27), qwen3-tts-flash-2025-11-27, qwen3-tts-flash-2025-09-18</li>
+</ul>
+</li>
+</ul></section><section id="china-beijing" class="section"><h4 id="china-beijing-h4">China (Beijing)</h4><p>To call the following models, use an <a href="https://modelstudio.console.alibabacloud.com/model/settings/api-key">API key</a> for the Beijing region:</p><ul>
+<li>
+<p><strong>Qwen-TTS</strong>:</p>
+<ul>
+<li><strong>Qwen3-TTS-Instruct-Flash</strong>: qwen3-tts-instruct-flash (stable version, currently equivalent to qwen3-tts-instruct-flash-2026-01-26), qwen3-tts-instruct-flash-2026-01-26 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-VD</strong>: qwen3-tts-vd-2026-01-26 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-VC</strong>: qwen3-tts-vc-2026-01-22 (latest snapshot)</li>
+<li><strong>Qwen3-TTS-Flash</strong>: qwen3-tts-flash (stable version, currently equivalent to qwen3-tts-flash-2025-11-27), qwen3-tts-flash-2025-11-27, qwen3-tts-flash-2025-09-18</li>
+<li><strong>Qwen-TTS</strong>: qwen-tts (stable version, currently equivalent to qwen-tts-2025-04-10), qwen-tts-latest (latest version, currently equivalent to qwen-tts-2025-05-22), qwen-tts-2025-05-22 (snapshot), qwen-tts-2025-04-10 (snapshot)</li>
+</ul>
+</li>
+</ul></section></section>
+<h2 id="supported-system-voices">Supported system voices <span id="bac280ddf5a1u"></span> <span id="184aea6f4399s"></span></h2>
+<p>Different models support different voices. Set the <code>voice</code> request parameter to a value from the <strong>voice parameter</strong> column in the following tables.</p>
+<ul>
+<li><a href="/help/en/model-studio/qwen-tts-voice-list#261bc7f209ri2">Qwen-TTS voice list</a></li>
+</ul>
+<h2 id="api-reference">API reference <span id="bb4dbbdb74em4"></span> <span id="d774348f5dboq"></span></h2>
+<ul>
+<li><a href="/help/en/model-studio/qwen-tts-api">Non-real-time speech synthesis - Qwen API reference</a></li>
+</ul>
+<h2 id="faq">FAQ <span id="37914114aaidw"></span> <span id="df054d5bdazem"></span></h2>
+<h3 id="q-how-long-is-the-audio-file-url-valid">Q: How long is the audio file URL valid? <span id="783e508579rco"></span> <span id="85be1a1a9fylb"></span></h3>
+<p>A: The audio file URL is valid for 24 hours after generation. After the URL expires, call the API again to obtain a new URL.</p></div>
+</div>
+</article>
+<script type="text/javascript">
+window.storeDocs = {
+language: '$lang',
+docGithubLink: '$!githubInfo.url'
+}
+</script>
+<div class="nav-footer">
+ </div>
+<div class="alicloud-document-ask clearfix"></div>
+<div class="feedback-message" style="display:none;">
+<span class="hasfeedback acon acon-done-16"></span>
+Thank you! We've received your  feedback.
+</div>
+</div>
+<div class="col-log-2 col-md-2 col-sm-0 col-xs-0 nav-catalog">
+<div class="article-catalog" id="articleCatalog"></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script
+crossorigin
+src="https://g.alicdn.com/code/lib/??react/16.8.6/umd/react.production.min.js,react-dom/16.8.6/umd/react-dom.production.min.js"
+></script>
+<script
+src="https://g.alicdn.com/code/lib/lodash.js/4.17.21/lodash.min.js"
+crossorigin="anonymous"
+></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/js/vendor.js"></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/js/index.js"></script>
+<script defer src="https://cloud-assets.alicdn.com/alicdn/dawn/user-tracker/latest/js/index.js"></script>
+</body>
+</html>

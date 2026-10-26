@@ -1,0 +1,1005 @@
+
+<!DOCTYPE html>
+<html lang="en" class="transparent alicloud back-to-top new_default">
+<link rel="stylesheet" href="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/css/index.css" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="spm-id" content="a2c63">
+<meta name="data-spm" content="a2c63" />
+<meta name="aplus-core" content="aplus.js">
+<meta name="aplus-ajax" content="chksum">
+<meta name="aplus-waiting" content="MAN">
+<meta name="aplus-pvhash" content="1">
+ <!-- MINOR_LANG_ENTRY_GATE：es/ko/de/tr/vi/th 入口卡点，翻译/内容就绪后把 content 追加 es,ko,de,tr,vi,th -->
+<!-- FR_ENTRY_GATE：fr 已在预发验证分支放开（本分支 FR_ENTRY_ENABLED=true）；线上卡点分支的 content 为 en,zh,tc,ja,id,pt-BR -->
+<meta name="kloud:supported-langs" content="en,zh,tc,ja,id,pt-BR,fr"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="aplus-rhost-v" content="sg.mmstat.com">
+<meta name="aplus-rhost-g" content="sg.mmstat.com">
+<title>
+ Non-real-time speech recognition - Alibaba Cloud Model Studio - Alibaba Cloud Documentation Center
+
+</title>
+ <meta name="keywords" content="ASR,speech recognition,Qwen,multimodal,streaming output,customized recognition,API">
+ <meta name="description" content="Non-real-time speech recognition,Alibaba Cloud Model Studio:Non-real-time speech recognition models convert recorded audio into text. They support multilingual recognition, singing recognition, noise rejection, and speaker diarization, which makes them suitabl...">
+ <script>
+window.globalData = {
+website: "intl",
+language: "en",
+nodeId:"2979031",
+channel: "",
+notfound: "",
+statusCode: "",
+errorType: ""
+};
+// UT的全局配置变量，在CDN加载前配置
+window.$ACE_TRACKER_CONFIG = {
+enableHistory: true,
+enableHash: false
+};
+</script>
+<!-- <base href="https://www.alibabacloud.com">-->
+<link rel="canonical" href="https://www.alibabacloud.com/help/en/model-studio/non-realtime-speech-recognition-user-guide"/>
+ <meta property="og:title" content="Non-real-time speech recognition - Alibaba Cloud" />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://www.alibabacloud.com/help/en/model-studio/non-realtime-speech-recognition-user-guide" />
+ <meta property="og:image" content="https://img.alicdn.com/tfs/TB1xpNqnmslXu8jSZFuXXXg7FXa-1200-630.png_.webp" />
+ <meta property="og:description" content="Non-real-time speech recognition,Alibaba Cloud Model Studio:Non-real-time speech recognition models convert recorded audio into text. They support multilingual recognition, singing recognition, noise rejection, and speaker diarization, which makes them suitabl..." />
+ <link rel="shortcut icon" href="//img.alicdn.com/tfs/TB1ugg7M9zqK1RjSZPxXXc4tVXa-32-32.png"/>
+<link rel="stylesheet" href="https://o.alicdn.com/fund/alicloud-pure-layout/css/index.min.css" />
+ <link
+rel="icon"
+href="https://img.alicdn.com/imgextra/i2/O1CN01TFs5Qw27uYvfA6gib_!!6000000007857-55-tps-32-32.svg"
+type="image/x-icon"
+/>
+</head>
+<body data-spm="" class="HAS_ALPS_RESOURCE"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=0a3c4e9c17911784089226614eb796&asid=AQAAAACpNsNq6vlMAwAAAAAiiOQJkG8tWg==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+ <script async src="https://o.alicdn.com/fund/alicloud-pure-layout/index.js"></script>
+
+<div id="app">
+<div class="aliyun-app-layout">
+
+<!-- docId:2979031 -->
+<input type="hidden" id="website" value="intl">
+<div class="products-wrapper$tip" data-spm="879954">
+<section id="products" class="intl-product container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="navDocument">
+<div class="doc-nav">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+</div>
+<div class="placeholder-ele">&nbsp;</div>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-8 col-xs-12 doc-content">
+<div class="all-products action" id="J_AllProducts">
+<div class="all-products-head">
+<div class="all-products-title">All Products</div>
+<div class="all-products-search-wrapper">
+<div class="all-products-search focus">
+<input autocomplete="off" class="all-products-search-box-input" id="J_AllProductsSearch" placeholder="Search Product" data-spm-anchor-id="a2c4g.11186623.6.i0.1f753945H9RVzu">
+<i class="icon-search icon-docs icon-docs-search"></i>
+<ul class="all-products-search-result" style="display: none;">
+</ul>
+</div>
+</div>
+</div>
+<div class="all-products-body" id="J_AllProductsBody"></div>
+</div>
+<div class="search-product-modal">
+Search
+</div>
+<div class="breadcrumbs-top" data-spm="a1">
+<div class="row nav-breadcrumb">
+ <div class="col-md-12 hidden-sm hidden-xs">
+<ul class="breadcrumb text-sm">
+<li><a class="active" title="Document Center" href="/help/en">Document Center</a></li>
+ <li><a class="active" title="Alibaba Cloud Model Studio" href="/help/en/model-studio/">Alibaba Cloud Model Studio</a></li>
+ <li><a class="active" title="User Guide (Models)" href="/help/en/model-studio/model-user-guide/">User Guide (Models)</a></li>
+ <li><a class="active" title="Model Playground" href="/help/en/model-studio/model-experience/">Model Playground</a></li>
+ <li><a class="active" title="Speech-to-text" href="/help/en/model-studio/speech-recognition/">Speech-to-text</a></li>
+ <li><a class="active" title="Non-real-time speech recognition" href="/help/en/model-studio/non-realtime-speech-recognition-user-guide">Non-real-time speech recognition</a></li>
+ </ul>
+</div>
+ <div class="col-md-4 col-sm-12">
+<button type="button" class="navbar-toggle bc mr0" data-toggle="collapse"
+data-target="#sideMenu-mobile">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+all-products-head <span class="icon-bar"></span>
+</button>
+</div>
+</div>
+<form class="search-bar clearfix" method="GET" action="/s/en">
+<input type="hidden" name="type" value="doc"/>
+<div class="select">
+<p class="select-text">
+<span class="placeholder">This Product</span>
+<i class="icon-docs icon-docs-selected"></i>
+</p>
+<ul class="select-options" style="display:none;">
+<li class="option selected" data-value="h_pid_$productId">This Product</li>
+<li class="option" data-value="">All Products</li>
+</ul>
+<input type="hidden" name="rangeinfo" value="h_pid_2400256"/>
+</div>
+<input autocomplete="off" class="search-key" type="text" placeholder="Search by keyword" name="k"/>
+<ul class="help-top-search-result" style="display: block;"></ul>
+<button class="search-submit" type="submit">
+<i class="icon-docs icon-docs-search"></i>
+</button>
+<div class="collapse-menus select">
+<p class="select-text">
+<span class="placeholder">Alibaba Cloud Model Studio:Non-real-time speech recognition</span>
+<i class="icon-docs icon-docs-more"></i>
+</p>
+</div>
+</form>
+</div>
+<header id="header-faq" class="clearfix">
+<a class="doc-center" href="/help/en">
+<i class="icon-docs icon-docs-back"></i>
+Document Center
+</a>
+<div class="download-links">
+ </div>
+<h1 class="page-title">Alibaba Cloud Model Studio:Non-real-time speech recognition</h1>
+<div class="doc-status">
+Last Updated:Sep 28, 2026
+</div>
+</header>
+<article class="product-description markdown-body">
+<div lang="en" class="icms-help-docs-content">
+<div lang="en" class="icms-help-docs-content"><p data-tag="shortdesc" class="shortdesc">Non-real-time speech recognition models convert recorded audio into text. They support multilingual recognition, singing recognition, noise rejection, and speaker diarization, which makes them suitable for meeting transcription, call analysis, subtitle generation, and similar scenarios.</p><h2 id="overview">Overview <span id="7cdd3fd85dnsx"></span> <span id="7bcf23b536wtv"></span></h2>
+<p>Transcribe recorded audio and video files in batches through asynchronous tasks.</p>
+<ul>
+<li>Context enhancement improves recognition accuracy through configurable context.</li>
+<li>Custom hotwords improve the recognition accuracy of proper nouns through a preset word list.</li>
+<li>Configurable features include speaker diarization, sensitive-word filtering, and sentence-level or word-level timestamps.</li>
+<li>Asynchronous transcription supports a single audio file of up to 12 hours in duration and up to 2 GB in size.</li>
+<li>Any sample rate is supported, along with mainstream audio and video formats such as AAC, WAV, and MP3.</li>
+</ul>
+<p>For real-time scenarios such as live subtitles, online meetings, and voice assistants, use <a href="/help/en/model-studio/real-time-speech-recognition-user-guide">Real-time speech recognition</a>. For model selection guidance, see <a href="/help/en/model-studio/asr-model">Speech-to-text</a>.</p>
+<h2 id="prerequisites">Prerequisites <span id="nrt02_prereq_h2"></span> <span id="nrt02_prereq_section"></span></h2>
+<ul>
+<li>An API key is <a href="/help/en/model-studio/get-api-key">Obtain an API key</a> and <a href="/help/en/model-studio/get-api-key">configured as an environment variable</a>.</li>
+<li>To call the API through the DashScope SDK, <a href="/help/en/model-studio/install-sdk">install the latest SDK</a>.</li>
+</ul>
+<h2 id="quick-start">Quick start <span id="7818a3bc466d6"></span> <span id="8b9a939b7c4x0"></span></h2>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>In non-real-time speech recognition, Qwen-Audio-3.x-ASR-Flash-Filetrans, Fun-ASR, Qwen3-ASR-Flash-Filetrans, and Paraformer use <strong>asynchronous calls</strong>. Set the request header <code>X-DashScope-Async: enable</code>, submit the task, and then poll the query API to retrieve the result. Other models, such as Fun-ASR-Flash and Qwen3-ASR-Flash, use <strong>synchronous calls</strong>.</p><p>If you call a <strong>dedicated deployment</strong> of the model service and receive the error <code>current user api does not support asynchronous calls</code>, the deployment supports <strong>synchronous calls</strong> only. Change the request header to <code>X-DashScope-Async: disable</code> and keep the rest of the call unchanged.</p></div></div>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs" class="tabbed-content-box section"><section id="qwen-audio-3-x-asr-flash-filetrans-fun-asr" class="section"><h4 id="qwen-audio-3-x-asr-flash-filetrans-fun-asr-h4">Qwen-Audio-3.x-ASR-Flash-Filetrans/Fun-ASR</h4><p>Because audio and video files can be large, the file transcription API uses asynchronous calls: submit a task, poll the query API for its status, and retrieve the recognition result after the task completes.</p><section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-2" class="tabbed-content-box section"><section id="curl" class="section"><h4 id="curl-h4">cURL</h4><p>When you call the API with cURL, first submit the task to get a <code>task_id</code>, and then query the task result by using that ID.</p><section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-3" class="tabbed-content-box section"><section id="submit-a-task" class="section"><h4 id="submit-a-task-h4">Submit a task</h4><p>The following configuration is for the Singapore region. Replace <code>{WorkspaceId}</code> with your actual <a href="/help/en/model-studio/regions#h2_migrate_domain">Workspace ID</a>. The configuration differs by region.</p><pre data-tag="codeblock" id="code-block" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl -X POST &#x27;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1/services/audio/asr/transcription&#x27; \
+-H &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+-H &quot;Content-Type: application/json&quot; \
+-H &quot;X-DashScope-Async: enable&quot; \
+-d &#x27;{
+    &quot;model&quot;: &quot;qwen-audio-3.1-asr-flash-filetrans&quot;,
+    &quot;input&quot;: {
+        &quot;file_urls&quot;: [
+            &quot;{YOUR_AUDIO_URL}&quot;
+        ]
+    },
+    &quot;parameters&quot;: {
+        &quot;channel_id&quot;: [0],
+        &quot;language_hints&quot;: [&quot;zh&quot;, &quot;en&quot;]
+    }
+}&#x27;
+</code></pre></section><section id="get-the-task-result" class="section"><h4 id="get-the-task-result-h4">Get the task result</h4><p>This query API allows 20 QPS by default and can scale up to 100 QPS. For a higher frequency, or to avoid throttling from polling, configure an asynchronous task callback (see <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#nrt03_callback_h3">High-concurrency scenarios: use callbacks instead of polling</a>).</p><p>The following configuration is for the Singapore region. Replace <code>{WorkspaceId}</code> with your actual <a href="/help/en/model-studio/regions#h2_migrate_domain">Workspace ID</a>. The configuration differs by region.</p><pre data-tag="codeblock" id="code-block-2" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl -X GET &#x27;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1/tasks/{task_id}&#x27; \
+-H &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+-H &quot;Content-Type: application/json&quot;
+</code></pre></section><section id="download-the-recognition-result" class="section"><h4 id="download-the-recognition-result-h4">Download the recognition result</h4><p>After the task succeeds, the <code>output.results[].transcription_url</code> returned by the query API points to a publicly downloadable JSON file that contains the complete recognition result. This URL is valid for <strong>24 hours</strong> by default, so download and save it promptly.</p><pre data-tag="codeblock" id="code-block-3" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code># Replace {transcription_url} with the transcription_url value returned by the query API
+curl -sS &#x27;{transcription_url}&#x27; -o transcription.json
+cat transcription.json | jq .
+</code></pre></section></section></section><section id="python" class="section"><h4 id="python-h4">Python</h4><pre data-tag="codeblock" id="code-block-4" outputclass="language-python" code-type="xCode" class="pre codeblock language-python"><code>from http import HTTPStatus
+from dashscope.audio.asr import Transcription
+from urllib import request
+import dashscope
+import os
+import json
+
+# The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+dashscope.base_http_api_url = &#x27;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1&#x27;
+
+# The API Key differs between the Singapore and Beijing regions. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+# If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: dashscope.api_key = &quot;sk-xxx&quot;
+dashscope.api_key = os.getenv(&quot;DASHSCOPE_API_KEY&quot;)
+
+task_response = Transcription.async_call(
+    model=&#x27;qwen-audio-3.1-asr-flash-filetrans&#x27;,
+    file_urls=[&#x27;{YOUR_AUDIO_URL}&#x27;],
+    language_hints=[&#x27;zh&#x27;, &#x27;en&#x27;]  # language_hints is an optional parameter used to specify the language codes of the audio to be recognized. For the value range, see the API reference documentation.
+)
+
+transcription_response = Transcription.wait(task=task_response.output.task_id)
+
+if transcription_response.status_code == HTTPStatus.OK:
+    for transcription in transcription_response.output[&#x27;results&#x27;]:
+        if transcription[&#x27;subtask_status&#x27;] == &#x27;SUCCEEDED&#x27;:
+            url = transcription[&#x27;transcription_url&#x27;]
+            result = json.loads(request.urlopen(url).read().decode(&#x27;utf8&#x27;))
+            print(json.dumps(result, indent=4,
+                            ensure_ascii=False))
+        else:
+            print(&#x27;transcription failed!&#x27;)
+            print(transcription)
+else:
+    print(&#x27;Error: &#x27;, transcription_response.output.message)
+</code></pre></section><section id="java" class="section"><h4 id="java-h4">Java</h4><pre data-tag="codeblock" id="code-block-5" outputclass="language-java" code-type="xCode" class="pre codeblock language-java"><code>import com.alibaba.dashscope.audio.asr.transcription.*;
+import com.alibaba.dashscope.utils.Constants;
+import com.google.gson.*;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+        Constants.baseHttpApiUrl = &quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1&quot;;
+        // Create the transcription request parameters.
+        TranscriptionParam param =
+                TranscriptionParam.builder()
+                        // The API Key differs between the Singapore and Beijing regions. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+                        // If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: .apiKey(&quot;sk-xxx&quot;)
+                        .apiKey(System.getenv(&quot;DASHSCOPE_API_KEY&quot;))
+                        .model(&quot;qwen-audio-3.1-asr-flash-filetrans&quot;)
+                        // language_hints is an optional parameter used to specify the language codes of the audio to be recognized. For the value range, see the API reference documentation.
+                        .parameter(&quot;language_hints&quot;, new String[]{&quot;zh&quot;, &quot;en&quot;})
+                        .fileUrls(
+                                Arrays.asList(
+                                        &quot;{YOUR_AUDIO_URL}&quot;))
+                        .build();
+        try {
+            Transcription transcription = new Transcription();
+            // Submit the transcription request
+            TranscriptionResult result = transcription.asyncCall(param);
+            System.out.println(&quot;RequestId: &quot; + result.getRequestId());
+            // Check whether the task was submitted successfully
+            if (result.getTaskId() == null) {
+                System.out.println(&quot;Error: &quot; + result.getOutput());
+                System.exit(1);
+            }
+            // Block and wait for the task to complete and get the result
+            result = transcription.wait(
+                    TranscriptionQueryParam.FromTranscriptionParam(param, result.getTaskId()));
+            // Get the transcription result
+            List&lt;TranscriptionTaskResult&gt; taskResultList = result.getResults();
+            if (taskResultList != null &amp;&amp; taskResultList.size() &gt; 0) {
+                for (TranscriptionTaskResult taskResult : taskResultList) {
+                    String transcriptionUrl = taskResult.getTranscriptionUrl();
+                    HttpURLConnection connection =
+                            (HttpURLConnection) new URL(transcriptionUrl).openConnection();
+                    connection.setRequestMethod(&quot;GET&quot;);
+                    connection.connect();
+                    BufferedReader reader =
+                            new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                    JsonElement jsonResult = gson.fromJson(reader, JsonObject.class);
+                    System.out.println(gson.toJson(jsonResult));
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(&quot;error: &quot; + e);
+        }
+        System.exit(0);
+    }
+}
+</code></pre></section></section><section class="collapse" id="accordion-the-complete-recognition-result-is-printed-to-the-console-in-json-format-it-contains-the-transcribed-text-along-with-each-segments-start-and-end-time-in-the-audio-or-video-file-in-milliseconds"><p>The complete recognition result is printed to the console in JSON format. It contains the transcribed text along with each segment&#x27;s start and end time in the audio or video file, in milliseconds.</p><div><ul>
+<li>Recognition result</li>
+</ul><pre data-tag="codeblock" id="code-block-6" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+    &quot;file_url&quot;: &quot;{YOUR_AUDIO_URL}&quot;,
+    &quot;properties&quot;: {
+        &quot;audio_format&quot;: &quot;pcm_s16le&quot;,
+        &quot;channels&quot;: [
+            0
+        ],
+        &quot;original_sampling_rate&quot;: 16000,
+        &quot;original_duration_in_milliseconds&quot;: 3834
+    },
+    &quot;transcripts&quot;: [
+        {
+            &quot;channel_id&quot;: 0,
+            &quot;content_duration_in_milliseconds&quot;: 2480,
+            &quot;text&quot;: &quot;Hello World, this is the Alibaba Speech Lab.&quot;,
+            &quot;sentences&quot;: [
+                {
+                    &quot;begin_time&quot;: 760,
+                    &quot;end_time&quot;: 3240,
+                    &quot;text&quot;: &quot;Hello World, this is the Alibaba Speech Lab.&quot;,
+                    &quot;sentence_id&quot;: 1,
+                    &quot;words&quot;: [
+                        {
+                            &quot;begin_time&quot;: 760,
+                            &quot;end_time&quot;: 1000,
+                            &quot;text&quot;: &quot;Hello&quot;,
+                            &quot;punctuation&quot;: &quot;&quot;
+                        },
+                        {
+                            &quot;begin_time&quot;: 1000,
+                            &quot;end_time&quot;: 1120,
+                            &quot;text&quot;: &quot; World&quot;,
+                            &quot;punctuation&quot;: &quot;,&quot;
+                        },
+                        {
+                            &quot;begin_time&quot;: 1400,
+                            &quot;end_time&quot;: 1920,
+                            &quot;text&quot;: &quot;this is&quot;,
+                            &quot;punctuation&quot;: &quot;&quot;
+                        },
+                        {
+                            &quot;begin_time&quot;: 1920,
+                            &quot;end_time&quot;: 2520,
+                            &quot;text&quot;: &quot;the Alibaba&quot;,
+                            &quot;punctuation&quot;: &quot;&quot;
+                        },
+                        {
+                            &quot;begin_time&quot;: 2520,
+                            &quot;end_time&quot;: 2840,
+                            &quot;text&quot;: &quot;Speech&quot;,
+                            &quot;punctuation&quot;: &quot;&quot;
+                        },
+                        {
+                            &quot;begin_time&quot;: 2840,
+                            &quot;end_time&quot;: 3240,
+                            &quot;text&quot;: &quot;Lab&quot;,
+                            &quot;punctuation&quot;: &quot;.&quot;
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre></div></section></section><section id="qwen-audio-3-x-asr-flash-fun-asr-flash" class="section"><h4 id="qwen-audio-3-x-asr-flash-fun-asr-flash-h4">Qwen-Audio-3.x-ASR-Flash/Fun-ASR-Flash</h4><p>The Qwen-Audio-3.x-ASR-Flash and Fun-ASR-Flash model series support synchronous calls for audio files shorter than 5 minutes, and can return recognition results in streaming or non-streaming mode.</p><p>The following configuration is for the Singapore region. Replace <code>{WorkspaceId}</code> with your actual <a href="/help/en/model-studio/regions#h2_migrate_domain">Workspace ID</a>. The configuration differs by region. The API key for the Singapore region differs from the one for the Beijing region.</p><pre data-tag="codeblock" id="code-block-7" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl --location --request POST &#x27;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation&#x27; \
+     --header &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+     --header &quot;Content-Type: application/json&quot; \
+     --header &quot;X-DashScope-SSE: disable&quot; \
+     --data &#x27;{
+    &quot;model&quot;: &quot;qwen-audio-3.1-asr-flash&quot;,
+    &quot;input&quot;: {
+        &quot;messages&quot;: [
+            {
+                &quot;role&quot;: &quot;user&quot;,
+                &quot;content&quot;: [
+                    {
+                        &quot;type&quot;: &quot;input_audio&quot;,
+                        &quot;input_audio&quot;: {
+                            &quot;data&quot;: &quot;{YOUR_AUDIO_URL}&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    &quot;parameters&quot;: {
+        &quot;format&quot;: &quot;wav&quot;,
+        &quot;sample_rate&quot;: &quot;16000&quot;
+    }
+}&#x27;
+</code></pre><div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong><strong>Note:</strong> The response structure returned by the Qwen-Audio-3.x-ASR-Flash and Fun-ASR-Flash model series through the DashScope synchronous API (the multimodal-generation endpoint) differs from the standard DashScope multimodal response format. The actual response structure is as follows:</p><pre data-tag="codeblock" id="code-block-8" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+  &quot;output&quot;: {
+    &quot;output&quot;: {
+      &quot;sentence&quot;: {
+        &quot;text&quot;: &quot;Recognized text content&quot;
+      }
+    },
+    &quot;text&quot;: &quot;Hello World, this is the Alibaba Speech Lab.&quot;
+  },
+  &quot;request_id&quot;: &quot;...&quot;
+}
+</code></pre><p>Here, <code>output.output.sentence.text</code> and the top-level <code>output.text</code> are the recognized-text fields, and there is no <code>choices</code> field. Parse the response accordingly.</p></div></div></section><section id="paraformer" class="section"><h4 id="paraformer-h4">Paraformer</h4><p>The Paraformer sample code is similar to the asynchronous call for Fun-ASR. Replace the model value with a Paraformer model name.</p></section></section>
+<h2 id="advanced-features">Advanced features <span id="nrt03_advanced_h2"></span> <span id="nrt03_advanced_section"></span></h2>
+<h3 id="use-the-openai-compatible-api">Use the OpenAI-compatible API <span id="ea91a245532re"></span> <span id="b168ac32b9hp8"></span></h3>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>The US region does not support the OpenAI-compatible mode.</p></div></div>
+<p>Only the Qwen3-ASR-Flash series models support calls through the OpenAI-compatible mode. This mode accepts only publicly accessible audio file URLs. It does not accept the absolute path of a local audio file.</p>
+<p>Use OpenAI Python SDK 1.52.0 or later, or Node.js SDK 4.68.0 or later. To install or upgrade the SDK, run:</p>
+<pre data-tag="codeblock" id="code-block-9" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code># Python
+pip install -U &quot;openai&gt;=1.52.0&quot;
+
+# Node.js
+npm install openai@^4.68.0
+</code></pre>
+<p><code>asr_options</code> is not a standard OpenAI parameter. With the OpenAI Python SDK, pass it through <code>extra_body</code>. With the Node.js OpenAI SDK, pass <code>asr_options</code> directly as a top-level parameter in the request body.</p>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-4" class="tabbed-content-box section"><section id="input-audio-file-url" class="section"><h4 id="input-audio-file-url-h4">Input: audio file URL</h4><section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-5" class="tabbed-content-box section"><section id="python-sdk" class="section"><h4 id="python-sdk-h4">Python SDK</h4><pre data-tag="codeblock" id="code-block-10" outputclass="language-python" code-type="xCode" class="pre codeblock language-python"><code>from openai import OpenAI
+import os
+
+try:
+    client = OpenAI(
+        # The API Key differs between the Singapore/US regions and the Beijing region. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+        # If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: api_key = &quot;sk-xxx&quot;,
+        api_key=os.getenv(&quot;DASHSCOPE_API_KEY&quot;),
+        # The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+        base_url=&quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1&quot;,
+    )
+
+    stream_enabled = False  # Whether to enable streaming output
+    completion = client.chat.completions.create(
+        model=&quot;qwen3-asr-flash&quot;,
+        messages=[
+            {
+                &quot;content&quot;: [
+                    {
+                        &quot;type&quot;: &quot;input_audio&quot;,
+                        &quot;input_audio&quot;: {
+                            &quot;data&quot;: &quot;{YOUR_AUDIO_URL}&quot;
+                        }
+                    }
+                ],
+                &quot;role&quot;: &quot;user&quot;
+            }
+        ],
+        stream=stream_enabled,
+        # When stream is set to False, the stream_options parameter cannot be set
+        # stream_options={&quot;include_usage&quot;: True},
+        extra_body={
+            &quot;asr_options&quot;: {
+                # &quot;language&quot;: &quot;zh&quot;,
+                &quot;enable_itn&quot;: False
+            }
+        }
+    )
+    if stream_enabled:
+        full_content = &quot;&quot;
+        print(&quot;The streaming output is:&quot;)
+        for chunk in completion:
+            # If stream_options.include_usage is True, the choices field of the last chunk is an empty list and needs to be skipped (you can get the Token usage via chunk.usage)
+            print(chunk)
+            if chunk.choices and chunk.choices[0].delta.content:
+                full_content += chunk.choices[0].delta.content
+        print(f&quot;The complete content is: {full_content}&quot;)
+    else:
+        print(f&quot;The non-streaming output is: {completion.choices[0].message.content}&quot;)
+except Exception as e:
+    print(f&quot;Error message: {e}&quot;)
+</code></pre></section><section id="node-js-sdk" class="section"><h4 id="node-js-sdk-h4">Node.js SDK</h4><pre data-tag="codeblock" id="code-block-11" outputclass="language-javascript" code-type="xCode" class="pre codeblock language-javascript"><code>// Preparations before running:
+// Common to Windows/Mac/Linux:
+// 1. Make sure Node.js is installed (version &gt;= 14 recommended)
+// 2. Run the following command to install the required dependencies: npm install openai
+
+import OpenAI from &quot;openai&quot;;
+
+const client = new OpenAI({
+  // The API Key differs between the Singapore/US regions and the Beijing region. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+  // If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: apiKey: &quot;sk-xxx&quot;,
+  apiKey: process.env.DASHSCOPE_API_KEY,
+  // The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+  baseURL: &quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1&quot;,
+});
+
+async function main() {
+  try {
+    const streamEnabled = false; // Whether to enable streaming output
+    const completion = await client.chat.completions.create({
+      model: &quot;qwen3-asr-flash&quot;,
+      messages: [
+        {
+          role: &quot;user&quot;,
+          content: [
+            {
+              type: &quot;input_audio&quot;,
+              input_audio: {
+                data: &quot;{YOUR_AUDIO_URL}&quot;
+              }
+            }
+          ]
+        }
+      ],
+      stream: streamEnabled,
+      // When stream is set to False, the stream_options parameter cannot be set
+      // stream_options: {
+      //   &quot;include_usage&quot;: true
+      // },
+      asr_options: {
+        // language: &quot;zh&quot;,
+        enable_itn: false
+      }
+    });
+
+    if (streamEnabled) {
+      let fullContent = &quot;&quot;;
+      console.log(&quot;The streaming output is:&quot;);
+      for await (const chunk of completion) {
+        console.log(JSON.stringify(chunk));
+        if (chunk.choices &amp;&amp; chunk.choices.length &gt; 0) {
+          const delta = chunk.choices[0].delta;
+          if (delta &amp;&amp; delta.content) {
+            fullContent += delta.content;
+          }
+        }
+      }
+      console.log(`The complete content is: ${fullContent}`);
+    } else {
+      console.log(`The non-streaming output is: ${completion.choices[0].message.content}`);
+    }
+  } catch (err) {
+    console.error(`Error message: ${err}`);
+  }
+}
+
+main();
+</code></pre></section><section id="curl-2" class="section"><h4 id="curl-2-h4">cURL</h4><p>The following configuration is for the Singapore region. Replace <code>{WorkspaceId}</code> with your actual <a href="/help/en/model-studio/regions#h2_migrate_domain">Workspace ID</a>. The configuration differs by region.</p><pre data-tag="codeblock" id="code-block-12" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code>curl -X POST &#x27;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1/chat/completions&#x27; \
+-H &quot;Authorization: Bearer $DASHSCOPE_API_KEY&quot; \
+-H &quot;Content-Type: application/json&quot; \
+-d &#x27;{
+    &quot;model&quot;: &quot;qwen3-asr-flash&quot;,
+    &quot;messages&quot;: [
+        {
+            &quot;content&quot;: [
+                {
+                    &quot;type&quot;: &quot;input_audio&quot;,
+                    &quot;input_audio&quot;: {
+                        &quot;data&quot;: &quot;{YOUR_AUDIO_URL}&quot;
+                    }
+                }
+            ],
+            &quot;role&quot;: &quot;user&quot;
+        }
+    ],
+    &quot;stream&quot;:false,
+    &quot;asr_options&quot;: {
+        &quot;enable_itn&quot;: false
+    }
+}&#x27;
+</code></pre></section></section></section><section id="input-base64-encoded-audio-file" class="section"><h4 id="input-base64-encoded-audio-file-h4">Input: Base64-encoded audio file</h4><p>Pass Base64-encoded data as a <a href="https://www.rfc-editor.org/rfc/rfc2397">Data URL</a> in the format <code>data:&lt;mediatype&gt;;base64,&lt;data&gt;</code>.</p><ul>
+<li>
+<p><code>&lt;mediatype&gt;</code>: the MIME type.</p>
+<p>The MIME type varies by audio format. For example:</p>
+<ul>
+<li>WAV: <code>audio/wav</code></li>
+<li>MP3: <code>audio/mpeg</code></li>
+</ul>
+</li>
+<li>
+<p><code>&lt;data&gt;</code>: the Base64-encoded string of the audio.</p>
+<p>Base64 encoding increases the data size. Keep the source file small enough that the encoded result still meets the input audio size limit (10 MB).</p>
+</li>
+<li>
+<p>Example: <code>data:audio/wav;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//PAxABQ/BXRbMPe4IQAhl9</code></p>
+<section class="collapse" id="accordion-click-to-view-sample-code"><p>Click to view sample code</p><div><pre data-tag="codeblock" id="code-block-13" outputclass="language-python" code-type="xCode" class="pre codeblock language-python"><code>import base64, pathlib
+
+# input.mp3 is the local audio file used for voice cloning. Replace it with the path to your own audio file and make sure it meets the audio requirements.
+file_path = pathlib.Path(&quot;{YOUR_AUDIO_FILE}&quot;)
+base64_str = base64.b64encode(file_path.read_bytes()).decode()
+data_uri = f&quot;data:audio/mpeg;base64,{base64_str}&quot;
+</code></pre><pre data-tag="codeblock" id="code-block-14" outputclass="language-java" code-type="xCode" class="pre codeblock language-java"><code>import java.nio.file.*;
+import java.util.Base64;
+
+public class Main {
+    /**
+     * filePath is the local audio file used for voice cloning. Replace it with the path to your own audio file and make sure it meets the audio requirements.
+     */
+    public static String toDataUrl(String filePath) throws Exception {
+        byte[] bytes = Files.readAllBytes(Paths.get(filePath));
+        String encoded = Base64.getEncoder().encodeToString(bytes);
+        return &quot;data:audio/mpeg;base64,&quot; + encoded;
+    }
+
+    // Usage example
+    public static void main(String[] args) throws Exception {
+        System.out.println(toDataUrl(&quot;{YOUR_AUDIO_FILE}&quot;));
+    }
+}
+</code></pre></div></section>
+</li>
+</ul><div outputclass="tabbed-codeblock" data-tag="fig" id="fig-code-group" class="tabbed-codeblock-box"><div class="tab-box"></div><input id="fig-code-group-python-sdk-tab" type="radio" name="check-fig-code-group" checked=""/><label for="fig-code-group-python-sdk-tab">Python SDK</label><div class="codeblock-item"><pre data-tag="codeblock" id="code-code-group-python-sdk" outputclass="language-python" code-type="xCode" class="pre codeblock language-python"><code>import base64
+from openai import OpenAI
+import os
+import pathlib
+
+try:
+    # Replace with the actual audio file path
+    file_path = &quot;{YOUR_AUDIO_FILE}&quot;
+    # Replace with the actual MIME type of the audio file
+    audio_mime_type = &quot;audio/mpeg&quot;
+
+    file_path_obj = pathlib.Path(file_path)
+    if not file_path_obj.exists():
+        raise FileNotFoundError(f&quot;Audio file does not exist: {file_path}&quot;)
+
+    base64_str = base64.b64encode(file_path_obj.read_bytes()).decode()
+    data_uri = f&quot;data:{audio_mime_type};base64,{base64_str}&quot;
+
+    client = OpenAI(
+        # The API Key differs between the Singapore/US regions and the Beijing region. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+        # If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: api_key = &quot;sk-xxx&quot;,
+        api_key=os.getenv(&quot;DASHSCOPE_API_KEY&quot;),
+        # The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+        base_url=&quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1&quot;,
+    )
+
+    stream_enabled = False  # Whether to enable streaming output
+    completion = client.chat.completions.create(
+        model=&quot;qwen3-asr-flash&quot;,
+        messages=[
+            {
+                &quot;content&quot;: [
+                    {
+                        &quot;type&quot;: &quot;input_audio&quot;,
+                        &quot;input_audio&quot;: {
+                            &quot;data&quot;: data_uri
+                        }
+                    }
+                ],
+                &quot;role&quot;: &quot;user&quot;
+            }
+        ],
+        stream=stream_enabled,
+        # When stream is set to False, the stream_options parameter cannot be set
+        # stream_options={&quot;include_usage&quot;: True},
+        extra_body={
+            &quot;asr_options&quot;: {
+                # &quot;language&quot;: &quot;zh&quot;,
+                &quot;enable_itn&quot;: False
+            }
+        }
+    )
+    if stream_enabled:
+        full_content = &quot;&quot;
+        print(&quot;The streaming output is:&quot;)
+        for chunk in completion:
+            # If stream_options.include_usage is True, the choices field of the last chunk is an empty list and needs to be skipped (you can get the Token usage via chunk.usage)
+            print(chunk)
+            if chunk.choices and chunk.choices[0].delta.content:
+                full_content += chunk.choices[0].delta.content
+        print(f&quot;The complete content is: {full_content}&quot;)
+    else:
+        print(f&quot;The non-streaming output is: {completion.choices[0].message.content}&quot;)
+except Exception as e:
+    print(f&quot;Error message: {e}&quot;)
+</code></pre></div><input id="fig-code-group-node-js-sdk-tab" type="radio" name="check-fig-code-group"/><label for="fig-code-group-node-js-sdk-tab">Node.js SDK</label><div class="codeblock-item"><pre data-tag="codeblock" id="code-code-group-node-js-sdk" outputclass="language-javascript" code-type="xCode" class="pre codeblock language-javascript"><code>// Preparations before running:
+// Common to Windows/Mac/Linux:
+// 1. Make sure Node.js is installed (version &gt;= 14 recommended)
+// 2. Run the following command to install the required dependencies: npm install openai
+
+import OpenAI from &quot;openai&quot;;
+import { readFileSync } from &#x27;fs&#x27;;
+
+const client = new OpenAI({
+  // The API Key differs between the Singapore/US regions and the Beijing region. Get an API Key: https://www.alibabacloud.com/help/model-studio/get-api-key
+  // If you have not configured the environment variable, replace the following line with your Alibaba Cloud Model Studio API Key: apiKey: &quot;sk-xxx&quot;,
+  apiKey: process.env.DASHSCOPE_API_KEY,
+  // The following is the configuration for the Singapore region. When calling, replace &quot;{WorkspaceId}&quot; with your actual workspace ID. The configuration differs by region.
+  baseURL: &quot;https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1&quot;,
+});
+
+const encodeAudioFile = (audioFilePath) =&gt; {
+    const audioFile = readFileSync(audioFilePath);
+    return audioFile.toString(&#x27;base64&#x27;);
+};
+
+// Replace with the actual audio file path
+const dataUri = `data:audio/mpeg;base64,${encodeAudioFile(&quot;{YOUR_AUDIO_FILE}&quot;)}`;
+
+async function main() {
+  try {
+    const streamEnabled = false; // Whether to enable streaming output
+    const completion = await client.chat.completions.create({
+      model: &quot;qwen3-asr-flash&quot;,
+      messages: [
+        {
+          role: &quot;user&quot;,
+          content: [
+            {
+              type: &quot;input_audio&quot;,
+              input_audio: {
+                data: dataUri
+              }
+            }
+          ]
+        }
+      ],
+      stream: streamEnabled,
+      // When stream is set to False, the stream_options parameter cannot be set
+      // stream_options: {
+      //   &quot;include_usage&quot;: true
+      // },
+      asr_options: {
+        // language: &quot;zh&quot;,
+        enable_itn: false
+      }
+    });
+
+    if (streamEnabled) {
+      let fullContent = &quot;&quot;;
+      console.log(&quot;The streaming output is:&quot;);
+      for await (const chunk of completion) {
+        console.log(JSON.stringify(chunk));
+        if (chunk.choices &amp;&amp; chunk.choices.length &gt; 0) {
+          const delta = chunk.choices[0].delta;
+          if (delta &amp;&amp; delta.content) {
+            fullContent += delta.content;
+          }
+        }
+      }
+      console.log(`The complete content is: ${fullContent}`);
+    } else {
+      console.log(`The non-streaming output is: ${completion.choices[0].message.content}`);
+    }
+  } catch (err) {
+    console.error(`Error message: ${err}`);
+  }
+}
+
+main();
+</code></pre></div></div></section></section>
+<h3 id="process-long-audio-files">Process long audio files <span id="nrt03_longaudio_h3"></span> <span id="nrt03_hotwords_section"></span></h3>
+<p>Non-real-time speech recognition supports asynchronous transcription of long audio files. This suits scenarios such as meeting minutes, interview transcripts, and call playback.</p>
+<strong>Limitations:</strong>
+<ul>
+<li><strong>Qwen-Audio-3.x-ASR-Flash-Filetrans</strong>/<strong>Fun-ASR / Qwen3-ASR-Flash-Filetrans / Paraformer:</strong> a single audio file can be up to 2 GB in size and 12 hours in duration.</li>
+<li><strong>Qwen-Audio-3.1-ASR-Flash:</strong> a single audio file can be up to 2 GB in size and 5 minutes in duration.</li>
+<li><strong>Qwen-Audio-3.0-ASR-Flash/Fun-ASR-Flash/Qwen3-ASR-Flash:</strong> a single audio file can be up to 10 MB in size and 5 minutes in duration. For longer audio, use Qwen-Audio-3.1-ASR-Flash-Filetrans, Fun-ASR, or Qwen3-ASR-Flash-Filetrans.</li>
+<li><strong>When speaker diarization is enabled:</strong> keep the audio duration within 2 hours. Longer audio may cause recognition failures or timeouts. For more information, see <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#nrt03_diarization_h3">Speaker diarization</a>.</li>
+</ul>
+<p><strong>Call flow:</strong> long audio transcription uses an asynchronous task model with three steps:</p>
+<ol>
+<li>Submit the transcription task and get a <code>task_id</code>.</li>
+<li>Poll the query API for the task status, or use the SDK&#x27;s wait method to block until the task completes.</li>
+<li>After the task completes, download the recognition result JSON from the returned URL.</li>
+</ol>
+<p>For sample code, see the <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#7818a3bc466d6">Quick start</a> code in Non-real-time speech recognition.</p>
+<h3 id="streaming-output">Streaming output <span id="nrt03_streaming_h3"></span> <span id="nrt03_streaming_section"></span></h3>
+<p>Qwen-Audio-3.1-ASR-Flash supports streaming recognition results over HTTP SSE. For the request and response format, see <a href="/help/en/model-studio/fun-asr-flash-recorded-speech-recognition-http-api">HTTP API</a>.</p>
+<p>Qwen-Audio-3.0-ASR-Flash/Fun-ASR-Flash/Qwen3-ASR-Flash support streaming output: they return intermediate results as recognition proceeds. This suits scenarios that need real-time progress feedback.</p>
+<p>Asynchronous transcription models such as Qwen-Audio-3.x-ASR-Flash-Filetrans, Fun-ASR, Qwen3-ASR-Flash-Filetrans, and Paraformer do not support streaming output. Get the final result by polling the task (for more information, see <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#nrt03_longaudio_h3">Process long audio files</a>).</p>
+<strong>How to enable:</strong>
+<ul>
+<li>DashScope Python SDK: set the <code>stream</code> parameter to <code>True</code>.</li>
+<li>DashScope Java SDK: call the <code>streamCall</code> API.</li>
+<li>DashScope HTTP: set the <code>X-DashScope-SSE</code> header to <code>enable</code>.</li>
+<li>OpenAI-compatible SDK: set the <code>stream</code> parameter to <code>True</code>.</li>
+</ul>
+<p>For Qwen3-ASR-Flash streaming output examples, see <a href="/help/en/model-studio/qwen-asr-api-reference#qwen-asr-sync-examples">Request examples</a> and select the Streaming output tab.</p>
+<h3 id="improve-accuracy-with-hotwords">Improve accuracy with hotwords <span id="nrt03_hotwords_h3"></span> <span id="1898afb4ea87z"></span></h3>
+<p>Hotwords improve recognition accuracy for domain-specific proper nouns such as names, place names, and product names. For details on how to create and use hotwords, see <a href="/help/en/model-studio/improve-asr-accuracy">Improve recognition accuracy</a>.</p>
+<p>Different SDKs use different naming conventions for these parameters, such as dictionary keys, object properties, or methods. For the full field mapping, see the API reference for each SDK.</p>
+<h3 id="improve-accuracy-with-context-enhancement">Improve accuracy with context enhancement <span id="33fdf0438d5jd"></span> <span id="0fd01a2fb6cbr"></span></h3>
+<p>Context enhancement passes the conversation history to the ASR model, which significantly improves transcription accuracy for proper nouns. For details on how to use this feature and for example results, see <a href="/help/en/model-studio/improve-asr-accuracy#ctx_enhance_h2">Context enhancement</a>.</p>
+<h3 id="speaker-diarization">Speaker diarization <span id="nrt03_diarization_h3"></span> <span id="nrt03_diarization_section"></span></h3>
+<p>Qwen-Audio-3.1-ASR-Flash enables speaker diarization with <code>speaker_diarization_enabled</code>. For its parameters and response structure, see <a href="/help/en/model-studio/fun-asr-flash-recorded-speech-recognition-http-api">HTTP API</a>.</p>
+<p>Speaker diarization automatically identifies different speakers in the audio and labels each sentence in the transcription result with a speaker tag. This suits scenarios such as multi-party meetings and interview recordings.</p>
+<p><strong>The following configuration and example apply to:</strong> the Qwen-Audio-3.x-ASR-Flash-Filetrans, Fun-ASR, and Paraformer series models.</p>
+<p><strong>How to enable:</strong> set the <code>diarization_enabled</code> parameter to <code>true</code> in the API request. In the result, each sentence includes a <code>speaker_id</code> field that identifies the speaker.</p>
+<p>Example return structure (excerpt):</p>
+<pre data-tag="codeblock" id="code-block-15" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+  &quot;transcripts&quot;: [
+    {
+      &quot;sentences&quot;: [
+        { &quot;begin_time&quot;: 100, &quot;end_time&quot;: 3820, &quot;text&quot;: &quot;Hello, let&#x27;s discuss the project progress today.&quot;, &quot;speaker_id&quot;: 0 },
+        { &quot;begin_time&quot;: 3820, &quot;end_time&quot;: 6500, &quot;text&quot;: &quot;Sure, let me give a quick report first.&quot;, &quot;speaker_id&quot;: 1 }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Different SDKs use different naming conventions for these fields, such as dictionary keys, object properties, or methods. For the full field mapping, see the API reference for each SDK.</p>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>When speaker diarization is enabled, keep the audio duration within 2 hours. Longer audio may cause recognition failures or timeouts. For the audio length limits when diarization is disabled, see <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#nrt03_longaudio_h3">Process long audio files</a>. Speaker diarization supports mono audio only.</p></div></div>
+<p>For the full field definitions, see the API reference.</p>
+<h3 id="sensitive-word-filtering">Sensitive word filtering <span id="nrt03_sensitive_h3"></span> <span id="nrt03_sensitive_section"></span></h3>
+<p>Sensitive word filtering replaces or removes sensitive words in the recognition result. This suits scenarios such as customer service quality inspection, content compliance, and subtitle moderation.</p>
+<p><strong>Supported models:</strong> the Qwen-Audio-3.x-ASR-Flash-Filetrans, Fun-ASR, and Paraformer series models.</p>
+<p><strong>Default behavior:</strong> when the <code>special_word_filter</code> parameter is not passed, the system uses the built-in <a href="https://dashscope.oss-cn-beijing.aliyuncs.com/samples/audio/paraformer/%E7%99%BE%E7%82%BC%E6%95%8F%E6%84%9F%E8%AF%8D%E5%88%97%E8%A1%A8_20230716.words.txt">Model Studio sensitive word list</a>. Matched words are replaced with an equal-length string of <code>*</code>.</p>
+<p><strong>Custom configuration:</strong> <code>special_word_filter</code> is a JSON object with three subfields:</p>
+<ul>
+<li><code>filter_with_signed.word_list</code>: a string array of sensitive words to replace with an equal-length string of <code>*</code>. For example, with <code>[&quot;test&quot;]</code>, &quot;Please help me test this&quot; becomes &quot;Please help me **** this&quot;.</li>
+<li><code>filter_with_empty.word_list</code>: a string array of sensitive words to remove entirely from the result. For example, with <code>[&quot;start&quot;]</code>, &quot;Is the game about to start now&quot; becomes &quot;Is the game about to now&quot;.</li>
+<li><code>system_reserved_filter</code>: a boolean value that defaults to <code>true</code>. It controls whether to also apply the system&#x27;s built-in sensitive word list, which takes effect together with your custom list.</li>
+</ul>
+<p>Configuration example:</p>
+<pre data-tag="codeblock" id="code-block-16" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+  &quot;special_word_filter&quot;: {
+    &quot;filter_with_signed&quot;: {
+      &quot;word_list&quot;: [&quot;test&quot;]
+    },
+    &quot;filter_with_empty&quot;: {
+      &quot;word_list&quot;: [&quot;start&quot;, &quot;happen&quot;]
+    },
+    &quot;system_reserved_filter&quot;: true
+  }
+}
+</code></pre>
+<p>Different SDKs use different naming conventions for these parameters, such as dictionary keys, object properties, or methods. For the full field mapping, see the API reference.</p>
+<h3 id="emotion-recognition">Emotion recognition <span id="nrt03_emotion_h3"></span></h3>
+<p>The Qwen3-ASR-Flash-Filetrans and Qwen3-ASR-Flash series models have emotion recognition permanently enabled, with no additional configuration required. The result includes an emotion tag for the speaker, chosen from seven fine-grained emotions: <code>surprised</code>, <code>neutral</code>, <code>happy</code>, <code>sad</code>, <code>disgusted</code>, <code>angry</code>, and <code>fearful</code>.</p>
+<p><strong>Field paths</strong> (vary by API):</p>
+<ul>
+<li><strong>OpenAI-compatible API</strong> (Qwen3-ASR-Flash real-time transcription): nested in <code>choices[].delta.annotations[].emotion</code> (streaming output) or <code>choices[].message.annotations[].emotion</code> (non-streaming).</li>
+<li><strong>DashScope synchronous API</strong> (Qwen3-ASR-Flash): nested in <code>output.choices[].message.annotations[].emotion</code>.</li>
+<li><strong>DashScope asynchronous task API</strong> (Qwen3-ASR-Flash-Filetrans recording file transcription): nested in <code>transcripts[].sentences[].emotion</code>, alongside the timestamp, speaker, and other fields in each sentence object.</li>
+</ul>
+<p>Example return structure (excerpt from the DashScope asynchronous task API):</p>
+<pre data-tag="codeblock" id="code-block-17" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+  &quot;transcripts&quot;: [{
+    &quot;sentences&quot;: [{
+      &quot;begin_time&quot;: 0,
+      &quot;end_time&quot;: 1440,
+      &quot;text&quot;: &quot;Welcome to Alibaba Cloud.&quot;,
+      &quot;emotion&quot;: &quot;neutral&quot;,
+      &quot;language&quot;: &quot;en&quot;
+    }]
+  }]
+}
+</code></pre>
+<p>Different SDKs use different naming conventions for these fields, such as dictionary keys, object properties, or methods. For the full field mapping, see the API reference.</p>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>The Qwen-Audio-3.x-ASR-Flash-Filetrans, Qwen-Audio-3.x-ASR-Flash, Fun-ASR-Flash, Fun-ASR, and Paraformer non-real-time models do not support emotion recognition. To use emotion recognition in real-time recognition, see the corresponding section in <a href="/help/en/model-studio/real-time-speech-recognition-user-guide">Real-time speech recognition</a>.</p></div></div>
+<h3 id="get-timestamps">Get timestamps <span id="nrt03_timestamp_h3"></span> <span id="nrt03_timestamp_section"></span></h3>
+<p>For timestamp stability and field paths in Flash streaming responses, see <a href="/help/en/model-studio/fun-asr-flash-recorded-speech-recognition-http-api#h-fl-stream-logic">HTTP API response handling</a>.</p>
+<p>Non-real-time speech recognition can output timestamps in the transcription result, which helps with subtitle generation, keyword highlighting, and audio/video editing. Qwen-Audio-3.x-ASR-Flash-Filetrans, Qwen-Audio-3.x-ASR-Flash, Fun-ASR, Fun-ASR-Flash, Qwen3-ASR-Flash-Filetrans, and Paraformer all support timestamps, but the default behavior and control method differ by model:</p>
+<ul>
+<li><strong>Qwen-Audio-3.x-ASR-Flash-Filetrans/Qwen-Audio-3.x-ASR-Flash/Fun-ASR/Fun-ASR-Flash/Paraformer:</strong> timestamps are permanently enabled and cannot be turned off.</li>
+<li><strong>Qwen3-ASR-Flash-Filetrans:</strong> only the DashScope asynchronous call supports timestamps, and timestamps are permanently enabled. Use the <code>enable_words</code> request parameter to control the timestamp level: set it to <code>false</code> (default) to return sentence-level timestamps, or <code>true</code> to return word-level timestamps. Word-level timestamps support only the following languages: Chinese, English, Japanese, Korean, German, French, Spanish, Italian, Portuguese, and Russian. Accuracy is not guaranteed for other languages.</li>
+</ul>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>When you call Qwen3-ASR-Flash through the OpenAI-compatible API, the output form is <code>chat.completion</code>, which does not return timestamp fields. For timestamps, use Qwen3-ASR-Flash-Filetrans (the asynchronous task API).</p></div></div>
+<p>Timestamps are in milliseconds and are returned at two levels:</p>
+<ul>
+<li><strong>Sentence level:</strong> <code>sentences[].begin_time</code> and <code>sentences[].end_time</code> mark the start and end time of each sentence in the audio.</li>
+<li><strong>Word level:</strong> the <code>sentences[].words[]</code> array, where each element contains <code>begin_time</code>, <code>end_time</code>, and <code>text</code> (the text of that word).</li>
+</ul>
+<p>Example return structure (excerpt from the DashScope asynchronous task API):</p>
+<pre data-tag="codeblock" id="code-block-18" outputclass="language-json" code-type="xCode" class="pre codeblock language-json"><code>{
+  &quot;transcripts&quot;: [{
+    &quot;sentences&quot;: [{
+      &quot;begin_time&quot;: 100,
+      &quot;end_time&quot;: 3820,
+      &quot;text&quot;: &quot;Hello, let&#x27;s discuss the project progress today.&quot;,
+      &quot;words&quot;: [
+        { &quot;begin_time&quot;: 100, &quot;end_time&quot;: 596, &quot;text&quot;: &quot;Hello,&quot; },
+        { &quot;begin_time&quot;: 596, &quot;end_time&quot;: 844, &quot;text&quot;: &quot;let&#x27;s&quot; }
+      ]
+    }]
+  }]
+}
+</code></pre>
+<div class="note note-important"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Important</strong>The in-audio timestamp is a millisecond integer (such as <code>100</code>). Do not confuse it with the task-level <code>end_time</code> (the task completion time, a string date such as <code>&quot;2024-09-12 15:11:40.903&quot;</code>). These are different fields.</p></div></div>
+<p>Different SDKs use different naming conventions for these fields, such as dictionary keys, object properties, or methods. For the full field mapping, see the API reference.</p>
+<h2 id="apply-in-production">Apply in production <span id="nrt04_prod_h2"></span> <span id="nrt04_prod_section"></span></h2>
+<p>When you apply non-real-time speech recognition in production, the following best practices improve recognition quality and system stability.</p>
+<h3 id="high-concurrency-scenarios-use-callbacks-instead-of-polling">High-concurrency scenarios: use callbacks instead of polling <span id="nrt03_callback_h3"></span> <span id="nrt03_callback_section"></span></h3>
+<p>For asynchronous transcription tasks (Qwen-Audio-3.0-ASR-Flash-Filetrans, Fun-ASR, Qwen3-ASR-Flash-Filetrans, and Paraformer), you submit the task through <code>POST /api/v1/services/audio/asr/transcription</code> and then usually get the result by periodically calling the query API <code>GET /api/v1/tasks/{task_id}</code>. <strong>This query API defaults to 20 QPS and scales up to 100 QPS. In high-concurrency batch scenarios, frequent polling easily triggers throttling.</strong></p>
+<p>Configure callback notifications through EventBridge. When a task completes, Model Studio automatically pushes a <code>dashscope:System:AsyncTaskFinish</code> event to your configured target (an HTTP/HTTPS endpoint or a RocketMQ topic). After the consumer receives the event, it no longer needs to call the query API, which avoids the throttling risk of frequent polling. For more information, see <a href="/help/en/model-studio/async-task-api">Configure EventBridge callback notifications</a>.</p>
+<h4 id="supported-models">Supported models <span id="nrt03_callback_h4_scope"></span> <span id="f661fedc4cdgv"></span></h4>
+<ul>
+<li><strong>Supported:</strong> Qwen-Audio-3.0-ASR-Flash-Filetrans, Fun-ASR, Qwen3-ASR-Flash-Filetrans, and Paraformer (all asynchronous transcription tasks).</li>
+<li><strong>Not supported:</strong> Qwen3-ASR-Flash (synchronous or streaming calls, which are not asynchronous tasks).</li>
+</ul>
+<h4 id="callback-message-content">Callback message content <span id="nrt03_callback_h4_body"></span> <span id="22ad1369908bz"></span></h4>
+<p>For all three models, the callback message body has <code>data.contain_result</code> set to <code>true</code>, and <code>data.output_result</code> directly carries <code>transcription_url</code>. After the consumer receives the callback, it can get the recognition result without calling <code>GET /api/v1/tasks/{task_id}</code> again. However, the result field path and structure differ across the three models. See the following table.</p>
+<div class="note note-note"><div class="note-icon-wrapper"></div><div class="note-content"><p><strong>Note</strong>When you write the consumer, choose the correct path for the model you use. Do not hardcode a single path. In failure scenarios, <code>data.output_result.output</code> no longer contains <code>results</code>/<code>result</code>; instead it contains <code>code</code> and <code>message</code> fields. Check <code>data.task_status</code> first, then read the result.</p></div></div>
+<table style="display:table;table-layout:fixed;width:100%;overflow-wrap:anywhere"><colgroup><col style="width:22%"/><col style="width:27%"/><col style="width:38%"/><col style="width:13%"/></colgroup><thead><tr><th style="vertical-align:top"><p><strong>Model</strong></p></th><th style="vertical-align:top"><p><strong>Submission parameter</strong></p></th><th style="vertical-align:top"><p><strong>Result field path (based on the callback body)</strong></p></th><th style="vertical-align:top"><p><strong>usage field</strong></p></th></tr></thead><tbody><tr><td style="vertical-align:top"><p>Qwen-Audio-3.0-ASR-Flash-Filetrans, Fun-ASR</p></td><td style="vertical-align:top"><p><code>input.file_urls</code> (array; only 1 URL per call)</p></td><td style="vertical-align:top"><p><code>data.output_result.output.results[ ].transcription_url</code> (array, one entry per file, with <code>subtask_status</code>; also includes <code>task_metrics</code>)</p></td><td style="vertical-align:top"><p><code>duration</code></p></td></tr><tr><td style="vertical-align:top"><p>Paraformer</p></td><td style="vertical-align:top"><p><code>input.file_urls</code> (array; only 1 URL per call)</p></td><td style="vertical-align:top"><p>Same as Qwen-Audio-3.0-ASR-Flash-Filetrans/Fun-ASR: <code>data.output_result.output.results[ ].transcription_url</code></p></td><td style="vertical-align:top"><p><code>duration</code></p></td></tr><tr><td style="vertical-align:top"><p>Qwen3-ASR-Flash-Filetrans</p></td><td style="vertical-align:top"><p><code>input.file_url</code> (<strong>single object</strong>; only 1 URL per call)</p></td><td style="vertical-align:top"><p><code>data.output_result.output.result.transcription_url</code> (<strong>single object</strong>, without <code>results[ ]</code> / <code>task_metrics</code>)</p></td><td style="vertical-align:top"><p><code>seconds</code></p></td></tr></tbody></table>
+<h4 id="usage-notes">Usage notes <span id="nrt03_callback_h4_caveats"></span> <span id="36ce5ad07397w"></span></h4>
+<p><strong>Security (HTTP/HTTPS delivery):</strong> in production, verify the X-Eventbridge-Signature* header fields in the callback request before you consume it. Otherwise, any external IP can forge an AsyncTaskFinish event and inject fake recognition results. Also set a receive timeout of at least 5 seconds on the receiver. The RocketMQ delivery method has no message-level signature; its security is guaranteed by the RocketMQ authentication mechanism.</p>
+<p><strong>Delivery latency:</strong> from task completion (end_time) to when the delivery target (an HTTP/HTTPS endpoint or a RocketMQ topic) receives the message, the delay is typically about 1 to 90 seconds. The exact latency depends on the real-time load of EventBridge.</p>
+<p><strong>Idempotency:</strong> the same event may be delivered multiple times due to retries. Implement idempotent processing on the consumer, using the CloudEvents data.id or data.task_id as the deduplication key.</p>
+<h3 id="production-recommendations">Production recommendations <span id="nrt04_prod_tips_h3"></span> <span id="nrt04_prod_tips"></span></h3>
+<ul>
+<li><strong>File hosting:</strong> upload audio files to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/simple-upload#a632b50f190j8">Alibaba Cloud OSS</a> and call the API by URL. Avoid local file uploads (local file calls are capped at 100 QPS and cannot be scaled up).</li>
+<li><strong>Asynchronous polling:</strong> long audio transcription uses an asynchronous model. Set a reasonable polling interval (such as 2 to 5 seconds) to avoid frequent queries that consume your quota. To exceed the 20 to 100 QPS query limit, switch to event callback notifications. For more information, see <a href="/help/en/model-studio/non-realtime-speech-recognition-user-guide#nrt03_callback_h3">High-concurrency scenarios: use callbacks instead of polling</a>.</li>
+<li><strong>Error handling:</strong> implement a robust retry mechanism. For network timeouts or temporary server-side errors (5xx), retry with an exponential backoff strategy.</li>
+<li><strong>Noise reduction:</strong> for noisy audio, preprocess it with a tool such as FFmpeg before you submit it for recognition.</li>
+<li><strong>Model selection:</strong> choose the right model based on audio duration. For short audio within 5 minutes, use Qwen3-ASR-Flash. For long audio over 5 minutes, use Qwen-Audio-3.1-ASR-Flash-Filetrans, Fun-ASR, or Qwen3-ASR-Flash-Filetrans.</li>
+</ul>
+<h2 id="supported-models-and-regions">Supported models and regions <span id="4a43cc1bb7kxg"></span> <span id="a6ddaaf4b308q"></span></h2>
+<section data-tag="tabbed-content-box" outputclass="tabbed-content-box" id="sec-tabs-6" class="tabbed-content-box section"><section id="singapore" class="section"><h4 id="singapore-h4">Singapore</h4><p>To call the following models, use an <a href="https://modelstudio.console.alibabacloud.com/model/settings/api-key">API Key</a> for the Singapore region:</p><ul>
+<li><strong>Qwen-Audio-3.1-ASR-Flash-Filetrans:</strong> qwen-audio-3.1-asr-flash-filetrans</li>
+<li><strong>Qwen-Audio-3.0-ASR-Flash-Filetrans:</strong> qwen-audio-3.0-asr-flash-filetrans</li>
+<li><strong>Qwen-Audio-3.1-ASR-Flash:</strong> qwen-audio-3.1-asr-flash</li>
+<li><strong>Qwen-Audio-3.0-ASR-Flash:</strong> qwen-audio-3.0-asr-flash</li>
+<li><strong>Fun-ASR:</strong> fun-asr (stable version, currently equivalent to fun-asr-2025-11-07), fun-asr-2025-11-07 (snapshot version), fun-asr-2025-08-25 (snapshot version), fun-asr-mtl (stable version, currently equivalent to fun-asr-mtl-2025-08-25), fun-asr-mtl-2025-08-25 (snapshot version)</li>
+<li><strong>Fun-ASR-Flash:</strong> fun-asr-flash-2026-06-15</li>
+<li><strong>Qwen3-ASR-Flash-Filetrans:</strong> qwen3-asr-flash-filetrans (stable version, currently equivalent to qwen3-asr-flash-filetrans-2025-11-17), qwen3-asr-flash-filetrans-2025-11-17 (snapshot version)</li>
+<li><strong>Qwen3-ASR-Flash:</strong> qwen3-asr-flash (stable version, currently equivalent to qwen3-asr-flash-2025-09-08), qwen3-asr-flash-2026-02-10 (latest snapshot version), qwen3-asr-flash-2025-09-08 (snapshot version)</li>
+</ul></section><section id="us-virginia" class="section"><h4 id="us-virginia-h4">US (Virginia)</h4><p>To call the following models, use an <a href="https://modelstudio.console.alibabacloud.com/us-east-1/model/settings/api-key">API Key</a> for the US region:</p><p><strong>Qwen3-ASR-Flash:</strong> qwen3-asr-flash (stable version, currently equivalent to qwen3-asr-flash-2025-09-08), qwen3-asr-flash-2025-09-08 (snapshot version)</p></section><section id="china-beijing" class="section"><h4 id="china-beijing-h4">China (Beijing)</h4><p>To call the following models, use an <a href="https://modelstudio.console.alibabacloud.com/model/settings/api-key">API Key</a> for the Beijing region:</p><ul>
+<li><strong>Qwen-Audio-3.1-ASR-Flash-Filetrans:</strong> qwen-audio-3.1-asr-flash-filetrans</li>
+<li><strong>Qwen-Audio-3.0-ASR-Flash-Filetrans:</strong> qwen-audio-3.0-asr-flash-filetrans</li>
+<li><strong>Qwen-Audio-3.1-ASR-Flash:</strong> qwen-audio-3.1-asr-flash</li>
+<li><strong>Qwen-Audio-3.0-ASR-Flash:</strong> qwen-audio-3.0-asr-flash</li>
+<li><strong>Fun-ASR:</strong> fun-asr (stable version, currently equivalent to fun-asr-2025-11-07), fun-asr-2025-11-07 (snapshot version), fun-asr-2025-08-25 (snapshot version), fun-asr-mtl (stable version, currently equivalent to fun-asr-mtl-2025-08-25), fun-asr-mtl-2025-08-25 (snapshot version)</li>
+<li><strong>Fun-ASR-Flash:</strong> fun-asr-flash-2026-06-15</li>
+<li><strong>Qwen3-ASR-Flash-Filetrans:</strong> qwen3-asr-flash-filetrans (stable version, currently equivalent to qwen3-asr-flash-filetrans-2025-11-17), qwen3-asr-flash-filetrans-2025-11-17 (snapshot version)</li>
+<li><strong>Qwen3-ASR-Flash:</strong> qwen3-asr-flash (stable version, currently equivalent to qwen3-asr-flash-2025-09-08), qwen3-asr-flash-2026-02-10 (latest snapshot version), qwen3-asr-flash-2025-09-08 (snapshot version)</li>
+<li><strong>Paraformer:</strong> paraformer-v2, paraformer-8k-v2</li>
+</ul></section></section>
+<h2 id="api-reference">API reference <span id="55d72db0d5jgx"></span> <span id="f2fe92d35168r"></span></h2>
+<ul>
+<li><a href="/help/en/model-studio/fun-asr-recorded-speech-recognition-api-reference">Non-real-time speech recognition - Qwen-Audio-3.x-ASR-Flash-Filetrans/Fun-ASR API reference</a></li>
+<li><a href="/help/en/model-studio/fun-asr-flash-recorded-speech-recognition-http-api">Non-real-time speech recognition - Qwen-Audio-3.x-ASR-Flash/Fun-ASR-Flash API reference</a></li>
+<li><a href="/help/en/model-studio/qwen-asr-api-reference">Non-real-time speech recognition - Qwen-ASR API reference</a></li>
+<li><a href="/help/en/model-studio/paraformer-recorded-speech-recognition-api-reference">Non-real-time speech recognition - Paraformer API reference</a></li>
+</ul>
+<h2 id="faq">FAQ <span id="16febbf1c5ubf"></span> <span id="77eaf07ffe4t5"></span></h2>
+<h3 id="q-how-do-i-provide-a-publicly-accessible-audio-url-to-the-api">Q: How do I provide a publicly accessible audio URL to the API? <span id="01d5f797c8ksz"></span> <span id="47cfd41366qf7"></span></h3>
+<p>Use <a href="https://www.alibabacloud.com/help/en/oss/user-guide/simple-upload#a632b50f190j8">Alibaba Cloud Object Storage Service (OSS)</a>. OSS provides highly available and reliable storage, and lets you generate a public access URL.</p>
+<p><strong>Verify that the generated URL is accessible over the public network:</strong> open the URL in a browser or with the curl command to confirm that the audio file downloads or plays (HTTP status code 200).</p>
+<h3 id="q-how-do-i-check-whether-the-audio-format-meets-the-requirements">Q: How do I check whether the audio format meets the requirements? <span id="d924657784796"></span> <span id="cab88a69cd9zq"></span></h3>
+<p>Use the open-source tool <a href="https://ffmpeg.org/ffprobe.html">ffprobe</a> to quickly get detailed audio information:</p>
+<pre data-tag="codeblock" id="code-block-19" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code># Query the container format (format_name), codec (codec_name), sample rate (sample_rate), and number of channels (channels) of the audio
+ffprobe -v error -show_entries format=format_name -show_entries stream=codec_name,sample_rate,channels -of default=noprint_wrappers=1 your_audio_file.mp3
+</code></pre>
+<h3 id="q-how-do-i-process-audio-to-meet-the-model-requirements">Q: How do I process audio to meet the model requirements? <span id="1991fd59f4mgy"></span> <span id="ae5c4cce7b7mm"></span></h3>
+<p>Use the open-source tool <a href="https://ffmpeg.en.lo4d.com/download">FFmpeg</a> to trim or convert the audio:</p>
+<ul>
+<li>
+<strong>Trim audio: extract a clip from a long audio file</strong>
+</li>
+</ul>
+<pre data-tag="codeblock" id="code-block-20" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code># -i: input file
+# -ss 00:01:30: set the trim start time (start at 1 minute 30 seconds)
+# -t 00:02:00: set the trim duration (trim 2 minutes)
+# -c copy: copy the audio stream directly without re-encoding, which is fast
+# output_clip.wav: output file
+ffmpeg -i long_audio.wav -ss 00:01:30 -t 00:02:00 -c copy output_clip.wav
+</code></pre>
+<ul>
+<li>
+<strong>Convert the format</strong>
+<p>For example, convert any audio to a 16 kHz, 16-bit, mono WAV file:</p>
+</li>
+</ul>
+<pre data-tag="codeblock" id="code-block-21" outputclass="language-bash" code-type="xCode" class="pre codeblock language-bash"><code># -i: input file
+# -ac 1: set the number of channels to 1 (mono)
+# -ar 16000: set the sample rate to 16000 Hz (16 kHz)
+# -sample_fmt s16: set the sample format to 16-bit signed integer PCM
+# output.wav: output file
+ffmpeg -i input.mp3 -ac 1 -ar 16000 -sample_fmt s16 output.wav
+</code></pre>
+<h3 id="q-how-do-i-improve-recognition-accuracy">Q: How do I improve recognition accuracy? <span id="nrt01_h3_accuracy"></span> <span id="nrt01_sec_faq_accuracy"></span></h3>
+<p>The following factors affect recognition accuracy. Check each one and optimize accordingly.</p>
+<p>Main factors:</p>
+<ol>
+<li>Audio quality: the quality of the recording device, the sample rate, and environmental noise directly affect audio clarity. High-quality audio input is the foundation of accurate recognition.</li>
+<li>Speaker characteristics: pitch, speech rate, accent, and dialect differences (especially rare dialects or strong accents) increase recognition difficulty.</li>
+<li>Language and vocabulary: mixed languages, technical terms, or slang increase recognition difficulty. Configure hotwords to improve accuracy for domain-specific terms.</li>
+</ol>
+<p>Optimization methods:</p>
+<ol>
+<li>Improve audio quality: use a high-performance microphone, record at the recommended sample rate, and minimize environmental noise and echo.</li>
+<li>Adapt to the speaker: for audio with strong accents or noticeable dialects, choose a model that supports the corresponding dialect.</li>
+<li>Configure hotwords: set hotwords for technical terms, proper nouns, and similar words.</li>
+</ol></div>
+</div>
+</article>
+<script type="text/javascript">
+window.storeDocs = {
+language: '$lang',
+docGithubLink: '$!githubInfo.url'
+}
+</script>
+<div class="nav-footer">
+ </div>
+<div class="alicloud-document-ask clearfix"></div>
+<div class="feedback-message" style="display:none;">
+<span class="hasfeedback acon acon-done-16"></span>
+Thank you! We've received your  feedback.
+</div>
+</div>
+<div class="col-log-2 col-md-2 col-sm-0 col-xs-0 nav-catalog">
+<div class="article-catalog" id="articleCatalog"></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script
+crossorigin
+src="https://g.alicdn.com/code/lib/??react/16.8.6/umd/react.production.min.js,react-dom/16.8.6/umd/react-dom.production.min.js"
+></script>
+<script
+src="https://g.alicdn.com/code/lib/lodash.js/4.17.21/lodash.min.js"
+crossorigin="anonymous"
+></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/js/vendor.js"></script>
+<script src="//g.alicdn.com/aliyun-help/help-portal-fe/0.12.64/js/index.js"></script>
+<script defer src="https://cloud-assets.alicdn.com/alicdn/dawn/user-tracker/latest/js/index.js"></script>
+</body>
+</html>

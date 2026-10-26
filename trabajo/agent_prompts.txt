@@ -1,0 +1,87 @@
+=== ae0254a10d68c6782
+Preparás la base de conocimiento de un chatbot para el sitio web del programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf.
+
+REPOSITORIO (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo
+- Usá sólo `git -C <repo> show c462fcf:<ruta>`, `git -C <repo> ls-tree -r --name-only c462fcf` y `git -C <repo> grep ... c462fcf`. Prohibido: push, commit, checkout, fetch, modificar archivos del repo, o imprimir la URL del remoto (tiene una credencial).
+- El texto fuente del programa está en doc/content*.py (y doc/build.py arma el documento). El PDF final de pantalla está en salida/PROGRAMA_SAN_ISIDRO_2027.pdf. También tenés el texto ya extraído de la A4 final hoja por hoja en /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/t/<hoja>.txt y la pantalla en .../v21/pj.txt.
+- Las 32 investigaciones están en informes/*.md.
+
+SALIDA 1 · /home/claude/proyecto/web/data/programa.json
+Una lista de entradas, en el orden del documento:
+{ "id": "5.6", "capitulo": "5 · Qué hacemos en cada área", "titulo": "Salud", "hoja_a4": 76, "texto": "párrafos separados por \n\n", "cuadros": [{"titulo": "...", "texto": "filas en texto plano"}], "fuentes": "texto de las fuentes de ese apartado, si existen" }
+Incluí: introducción, «Qué proponemos hacer», cada apartado de los capítulos 1 a 6, los recuadros (como parte del apartado o como entrada propia con id tipo "5.5-r1"), «Para cerrar», cada ordenanza del anexo como entrada propia, el glosario (una entrada por término) y la nota de método. El texto tiene que ser EXACTAMENTE el texto final del programa (c462fcf): no reescribas nada. Sacá sólo los encabezados y pies de página. Verificá contra el PDF final que no falte ningún apartado. Las hojas de la A4 sirven para que el chatbot cite «hoja X»: sacalas del texto por hoja.
+
+SALIDA 2 · /home/claude/proyecto/web/data/investigaciones.json
+Pasajes de las 32 investigaciones, para que el chatbot pueda explicar de dónde salió cada cosa. Cada pasaje:
+{ "id": "inv-07-03", "informe": "título legible del informe (no el nombre del archivo)", "seccion": "título de la sección", "texto": "...", "temas": ["palabras clave"], "relacion": ["ids de apartados del programa relacionados"], "descartado": false, "nota": "" }
+Pasajes de 150 a 400 palabras, cortados por sección. Tamaño total menor a 1,5 MB.
+CURACIÓN (obligatoria, porque esto va a ser público):
+- Sacá todo lo que sea nota interna: mensajes al coordinador, a Nick o al trabajador, pendientes, «TODO», instrucciones de trabajo, comentarios de proceso, rutas de archivos (01_raw/…, informes/…, .py, .csv), y referencias a «el repositorio».
+- Las marcas [V], [P], [CP], [SC] pasalas a palabras simples entre paréntesis («verificado en la fuente», «según la prensa», «cálculo propio», «sin confirmar»).
+- Los nombres de personas y de empresas se quedan como están. No saques nombres.
+- Si un pasaje describe una opción que el programa final descartó o decidió distinto, marcalo "descartado": true y en "nota" escribí en una oración qué decidió el programa (con el id del apartado). Ejemplo conocido: sobre el permiso de los locales de la costa (Catalejo y Barisidro), el programa final dice, según quienes manejaban los locales, que el permiso de uso de la tierra lo daba la Provincia y el canon se le pagaba a la Provincia; si un informe dice otra cosa, marcalo con esa nota.
+- No incluyas nada que plantee la democracia directa como una etapa futura o un plan posterior del programa. Si aparece, sacalo y anotalo en el informe de curación.
+- No inventes ni resumas con palabras tuyas: el texto de cada pasaje es el del informe, sólo limpio.
+
+SALIDA 3 · /home/claude/proyecto/web/data/CURACION.md
+En castellano llano: qué sacaste y por qué (con ejemplos), la lista de pasajes marcados como descartados con su nota, y cualquier contradicción que encuentres entre una investigación y el programa final. Al final, el tamaño de cada JSON y la cantidad de entradas.
+
+Validá que los dos JSON se lean bien con Python (json.load). Cuando termines, respondé sólo con: «Listo» y un resumen de 6 líneas (cantidad de entradas, tamaños, qué sacaste, contradicciones).
+--- lines: 294
+=== a3726dacd1dca88fd
+Preparás los datos geográficos y las imágenes para el sitio web del programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf.
+
+REPOSITORIO (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo
+- Usá sólo `git -C <repo> show c462fcf:<ruta>`, `git -C <repo> ls-tree ...` y `git -C <repo> grep ... c462fcf`; para archivos binarios, `git show c462fcf:<ruta> > /tmp/...` dentro de una carpeta de trabajo tuya (/tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/geo). Prohibido: push, commit, checkout, fetch, modificar el repo, o imprimir la URL del remoto (tiene una credencial).
+- Fuentes útiles: 01_raw/censo2022/radios-censales-2022-shp.zip (radios censales), doc/charts.py (cómo el documento armó el mapa de zonas y asignó radios a localidades), assets/svg/g_mapa_zonas.svg y g_mapa_radios.svg, doc/content*.py (texto final), assets/doc/f_*.jpg (fotos aprobadas).
+- Texto final ya extraído: /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/pj.txt (pantalla) y .../v21/t/<hoja>.txt (A4).
+- Instalá lo que haga falta con pip (--break-system-packages), por ejemplo pyshp, shapely, pillow. Si algo de internet no se puede bajar, no insistas: trabajá con lo que hay en el repo.
+
+SALIDA 1 · /home/claude/proyecto/web/data/zonas.geojson
+Las seis localidades de San Isidro como polígonos (Boulogne Sur Mer, Béccar, Villa Adelina, San Isidro, Martínez, Acassuso), en longitud/latitud WGS84, armadas con los radios censales con el mismo criterio que usó el documento (mirá doc/charts.py). Simplificadas para que el archivo pese menos de 150 KB sin perder la forma. Propiedad "nombre" en cada una. Si podés, sumá también el contorno de todo el partido y una línea de la costa del río como features aparte (propiedad "tipo").
+
+SALIDA 2 · /home/claude/proyecto/web/data/zonas_datos.json
+Por zona, todas las cifras que el programa final da por localidad: población, hogares, % de hogares con NBI, sin cloaca, sin gas de red, hacinamiento, el reparto del dinero de obra que deciden los vecinos (año 1 y año 4, total y por habitante), los lugares de formación por zona (315 Boulogne, 307 Béccar, etc.), chicos y personas mayores por zona, y cualquier otra cifra por zona. Cada cifra con "fuente": id del apartado o número de cuadro/gráfico del programa final. Sólo cifras que estén en el texto final (c462fcf): no calcules ni inventes nada nuevo. Agregá el promedio de San Isidro cuando el programa lo dé.
+
+SALIDA 3 · Imágenes en /home/claude/proyecto/web/img/
+- Convertí las fotos aprobadas assets/doc/f_*.jpg a WebP: una de 1600 px de ancho (calidad 78) y una de 800 px (calidad 72), con nombres f_xxx-1600.webp y f_xxx-800.webp.
+- No incluyas las dos fotos que se sacaron del programa: «Plaza de barrio, un sábado» y «Trabajo sobre el mapa del partido» (buscá en doc/content*.py qué archivos eran).
+- /home/claude/proyecto/web/img/fotos.json: por foto, el archivo, el epígrafe exacto que lleva en el programa final, y el apartado donde aparece. Si una foto no aparece en el programa final, marcala "en_programa": false.
+
+SALIDA 4 · /home/claude/proyecto/web/data/GEO_INFORME.md: en castellano llano, cómo armaste las zonas, qué controles hiciste (por ejemplo, que la población sumada por zona coincida con la del programa), y cualquier problema.
+
+Cuando termines, respondé sólo con «Listo» y un resumen de 5 líneas.
+--- lines: 300
+=== ac543544d0000060b
+Armás los datos de un plan de despliegue (rollout plan) para el programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf. Todavía no armes la página: sólo los datos y la revisión.
+
+QUÉ ES: un plan como los que usan las grandes industrias y los gerentes de proyectos de software para proyectos muy grandes. Muestra cada acción, qué necesita antes, qué destraba, quién la hace y cuándo, con el camino crítico. Sirve para mostrar que el equipo está organizado y que el día uno sabe a quién pedirle qué y qué hacer.
+
+EJEMPLO DE REFERENCIA (de otro proyecto del mismo dueño): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/ejemplos/ejemplo_rollout_nick.html. Tiene `const DATA = [...]` con 130 acciones y estos campos: code, task, stream, owner, team, dur (días hábiles), start, finish, float, critical, milestone, decision, steps, moves, sne, needs [{code, type "FS"|"SS", lag}], note. Usá el mismo esquema (podés dejar vacíos moves y sne) y sumá "fuente" (id del apartado del programa de donde sale la acción).
+
+FUENTE: el texto final del programa. Repositorio (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo — usá sólo `git -C <repo> show c462fcf:<ruta>` y `git -C <repo> grep ... c462fcf`; prohibido push, commit, checkout, fetch, modificar el repo o imprimir la URL del remoto. Texto fuente en doc/content*.py. Texto ya extraído: /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/pj.txt (pantalla) y .../v21/t/<hoja>.txt (A4; el capítulo 6 empieza en la hoja 101 y el anexo en la 116).
+
+QUÉ INCLUIR:
+- Todo el capítulo 6: los veintiún compromisos de los primeros cien días, las metas de los cuatro años, el calendario mes por mes, la suba año por año de la obra que deciden los vecinos, los riesgos que tengan una acción preventiva.
+- Cada ordenanza del anexo: presentación al Concejo, tratamiento, aprobación, y lo que destraba.
+- Las acciones de los capítulos 4 y 5 que el calendario nombra o que el texto fecha: asambleas, comisiones, panel sorteado, la inteligencia artificial del Municipio por etapas, la tecnicatura y las pasantías, salud (turnos, tomógrafos, compras), seguridad, costa (Escuela Náutica, baños, foodtrucks, clases e instructores), espectáculos, habilitaciones e inspecciones grabadas, multas, transparencia, empleados, niñez, personas mayores, género y discapacidad.
+- El ciclo de presupuesto del capítulo 3: presupuesto, ordenanza fiscal e impositiva, Asamblea de Concejales y Mayores Contribuyentes, tabla de valores.
+- Una línea de transición: desde la elección de 2027 hasta la asunción. La asunción es el 10 de diciembre de 2027 (confirmalo en el texto). Para la fecha de la elección, si el programa no la dice, buscá en la web la fecha oficial de las elecciones generales de 2027 en la Provincia de Buenos Aires; si no está fijada, usá la regla legal y marcala como estimada en "note".
+- El plan llega hasta el fin del mandato (diciembre de 2031). Los primeros 18 meses, en detalle; después, por trimestre o semestre.
+
+LÍNEAS DE TRABAJO (stream), exactamente estas 12, más «0 Transición»: mecanismo vecinal y obra pública; Concejo y ordenanzas; presupuesto y tasas; inteligencia artificial del Municipio; empleo y formación; vivienda; salud; seguridad; costa y espacio público; cultura y espectáculos; habilitaciones e inspecciones; transparencia.
+
+RESPONSABLES: por cargo (Intendente, Secretaría de Hacienda, Secretaría de Salud, Concejo Deliberante, comisiones vecinales, Provincia, UNSO, etc.), nunca nombres de personas.
+
+REGLAS:
+- Cada acción tiene que salir del texto del programa: nada de compromisos nuevos. Las duraciones que el programa no dice son supuestos tuyos: marcá cada uno en "note" («duración estimada»).
+- Las fechas tienen que coincidir con los meses del programa (mes 1 = diciembre de 2027 desde el día 10; definí la regla y aplicala igual en todo el plan).
+- Calculá el camino crítico (CPM) con días hábiles de lunes a viernes, sin feriados (decilo en una nota), con holgura (float) para cada acción. Hitos con dur 0.
+- Validá: sin ciclos, cada "needs" existe, ninguna acción empieza antes de lo que necesita, las fechas caen dentro de los meses que da el programa.
+- Textos en castellano rioplatense llano: una idea por oración, sin «Y» ni «Que» al empezar una oración, nada de jerga.
+
+SALIDA:
+- /home/claude/proyecto/despliegue/acciones.json (la lista, con los campos del esquema).
+- /home/claude/proyecto/despliegue/REVISION.md: los supuestos (duraciones y reglas), las acciones del camino crítico, y cualquier contradicción o hueco que encuentres en el capítulo 6 o entre el capítulo 6 y los capítulos 4 y 5 (no los resuelvas: listalos).
+Cuando termines, respondé sólo con «Listo» y un resumen de 6 líneas (cantidad de acciones, hitos, acciones críticas, fecha de inicio y fin, huecos encontrados).
+--- lines: 184

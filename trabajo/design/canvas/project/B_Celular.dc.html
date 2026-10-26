@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>B. La pregunta primero, celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+</style>
+</helmet>
+<div style="width: 390px; height: 1720px; overflow: hidden; box-sizing: border-box; background: #FBF8F2; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+  <div style="background: #7C2E23; color: #FBF8F2">
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 14px 16px">
+      <a href="#" style="text-decoration: none; color: #FBF8F2; font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 21px">San Isidro 2027</a>
+      <button type="button" aria-label="Abrir el menú" style="font: inherit; font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; padding: 10px 14px; min-height: 44px; border: 1px solid #C98F82; border-radius: 999px; background: transparent; color: #FBF8F2">
+        <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="#FBF8F2" stroke-width="1.6" fill="none"></path></svg>Menú</button>
+    </header>
+    <section style="padding: 20px 16px 32px; display: flex; flex-direction: column; gap: 16px">
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.04">¿Qué te preocupa de San Isidro?</h1>
+      <p style="margin: 0; font-size: 17px; color: #F1E3DC">Preguntale al programa. Te responde con lo que proponemos y te dice en qué capítulo y en qué hoja está.</p>
+      <form style="display: flex; flex-direction: column; gap: 8px">
+        <label for="q-bm" style="font-size: 14px; color: #F1E3DC">Tu pregunta</label>
+        <textarea id="q-bm" rows="3" placeholder="Por ejemplo: tengo un café en Martínez y me hicieron una inspección injusta" style="font: inherit; font-size: 17px; padding: 14px 16px; border: 0; border-radius: 10px; background: #FFFFFF; color: #2A211C; resize: none"></textarea>
+        <button type="submit" style="font: inherit; font-weight: 600; font-size: 17px; padding: 15px 20px; border: 0; border-radius: 10px; background: #DB6B4B; color: #2A211C">Preguntar</button>
+      </form>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2">Vivo en Boulogne y no tengo cloaca</button>
+        <button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2">Tengo un comercio y me clausuraron</button>
+        <button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2">¿Cómo se paga todo esto?</button>
+      </div>
+    </section>
+  </div>
+
+  <section style="padding: 28px 16px; display: flex; flex-direction: column; gap: 14px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.1">Así responde</h2>
+    <p style="margin: 0; align-self: flex-end; max-width: 85%; background: #EFE6DA; border-radius: 14px 14px 4px 14px; padding: 12px 16px; font-size: 16px">Tengo un café en Martínez y un inspector me quiso clausurar sin motivo. ¿Qué propone el programa?</p>
+    <div style="background: #FFFFFF; border: 1px solid #DCD2C3; border-radius: 14px 14px 14px 4px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+      <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.5">Las inspecciones de comercios van a quedar grabadas. Los inspectores van a grabar con su teléfono cada inspección, y después cualquier vecino podrá ver cómo fue. Sin grabación sellada, no valen el acta, la clausura ni la habilitación.</p>
+      <p style="margin: 0; font-size: 13px; color: #5F7057">Fuente: Qué proponemos hacer, punto 7 (hoja 6), y apartado 5.9 (hoja 88).</p>
+      <a href="#" style="font-weight: 600; font-size: 15px">Leer el 5.9 completo</a>
+    </div>
+    <p style="margin: 0; font-size: 13px; color: #5E534B">Responde sólo con el programa y con las investigaciones que lo respaldan. Si el programa no habla de algo, lo dice.</p>
+  </section>
+
+  <section style="background: #F5F0E8; border-top: 1px solid #DCD2C3; padding: 28px 16px; display: flex; flex-direction: column; gap: 12px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.1">Qué proponemos hacer</h2>
+    <ol style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #DCD2C3">
+      <li style="border-bottom: 1px solid #DCD2C3; padding: 14px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 16px; flex-shrink: 0">1</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.35">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</a></li>
+      <li style="border-bottom: 1px solid #DCD2C3; padding: 14px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 16px; flex-shrink: 0">2</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.35">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</a></li>
+      <li style="border-bottom: 1px solid #DCD2C3; padding: 14px 0; display: flex; gap: 14px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 16px; flex-shrink: 0">3</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.35">Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</a></li>
+    </ol>
+    <a href="#" style="font-weight: 600; padding: 10px 0">Ver los nueve puntos</a>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

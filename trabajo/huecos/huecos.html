@@ -1,0 +1,93 @@
+<title>Los 30 huecos del programa</title>
+<style>
+:root{--bg:#F5F0E8;--card:#FFFFFF;--ink:#2A211C;--ink2:#5E534B;--ox:#7C2E23;--coral:#B04E2E;--sage:#5F7057;--rule:#DCD2C3;--tint:#F8EAE3;--tint2:#EFE8DC}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1A1512;--card:#2A231E;--ink:#EFE7DB;--ink2:#BFB3A6;--ox:#E8A08F;--coral:#F0A184;--sage:#A3B597;--rule:#3B312A;--tint:#3A2520;--tint2:#2E2621;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1A1512;--card:#2A231E;--ink:#EFE7DB;--ink2:#BFB3A6;--ox:#E8A08F;--coral:#F0A184;--sage:#A3B597;--rule:#3B312A;--tint:#3A2520;--tint2:#2E2621;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px 16px 56px}
+main{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);margin:0}
+.lead{color:var(--ink2);margin:8px 0 0}
+.sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.sum div{border-radius:14px;padding:14px 16px;background:var(--card);border:1px solid var(--rule)}
+.sum b{display:block;font-family:Georgia,serif;font-size:2rem;font-weight:500;line-height:1}
+.sum span{font-size:14px;color:var(--ink2)}
+.sum .g1{background:var(--tint)} .sum .g1 b{color:var(--coral)}
+section{display:flex;flex-direction:column;gap:10px}
+h2{font-family:Georgia,serif;font-weight:500;font-size:1.5rem;margin:0}
+h2 small{display:block;font-family:system-ui,sans-serif;font-size:14px;color:var(--ink2);margin-top:4px}
+ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+li{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px}
+li .n{font-family:Georgia,serif;font-size:1.2rem;color:var(--ink2)}
+li p{margin:0}
+li .fix{margin-top:4px;font-size:14.5px;color:var(--ink2)}
+li .fix b{color:var(--sage)}
+.g1 li{border-left:4px solid var(--coral)}
+.rec{background:var(--ox);color:#FBF8F2;border-radius:16px;padding:18px 20px;font-size:17px}
+.rec p{margin:0}
+.rec p + p{margin-top:8px}
+@media (max-width:640px){.sum{grid-template-columns:minmax(0,1fr)}}
+</style>
+<main>
+  <header>
+    <h1>Los 30 huecos del programa</h1>
+    <p class="lead">Aparecieron al armar el plan de despliegue: lugares donde dos partes del programa no coinciden, o donde una fecha no cierra. El plan los cubre con un supuesto; acá están para decidir si se corrigen en el programa.</p>
+    <div class="sum">
+      <div class="g1"><b>12</b><span>contradicciones que un lector atento puede encontrar</span></div>
+      <div><b>11</b><span>frases que se aclaran con una línea</span></div>
+      <div><b>7</b><span>cosas que el programa no fecha (no hace falta tocarlo)</span></div>
+    </div>
+  </header>
+
+  <section class="g1">
+    <h2>1 · Contradicciones<small>Recomiendo corregirlas en el programa.</small></h2>
+    <ol>
+      <li><span class="n">13</span><div><p>El calendario pone pasantes como personal técnico de la oficina de delitos por internet; el 5.3 y la Ordenanza 10 dicen que los pasantes nunca hacen tareas de planta.</p><p class="fix"><b>Arreglo:</b> corregir el calendario (mes 15).</p></div></li>
+      <li><span class="n">23</span><div><p>Semillero: dice 16 empresas en el mandato, pero 10 por convocatoria por 4 convocatorias son 40.</p><p class="fix"><b>Arreglo:</b> corregir el número o explicar la cuenta.</p></div></li>
+      <li><span class="n">18</span><div><p>El calendario presenta dos ordenanzas (foodtrucks y el cambio al artículo 9 de la 5824) que no están escritas en el anexo, y el anexo dice que están todas.</p><p class="fix"><b>Arreglo:</b> escribirlas o cambiar esa frase del anexo.</p></div></li>
+      <li><span class="n">14</span><div><p>La inteligencia artificial del Municipio funciona en el mes 3, pero el programa dice que todo contrato se licita y una licitación tarda tres meses.</p><p class="fix"><b>Arreglo:</b> aclarar con qué funciona al principio.</p></div></li>
+      <li><span class="n">15</span><div><p>Las denuncias de coimas empiezan a los cien días, pero necesitan la auditoría externa (se licita, no llega) y la firma digital de la Nación (sin plazo).</p><p class="fix"><b>Arreglo:</b> aclarar qué pasa mientras tanto.</p></div></li>
+      <li><span class="n">16</span><div><p>La Ordenanza 4 anula toda inspección sin grabación, pero las grabaciones empiezan en el mes 9; si rige antes, todas las inspecciones de esos meses serían nulas.</p><p class="fix"><b>Arreglo:</b> decir que rige desde el mes 9.</p></div></li>
+      <li><span class="n">17</span><div><p>El 5.3 dice que la recolección subcontrata pymes de San Isidro, pero su pliego (Ordenanza 9) no lo incluye y el semillero recién existe en el mes 27.</p><p class="fix"><b>Arreglo:</b> sumarlo al pliego o sacarlo del 5.3.</p></div></li>
+      <li><span class="n">20</span><div><p>Los shows de prueba (meses 1 a 3) usan el sonido del Municipio, que se compra por licitación de tres meses y no llega.</p><p class="fix"><b>Arreglo:</b> aclarar con qué sonido se hace la prueba.</p></div></li>
+      <li><span class="n">1</span><div><p>El calendario da cada año de la obra vecinal por cumplido el 9 de diciembre, pero la ordenanza lo cuenta de enero a diciembre.</p><p class="fix"><b>Arreglo:</b> usar la misma cuenta en los dos lados.</p></div></li>
+      <li><span class="n">2</span><div><p>La partida sube sólo si se gastó todo el año anterior, pero el presupuesto siguiente se vota antes de que cierre el año.</p><p class="fix"><b>Arreglo:</b> aclarar cómo se comprueba a tiempo.</p></div></li>
+      <li><span class="n">10</span><div><p>La obra del año 1 se elige a mitad de año y una licitación tarda tres meses: no llega a hacerse ese año.</p><p class="fix"><b>Arreglo:</b> decir si el año 1 se cumple con la obra adjudicada o terminada.</p></div></li>
+      <li><span class="n">11</span><div><p>El 6.1 dice que una asamblea a mitad de año llega tarde para el presupuesto, pero la ronda que elige las obras cae a mitad de año.</p><p class="fix"><b>Arreglo:</b> se resuelve junto con el 10.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>2 · Frases que se aclaran con una línea<small>Conviene aprovechar la misma vuelta.</small></h2>
+    <ol>
+      <li><span class="n">3</span><div><p>La obra vecinal sigue si el Tribunal de Cuentas no objeta, pero no se dice cuándo se sabe.</p></div></li>
+      <li><span class="n">4</span><div><p>Dos proyectos son «el primero» en la sesión de diciembre: la derogación y la tabla.</p></div></li>
+      <li><span class="n">5</span><div><p>La primera asamblea: en un lado está «convocada» a los cien días, en otro «hecha» en el mes 3.</p></div></li>
+      <li><span class="n">6</span><div><p>Los compromisos 4 y 5 se comprueban con la ordenanza aprobada, pero sólo se fecha su entrada, y en enero y febrero no hay sesiones.</p></div></li>
+      <li><span class="n">7</span><div><p>Centros de apoyo escolar: «dos por año» y «los seis en el mes 25» sólo cuadran si abren justo al empezar el año 3.</p></div></li>
+      <li><span class="n">8</span><div><p>El profesor digital se prueba «en los primeros centros», en plural, pero sólo se fecha el primero.</p></div></li>
+      <li><span class="n">9</span><div><p>Panel sorteado: «apenas se aprueba la Ordenanza 12» y «en los meses 7 a 12» no coinciden.</p></div></li>
+      <li><span class="n">12</span><div><p>El calendario da por hecho el título de la tecnicatura; el 6.6 lo trata como riesgo, con una beca si no llega.</p></div></li>
+      <li><span class="n">19</span><div><p>Espectáculos todas las semanas: los shows pagos van de septiembre a abril, y no se dice qué pasa el resto del año.</p></div></li>
+      <li><span class="n">21</span><div><p>El tramo de arena del año 1 necesita estudio ambiental, panel y licitación, y no se ordenan esos pasos ni se dice qué verano es.</p></div></li>
+      <li><span class="n">22</span><div><p>Las clases de la Escuela Náutica en el agua dependen de la Ordenanza 11, y el calendario no las ata a esa aprobación.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3 · Lo que el programa no fecha<small>No hace falta tocar el programa: el plan pone una fecha estimada y lo dice en cada acción.</small></h2>
+    <ol>
+      <li><span class="n">24</span><div><p>La fecha de la elección (el plan usa el 24 de octubre de 2027).</p></div></li>
+      <li><span class="n">25</span><div><p>Cuándo se presenta y se vota el presupuesto de cada año.</p></div></li>
+      <li><span class="n">26</span><div><p>Cuándo se aprueba cada ordenanza (sólo se fecha cuándo entra).</p></div></li>
+      <li><span class="n">27</span><div><p>Los plazos que dependen de otros: AySA, la firma digital de la Nación, el título, la Provincia, el Tribunal de Cuentas.</p></div></li>
+      <li><span class="n">28</span><div><p>Cosas sin fecha: la patrulla que graba, la transmisión de las asambleas, el registro de órdenes de juez, entre otras.</p></div></li>
+      <li><span class="n">29</span><div><p>Las asambleas de los años 2 a 4.</p></div></li>
+      <li><span class="n">30</span><div><p>Cuándo entran los grupos 3 y 4 de la formación.</p></div></li>
+    </ol>
+  </section>
+
+  <div class="rec">
+    <p>Recomiendo corregir los grupos 1 y 2 en el programa, en una sola vuelta del documento. Lo malo: hay que rehacer el PDF, la A4 y el Excel.</p>
+    <p>El grupo 3 queda como está.</p>
+  </div>
+</main>

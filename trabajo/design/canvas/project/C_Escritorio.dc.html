@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>C. El mapa primero, computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.hero{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center}
+.zone{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.hero,.zone,.cards{grid-template-columns:minmax(0,1fr)}}
+</style>
+</helmet>
+<div style="background: #F5F0E8; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+  <header style="border-bottom: 1px solid #DCD2C3">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px">
+      <a href="#" style="text-decoration: none; color: #2A211C; display: flex; flex-direction: column">
+        <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 24px; line-height: 1.1">San Isidro 2027</span>
+        <span style="font-size: 13px; color: #5E534B">Programa de gobierno</span>
+      </a>
+      <nav aria-label="Secciones" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Las seis zonas</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Qué proponemos</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">El programa</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Plan con fechas</a>
+        <a href="#" style="background: #7C2E23; color: #FBF8F2; text-decoration: none; font-weight: 600; padding: 11px 18px; border-radius: 999px">Preguntale al programa</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="wrap hero" style="padding-top: 56px; padding-bottom: 40px">
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span style="font-size: 15px; font-weight: 600; color: #5F7057">Programa de gobierno San Isidro 2027</span>
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 52px; line-height: 1.05; letter-spacing: -0.01em">Los vecinos de cada zona van a decidir la mitad de la obra pública.</h1>
+      <p style="margin: 0; font-size: 18px; color: #5E534B">Una fórmula escrita, y no el intendente, va a repartir el dinero entre las zonas, según la población y la necesidad de cada una. Por eso la mayor parte va a ir a Boulogne Sur Mer y a Béccar.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+        <a href="#" style="background: #7C2E23; color: #FBF8F2; text-decoration: none; font-weight: 600; padding: 14px 22px; border-radius: 999px">Ver tu zona</a>
+        <a href="#" style="color: #7C2E23; text-decoration: none; font-weight: 600; padding: 13px 21px; border-radius: 999px; border: 1px solid #7C2E23">Leer los nueve puntos</a>
+      </div>
+    </div>
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+      <div style="position: relative; background: #EFE8DC; border: 1px solid #DCD2C3; border-radius: 10px; padding: 16px">
+        <img src="/_blob/d0d40cbdc9922221631df185df868474" alt="Mapa en relieve de las seis zonas de San Isidro. Cada zona es más alta cuanto más dinero de obra deciden sus vecinos: Boulogne Sur Mer 8.569 millones, Béccar 7.887, Martínez 4.697, San Isidro 3.729, Villa Adelina 3.198 y Acassuso 827." style="width: 100%; display: block">
+        <span style="position: absolute; top: 14px; right: 16px; font-size: 13px; color: #5E534B; background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 999px; padding: 6px 12px">Arrastrá para girar · Tocá una zona</span>
+      </div>
+      <figcaption style="font-size: 13px; color: #5E534B">La altura de cada zona es el dinero de obra que van a decidir sus vecinos por año, desde el cuarto año, en millones de pesos. Fuente: 4.4, gráfico 23.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap" style="padding-bottom: 72px; display: flex; flex-direction: column; gap: 24px">
+    <div role="group" aria-label="Elegí una zona" style="display: flex; flex-wrap: wrap; gap: 10px">
+      <button type="button" aria-pressed="true" style="font: inherit; font-weight: 600; padding: 10px 16px; border-radius: 999px; border: 1px solid #7C2E23; background: #7C2E23; color: #FBF8F2; cursor: pointer">Boulogne Sur Mer</button>
+      <button type="button" aria-pressed="false" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C; cursor: pointer">Béccar</button>
+      <button type="button" aria-pressed="false" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C; cursor: pointer">Villa Adelina</button>
+      <button type="button" aria-pressed="false" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C; cursor: pointer">San Isidro</button>
+      <button type="button" aria-pressed="false" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C; cursor: pointer">Martínez</button>
+      <button type="button" aria-pressed="false" style="font: inherit; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C; cursor: pointer">Acassuso</button>
+    </div>
+    <div class="zone" style="background: #FBF8F2; border: 1px solid #DCD2C3; border-radius: 10px; padding: 32px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.1">Boulogne Sur Mer</h2>
+        <p style="margin: 0; font-size: 17px; color: #5E534B">Tiene la mayor población y el índice de necesidad más alto de San Isidro: 34,0%. Por eso es la zona que más obra va a decidir.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 15px; font-weight: 600; padding-top: 6px"><a href="#">Qué propone el programa para tu zona</a><a href="#">Preguntale al programa sobre Boulogne</a></div>
+      </div>
+      <dl class="figs" style="margin: 0">
+        <div style="border-top: 2px solid #7C2E23; padding-top: 10px"><dt style="font-size: 14px; color: #5E534B">Obra que van a decidir sus vecinos, por año, desde el cuarto año</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 32px; font-weight: 600; font-variant-numeric: tabular-nums">8.569 M</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 10px"><dt style="font-size: 14px; color: #5E534B">Personas</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 32px; font-weight: 600; font-variant-numeric: tabular-nums">74.832</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 10px"><dt style="font-size: 14px; color: #5E534B">Hogares sin cloaca</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 32px; font-weight: 600; font-variant-numeric: tabular-nums">2.295</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 10px"><dt style="font-size: 14px; color: #5E534B">Hogares sin gas de red</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 32px; font-weight: 600; font-variant-numeric: tabular-nums">6.947</dd></div>
+      </dl>
+    </div>
+    <p style="margin: 0; font-size: 13px; color: #5E534B">Fuentes: Censo 2022; programa, apartados 1.1 y 4.4 (cuadro 22 y gráfico 23).</p>
+  </section>
+
+  <section style="background: #FBF8F2; border-top: 1px solid #DCD2C3; padding: 72px 0">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
+      <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 44px; line-height: 1.05">Qué proponemos hacer</h2>
+      <ol class="cards" style="list-style: none; margin: 0; padding: 0">
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">1</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">2</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">3</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">4</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Las personas que se forman en la tecnicatura van a construir la inteligencia artificial del Municipio.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">5</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">6</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Las cámaras van a detectar y avisar, y no sólo grabar.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">7</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Las inspecciones de comercios van a quedar grabadas.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">8</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Va a haber muchos más shows y espectáculos: 200 por año, la mayoría al aire libre, en plazas y espacios públicos de todo San Isidro.</a></li>
+        <li style="border-top: 2px solid #7C2E23; padding-top: 14px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">9</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.3">Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="wrap" style="padding-top: 32px; padding-bottom: 48px; font-size: 14px; color: #5E534B">Programa de gobierno San Isidro 2027.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2480}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

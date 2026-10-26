@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>B2. La pregunta primero, con tarjetas, computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.ask{display:flex;flex-wrap:wrap;gap:12px}
+.answer{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:start}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#FFFFFF;border:1px solid #DCD2C3;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:center 40%;display:block}
+.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:14px;flex-grow:1}
+.num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#7C2E23;color:#FBF8F2;font-family:Spectral,Georgia,serif;font-weight:600;font-size:18px}
+.lead{font-family:Spectral,Georgia,serif;font-size:22px;line-height:1.3;flex-grow:1}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #EAE2D5;padding-top:14px;font-size:14px}
+.more{font-weight:600}
+.askit{font:inherit;font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px;border:1px solid #7C2E23;background:transparent;color:#7C2E23;cursor:pointer}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:680px){.answer,.cards{grid-template-columns:minmax(0,1fr)}}
+</style>
+</helmet>
+<div style="background: #FBF8F2; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+  <header style="background: #7C2E23; color: #FBF8F2">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px">
+      <a href="#" style="text-decoration: none; color: #FBF8F2; display: flex; flex-direction: column">
+        <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 24px; line-height: 1.1">San Isidro 2027</span>
+        <span style="font-size: 13px; color: #EBD9D2">Programa de gobierno</span>
+      </a>
+      <nav aria-label="Secciones" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Qué proponemos</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">El programa</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Las seis zonas</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Plan con fechas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #7C2E23; color: #FBF8F2; padding: 56px 0 80px">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 22px; max-width: 1000px">
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 68px; line-height: 1.02; letter-spacing: -0.015em">¿Qué te preocupa de San Isidro?</h1>
+      <p style="margin: 0; font-size: 20px; color: #F1E3DC; max-width: 36em">Preguntale al programa. Te responde con lo que proponemos y te dice en qué capítulo y en qué hoja está.</p>
+      <form style="display: flex; flex-direction: column; gap: 8px; padding-top: 6px">
+        <label for="q-b2" style="font-size: 14px; color: #F1E3DC">Tu pregunta</label>
+        <div class="ask">
+          <input id="q-b2" type="text" placeholder="Por ejemplo: tengo un café en Martínez y me hicieron una inspección injusta" style="flex: 1 1 420px; min-width: 0; font: inherit; font-size: 18px; padding: 18px 20px; border: 0; border-radius: 10px; background: #FFFFFF; color: #2A211C">
+          <button type="submit" style="font: inherit; font-weight: 600; font-size: 18px; padding: 18px 28px; border: 0; border-radius: 10px; background: #DB6B4B; color: #2A211C; cursor: pointer">Preguntar</button>
+        </div>
+      </form>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px">
+        <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2; cursor: pointer">Vivo en Boulogne y no tengo cloaca</button>
+        <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2; cursor: pointer">Mi hijo terminó la secundaria y busca trabajo</button>
+        <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2; cursor: pointer">Tengo un comercio y me clausuraron</button>
+        <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2; cursor: pointer">¿Cómo se paga todo esto?</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top: 56px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 24px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.1">Así responde</h2>
+    <div class="answer">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; align-self: flex-end; max-width: 30em; background: #EFE6DA; border-radius: 14px 14px 4px 14px; padding: 16px 20px; font-size: 17px">Tengo un café en Martínez y un inspector me quiso clausurar sin motivo. ¿Qué propone el programa?</p>
+        <div style="background: #FFFFFF; border: 1px solid #DCD2C3; border-radius: 14px 14px 14px 4px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px">
+          <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.5">Las inspecciones de comercios van a quedar grabadas. Los inspectores van a grabar con su teléfono cada inspección, y después cualquier vecino podrá ver cómo fue. Sin grabación sellada, no valen el acta, la clausura ni la habilitación.</p>
+          <p style="margin: 0; font-size: 14px; color: #5F7057">Fuente: Qué proponemos hacer, punto 7 (hoja 6), y apartado 5.9 (hoja 88).</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 15px; font-weight: 600"><a href="#">Leer el 5.9 completo</a><a href="#">Hacer otra pregunta</a></div>
+        </div>
+        <p style="margin: 0; font-size: 14px; color: #5E534B">Responde sólo con el programa y con las investigaciones que lo respaldan. Si el programa no habla de algo, lo dice.</p>
+      </div>
+      <div style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 24px">El programa completo</h3>
+        <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px">
+          <li><a href="#">Diagnóstico</a></li>
+          <li><a href="#">El gobierno actual, medido</a></li>
+          <li><a href="#">Los fondos</a></li>
+          <li><a href="#">El mecanismo</a></li>
+          <li><a href="#">Qué hacemos en cada área</a></li>
+          <li><a href="#">El plan, con fechas</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F5F0E8; padding: 72px 0 80px">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+          <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 48px; line-height: 1.05">Qué proponemos hacer</h2>
+          <p style="margin: 0; font-size: 18px; color: #5E534B">Nueve puntos. Tocá «Leer más» para ver el punto completo, o preguntale al programa sobre ese tema.</p>
+        </div>
+        <a href="#" style="font-weight: 600">Leer el programa completo</a>
+      </div>
+      <ol class="cards" style="list-style: none; margin: 0; padding: 0">
+        <li class="card">
+          <img src="/_blob/368b8de8114846726fbeeecd922a7c93" alt="Asamblea vecinal. Ilustración.">
+          <div class="card-body"><span class="num">1</span><span class="lead">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/4d3905e80c5fe7bc5a4f94aecd761bab" alt="Formación laboral. Ilustración.">
+          <div class="card-body"><span class="num">2</span><span class="lead">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/51273961a182d407b798654293e090e2" alt="La tecnicatura en inteligencia artificial. Ilustración.">
+          <div class="card-body"><span class="num">3</span><span class="lead">Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/f53aca987287b1c145850a0039763008" alt="La pasantía en el Municipio. Ilustración.">
+          <div class="card-body"><span class="num">4</span><span class="lead">Las personas que se forman en la tecnicatura van a construir la inteligencia artificial del Municipio.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/323c68974c4afca7f85a3d17801694d7" alt="Una vecina le pregunta con la voz a la inteligencia artificial del Municipio. Ilustración.">
+          <div class="card-body"><span class="num">5</span><span class="lead">La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/6e25be23b3d4af8a12af7ef354860066" alt="La cámara avisa y el patrullero llega. Ilustración.">
+          <div class="card-body"><span class="num">6</span><span class="lead">Las cámaras van a detectar y avisar, y no sólo grabar.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/307fc01694c2a20f6184a6e42deb0555" alt="Una inspección grabada: graban el inspector y el comerciante. Ilustración.">
+          <div class="card-body"><span class="num">7</span><span class="lead">Las inspecciones de comercios van a quedar grabadas.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/c1d81c923cfd0f3b8364f563fb331225" alt="Una banda emergente de San Isidro, en una plaza. Ilustración.">
+          <div class="card-body"><span class="num">8</span><span class="lead">Va a haber muchos más shows y espectáculos: 200 por año, la mayoría al aire libre, en plazas y espacios públicos de todo San Isidro.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+        <li class="card">
+          <img src="/_blob/d5369ed6b546c8941f94295b114acffa" alt="Bajada a la costa. Ilustración.">
+          <div class="card-body"><span class="num">9</span><span class="lead">Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</span>
+            <div class="foot"><a href="#" class="more">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+        </li>
+      </ol>
+      <p style="margin: 0; font-size: 13px; color: #5E534B">Las imágenes son ilustraciones del programa.</p>
+    </div>
+  </section>
+
+  <footer class="wrap" style="padding-top: 24px; padding-bottom: 48px; font-size: 14px; color: #5E534B; border-top: 1px solid #DCD2C3">Programa de gobierno San Isidro 2027.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

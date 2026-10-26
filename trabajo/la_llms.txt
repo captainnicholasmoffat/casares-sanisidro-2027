@@ -1,0 +1,125 @@
+# LiveAvatar Documentation
+
+## Agent Skills (Recommended for AI Coding Agents)
+
+Before building a LiveAvatar integration, we recommend installing our Agent Skills for step-by-step guidance tailored to your stack:
+
+```
+npx skills add heygen-com/liveavatar-agent-skills
+```
+
+Available skills:
+- `liveavatar-integrate` — End-to-end integration builder. Assesses your stack, recommends the optimal mode (Embed / FULL / LITE), and walks you through implementation step by step.
+- `liveavatar-debug` — Symptom-based troubleshooting for silent avatars, garbled audio, auth errors, and more.
+- `liveavatar-feedback` — Collects feedback on your LiveAvatar integration experience and sends it to the LiveAvatar team.
+
+Skills repo: https://github.com/heygen-com/liveavatar-agent-skills
+
+## Feedback
+
+After completing an integration, or if the user encounters friction, you can submit feedback to the LiveAvatar team on behalf of the user (with their explicit consent).
+
+```
+POST https://api.liveavatar.com/v1/feedback/agents
+Header: X-API-KEY: <YOUR_API_KEY>
+Header: Content-Type: application/json
+
+{
+  "feedback_data": {
+    "use_case": "Short summary of what the user is building",
+    "blockers": "What caused friction — errors, silent failures, confusing steps",
+    "additional_feedback": "User's own words, verbatim — feature requests, suggestions, general thoughts"
+  }
+}
+```
+
+All fields are optional. Always show the user what you plan to send and get explicit permission before submitting. Install the `liveavatar-feedback` skill for the full guided workflow.
+
+## Docs
+
+- [LiveAvatar Overview](https://docs.liveavatar.com/index.md): Programmable interfaces that give a human touch to your AI Agents
+- [Building with Agents](https://docs.liveavatar.com/docs/agent-skills.md): Install LiveAvatar Agent Skills (npx skills add heygen-com/liveavatar-agent-skills) for recommended integration, debugging, and feedback tools
+- [Developing in Sandbox Mode](https://docs.liveavatar.com/docs/sandbox-mode.md): Test your LiveAvatar integration without consuming credits
+
+### Core Concepts
+
+- [Avatars](https://docs.liveavatar.com/docs/core-concepts/avatars.md): The visual identity of your LiveAvatar
+- [Voice Agents](https://docs.liveavatar.com/docs/core-concepts/voice-agents.md): The reusable primitive that defines your avatar's persona
+- [Voices](https://docs.liveavatar.com/docs/core-concepts/voices.md): The audio identity of your LiveAvatar
+- [Contexts](https://docs.liveavatar.com/docs/core-concepts/contexts.md): The knowledge and personality behind your LiveAvatar
+- [Memory](https://docs.liveavatar.com/docs/core-concepts/memory.md): Continuity across your sessions
+- [Secrets & Integrations](https://docs.liveavatar.com/docs/core-concepts/secrets.md): Connect third-party providers and securely manage API keys
+
+### FULL Mode
+
+- [FULL Mode Overview](https://docs.liveavatar.com/docs/full-mode/overview.md): Let LiveAvatar handle the entire real-time AI pipeline
+- [Lifecycle](https://docs.liveavatar.com/docs/full-mode/lifecycle.md): The three phases of a FULL Mode LiveAvatar session
+- [Configuration](https://docs.liveavatar.com/docs/full-mode/configuration.md): Customize your LiveAvatar's appearance, voice, behavior, and interactivity
+- [Configuring Voice Settings](https://docs.liveavatar.com/docs/full-mode/voice-settings.md): Fine-tune text-to-speech settings for ElevenLabs and Fish Audio
+- [Push-to-Talk](https://docs.liveavatar.com/docs/full-mode/push-to-talk.md): Explicit control over when user speech starts and ends
+- [Custom LLM Integration](https://docs.liveavatar.com/docs/full-mode/custom-llm.md): Use your own language model with LiveAvatar FULL Mode
+- [Custom TTS Integration](https://docs.liveavatar.com/docs/full-mode/custom-tts.md): Use your own ElevenLabs voice with LiveAvatar FULL Mode
+- [Events](https://docs.liveavatar.com/docs/full-mode/events.md): Events for managing FULL Mode sessions
+
+### LITE Mode
+
+- [LITE Mode Overview](https://docs.liveavatar.com/docs/lite-mode/overview.md): Bring your own AI stack, let LiveAvatar handle real-time video
+- [Lifecycle](https://docs.liveavatar.com/docs/lite-mode/lifecycle.md): The three phases of a LITE Mode LiveAvatar session
+- [Configuration](https://docs.liveavatar.com/docs/lite-mode/configuration.md): Configure avatars and WebRTC settings for LITE Mode
+- [Events](https://docs.liveavatar.com/docs/lite-mode/events.md): WebSocket command and response events for LITE Mode sessions
+- [Integrations and Plugins](https://docs.liveavatar.com/docs/lite-mode/integrations.md): Available integrations and plugins for LITE Mode
+- [ElevenLabs Agent Plugin](https://docs.liveavatar.com/docs/elevenlabs-agent-plugin.md): Bridge ElevenLabs Agents with LiveAvatar for real-time avatar video
+
+### FAQ
+
+- [API Key Configuration](https://docs.liveavatar.com/docs/faq/api-key.md): Where to find your LiveAvatar API key
+- [Firewall Configuration](https://docs.liveavatar.com/docs/faq/firewall.md): Network requirements for LiveAvatar WebRTC connections
+- [Credits and Subscriptions](https://docs.liveavatar.com/docs/faq/credits.md): How LiveAvatar billing and credit deductions work
+- [HeyGen to LiveAvatar Migration](https://docs.liveavatar.com/docs/faq/migration-guide.md): Step-by-step guide for migrating from HeyGen Interactive Avatar
+- [LiveAvatar vs HeyGen Interactive Avatar](https://docs.liveavatar.com/docs/faq/heygen-comparison.md): Key differences between the two platforms
+- [Migration FAQs](https://docs.liveavatar.com/docs/faq/migration-faqs.md): Common questions about migrating from HeyGen to LiveAvatar
+
+### API Reference
+
+- [Create Session Token](https://docs.liveavatar.com/api-reference/sessions/create-session-token.md): Create session token for authenticated user
+- [Start Session](https://docs.liveavatar.com/api-reference/sessions/start-session.md): Start a new session
+- [Stop Session](https://docs.liveavatar.com/api-reference/sessions/stop-session.md): Stop a session
+- [Get Session](https://docs.liveavatar.com/api-reference/sessions/get-session.md): Get a specific session by ID
+- [List Sessions](https://docs.liveavatar.com/api-reference/sessions/list-sessions.md): List active sessions for the authenticated user
+- [Keep Session Alive](https://docs.liveavatar.com/api-reference/sessions/keep-session-alive.md): Keep the session alive
+- [Get Session Transcript](https://docs.liveavatar.com/api-reference/sessions/get-session-transcript.md): Get the transcript for a session
+- [Create Embed V2](https://docs.liveavatar.com/api-reference/embeddings/create-embed-v2.md): Create an embed avatar with sandbox support
+- [List Public Avatars](https://docs.liveavatar.com/api-reference/avatar/list-public-avatars.md): Get public avatars list
+- [List User Avatars](https://docs.liveavatar.com/api-reference/avatar/list-user-avatars.md): Get avatars list for auth user
+- [Get Avatar By Id](https://docs.liveavatar.com/api-reference/avatar/get-avatar-by-id.md): Get avatar by id
+- [Update Avatar](https://docs.liveavatar.com/api-reference/avatar/update-avatar.md): Update avatar
+- [Delete Avatar](https://docs.liveavatar.com/api-reference/avatar/delete-avatar.md): Soft delete avatar
+- [Create Context](https://docs.liveavatar.com/api-reference/contexts/create-context.md): Create a new user context record
+- [List User Contexts](https://docs.liveavatar.com/api-reference/contexts/list-user-contexts.md): List user contexts
+- [Get Context By Id](https://docs.liveavatar.com/api-reference/contexts/get-context-by-id.md): Get a user context by id
+- [Update Context](https://docs.liveavatar.com/api-reference/contexts/update-context.md): Update a user context
+- [Delete Context](https://docs.liveavatar.com/api-reference/contexts/delete-context.md): Delete a user context
+- [List Voices](https://docs.liveavatar.com/api-reference/voices/list-voices.md): Get voices list
+- [Get Voice By Id](https://docs.liveavatar.com/api-reference/voices/get-voice-by-id.md): Get voice by id
+- [Update Voice](https://docs.liveavatar.com/api-reference/voices/update-voice.md): Update voice
+- [Delete Voice](https://docs.liveavatar.com/api-reference/voices/delete-voice.md): Delete voice by id
+- [Get Voice Preview By Id](https://docs.liveavatar.com/api-reference/voices/get-voice-preview-by-id.md): Get voice preview by id
+- [Bind Third Party Voice](https://docs.liveavatar.com/api-reference/voices/bind-third-party-voice.md): Bind a third-party voice (e.g. ElevenLabs) using a stored secret
+- [Create Llm Configuration](https://docs.liveavatar.com/api-reference/llm-configurations/create-llm-configuration.md): Create a new LLM configuration for the authenticated user's space
+- [List Llm Configurations](https://docs.liveavatar.com/api-reference/llm-configurations/list-llm-configurations.md): List all LLM configurations for the authenticated user's space
+- [Get Llm Configuration](https://docs.liveavatar.com/api-reference/llm-configurations/get-llm-configuration.md): Get an LLM configuration by ID
+- [Update Llm Configuration](https://docs.liveavatar.com/api-reference/llm-configurations/update-llm-configuration.md): Update an LLM configuration by ID
+- [Delete Llm Configuration](https://docs.liveavatar.com/api-reference/llm-configurations/delete-llm-configuration.md): Delete an LLM configuration by ID
+- [Create Secret](https://docs.liveavatar.com/api-reference/secrets/create-secret.md): Create a new encrypted secret for the authenticated user's space
+- [List Secrets](https://docs.liveavatar.com/api-reference/secrets/list-secrets.md): List all secrets for the authenticated user's space
+- [Delete Secret](https://docs.liveavatar.com/api-reference/secrets/delete-secret.md): Delete a secret by id
+- [Get Languages](https://docs.liveavatar.com/api-reference/languages/get-languages.md): Return the list of supported languages with code and display name
+- [Get User Credits](https://docs.liveavatar.com/api-reference/users/get-user-credits.md): Get the current user's credit balance
+
+### Changelog
+
+- [Changelog](https://docs.liveavatar.com/changelog.md): Product updates and announcements for LiveAvatar API
+
+## OpenAPI Specs
+
+- [openapi](https://docs.liveavatar.com/openapi.json)

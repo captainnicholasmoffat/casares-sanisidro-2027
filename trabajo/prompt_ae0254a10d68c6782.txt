@@ -1,0 +1,28 @@
+Preparás la base de conocimiento de un chatbot para el sitio web del programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf.
+
+REPOSITORIO (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo
+- Usá sólo `git -C <repo> show c462fcf:<ruta>`, `git -C <repo> ls-tree -r --name-only c462fcf` y `git -C <repo> grep ... c462fcf`. Prohibido: push, commit, checkout, fetch, modificar archivos del repo, o imprimir la URL del remoto (tiene una credencial).
+- El texto fuente del programa está en doc/content*.py (y doc/build.py arma el documento). El PDF final de pantalla está en salida/PROGRAMA_SAN_ISIDRO_2027.pdf. También tenés el texto ya extraído de la A4 final hoja por hoja en /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/t/<hoja>.txt y la pantalla en .../v21/pj.txt.
+- Las 32 investigaciones están en informes/*.md.
+
+SALIDA 1 · /home/claude/proyecto/web/data/programa.json
+Una lista de entradas, en el orden del documento:
+{ "id": "5.6", "capitulo": "5 · Qué hacemos en cada área", "titulo": "Salud", "hoja_a4": 76, "texto": "párrafos separados por \n\n", "cuadros": [{"titulo": "...", "texto": "filas en texto plano"}], "fuentes": "texto de las fuentes de ese apartado, si existen" }
+Incluí: introducción, «Qué proponemos hacer», cada apartado de los capítulos 1 a 6, los recuadros (como parte del apartado o como entrada propia con id tipo "5.5-r1"), «Para cerrar», cada ordenanza del anexo como entrada propia, el glosario (una entrada por término) y la nota de método. El texto tiene que ser EXACTAMENTE el texto final del programa (c462fcf): no reescribas nada. Sacá sólo los encabezados y pies de página. Verificá contra el PDF final que no falte ningún apartado. Las hojas de la A4 sirven para que el chatbot cite «hoja X»: sacalas del texto por hoja.
+
+SALIDA 2 · /home/claude/proyecto/web/data/investigaciones.json
+Pasajes de las 32 investigaciones, para que el chatbot pueda explicar de dónde salió cada cosa. Cada pasaje:
+{ "id": "inv-07-03", "informe": "título legible del informe (no el nombre del archivo)", "seccion": "título de la sección", "texto": "...", "temas": ["palabras clave"], "relacion": ["ids de apartados del programa relacionados"], "descartado": false, "nota": "" }
+Pasajes de 150 a 400 palabras, cortados por sección. Tamaño total menor a 1,5 MB.
+CURACIÓN (obligatoria, porque esto va a ser público):
+- Sacá todo lo que sea nota interna: mensajes al coordinador, a Nick o al trabajador, pendientes, «TODO», instrucciones de trabajo, comentarios de proceso, rutas de archivos (01_raw/…, informes/…, .py, .csv), y referencias a «el repositorio».
+- Las marcas [V], [P], [CP], [SC] pasalas a palabras simples entre paréntesis («verificado en la fuente», «según la prensa», «cálculo propio», «sin confirmar»).
+- Los nombres de personas y de empresas se quedan como están. No saques nombres.
+- Si un pasaje describe una opción que el programa final descartó o decidió distinto, marcalo "descartado": true y en "nota" escribí en una oración qué decidió el programa (con el id del apartado). Ejemplo conocido: sobre el permiso de los locales de la costa (Catalejo y Barisidro), el programa final dice, según quienes manejaban los locales, que el permiso de uso de la tierra lo daba la Provincia y el canon se le pagaba a la Provincia; si un informe dice otra cosa, marcalo con esa nota.
+- No incluyas nada que plantee la democracia directa como una etapa futura o un plan posterior del programa. Si aparece, sacalo y anotalo en el informe de curación.
+- No inventes ni resumas con palabras tuyas: el texto de cada pasaje es el del informe, sólo limpio.
+
+SALIDA 3 · /home/claude/proyecto/web/data/CURACION.md
+En castellano llano: qué sacaste y por qué (con ejemplos), la lista de pasajes marcados como descartados con su nota, y cualquier contradicción que encuentres entre una investigación y el programa final. Al final, el tamaño de cada JSON y la cantidad de entradas.
+
+Validá que los dos JSON se lean bien con Python (json.load). Cuando termines, respondé sólo con: «Listo» y un resumen de 6 líneas (cantidad de entradas, tamaños, qué sacaste, contradicciones).

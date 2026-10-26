@@ -1,0 +1,31 @@
+Armás los datos de un plan de despliegue (rollout plan) para el programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf. Todavía no armes la página: sólo los datos y la revisión.
+
+QUÉ ES: un plan como los que usan las grandes industrias y los gerentes de proyectos de software para proyectos muy grandes. Muestra cada acción, qué necesita antes, qué destraba, quién la hace y cuándo, con el camino crítico. Sirve para mostrar que el equipo está organizado y que el día uno sabe a quién pedirle qué y qué hacer.
+
+EJEMPLO DE REFERENCIA (de otro proyecto del mismo dueño): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/ejemplos/ejemplo_rollout_nick.html. Tiene `const DATA = [...]` con 130 acciones y estos campos: code, task, stream, owner, team, dur (días hábiles), start, finish, float, critical, milestone, decision, steps, moves, sne, needs [{code, type "FS"|"SS", lag}], note. Usá el mismo esquema (podés dejar vacíos moves y sne) y sumá "fuente" (id del apartado del programa de donde sale la acción).
+
+FUENTE: el texto final del programa. Repositorio (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo — usá sólo `git -C <repo> show c462fcf:<ruta>` y `git -C <repo> grep ... c462fcf`; prohibido push, commit, checkout, fetch, modificar el repo o imprimir la URL del remoto. Texto fuente en doc/content*.py. Texto ya extraído: /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/pj.txt (pantalla) y .../v21/t/<hoja>.txt (A4; el capítulo 6 empieza en la hoja 101 y el anexo en la 116).
+
+QUÉ INCLUIR:
+- Todo el capítulo 6: los veintiún compromisos de los primeros cien días, las metas de los cuatro años, el calendario mes por mes, la suba año por año de la obra que deciden los vecinos, los riesgos que tengan una acción preventiva.
+- Cada ordenanza del anexo: presentación al Concejo, tratamiento, aprobación, y lo que destraba.
+- Las acciones de los capítulos 4 y 5 que el calendario nombra o que el texto fecha: asambleas, comisiones, panel sorteado, la inteligencia artificial del Municipio por etapas, la tecnicatura y las pasantías, salud (turnos, tomógrafos, compras), seguridad, costa (Escuela Náutica, baños, foodtrucks, clases e instructores), espectáculos, habilitaciones e inspecciones grabadas, multas, transparencia, empleados, niñez, personas mayores, género y discapacidad.
+- El ciclo de presupuesto del capítulo 3: presupuesto, ordenanza fiscal e impositiva, Asamblea de Concejales y Mayores Contribuyentes, tabla de valores.
+- Una línea de transición: desde la elección de 2027 hasta la asunción. La asunción es el 10 de diciembre de 2027 (confirmalo en el texto). Para la fecha de la elección, si el programa no la dice, buscá en la web la fecha oficial de las elecciones generales de 2027 en la Provincia de Buenos Aires; si no está fijada, usá la regla legal y marcala como estimada en "note".
+- El plan llega hasta el fin del mandato (diciembre de 2031). Los primeros 18 meses, en detalle; después, por trimestre o semestre.
+
+LÍNEAS DE TRABAJO (stream), exactamente estas 12, más «0 Transición»: mecanismo vecinal y obra pública; Concejo y ordenanzas; presupuesto y tasas; inteligencia artificial del Municipio; empleo y formación; vivienda; salud; seguridad; costa y espacio público; cultura y espectáculos; habilitaciones e inspecciones; transparencia.
+
+RESPONSABLES: por cargo (Intendente, Secretaría de Hacienda, Secretaría de Salud, Concejo Deliberante, comisiones vecinales, Provincia, UNSO, etc.), nunca nombres de personas.
+
+REGLAS:
+- Cada acción tiene que salir del texto del programa: nada de compromisos nuevos. Las duraciones que el programa no dice son supuestos tuyos: marcá cada uno en "note" («duración estimada»).
+- Las fechas tienen que coincidir con los meses del programa (mes 1 = diciembre de 2027 desde el día 10; definí la regla y aplicala igual en todo el plan).
+- Calculá el camino crítico (CPM) con días hábiles de lunes a viernes, sin feriados (decilo en una nota), con holgura (float) para cada acción. Hitos con dur 0.
+- Validá: sin ciclos, cada "needs" existe, ninguna acción empieza antes de lo que necesita, las fechas caen dentro de los meses que da el programa.
+- Textos en castellano rioplatense llano: una idea por oración, sin «Y» ni «Que» al empezar una oración, nada de jerga.
+
+SALIDA:
+- /home/claude/proyecto/despliegue/acciones.json (la lista, con los campos del esquema).
+- /home/claude/proyecto/despliegue/REVISION.md: los supuestos (duraciones y reglas), las acciones del camino crítico, y cualquier contradicción o hueco que encuentres en el capítulo 6 o entre el capítulo 6 y los capítulos 4 y 5 (no los resuelvas: listalos).
+Cuando termines, respondé sólo con «Listo» y un resumen de 6 líneas (cantidad de acciones, hitos, acciones críticas, fecha de inicio y fin, huecos encontrados).

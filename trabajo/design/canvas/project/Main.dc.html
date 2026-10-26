@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>A. Sitio de diario, computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.chap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;gap:0 48px}
+@media (max-width:900px){.hero,.cards,.days,.chap{grid-template-columns:minmax(0,1fr)}.chap{grid-template-rows:none;grid-auto-flow:row}.hero{gap:32px}}
+</style>
+</helmet>
+<div style="background: #F5F0E8; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+  <header style="border-bottom: 1px solid #DCD2C3; background: #F5F0E8">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px">
+      <a href="#" style="text-decoration: none; color: #2A211C; display: flex; flex-direction: column">
+        <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 24px; line-height: 1.1">San Isidro 2027</span>
+        <span style="font-size: 13px; color: #5E534B">Programa de gobierno</span>
+      </a>
+      <nav class="nav" aria-label="Secciones">
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Qué proponemos</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">El programa</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Las seis zonas</a>
+        <a href="#" style="color: #2A211C; text-decoration: none; font-weight: 500">Plan con fechas</a>
+        <a href="#" style="background: #7C2E23; color: #FBF8F2; text-decoration: none; font-weight: 600; padding: 11px 18px; border-radius: 999px">Preguntale al programa</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="wrap hero" style="padding-top: 72px; padding-bottom: 80px">
+    <div style="display: flex; flex-direction: column; gap: 22px">
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 84px; line-height: .95; letter-spacing: -0.02em">San Isidro 2027</h1>
+      <p style="margin: 0; font-family: Spectral, Georgia, serif; font-style: italic; font-size: 28px; line-height: 1.3; max-width: 20em">Con los recursos que el Municipio ya tiene, y con decisión vecinal sobre la inversión pública.</p>
+      <p style="margin: 0; font-size: 18px; color: #5E534B; max-width: 34em">Según el Censo 2022, en San Isidro hay 25.165 hogares sin gas de red y 6.488 que no tienen cloaca. La mayoría está en Boulogne y en Béccar.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px">
+        <a href="#" style="background: #7C2E23; color: #FBF8F2; text-decoration: none; font-weight: 600; padding: 15px 22px; border-radius: 999px">Leer los nueve puntos</a>
+        <a href="#" style="color: #7C2E23; text-decoration: none; font-weight: 600; padding: 14px 21px; border-radius: 999px; border: 1px solid #7C2E23">Preguntale al programa</a>
+      </div>
+    </div>
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+      <img src="/_blob/25158cd3f60b2f91c6195727f68dbed7" alt="La costanera de San Isidro al atardecer, con gente sobre el murallón y veleros en el río." style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 4px">
+      <figcaption style="font-size: 13px; color: #5E534B">La costanera de San Isidro. Ilustración.</figcaption>
+    </figure>
+  </section>
+
+  <section style="background: #FBF8F2; border-top: 1px solid #DCD2C3; border-bottom: 1px solid #DCD2C3; padding: 80px 0">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+        <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 52px; line-height: 1.05">Qué proponemos hacer</h2>
+        <p style="margin: 0; font-size: 18px; color: #5E534B">Proponemos una democracia semidirecta asistida por inteligencia artificial: los vecinos de cada zona van a decidir la mitad de la obra pública y a controlar cómo se usa el dinero de todos.</p>
+      </div>
+      <ol class="cards" style="list-style: none; margin: 0; padding: 0">
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">1</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 4</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">2</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 5</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">3</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 5</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">4</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Las personas que se forman en la tecnicatura van a construir la inteligencia artificial del Municipio.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 4</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">5</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 4</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">6</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Las cámaras van a detectar y avisar, y no sólo grabar.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 5</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">7</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Las inspecciones de comercios van a quedar grabadas.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 5</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">8</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Va a haber muchos más shows y espectáculos: 200 por año, la mayoría al aire libre, en plazas y espacios públicos de todo San Isidro.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 5</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+        <li style="background: #F5F0E8; border: 1px solid #DCD2C3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 30px; color: #7C2E23; line-height: 1">9</span>
+          <span style="font-family: Spectral, Georgia, serif; font-size: 21px; line-height: 1.3; flex-grow: 1">Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</span>
+          <span style="display: flex; justify-content: space-between; align-items: center; font-size: 14px"><span style="color: #5F7057">Capítulo 3</span><a href="#" style="font-weight: 600">Leer más</a></span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top: 80px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 32px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 44px; line-height: 1.05">Los primeros cien días</h2>
+    <ol class="days" style="list-style: none; margin: 0; padding: 0">
+      <li style="border-top: 3px solid #5F7057; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-weight: 600; color: #5F7057">10 de diciembre de 2027</span>
+        <span style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35">Asume el nuevo gobierno. Ese mismo mes, el intendente va a mandar al Concejo Deliberante las primeras ordenanzas.</span>
+      </li>
+      <li style="border-top: 3px solid #5F7057; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-weight: 600; color: #5F7057">Los meses siguientes</span>
+        <span style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35">Empezará a funcionar la inteligencia artificial del Municipio. También abrirá el primer centro de apoyo escolar.</span>
+      </li>
+      <li style="border-top: 3px solid #5F7057; padding-top: 16px; display: flex; flex-direction: column; gap: 6px">
+        <span style="font-weight: 600; color: #5F7057">19 de marzo de 2028</span>
+        <span style="font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.35">A los cien días, todos los vecinos ya van a estar convocados a la primera asamblea de su zona.</span>
+      </li>
+    </ol>
+  </section>
+
+  <section style="background: #FBF8F2; border-top: 1px solid #DCD2C3; padding: 72px 0 80px">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px">
+        <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 44px; line-height: 1.05">El programa completo</h2>
+        <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 0 1 420px">
+          <label for="buscar-a" style="font-size: 14px; color: #5E534B">Buscar en el programa</label>
+          <input id="buscar-a" type="search" placeholder="Por ejemplo: cloacas, multas, costa" style="font: inherit; padding: 13px 16px; border: 1px solid #BFB3A1; border-radius: 6px; background: #FFFFFF; color: #2A211C">
+        </div>
+      </div>
+      <ol class="chap" style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #DCD2C3">
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">1</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">Diagnóstico</a></li>
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">2</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">El gobierno actual, medido</a></li>
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">3</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">Los fondos</a></li>
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">4</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">El mecanismo</a></li>
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">5</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">Qué hacemos en cada área</a></li>
+        <li style="border-bottom: 1px solid #DCD2C3; padding: 16px 0; display: flex; gap: 16px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23; width: 24px">6</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 20px">El plan, con fechas</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="wrap" style="padding-top: 32px; padding-bottom: 48px; font-size: 14px; color: #5E534B">Programa de gobierno San Isidro 2027.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2480}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

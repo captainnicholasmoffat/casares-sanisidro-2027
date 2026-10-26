@@ -1,0 +1,242 @@
+<title>Menú en el celular</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F5F0E8; --paper:#FBF8F2; --card:#FFFFFF; --ink:#2A211C; --ink-2:#5E534B; --ink-3:#7A6E64; --rule:#DCD2C3;
+  --ox:#7C2E23; --ox-2:#6A261D; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --ox-line:rgba(251,248,242,.22); --coral:#DB6B4B; --sage:#5F7057; --amber:#8F6A24;
+  --field:#FFFFFF; --field-ink:#2A211C; --stage:#E9E1D4; --shadow:0 18px 50px rgba(42,33,28,.18);
+  --serif:"Spectral","Iowan Old Style",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A;
+  --ox:#7C2E23; --ox-2:#6A261D; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --ox-line:rgba(251,248,242,.22); --coral:#DB6B4B; --sage:#A3B597; --amber:#D9B169;
+  --field:#FFFFFF; --field-ink:#2A211C; --stage:#120E0C; --shadow:0 18px 50px rgba(0,0,0,.5); color-scheme:dark } }
+:root[data-theme="dark"]{
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --ink-3:#A39687; --rule:#3B312A;
+  --ox:#7C2E23; --ox-2:#6A261D; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --ox-line:rgba(251,248,242,.22); --coral:#DB6B4B; --sage:#A3B597; --amber:#D9B169;
+  --field:#FFFFFF; --field-ink:#2A211C; --stage:#120E0C; --shadow:0 18px 50px rgba(0,0,0,.5); color-scheme:dark }
+*{box-sizing:border-box}
+html,body{background:var(--stage)}
+body{color:var(--ink);font:16px/1.5 var(--sans);margin:0}
+button{font:inherit;color:inherit}
+a{color:inherit}
+
+/* Selector de opción (no es parte de la web) */
+.pick{max-width:420px;margin:0 auto;padding:18px 16px 14px;display:flex;flex-direction:column;gap:12px}
+.pick h1{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.1;margin:0}
+.pick .why{font-size:14px;color:var(--ink-2);margin:0}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.seg button{border:1px solid var(--rule);background:var(--card);border-radius:12px;padding:9px 8px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:2px;min-width:0}
+.seg button b{font-size:15px}
+.seg button span{font-size:12px;color:var(--ink-2);line-height:1.25}
+.seg button[aria-pressed="true"]{border-color:var(--ox);box-shadow:inset 0 0 0 1px var(--ox)}
+.verdict{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;font-size:14px;display:flex;flex-direction:column;gap:6px}
+.verdict p{margin:0}
+.verdict .rec{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-left:6px}
+.verdict .bad b{color:var(--ink)}
+.verdict .bad{color:var(--ink-2)}
+.hint{font-size:12px;color:var(--ink-3);text-align:center;margin:0}
+
+/* El "teléfono": en el celular ocupa todo; en computadora, una columna de 390 */
+#head{display:contents}
+.phone{max-width:420px;margin:0 auto 40px;background:var(--ground);box-shadow:var(--shadow);position:relative;min-height:100vh}
+@media (min-width:600px){.phone{border-radius:22px;overflow:clip}}
+
+/* ---- Encabezados ---- */
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--ox-ink);min-width:0}
+.brand b{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.05}
+.brand span{font-size:12px;color:var(--ox-soft)}
+
+/* A: barra fija con Menú */
+.hA{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ox);color:var(--ox-ink);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:1px solid var(--ox-line)}
+.mbtn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid var(--ox-line);color:var(--ox-ink);border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;cursor:pointer}
+.mbtn svg{width:18px;height:18px}
+.sheet{position:fixed;inset:0;z-index:50;display:flex;justify-content:center;background:rgba(20,12,10,.35)}
+.sheet-in{width:100%;max-width:420px;height:100%;background:var(--ox);color:var(--ox-ink);display:flex;flex-direction:column;overflow-y:auto;padding:calc(10px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.sheet-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--ox-line)}
+.sheet ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column}
+.sheet li a{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;color:var(--ox-ink);padding:16px 2px;border-bottom:1px solid var(--ox-line)}
+.sheet li a b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15}
+.sheet li a span{display:block;font-size:14px;color:var(--ox-soft);margin-top:2px}
+.sheet li a svg{flex:none;width:18px;height:18px;opacity:.8}
+.sheet .small{display:flex;gap:20px;margin-top:22px;font-size:15px}
+.sheet .small a{color:var(--ox-soft)}
+.sheet .note{margin-top:auto;padding-top:24px;font-size:12px;color:var(--ox-soft);opacity:.85}
+
+/* B: marca arriba + tira fija deslizable */
+.hB{background:var(--ox);color:var(--ox-ink);padding:12px 16px 12px}
+.stripB{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--rule)}
+.stripB .sc{display:flex;gap:6px;overflow-x:auto;padding:9px 16px;scrollbar-width:none;scroll-snap-type:x proximity}
+.stripB .sc::-webkit-scrollbar{display:none}
+.stripB a{flex:none;scroll-snap-align:start;font-size:14px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:7px 13px;border-radius:999px;border:1px solid var(--rule);background:var(--card);white-space:nowrap}
+.stripB a.on{background:var(--ox);border-color:var(--ox);color:var(--ox-ink)}
+.stripB::after{content:"";position:absolute;right:0;top:0;bottom:1px;width:36px;background:linear-gradient(90deg,transparent,var(--paper));pointer-events:none}
+
+/* C: marca arriba + barra de abajo tipo app */
+.hC{background:var(--ox);color:var(--ox-ink);padding:12px 16px}
+.barC{position:fixed;left:50%;transform:translateX(-50%);bottom:0;z-index:30;width:100%;max-width:420px;background:var(--paper);border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+.barC a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--ink-2);font-size:11px;font-weight:600;padding:4px 0;border-radius:10px;min-width:0}
+.barC a svg{width:22px;height:22px}
+.barC a.on{color:var(--ox)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .barC a.on{color:#E8A08F} }
+:root[data-theme="dark"] .barC a.on{color:#E8A08F}
+.phone.c .content{padding-bottom:84px}
+
+/* ---- Contenido de muestra (igual a la web) ---- */
+.hero{background:var(--ox);color:var(--ox-ink);padding:26px 16px 34px;display:flex;flex-direction:column;gap:16px}
+.hero h2{font-family:var(--serif);font-weight:500;font-size:2.35rem;line-height:1.04;letter-spacing:-.015em;margin:0}
+.hero p{margin:0;color:var(--ox-soft);font-size:1.05rem}
+.hero label{font-size:14px;color:var(--ox-soft)}
+.ask{display:flex;flex-direction:column;gap:8px}
+.ask textarea{font:inherit;font-size:17px;line-height:1.4;padding:14px 16px;border:0;border-radius:10px;background:var(--field);color:var(--field-ink);resize:none;min-height:calc(3 * 1.4em + 28px);width:100%}
+.ask .row{display:grid;grid-template-columns:auto 1fr;gap:8px}
+.ask .row button{border:0;border-radius:10px;padding:13px 18px;font-weight:600;font-size:17px}
+.ask .mic{background:var(--paper);color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.ask .mic svg{width:18px;height:18px}
+.ask .go{background:var(--coral);color:#2A211C}
+.fixnote{font-size:12px;color:var(--ox-soft);opacity:.9;margin:0}
+.chips{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.chips span{border:1px solid var(--ox-line);border-radius:999px;padding:8px 14px;font-size:15px}
+.sec{padding:34px 16px 8px;display:flex;flex-direction:column;gap:14px;scroll-margin-top:64px}
+.sec h3{font-family:var(--serif);font-weight:500;font-size:1.8rem;line-height:1.1;margin:0}
+.sec p.lead{margin:0;color:var(--ink-2)}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.card .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ox);color:var(--ox-ink);display:grid;place-items:center;font-family:var(--serif);font-size:15px}
+.card p{margin:0;font-family:var(--serif);font-size:1.12rem;line-height:1.3}
+.cap{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.cap small{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
+.cap b{font-family:var(--serif);font-weight:500;font-size:1.25rem}
+.cap span{color:var(--ox);font-weight:600;font-size:14px}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .cap span{color:#E8A08F} }
+:root[data-theme="dark"] .cap span{color:#E8A08F}
+.foot{background:var(--ox);color:var(--ox-soft);padding:26px 16px 30px;font-size:13px;margin-top:34px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--ink);color:var(--ground);font-size:14px;padding:10px 16px;border-radius:999px;max-width:calc(100% - 32px);text-align:center}
+</style>
+
+<div class="pick">
+  <h1>Menú en el celular</h1>
+  <p class="why">Hoy los cinco links de arriba se acomodan en tres renglones sueltos y se mezclan, y al bajar desaparecen. Probá cada opción desde tu celular: bajá, tocá el menú, volvé a subir.</p>
+  <div class="seg" role="group" aria-label="Opción">
+    <button type="button" data-o="a" aria-pressed="true"><b>A · Menú</b><span>Barra fija con botón</span></button>
+    <button type="button" data-o="b" aria-pressed="false"><b>B · Tira</b><span>Se desliza con el dedo</span></button>
+    <button type="button" data-o="c" aria-pressed="false"><b>C · Abajo</b><span>Barra tipo app</span></button>
+  </div>
+  <div class="verdict" id="verdict"></div>
+  <p class="hint">En las tres, la caja de la pregunta muestra el ejemplo entero (hoy lo corta en celulares chicos).</p>
+</div>
+
+<div class="phone" id="phone">
+  <div id="head"></div>
+  <div class="content">
+    <section class="hero" id="m-preguntar">
+      <h2>¿Qué te preocupa de San Isidro?</h2>
+      <p>Preguntale a nuestro programa de gobierno. Te responde con lo que proponemos y te dice en qué capítulo y en qué hoja está.</p>
+      <div class="ask">
+        <label for="mq">Tu pregunta</label>
+        <textarea id="mq" rows="3" placeholder="Por ejemplo: tengo un café en Martínez y me hicieron una inspección injusta"></textarea>
+        <div class="row"><button class="mic" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Hablar</button><button class="go" type="button">Preguntar</button></div>
+      </div>
+      <div class="chips"><span>Vivo en Boulogne y no tengo cloaca</span><span>Mi hijo terminó la secundaria y busca trabajo</span><span>Tengo un comercio y me clausuraron</span></div>
+    </section>
+    <section class="sec" id="m-propuestas">
+      <h3>Qué proponemos hacer</h3>
+      <p class="lead">Una democracia semidirecta asistida por inteligencia artificial: los vecinos de cada zona van a decidir la mitad de la obra pública.</p>
+      <div class="card"><span class="n">1</span><p>Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</p></div>
+      <div class="card"><span class="n">2</span><p>La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</p></div>
+      <div class="card"><span class="n">3</span><p>Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</p></div>
+      <div class="card"><span class="n">4</span><p>Las personas que se forman en la tecnicatura van a construir la inteligencia artificial del Municipio.</p></div>
+      <div class="card"><span class="n">5</span><p>La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</p></div>
+      <div class="card"><span class="n">6</span><p>Las cámaras van a detectar y avisar, y no sólo grabar.</p></div>
+      <div class="card"><span class="n">7</span><p>Las inspecciones de comercios van a quedar grabadas.</p></div>
+    </section>
+    <section class="sec" id="m-programa">
+      <h3>El programa completo</h3>
+      <div class="cap"><div><small>Capítulo 1</small><b>Diagnóstico</b></div><span>Leer</span></div>
+      <div class="cap"><div><small>Capítulo 2</small><b>El gobierno actual, medido</b></div><span>Leer</span></div>
+      <div class="cap"><div><small>Capítulo 3</small><b>Los fondos</b></div><span>Leer</span></div>
+      <div class="cap"><div><small>Capítulo 4</small><b>El mecanismo</b></div><span>Leer</span></div>
+      <div class="cap"><div><small>Capítulo 5</small><b>Qué hacemos en cada área</b></div><span>Leer</span></div>
+      <div class="cap"><div><small>Capítulo 6</small><b>El plan, con fechas</b></div><span>Leer</span></div>
+    </section>
+    <footer class="foot">Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</footer>
+  </div>
+  <div id="extra"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+  var ICON = {
+    menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    go: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    ask: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>',
+    list: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="1.6" fill="currentColor"/><circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="6" cy="17" r="1.6" fill="currentColor"/><path d="M10 7h10M10 12h10M10 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    book: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5V19c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 6v13.5" stroke="currentColor" stroke-width="1.8"/></svg>',
+    chart: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V11M10 19V6M15 19v-5M20 19V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    cal: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'
+  };
+  var DEST = [
+    {id: "m-preguntar", t: "Preguntale al programa", s: "Contá tu problema y te dice qué proponemos", c: "Preguntar", i: "ask"},
+    {id: "m-propuestas", t: "Qué proponemos", s: "Los nueve puntos y los primeros cien días", c: "Propuestas", i: "list"},
+    {id: "m-programa", t: "El programa completo", s: "Los seis capítulos, para leer entero", c: "Programa", i: "book"},
+    {ext: "Las cuentas", t: "Las cuentas", s: "Cuánto entra, cuánto sale y cómo se paga", c: "Cuentas", i: "chart"},
+    {ext: "el plan de despliegue", t: "Plan de despliegue", s: "Qué se hace, quién y en qué orden", c: "Plan", i: "cal"}
+  ];
+  var TXT = {
+    a: {rec: true, good: "Arriba queda una barra finita con el nombre y un botón «Menú», siempre visible al bajar. Al tocarlo se abre la lista grande, un destino por renglón, con una línea que explica cada uno.", bad: "los destinos quedan detrás de un toque."},
+    b: {rec: false, good: "Arriba el nombre y, debajo, una tira de botones en un solo renglón que queda fija al bajar y se desliza con el dedo. Marca dónde estás.", bad: "«Las cuentas» y «Plan» quedan fuera de la pantalla y mucha gente no se da cuenta de que hay que deslizar."},
+    c: {rec: false, good: "Arriba el nombre y, abajo, una barra fija con cinco íconos, como en una aplicación del celular.", bad: "ocupa siempre un pedazo de pantalla abajo, choca con la barra del navegador y obliga a acortar los nombres («Preguntar», «Cuentas», «Plan»)."}
+  };
+  var phone = document.getElementById("phone"), head = document.getElementById("head"), extra = document.getElementById("extra"), toast = document.getElementById("toast"), tt;
+  function say(t){ toast.textContent = t; toast.hidden = false; clearTimeout(tt); tt = setTimeout(function(){ toast.hidden = true; }, 2200); }
+  function goTo(d){ if (d.ext) { say("En la web real, esto abre " + d.ext + "."); return; } var el = document.getElementById(d.id); if (el) el.scrollIntoView({behavior: "smooth", block: "start"}); }
+  function brand(){ return '<a class="brand" href="#m-preguntar"><b>San Isidro 2027</b><span>Programa de gobierno</span></a>'; }
+  function build(o){
+    phone.className = "phone " + o; extra.innerHTML = ""; head.innerHTML = "";
+    if (o === "a") {
+      head.innerHTML = '<div class="hA">' + brand() + '<button class="mbtn" type="button" id="open" aria-expanded="false">' + ICON.menu + 'Menú</button></div>';
+      var sh = document.createElement("div"); sh.className = "sheet"; sh.hidden = true; sh.setAttribute("role", "dialog"); sh.setAttribute("aria-modal", "true"); sh.setAttribute("aria-label", "Menú");
+      sh.innerHTML = '<div class="sheet-in"><div class="sheet-top">' + brand() + '<button class="mbtn" type="button" id="close">' + ICON.close + 'Cerrar</button></div><ol>' +
+        DEST.map(function(d, k){ return '<li><a href="#" data-k="' + k + '"><div><b>' + d.t + '</b><span>' + d.s + '</span></div>' + ICON.go + '</a></li>'; }).join("") +
+        '</ol><div class="small"><a href="#" data-x="Escribinos">Escribinos</a><a href="#" data-x="Privacidad">Privacidad</a></div><p class="note">Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</p></div>';
+      extra.appendChild(sh);
+      var open = document.getElementById("open");
+      function setOpen(v){ sh.hidden = !v; open.setAttribute("aria-expanded", v ? "true" : "false"); document.documentElement.style.overflow = v ? "hidden" : ""; if (v) document.getElementById("close").focus(); else open.focus(); }
+      open.addEventListener("click", function(){ setOpen(true); });
+      document.getElementById("close").addEventListener("click", function(){ setOpen(false); });
+      sh.addEventListener("click", function(e){ if (e.target === sh) setOpen(false); });
+      document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !sh.hidden) setOpen(false); });
+      sh.querySelectorAll("a[data-k]").forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); setOpen(false); goTo(DEST[+a.dataset.k]); }); });
+      sh.querySelectorAll("a[data-x]").forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); say("En la web real, esto abre «" + a.dataset.x + "»."); }); });
+    } else if (o === "b") {
+      head.innerHTML = '<div class="hB">' + brand() + '</div>';
+      var st = document.createElement("nav"); st.className = "stripB"; st.setAttribute("aria-label", "Secciones");
+      st.innerHTML = '<div class="sc">' + DEST.map(function(d, k){ return '<a href="#" data-k="' + k + '"' + (k === 0 ? ' class="on"' : '') + '>' + (k === 0 ? "Preguntar" : d.t) + '</a>'; }).join("") + '</div>';
+      head.appendChild(st);
+      st.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); goTo(DEST[+a.dataset.k]); }); });
+    } else {
+      head.innerHTML = '<div class="hC">' + brand() + '</div>';
+      var bar = document.createElement("nav"); bar.className = "barC"; bar.setAttribute("aria-label", "Secciones");
+      bar.innerHTML = DEST.map(function(d, k){ return '<a href="#" data-k="' + k + '"' + (k === 0 ? ' class="on"' : '') + '>' + ICON[d.i] + d.c + '</a>'; }).join("");
+      extra.appendChild(bar);
+      bar.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); goTo(DEST[+a.dataset.k]); }); });
+    }
+    var v = TXT[o];
+    document.getElementById("verdict").innerHTML = '<p><b>Opción ' + o.toUpperCase() + '</b>' + (v.rec ? '<span class="rec">Mi recomendada</span>' : '') + '</p><p>' + v.good + '</p><p class="bad"><b>Lo malo:</b> ' + v.bad + '</p>';
+  }
+  // Marca la sección visible (B y C)
+  var secs = ["m-preguntar", "m-propuestas", "m-programa"];
+  window.addEventListener("scroll", function(){
+    var cur = 0; secs.forEach(function(id, k){ var el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 140) cur = k; });
+    document.querySelectorAll(".stripB a, .barC a").forEach(function(a){ a.classList.toggle("on", +a.dataset.k === cur); });
+  }, {passive: true});
+  document.querySelectorAll(".seg button").forEach(function(b){ b.addEventListener("click", function(){
+    document.querySelectorAll(".seg button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+    document.documentElement.style.overflow = ""; build(b.dataset.o);
+  }); });
+  build("a");
+})();
+</script>

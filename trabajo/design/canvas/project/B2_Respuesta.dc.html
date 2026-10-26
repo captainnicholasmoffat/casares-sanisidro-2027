@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>B2. Después de preguntar, computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.chat{max-width:880px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.ask{display:flex;flex-wrap:wrap;gap:12px}
+.ans{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:24px;align-items:start}
+@media (max-width:700px){.ans{grid-template-columns:minmax(0,1fr)}}
+</style>
+</helmet>
+<div style="background: #FBF8F2; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+  <header style="background: #7C2E23; color: #FBF8F2">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px">
+      <a href="#" style="text-decoration: none; color: #FBF8F2; display: flex; flex-direction: column">
+        <span style="font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 24px; line-height: 1.1">San Isidro 2027</span>
+        <span style="font-size: 13px; color: #EBD9D2">Programa de gobierno</span>
+      </a>
+      <nav aria-label="Secciones" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Qué proponemos</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">El programa</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Las seis zonas</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Plan con fechas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: #7C2E23; color: #FBF8F2; padding: 32px 0 36px">
+    <div class="chat" style="display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: Spectral, Georgia, serif; font-size: 28px; line-height: 1.1">Preguntale al programa</span>
+      <form class="ask">
+        <label for="q-r" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Tu pregunta</label>
+        <input id="q-r" type="text" value="Tengo un café en Martínez y un inspector me quiso clausurar sin motivo. ¿Qué propone el programa?" style="flex: 1 1 420px; min-width: 0; font: inherit; font-size: 17px; padding: 16px 18px; border: 0; border-radius: 10px; background: #FFFFFF; color: #2A211C">
+        <button type="submit" style="font: inherit; font-weight: 600; font-size: 17px; padding: 16px 24px; border: 0; border-radius: 10px; background: #DB6B4B; color: #2A211C">Preguntar</button>
+      </form>
+    </div>
+  </section>
+
+  <section style="padding: 40px 0 56px">
+    <div class="chat" style="display: flex; flex-direction: column; gap: 18px">
+      <p style="margin: 0; align-self: flex-end; max-width: 34em; background: #EFE6DA; border-radius: 14px 14px 4px 14px; padding: 14px 18px; font-size: 17px">Tengo un café en Martínez y un inspector me quiso clausurar sin motivo. ¿Qué propone el programa?</p>
+      <div style="background: #FFFFFF; border: 1px solid #DCD2C3; border-radius: 14px 14px 14px 4px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+        <div class="ans">
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.5">Las inspecciones de comercios van a quedar grabadas. Los inspectores van a grabar con su teléfono cada inspección, y después cualquier vecino podrá ver cómo fue. Sin grabación sellada, no valen el acta, la clausura ni la habilitación.</p>
+            <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 20px; line-height: 1.5">El comerciante también va a tener derecho a grabar la inspección, y ese video va a quedar guardado en la inteligencia artificial del Municipio, igual que el del inspector. Así, el comerciante podrá protegerse si el inspector no hace las cosas como corresponde.</p>
+          </div>
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 6px">
+            <img src="/_blob/307fc01694c2a20f6184a6e42deb0555" alt="Una inspección grabada: graban el inspector y el comerciante. Ilustración." style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; border-radius: 6px">
+            <figcaption style="font-size: 12px; color: #5E534B">Ilustración del programa.</figcaption>
+          </figure>
+        </div>
+        <p style="margin: 0; font-size: 14px; color: #5F7057; border-top: 1px solid #EAE2D5; padding-top: 12px">Fuente: Qué proponemos hacer, punto 7 (hoja 6), y apartado 5.9 (hoja 88).</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; font-size: 15px; font-weight: 600"><a href="#">Leer el 5.9 completo</a><a href="#">Ver el punto 7</a></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 14px; color: #5E534B">Seguí preguntando</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: #FFFFFF; color: #2A211C">¿Cuándo empiezan las inspecciones grabadas?</button>
+          <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: #FFFFFF; color: #2A211C">¿Qué más propone para los comercios?</button>
+          <button type="button" style="font: inherit; font-size: 15px; padding: 10px 16px; border-radius: 999px; border: 1px solid #BFB3A1; background: #FFFFFF; color: #2A211C">¿Cómo se habilita un local?</button>
+        </div>
+        <form class="ask" style="padding-top: 4px">
+          <label for="q-r2" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Otra pregunta</label>
+          <input id="q-r2" type="text" placeholder="Escribí otra pregunta" style="flex: 1 1 420px; min-width: 0; font: inherit; font-size: 17px; padding: 15px 18px; border: 1px solid #BFB3A1; border-radius: 10px; background: #FFFFFF; color: #2A211C">
+          <button type="submit" style="font: inherit; font-weight: 600; font-size: 17px; padding: 15px 24px; border: 0; border-radius: 10px; background: #7C2E23; color: #FBF8F2">Preguntar</button>
+        </form>
+      </div>
+      <p style="margin: 0; font-size: 14px; color: #5E534B">Responde sólo con el programa y con las investigaciones que lo respaldan. Si el programa no habla de algo, lo dice.</p>
+    </div>
+  </section>
+
+  <section style="background: #F5F0E8; border-top: 1px solid #DCD2C3; padding: 56px 0 64px">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 16px">
+      <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.05">Qué proponemos hacer</h2>
+      <p style="margin: 0; font-size: 18px; color: #5E534B">Nueve puntos. Tocá «Leer más» para ver el punto completo, o preguntale al programa sobre ese tema.</p>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

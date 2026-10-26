@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Lector del programa, computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.lay{display:flex;flex-wrap:wrap;gap:48px;max-width:1240px;margin:0 auto;padding:40px 32px 64px;box-sizing:border-box}
+.side{flex:1 1 280px;max-width:320px;display:flex;flex-direction:column;gap:2px;font-size:15px}
+.main{flex:999 1 560px;min-width:0;max-width:740px;display:flex;flex-direction:column;gap:18px}
+.ch{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #E3DACC;color:#2A211C;text-decoration:none}
+.ch span{color:#5E534B;font-size:13px}
+.sub{list-style:none;margin:6px 0 10px;padding:0;display:flex;flex-direction:column;gap:2px}
+.sub a{display:block;padding:7px 10px;border-radius:6px;color:#2A211C;text-decoration:none;line-height:1.3;font-size:14px}
+.sub a:hover{background:#EFE6DA}
+.sub a.on{background:#7C2E23;color:#FBF8F2}
+.txt{font-family:Spectral,Georgia,serif;font-size:19px;line-height:1.65;display:flex;flex-direction:column;gap:14px}
+.txt p{margin:0}
+.txt h4{margin:10px 0 0;font-family:Spectral,Georgia,serif;font-weight:600;font-size:22px;line-height:1.25}
+.txt b{font-weight:600}
+.pn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border-top:1px solid #DCD2C3;padding-top:20px;margin-top:8px}
+.pn a{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px solid #DCD2C3;border-radius:10px;background:#FFFFFF;text-decoration:none;color:#2A211C}
+.pn a small{font-family:Inter,system-ui,sans-serif;font-size:13px;color:#5E534B}
+.pn a span{font-family:Spectral,Georgia,serif;font-size:17px;line-height:1.3}
+</style>
+</helmet>
+<div style="background: #FBF8F2; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+  <header style="background: #7C2E23; color: #FBF8F2">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 16px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+      <a href="#" style="color: #FBF8F2; text-decoration: none; font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 22px">San Isidro 2027</a>
+      <nav aria-label="Secciones" style="display: flex; flex-wrap: wrap; gap: 6px 24px">
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Preguntale al programa</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500">Qué proponemos</a>
+        <a href="#" style="color: #FBF8F2; text-decoration: none; font-weight: 500; border-bottom: 2px solid #FBF8F2">El programa completo</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="lay">
+    <nav class="side" aria-label="Índice del programa">
+      <span style="font-size: 13px; font-weight: 600; color: #5F7057; padding-bottom: 6px">Índice</span>
+      <a href="#" class="ch">Introducción <span>5</span></a>
+      <a href="#" class="ch">Qué proponemos hacer <span>6</span></a>
+      <a href="#" class="ch">1 · Diagnóstico <span>8</span></a>
+      <a href="#" class="ch">2 · El gobierno actual, medido <span>13</span></a>
+      <a href="#" class="ch">3 · Los fondos <span>18</span></a>
+      <a href="#" class="ch" aria-expanded="true" style="font-weight: 600">4 · El mecanismo <span>30</span></a>
+      <ul class="sub">
+        <li><a href="#">4.1 El límite legal: lo que un intendente bonaerense no puede delegar</a></li>
+        <li><a href="#" class="on" aria-current="page">4.2 La Legislatura todavía no habilitó el referéndum ni la consulta popular en los municipios</a></li>
+        <li><a href="#">4.3 Cuánto dinero van a decidir los vecinos</a></li>
+        <li><a href="#">4.4 Cómo se reparte el dinero entre las zonas: por población y por necesidad</a></li>
+        <li><a href="#">4.5 Quién decide y quién ejecuta: dos capas</a></li>
+        <li><a href="#">4.6 Cómo se forma una comisión, y cómo rinde cuentas</a></li>
+        <li><a href="#">4.7 El Concejo Deliberante: diez bloques y ninguna mayoría</a></li>
+        <li><a href="#">4.8 Qué cambia cuando el barrio también hace la obra</a></li>
+        <li><a href="#">4.9 Dos piezas más: el gasto de cada zona a la vista y la partida protegida</a></li>
+        <li><a href="#">4.10 El primer acto de gobierno: derogar tres artículos</a></li>
+        <li><a href="#">4.11 La inteligencia artificial del Municipio</a></li>
+        <li><a href="#">4.12 A quién le molesta esto</a></li>
+        <li><a href="#">4.13 Lo que dice este capítulo, en nueve puntos</a></li>
+      </ul>
+      <a href="#" class="ch">5 · Qué hacemos en cada área <span>49</span></a>
+      <a href="#" class="ch">6 · El plan, con fechas <span>101</span></a>
+      <a href="#" class="ch">Anexo · Las ordenanzas <span>116</span></a>
+    </nav>
+
+    <article class="main">
+      <div style="font-size: 14px; color: #5E534B; display: flex; flex-wrap: wrap; gap: 6px"><a href="#">El programa</a><span aria-hidden="true">›</span><a href="#">Capítulo 4 · El mecanismo</a></div>
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 40px; line-height: 1.12; letter-spacing: -0.01em">4.2 La Legislatura todavía no habilitó el referéndum ni la consulta popular en los municipios</h1>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #DCD2C3; padding-bottom: 16px">
+        <span style="font-size: 14px; color: #5F7057; font-weight: 600">Hoja 31 de la versión A4</span>
+        <button type="button" style="font: inherit; font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 999px; border: 1px solid #7C2E23; background: transparent; color: #7C2E23">Preguntale sobre este apartado</button>
+      </div>
+      <div class="txt">
+        <p>En 1994, la Provincia de Buenos Aires reformó su Constitución. Incluyó el artículo 211: «La Ley Orgánica de las Municipalidades deberá contemplar la posibilidad que los municipios accedan a los institutos de democracia semidirecta».</p>
+        <p>La Constitución ordenó habilitar en los municipios el referéndum, la consulta popular y la iniciativa popular. Treinta y dos años después, la Legislatura todavía no lo hizo. El Decreto-Ley 6769/58, que es la ley de los municipios, sigue sin nombrar ninguna de esas tres cosas.</p>
+        <h4>Qué son los institutos de democracia semidirecta</h4>
+        <p>Son tres. El referéndum pone una ordenanza a votación de los vecinos. La consulta popular les pregunta a los vecinos antes de tomar una decisión. Con la iniciativa popular, un grupo de vecinos puede presentar un proyecto y obligar al Concejo a tratarlo. Las tres están en la Constitución nacional desde 1994, y también en la provincial. Ninguna de las tres existe hoy para un municipio bonaerense.</p>
+        <p><b>Qué hacen otras provincias.</b> Varias les dan a sus municipios autonomía plena, con carta orgánica propia. Así, cada municipio escribe su propia norma de base, y ahí decide cómo participan los vecinos. Buenos Aires no lo permite. Sus 135 municipios se rigen por un decreto-ley de 1958. Ningún órgano elegido por el voto aprobó esa norma.</p>
+        <p><b>Por qué importa para este programa.</b> Si la Legislatura hubiera cumplido, nada de lo que propone este capítulo sería necesario. El voto de los vecinos obligaría al Municipio, y no haría falta el camino indirecto de reservar por ordenanza el dinero de cada zona. Todo este mecanismo es una forma de compensar lo que la Legislatura no hizo en treinta y dos años.</p>
+      </div>
+      <nav class="pn" aria-label="Apartados vecinos">
+        <a href="#"><small>Anterior</small><span>4.1 El límite legal: lo que un intendente bonaerense no puede delegar</span></a>
+        <a href="#" style="text-align: right"><small>Siguiente</small><span>4.3 Cuánto dinero van a decidir los vecinos</span></a>
+      </nav>
+    </article>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

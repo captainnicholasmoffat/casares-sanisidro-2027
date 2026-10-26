@@ -1,0 +1,653 @@
+<title>San Isidro 2027</title>
+<meta name="description" content="Programa de gobierno San Isidro 2027. Preguntale al programa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#F5F0E8; --paper:#FBF8F2; --card:#FFFFFF; --ink:#2A211C; --ink-2:#5E534B; --rule:#DCD2C3; --rule-2:#EAE2D5; --field-line:#BFB3A1;
+  --ox:#7C2E23; --ox-ink:#FBF8F2; --ox-soft:#F1E3DC; --ox-line:#C98F82; --coral:#DB6B4B; --sage:#5F7057;
+  --bubble:#EFE6DA; --link:#7C2E23; --focus:#7C2E23; --shade:rgba(30,20,15,.55);
+  --serif:"Spectral","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gutter:clamp(16px,4vw,32px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --rule:#3B312A; --rule-2:#352C26; --field-line:#5A4D43;
+    --bubble:#3A2F28; --link:#E8A08F; --focus:#E8A08F; --sage:#A3B597; --shade:rgba(0,0,0,.65); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1A1512; --paper:#211B17; --card:#2A231E; --ink:#EFE7DB; --ink-2:#BFB3A6; --rule:#3B312A; --rule-2:#352C26; --field-line:#5A4D43;
+  --bubble:#3A2F28; --link:#E8A08F; --focus:#E8A08F; --sage:#A3B597; --shade:rgba(0,0,0,.65); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:3px}
+h1,h2,h3{margin:0;font-weight:500;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--gutter)}
+.narrow{max-width:900px;margin:0 auto;padding-inline:var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+button{font:inherit;cursor:pointer}
+
+/* Encabezado */
+.top{background:var(--ox);color:var(--ox-ink)}
+.top-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:16px}
+.brand{color:var(--ox-ink);text-decoration:none;display:flex;flex-direction:column}
+.brand b{font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.1}
+.brand span{font-size:13px;color:var(--ox-soft)}
+.nav{display:flex;flex-wrap:wrap;gap:6px 24px}
+.nav a{color:var(--ox-ink);text-decoration:none;font-weight:500;padding:6px 0}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Pregunta */
+.hero{background:var(--ox);color:var(--ox-ink);padding-block:40px 64px}
+.hero-in{display:flex;flex-direction:column;gap:20px;max-width:1000px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.03;letter-spacing:-.015em}
+.hero p.sub{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--ox-soft);max-width:36em}
+.ask{display:flex;flex-wrap:wrap;gap:10px}
+.ask textarea{flex:1 1 420px;min-width:0;font:inherit;font-size:18px;line-height:1.4;padding:16px 18px;border:0;border-radius:10px;background:#FFFFFF;color:#2A211C;resize:none;min-height:60px}
+.ask .go{font-weight:600;font-size:18px;padding:16px 26px;border:0;border-radius:10px;background:var(--coral);color:#2A211C}
+.ask .go:disabled{opacity:.6;cursor:wait}
+.hero label{font-size:14px;color:var(--ox-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip-q{font-size:15px;padding:10px 15px;min-height:44px;border-radius:999px;border:1px solid var(--ox-line);background:transparent;color:var(--ox-ink)}
+.chip-q:hover{background:rgba(255,255,255,.08)}
+.hero .note{font-size:14px;color:var(--ox-soft)}
+
+/* Conversación */
+.talk{padding-block:48px 56px}
+.talk h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.1;margin-bottom:20px}
+.thread{display:flex;flex-direction:column;gap:18px}
+.q{align-self:flex-end;max-width:min(36em,90%);background:var(--bubble);border-radius:14px 14px 4px 14px;padding:14px 18px;font-size:17px;white-space:pre-wrap;overflow-wrap:anywhere}
+.a{background:var(--card);border:1px solid var(--rule);border-radius:14px 14px 14px 4px;padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.a .status{font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+.dots{display:inline-flex;gap:4px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--ink-2);opacity:.35;animation:blink 1.2s infinite}
+.dots i:nth-child(2){animation-delay:.2s}.dots i:nth-child(3){animation-delay:.4s}
+@keyframes blink{50%{opacity:1}}
+.a .body{font-family:var(--serif);font-size:19px;line-height:1.55;display:flex;flex-direction:column;gap:12px;overflow-wrap:anywhere}
+.a .body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.a .src{display:flex;flex-wrap:wrap;gap:8px;border-top:1px solid var(--rule-2);padding-top:12px;align-items:center}
+.a .src-l{font-size:13px;color:var(--sage);font-weight:600;margin-right:4px}
+.src-b{font-size:13px;padding:7px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);text-align:left}
+.src-b:hover{border-color:var(--link);color:var(--link)}
+.a .more{display:flex;flex-direction:column;gap:8px}
+.a .more span{font-size:14px;color:var(--ink-2)}
+.chip-f{font-size:14px;padding:9px 14px;min-height:44px;border-radius:999px;border:1px solid var(--field-line);background:var(--card);color:var(--ink);text-align:left}
+.chip-f:hover{border-color:var(--link)}
+.stop{align-self:flex-start;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--field-line);background:transparent;color:var(--ink)}
+.err{font-size:15px;color:var(--ink);background:var(--bubble);border-radius:8px;padding:10px 14px}
+.follow{margin-top:8px;display:flex;flex-direction:column;gap:8px}
+.follow .ask textarea{border:1px solid var(--field-line);background:var(--card);color:var(--ink);font-size:17px}
+.follow .ask .go{background:var(--ox);color:var(--ox-ink);font-size:17px}
+.fine{font-size:14px;color:var(--ink-2);margin-top:6px}
+.example-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;align-items:start}
+.example-fig{margin:0;display:flex;flex-direction:column;gap:8px}
+.example-fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:8px;display:block}
+figcaption{font-size:13px;color:var(--ink-2)}
+
+/* Nueve puntos */
+.nine{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding-block:64px 72px}
+.nine-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 24px;margin-bottom:28px}
+.nine-head h2{font-family:var(--serif);font-size:clamp(2rem,3.6vw,3rem);line-height:1.05}
+.nine-head p{color:var(--ink-2);font-size:17px;max-width:40em;margin-top:8px}
+.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;display:block;background:var(--rule-2)}
+.card-b{padding:14px 18px 16px;display:flex;flex-direction:column;gap:10px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;flex-shrink:0;border-radius:50%;background:var(--ox);color:var(--ox-ink);font-family:var(--serif);font-weight:600;font-size:17px}
+.lead{font-family:var(--serif);font-size:19px;line-height:1.3}
+.card-t{display:flex;gap:12px;align-items:flex-start}
+.full{font-family:var(--serif);font-size:17px;line-height:1.55;color:var(--ink-2);display:flex;flex-direction:column;gap:8px}
+.full .cap{font-family:var(--sans);font-size:13px;color:var(--sage);font-weight:600}
+.card-f{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--rule-2);padding-top:10px}
+.lnk{background:none;border:0;padding:8px 0;color:var(--link);font-weight:600;font-size:15px}
+.ask-it{font-size:14px;font-weight:600;padding:9px 14px;min-height:44px;border-radius:999px;border:1px solid var(--link);background:transparent;color:var(--link)}
+
+/* Programa completo */
+.prog{padding-block:64px 72px}
+.prog-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 32px;margin-bottom:24px}
+.prog-head h2{font-family:var(--serif);font-size:clamp(2rem,3.6vw,3rem);line-height:1.05}
+.search{display:flex;flex-direction:column;gap:6px;flex:0 1 440px;min-width:0}
+.search label{font-size:14px;color:var(--ink-2)}
+.search input{font:inherit;padding:13px 16px;border:1px solid var(--field-line);border-radius:8px;background:var(--card);color:var(--ink)}
+.results{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.res{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;color:var(--ink)}
+.res b{font-family:var(--serif);font-weight:600;font-size:17px;display:block}
+.res span{font-size:14px;color:var(--ink-2)}
+.chap{border-top:1px solid var(--rule)}
+.chap details{border-bottom:1px solid var(--rule)}
+.chap summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-family:var(--serif);font-size:21px}
+.chap summary::-webkit-details-marker{display:none}
+.chap summary::after{content:"+";font-family:var(--sans);font-size:22px;color:var(--ink-2)}
+.chap details[open] summary::after{content:"−"}
+.chap ul{list-style:none;margin:0;padding:0 0 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 32px}
+.chap li button{background:none;border:0;padding:8px 0;text-align:left;color:var(--ink);font-size:16px;line-height:1.35;width:100%}
+.chap li button:hover{color:var(--link)}
+.chap li small{color:var(--ink-2);font-size:13px;margin-left:6px}
+
+/* Lector */
+.reader{position:fixed;inset:0;z-index:20;background:var(--shade);display:flex;justify-content:flex-end}
+.reader-p{background:var(--paper);width:min(760px,100%);height:100%;overflow-y:auto;padding:24px var(--gutter) 48px;display:flex;flex-direction:column;gap:14px;box-shadow:-8px 0 30px rgba(0,0,0,.18)}
+.reader-top{display:flex;justify-content:space-between;align-items:start;gap:16px;position:sticky;top:0;background:var(--paper);padding:8px 0 10px;border-bottom:1px solid var(--rule)}
+.reader-top small{color:var(--sage);font-weight:600;font-size:13px;display:block}
+.reader-top h3{font-family:var(--serif);font-size:28px;line-height:1.15}
+.close{font-weight:600;font-size:15px;padding:9px 14px;border-radius:999px;border:1px solid var(--field-line);background:var(--card);color:var(--ink);flex-shrink:0}
+.reader-b{font-family:var(--serif);font-size:18px;line-height:1.6;display:flex;flex-direction:column;gap:12px}
+.reader-b .box{font-family:var(--sans);font-size:14px;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;white-space:pre-wrap;overflow-x:auto}
+.reader-b .box b{display:block;margin-bottom:6px}
+.reader-b .fts{font-family:var(--sans);font-size:13px;color:var(--ink-2);white-space:pre-wrap}
+
+.foot{padding-block:28px 48px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--rule)}
+
+@media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:680px){
+  .cards,.example-grid,.chap ul{grid-template-columns:minmax(0,1fr)}
+  .card img{aspect-ratio:21/9}
+  .example-fig{display:none}
+  .hero{padding-block:24px 40px}
+  .ask textarea{font-size:17px}
+  .ask .go{flex:1 1 100%}
+  .a{padding:18px}
+  .a .body{font-size:18px}
+}
+@media (prefers-reduced-motion: reduce){.dots i{animation:none;opacity:.8}}
+</style>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#inicio"><b>San Isidro 2027</b><span>Programa de gobierno</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#inicio">Preguntale al programa</a>
+      <a href="#propuestas">Qué proponemos</a>
+      <a href="#programa">El programa completo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio" aria-labelledby="t-hero">
+    <div class="wrap hero-in">
+      <h1 id="t-hero">¿Qué te preocupa de San Isidro?</h1>
+      <p class="sub">Preguntale al programa. Te responde con lo que proponemos y te dice en qué capítulo y en qué hoja está.</p>
+      <form class="askform" id="form-main" style="display:flex;flex-direction:column;gap:8px">
+        <label for="q-main">Tu pregunta</label>
+        <div class="ask">
+          <textarea id="q-main" rows="2" maxlength="600" placeholder="Por ejemplo: tengo un café en Martínez y me hicieron una inspección injusta"></textarea>
+          <button class="go" type="submit">Preguntar</button>
+        </div>
+      </form>
+      <div class="chips" aria-label="Preguntas de ejemplo">
+        <button class="chip-q" type="button" data-q="Vivo en Boulogne y no tengo cloaca. ¿Qué propone el programa?">Vivo en Boulogne y no tengo cloaca</button>
+        <button class="chip-q" type="button" data-q="Mi hijo terminó la secundaria y busca trabajo. ¿Qué propone el programa?">Mi hijo terminó la secundaria y busca trabajo</button>
+        <button class="chip-q" type="button" data-q="Tengo un comercio y me clausuraron. ¿Qué propone el programa para los comercios?">Tengo un comercio y me clausuraron</button>
+        <button class="chip-q" type="button" data-q="¿Cómo se paga todo lo que propone el programa?">¿Cómo se paga todo esto?</button>
+      </div>
+      <p class="note" id="avail-note" hidden></p>
+    </div>
+  </section>
+
+  <section class="talk" id="respuesta" aria-labelledby="t-talk">
+    <div class="narrow">
+      <h2 id="t-talk">Así responde</h2>
+      <div id="example">
+        <div class="example-grid">
+          <div class="thread">
+            <p class="q">Tengo un café en Martínez y un inspector me quiso clausurar sin motivo. ¿Qué propone el programa?</p>
+            <div class="a">
+              <div class="body">
+                <p>Las inspecciones de comercios van a quedar grabadas. Los inspectores van a grabar con su teléfono cada inspección, y después cualquier vecino podrá ver cómo fue. Sin grabación sellada, no valen el acta, la clausura ni la habilitación.</p>
+                <p>El comerciante también va a tener derecho a grabar la inspección, y ese video va a quedar guardado en la inteligencia artificial del Municipio, igual que el del inspector. Así, el comerciante podrá protegerse si el inspector no hace las cosas como corresponde.</p>
+              </div>
+              <div class="src"><span class="src-l">Fuente</span><button class="src-b" type="button" data-open="proponemos">Qué proponemos hacer, punto 7 · hoja 6</button><button class="src-b" type="button" data-open="5.9">5.9 · hoja 88</button></div>
+            </div>
+          </div>
+          <figure class="example-fig">
+            <img src="img/f_inspeccion-800.webp" alt="Un inspector y un comerciante graban la inspección con sus teléfonos." loading="lazy" width="800" height="1061">
+            <figcaption>Una inspección grabada: graban el inspector y el comerciante. Ilustración.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="thread" id="thread" hidden></div>
+      <form class="follow" id="form-follow" hidden>
+        <label for="q-follow" class="sr">Otra pregunta</label>
+        <div class="ask">
+          <textarea id="q-follow" rows="1" maxlength="600" placeholder="Escribí otra pregunta"></textarea>
+          <button class="go" type="submit">Preguntar</button>
+        </div>
+      </form>
+      <p class="fine">Responde sólo con el programa y con las investigaciones que lo respaldan. Si el programa no habla de algo, lo dice. En el celular podés dictar la pregunta con el micrófono del teclado.</p>
+    </div>
+  </section>
+
+  <section class="nine" id="propuestas" aria-labelledby="t-nine">
+    <div class="wrap">
+      <div class="nine-head">
+        <div>
+          <h2 id="t-nine">Qué proponemos hacer</h2>
+          <p>{{INTRO}}</p>
+        </div>
+      </div>
+      <ol class="cards" id="cards"></ol>
+    </div>
+  </section>
+
+  <section class="prog" id="programa" aria-labelledby="t-prog">
+    <div class="wrap">
+      <div class="prog-head">
+        <h2 id="t-prog">El programa completo</h2>
+        <div class="search">
+          <label for="buscar">Buscar en el programa</label>
+          <input id="buscar" type="search" placeholder="Por ejemplo: cloacas, multas, costa" autocomplete="off">
+        </div>
+      </div>
+      <div class="results" id="results" aria-live="polite"></div>
+      <div class="chap" id="chapters"><p style="padding:16px 0;color:var(--ink-2)">Cargando el programa…</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Programa de gobierno San Isidro 2027. Las imágenes son ilustraciones del programa.</p>
+</footer>
+
+<div class="reader" id="reader" hidden>
+  <div class="reader-p" role="dialog" aria-modal="true" aria-labelledby="r-title" tabindex="-1">
+    <div class="reader-top">
+      <div><small id="r-meta"></small><h3 id="r-title"></h3></div>
+      <button class="close" type="button" id="r-close">Cerrar</button>
+    </div>
+    <div class="reader-b" id="r-body"></div>
+  </div>
+</div>
+
+<script type="application/json" id="nueve-data">{{NUEVE_JSON}}</script>
+<script>
+(function(){
+  "use strict";
+  document.documentElement.lang = "es";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var NUEVE = JSON.parse($("#nueve-data").textContent);
+  var IMGS = {1:["f_asamblea","Asamblea vecinal. Ilustración."],2:["f_taller","Formación laboral. Ilustración."],3:["f_tecnicatura","La tecnicatura en inteligencia artificial. Ilustración."],4:["f_pasantia","La pasantía en el Municipio. Ilustración."],5:["f_voz","Una vecina le pregunta con la voz a la inteligencia artificial del Municipio. Ilustración."],6:["f_patrullero","La cámara avisa y el patrullero llega. Ilustración."],7:["f_inspeccion","Una inspección grabada: graban el inspector y el comerciante. Ilustración."],8:["f_banda","Una banda emergente de San Isidro, en una plaza. Ilustración."],9:["f_escalera","Bajada a la costa. Ilustración."]};
+
+  function el(tag, attrs, text){
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs){ if (k === "class") e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  /* ---------- Las nueve tarjetas ---------- */
+  var cards = $("#cards");
+  NUEVE.items.forEach(function(it){
+    var li = el("li", {"class":"card"});
+    var im = IMGS[it.n];
+    var img = el("img", {src:"img/" + im[0] + "-800.webp", alt: im[1], loading:"lazy", width:"800", height:"1060"});
+    var b = el("div", {"class":"card-b"});
+    var top = el("div", {"class":"card-t"});
+    top.appendChild(el("span", {"class":"num", "aria-hidden":"true"}, String(it.n)));
+    top.appendChild(el("p", {"class":"lead"}, it.lead));
+    b.appendChild(top);
+    var full = el("div", {"class":"full", id:"full-" + it.n}); full.hidden = true;
+    full.appendChild(el("p", null, it.body));
+    if (it.cap) full.appendChild(el("span", {"class":"cap"}, "Capítulo " + it.cap));
+    b.appendChild(full);
+    var f = el("div", {"class":"card-f"});
+    var more = el("button", {"class":"lnk", type:"button", "aria-expanded":"false", "aria-controls":"full-" + it.n}, "Leer más");
+    more.addEventListener("click", function(){
+      var open = full.hidden; full.hidden = !open;
+      more.textContent = open ? "Cerrar" : "Leer más";
+      more.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    var askb = el("button", {"class":"ask-it", type:"button"}, "Preguntale sobre esto");
+    askb.addEventListener("click", function(){ ask("Explicame el punto " + it.n + " del programa: " + it.lead); });
+    f.appendChild(more); f.appendChild(askb);
+    b.appendChild(f);
+    li.appendChild(img); li.appendChild(b);
+    cards.appendChild(li);
+  });
+
+  /* ---------- Datos y búsqueda ---------- */
+  var PROG = null, INV = null, progP = null, invP = null;
+  var CH_P = [], CH_I = [], DF_P = {}, DF_I = {}, AVG_P = 1, AVG_I = 1;
+  var STOP = {};
+  ("a al algo algun alguna algunas alguno algunos ante antes aqui asi aun cada como con contra cual cuales cuando de del desde donde dos e el ella ellas ellos en entre era es esa esas ese eso esos esta estan estas este esto estos fue fueron ha hace han hasta hay la las le les lo los mas me mi mis muy ni no nos o otra otras otro otros para pero poco por porque que quien se sea segun ser si sin sobre son su sus tambien tan te tiene tienen todo todos tu tus un una unas uno unos y ya yo vos voy va van tengo tenes puede pueden programa proponen propone propuesta qué cómo the of and to in is for what how does do about my i").split(" ").forEach(function(w){ STOP[w] = 1; });
+  var SYN = {plata:"dinero fondos", laburo:"trabajo empleo", chorro:"robo seguridad", chorros:"robo seguridad", afanaron:"robo seguridad", kiosco:"comercio", negocio:"comercio", local:"comercio habilitacion", cafe:"comercio", cafeteria:"comercio", bondi:"colectivo transporte", impuestos:"tasa", abl:"tasa", municipalidad:"municipio", policia:"seguridad camaras", cana:"seguridad", pibes:"jovenes", chicos:"ninez jovenes", jubilados:"personas mayores", ia:"inteligencia artificial", plaza:"plazas espacio publico", rio:"costa", clausuraron:"clausura inspeccion", inspector:"inspeccion"};
+  function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " "); }
+  function stem(w){ if (w.length > 5 && /es$/.test(w)) w = w.slice(0, -2); else if (w.length > 4 && /s$/.test(w)) w = w.slice(0, -1); return w.length > 7 ? w.slice(0, 7) : w; }
+  function toks(s){
+    var out = [];
+    norm(s).split(" ").forEach(function(w){
+      if (!w || STOP[w] || w.length < 3 && !/^\d+$/.test(w)) return;
+      out.push(stem(w));
+      if (SYN[w]) SYN[w].split(" ").forEach(function(x){ out.push(stem(x)); });
+    });
+    return out;
+  }
+  function indexChunks(list, df){
+    var tot = 0;
+    list.forEach(function(c){
+      var tf = {}, t = toks(c.search);
+      t.forEach(function(w){ tf[w] = (tf[w] || 0) + 1; });
+      c.tf = tf; c.len = t.length || 1; tot += c.len;
+      for (var w in tf) df[w] = (df[w] || 0) + 1;
+    });
+    return tot / (list.length || 1);
+  }
+  function bm25(list, df, avg, q, k){
+    var N = list.length, qt = toks(q), seen = {}, terms = [];
+    qt.forEach(function(w){ if (!seen[w]) { seen[w] = 1; terms.push(w); } });
+    if (!terms.length) return [];
+    var res = [];
+    list.forEach(function(c){
+      var s = 0;
+      terms.forEach(function(w){
+        var f = c.tf[w]; if (!f) return;
+        var idf = Math.log(1 + (N - df[w] + .5) / (df[w] + .5));
+        s += idf * (f * 2.2) / (f + 1.2 * (.25 + .75 * c.len / avg));
+      });
+      if (s > 0) res.push({c: c, s: s * (c.boost || 1)});
+    });
+    res.sort(function(a, b){ return b.s - a.s; });
+    return res.slice(0, k || 10);
+  }
+  function hojaTxt(e){ return e.hoja_a4 ? (e.hoja_a4_fin && e.hoja_a4_fin !== e.hoja_a4 ? "hojas " + e.hoja_a4 + " a " + e.hoja_a4_fin : "hoja " + e.hoja_a4) : ""; }
+  function cleanInforme(s){ return String(s || "").replace(/^Informe\s+[0-9]+[a-z ]*\s*·\s*/i, ""); }
+
+  function loadProg(){
+    if (progP) return progP;
+    progP = fetch("data/programa.json").then(function(r){ if (!r.ok) throw new Error("programa"); return r.json(); }).then(function(d){
+      PROG = d;
+      d.forEach(function(e){
+        var paras = String(e.texto || "").split(/\n\n+/), buf = "";
+        function push(t){ if (t.trim()) CH_P.push({e: e, text: t.trim(), search: e.titulo + " " + e.titulo + " " + t, boost: /^glosario-/.test(e.id) ? .7 : 1}); }
+        paras.forEach(function(p){ if ((buf + "\n\n" + p).length > 1500 && buf) { push(buf); buf = p; } else buf = buf ? buf + "\n\n" + p : p; });
+        push(buf);
+        (e.cuadros || []).forEach(function(c){ push((c.titulo || "Cuadro") + "\n" + String(c.texto || "").slice(0, 2200)); });
+      });
+      AVG_P = indexChunks(CH_P, DF_P);
+      return d;
+    });
+    return progP;
+  }
+  function loadInv(){
+    if (invP) return invP;
+    invP = fetch("data/investigaciones.json").then(function(r){ if (!r.ok) throw new Error("inv"); return r.json(); }).then(function(d){
+      INV = d;
+      d.forEach(function(x){ CH_I.push({x: x, text: String(x.texto || "").slice(0, 1900), search: (x.seccion || "") + " " + (x.temas || []).join(" ") + " " + x.texto, boost: x.descartado ? .6 : 1}); });
+      AVG_I = indexChunks(CH_I, DF_I);
+      return d;
+    }).catch(function(){ INV = []; return []; });
+    return invP;
+  }
+
+  /* ---------- Lector del programa ---------- */
+  var reader = $("#reader"), lastFocus = null;
+  function openEntry(id){
+    loadProg().then(function(){
+      var e = PROG.filter(function(x){ return x.id === id; })[0];
+      if (!e) return;
+      $("#r-meta").textContent = e.capitulo + (hojaTxt(e) ? " · " + hojaTxt(e) : "");
+      $("#r-title").textContent = (/^\d+\.\d+$/.test(e.id) ? e.id + " " : "") + e.titulo;
+      var b = $("#r-body"); b.textContent = "";
+      String(e.texto || "").split(/\n\n+/).forEach(function(p){ if (p.trim()) b.appendChild(el("p", null, p.trim())); });
+      (e.cuadros || []).forEach(function(c){ var d = el("div", {"class":"box"}); d.appendChild(el("b", null, c.titulo || "Cuadro")); d.appendChild(document.createTextNode(c.texto || "")); b.appendChild(d); });
+      if (e.fuentes) b.appendChild(el("p", {"class":"fts"}, "Fuentes: " + e.fuentes));
+      lastFocus = document.activeElement;
+      reader.hidden = false; document.body.style.overflow = "hidden";
+      $(".reader-p").scrollTop = 0; $(".reader-p").focus();
+    }).catch(function(){});
+  }
+  function openInv(x){
+    $("#r-meta").textContent = "Investigación que respalda el programa";
+    $("#r-title").textContent = cleanInforme(x.informe);
+    var b = $("#r-body"); b.textContent = "";
+    if (x.seccion) b.appendChild(el("p", {"class":"fts"}, x.seccion));
+    String(x.texto || "").split(/\n\n+/).forEach(function(p){ if (p.trim()) b.appendChild(el("p", null, p.trim())); });
+    if (x.descartado && x.nota) b.appendChild(el("p", {"class":"box"}, "El programa decidió distinto: " + x.nota));
+    lastFocus = document.activeElement;
+    reader.hidden = false; document.body.style.overflow = "hidden";
+    $(".reader-p").scrollTop = 0; $(".reader-p").focus();
+  }
+  function closeReader(){ reader.hidden = true; document.body.style.overflow = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  $("#r-close").addEventListener("click", closeReader);
+  reader.addEventListener("click", function(ev){ if (ev.target === reader) closeReader(); });
+  reader.addEventListener("keydown", function(ev){ if (ev.key === "Escape") closeReader(); });
+  document.addEventListener("click", function(ev){
+    var t = ev.target.closest ? ev.target.closest("[data-open]") : null;
+    if (t) openEntry(t.getAttribute("data-open"));
+  });
+
+  /* Capítulos */
+  loadProg().then(function(d){
+    var box = $("#chapters"); box.textContent = "";
+    var groups = [], by = {};
+    d.forEach(function(e){ if (!by[e.capitulo]) { by[e.capitulo] = []; groups.push(e.capitulo); } by[e.capitulo].push(e); });
+    groups.forEach(function(g){
+      var det = el("details"), sum = el("summary", null, g);
+      det.appendChild(sum);
+      var ul = el("ul");
+      by[g].forEach(function(e){
+        if (/-r\d+$/.test(e.id)) return;
+        var li = el("li"), bt = el("button", {type:"button"});
+        bt.appendChild(document.createTextNode((/^\d+\.\d+$/.test(e.id) ? e.id + " " : "") + e.titulo));
+        if (e.hoja_a4) bt.appendChild(el("small", null, "hoja " + e.hoja_a4));
+        bt.addEventListener("click", function(){ openEntry(e.id); });
+        li.appendChild(bt); ul.appendChild(li);
+      });
+      det.appendChild(ul); box.appendChild(det);
+    });
+  }).catch(function(){ $("#chapters").textContent = "No se pudo cargar el programa. Recargá la página."; });
+
+  var sTimer = null;
+  $("#buscar").addEventListener("input", function(ev){
+    clearTimeout(sTimer);
+    var v = ev.target.value;
+    sTimer = setTimeout(function(){
+      var out = $("#results"); out.textContent = "";
+      if (norm(v).trim().length < 3) return;
+      loadProg().then(function(){
+        var hits = bm25(CH_P, DF_P, AVG_P, v, 30), seen = {}, n = 0;
+        hits.forEach(function(h){
+          if (seen[h.c.e.id] || n >= 8) return; seen[h.c.e.id] = 1; n++;
+          var bt = el("button", {"class":"res", type:"button"});
+          bt.appendChild(el("b", null, (/^\d+\.\d+$/.test(h.c.e.id) ? h.c.e.id + " " : "") + h.c.e.titulo));
+          bt.appendChild(el("span", null, h.c.e.capitulo + (hojaTxt(h.c.e) ? " · " + hojaTxt(h.c.e) : "") + " — " + h.c.text.slice(0, 140).replace(/\s+/g, " ") + "…"));
+          bt.addEventListener("click", function(){ openEntry(h.c.e.id); });
+          out.appendChild(bt);
+        });
+        if (!n) out.appendChild(el("p", {style:"color:var(--ink-2)"}, "No encontré esa palabra en el programa. Probá con otra, o preguntale al programa arriba."));
+      });
+    }, 220);
+  });
+
+  /* ---------- Preguntale al programa ---------- */
+  var RULES = [
+    "Sos la herramienta «Preguntale al programa» del sitio del programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires).",
+    "Respondés preguntas de vecinos usando SÓLO los pasajes que vienen en el mensaje, bajo PROGRAMA e INVESTIGACIONES.",
+    "Reglas:",
+    "1. El PROGRAMA es lo aprobado y manda. Las INVESTIGACIONES sólo sirven para explicar de dónde sale algo o qué se investigó. Si una investigación dice algo distinto del programa, decí lo que decidió el programa. Un pasaje marcado DESCARTADO nunca es una propuesta.",
+    "2. Si los pasajes no tratan el tema, decilo claro en una oración («El programa no habla de eso») y, si hay, contá lo más cercano que sí propone. Nunca inventes propuestas, cifras, fechas ni nombres.",
+    "3. Respondé en el mismo idioma de la última pregunta.",
+    "4. Lenguaje llano: oraciones cortas, una idea por oración. Para lo que se propone, usá futuro («va a», «vamos a»). Usá las cifras tal como están en los pasajes.",
+    "5. Entre 60 y 170 palabras, salvo que pidan más detalle. Sin títulos ni negritas. Podés usar una lista corta con guiones si ayuda.",
+    "6. Nunca uses las palabras «mafia», «plata» ni «sobreprecio». La inteligencia artificial que propone el programa se llama siempre «la inteligencia artificial del Municipio».",
+    "7. No opines sobre candidatos, partidos ni personas. No hables de etapas futuras que el programa no plantea. Si preguntan algo ajeno a San Isidro o al programa, decí que sólo respondés sobre el programa.",
+    "8. No menciones «pasajes» ni «fragmentos»: hablá de «el programa» o de «las investigaciones».",
+    "FORMATO: primero la respuesta. Después, en una línea aparte, «FUENTES:» y los códigos de los pasajes que usaste, separados por comas (por ejemplo: FUENTES: P5.9, P6.1, I12). Después, en otra línea, «SEGUIR:» y dos preguntas cortas para seguir, en el idioma de la pregunta, separadas por « | ». Nada después de esa línea."
+  ].join("\n");
+
+  var sampleP = null, history = [], busy = false, ctl = null;
+  function getSample(){
+    if (!sampleP) sampleP = (window.claude && window.claude.use) ? window.claude.use("sample").catch(function(){ return null; }) : Promise.resolve(null);
+    return sampleP;
+  }
+  getSample().then(function(s){
+    if (!s) {
+      var n = $("#avail-note");
+      n.textContent = "Para preguntar, abrí esta página dentro de Claude. Mientras tanto, podés leer las propuestas y el programa completo más abajo.";
+      n.hidden = false;
+      document.querySelectorAll(".go,.chip-q,.ask-it").forEach(function(b){ b.disabled = true; });
+    }
+  });
+
+  function looksSpanish(q){
+    var n = norm(q).split(" ").filter(Boolean), es = 0;
+    "de la el que en los las y por con para del se una no es mi me".split(" ").forEach(function(w){ if (n.indexOf(w) >= 0) es++; });
+    return es >= 1 || /[áéíóúñ¿¡]/i.test(q) || n.length < 3;
+  }
+
+  function buildContext(qSearch){
+    var hp = bm25(CH_P, DF_P, AVG_P, qSearch, 14), hi = bm25(CH_I, DF_I, AVG_I, qSearch, 8);
+    var parts = [], refs = {}, size = 0, LIM_P = 30000, LIM_I = 11000, used = 0;
+    var out = "PROGRAMA (lo aprobado)\n";
+    hp.forEach(function(h, i){
+      var e = h.c.e, code = "P" + (i + 1), t = h.c.text.slice(0, 2600);
+      var block = "[" + code + "] " + e.capitulo + " · " + (/^\d/.test(e.id) ? e.id + " " : "") + e.titulo + (hojaTxt(e) ? " (" + hojaTxt(e) + ")" : "") + "\n" + t + "\n\n";
+      if (used + block.length > LIM_P) return;
+      used += block.length; out += block; refs[code] = {kind:"p", e: e};
+    });
+    used = 0; out += "INVESTIGACIONES (sólo para explicar de dónde sale algo)\n";
+    hi.forEach(function(h, i){
+      var x = h.c.x, code = "I" + (i + 1);
+      var block = "[" + code + "] " + cleanInforme(x.informe) + (x.seccion ? " · " + x.seccion : "") + (x.descartado ? " · DESCARTADO" + (x.nota ? ": " + x.nota : "") : (x.nota ? " · Nota: " + x.nota : "")) + "\n" + h.c.text + "\n\n";
+      if (used + block.length > LIM_I) return;
+      used += block.length; out += block; refs[code] = {kind:"i", x: x};
+    });
+    return {text: out, refs: refs};
+  }
+
+  function renderBody(box, text){
+    box.textContent = "";
+    var main = text.split(/\n\s*FUENTES\s*:/i)[0].split(/\n\s*SEGUIR\s*:/i)[0];
+    var blocks = main.trim().split(/\n\s*\n/);
+    blocks.forEach(function(bl){
+      var lines = bl.split("\n").filter(function(l){ return l.trim(); });
+      if (lines.length && lines.every(function(l){ return /^\s*[-•*]\s+/.test(l); })) {
+        var ul = el("ul"); lines.forEach(function(l){ ul.appendChild(el("li", null, l.replace(/^\s*[-•*]\s+/, "").replace(/\*\*/g, ""))); }); box.appendChild(ul);
+      } else if (lines.length) box.appendChild(el("p", null, lines.join(" ").replace(/\*\*/g, "")));
+    });
+  }
+  function parseTail(text){
+    var f = text.match(/FUENTES\s*:\s*([^\n]*)/i), s = text.match(/SEGUIR\s*:\s*([^\n]*)/i);
+    var codes = f ? (f[1].match(/[PI]\d+/gi) || []).map(function(c){ return c.toUpperCase(); }) : [];
+    var sug = s ? s[1].split("|").map(function(x){ return x.trim().replace(/^["«]|["»]$/g, ""); }).filter(function(x){ return x.length > 3 && x.length < 140; }).slice(0, 2) : [];
+    return {codes: codes, sug: sug};
+  }
+
+  function errorCopy(e){
+    var c = e && e.code;
+    if (c === "not_granted" || c === "sampling_disabled" || c === "not_declared" || c === "capability_disabled" || c === "capability_removed") return "Para responder, esta página necesita permiso para usar tu cuenta de Claude. Sin ese permiso, podés leer las propuestas y el programa completo más abajo.";
+    if (c === "rate_limited") return "Hubo muchas preguntas seguidas. Probá de nuevo en un rato.";
+    if (c === "session_expired") return "Tu sesión de Claude venció. Volvé a entrar y preguntá de nuevo.";
+    if (c === "refused") return "Esa pregunta no la puedo responder. Probá preguntar sobre alguna propuesta del programa.";
+    if (c === "prompt_too_large") return "La pregunta es muy larga. Probá con una más corta.";
+    return "Se cortó la respuesta. Tocá «Preguntar» de nuevo.";
+  }
+
+  function setBusy(b){
+    busy = b;
+    document.querySelectorAll(".go").forEach(function(x){ x.disabled = b; });
+  }
+
+  function ask(question){
+    question = String(question || "").trim();
+    if (!question || busy) return;
+    $("#example").hidden = true;
+    $("#t-talk").textContent = "Tu consulta";
+    var thread = $("#thread"); thread.hidden = false; $("#form-follow").hidden = false;
+    thread.appendChild(el("p", {"class":"q"}, question));
+    var card = el("div", {"class":"a", "aria-live":"polite"});
+    var status = el("div", {"class":"status"});
+    var dots = el("span", {"class":"dots", "aria-hidden":"true"}); dots.appendChild(el("i")); dots.appendChild(el("i")); dots.appendChild(el("i"));
+    var stText = el("span", null, "Buscando en el programa…");
+    status.appendChild(dots); status.appendChild(stText);
+    var body = el("div", {"class":"body"});
+    var stop = el("button", {"class":"stop", type:"button"}, "Parar");
+    card.appendChild(status); card.appendChild(body); card.appendChild(stop);
+    thread.appendChild(card);
+    card.scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+    setBusy(true);
+    ctl = new AbortController();
+    var myCtl = ctl;
+    stop.addEventListener("click", function(){ myCtl.abort(); });
+    var finish = function(){ setBusy(false); stop.remove(); };
+
+    Promise.all([getSample(), loadProg(), loadInv()]).then(function(r){
+      var sample = r[0];
+      if (!sample) throw {code:"not_granted"};
+      var prevQ = history.length ? history[history.length - 2].content : "";
+      var qP = looksSpanish(question) ? Promise.resolve(question) :
+        sample.json("Traducí esta pregunta al castellano rioplatense. Respondé sólo con JSON {\"es\": \"...\"}.\n\n" + question, {modelTier:"quick", signal: myCtl.signal}).then(function(j){ return (j && j.es) ? String(j.es) : question; }).catch(function(e){ if (e && e.code === "cancelled") throw e; return question; });
+      return qP.then(function(qEs){
+        var ctx = buildContext(qEs + " " + qEs + " " + prevQ);
+        stText.textContent = "Preparando la respuesta…";
+        var turns = [{role:"user", content: RULES}];
+        history.slice(-4).forEach(function(t){ turns.push(t); });
+        var final = ctx.text + "\nPREGUNTA DEL VECINO: " + question;
+        var enc = new TextEncoder(), total = enc.encode(RULES + final).length;
+        turns.slice(1).forEach(function(t){ total += enc.encode(t.content).length; });
+        while (total > 60000 && turns.length > 1) { var drop = turns.splice(1, 1)[0]; total -= enc.encode(drop.content).length; }
+        if (turns.length > 1 && turns[1].role === "assistant") turns.splice(1, 1);
+        turns.push({role:"user", content: final});
+        return sample(turns, {
+          cache: false, signal: myCtl.signal,
+          onText: function(u){ status.hidden = true; renderBody(body, u.text); }
+        }).then(function(res){
+          status.hidden = true;
+          renderBody(body, res.text);
+          var tail = parseTail(res.text);
+          var shown = {}, src = el("div", {"class":"src"});
+          src.appendChild(el("span", {"class":"src-l"}, "Fuente"));
+          tail.codes.forEach(function(c){
+            var ref = ctx.refs[c]; if (!ref) return;
+            if (ref.kind === "p") {
+              if (shown["p" + ref.e.id]) return; shown["p" + ref.e.id] = 1;
+              var b = el("button", {"class":"src-b", type:"button"}, (/^\d+\.\d+$/.test(ref.e.id) ? ref.e.id + " " : "") + ref.e.titulo + (ref.e.hoja_a4 ? " · hoja " + ref.e.hoja_a4 : ""));
+              b.addEventListener("click", function(){ openEntry(ref.e.id); });
+              src.appendChild(b);
+            } else {
+              if (shown["i" + ref.x.id]) return; shown["i" + ref.x.id] = 1;
+              var bi = el("button", {"class":"src-b", type:"button"}, "Investigación: " + cleanInforme(ref.x.informe).slice(0, 70));
+              bi.addEventListener("click", function(){ openInv(ref.x); });
+              src.appendChild(bi);
+            }
+          });
+          if (src.children.length > 1) card.appendChild(src);
+          if (res.truncated) card.appendChild(el("p", {"class":"fine"}, "La respuesta quedó cortada. Preguntá por una parte más chica."));
+          if (tail.sug.length) {
+            var m = el("div", {"class":"more"}); m.appendChild(el("span", null, "Seguí preguntando"));
+            var cw = el("div", {"class":"chips"});
+            tail.sug.forEach(function(sg){ var b = el("button", {"class":"chip-f", type:"button"}, sg); b.addEventListener("click", function(){ ask(sg); }); cw.appendChild(b); });
+            m.appendChild(cw); card.appendChild(m);
+          }
+          var clean = res.text.split(/\n\s*FUENTES\s*:/i)[0].trim();
+          history.push({role:"user", content: question}, {role:"assistant", content: clean || res.text});
+          finish();
+        });
+      });
+    }).catch(function(e){
+      status.hidden = true;
+      if (e && e.text) renderBody(body, e.text);
+      if (!(e && e.code === "cancelled")) card.appendChild(el("p", {"class":"err"}, errorCopy(e)));
+      else if (!body.textContent) card.appendChild(el("p", {"class":"err"}, "Paraste la respuesta."));
+      finish();
+    });
+  }
+
+  function hook(formSel, taSel){
+    var f = $(formSel), ta = $(taSel);
+    f.addEventListener("submit", function(ev){ ev.preventDefault(); var v = ta.value; if (v.trim()) { ask(v); ta.value = ""; } });
+    ta.addEventListener("keydown", function(ev){ if (ev.key === "Enter" && !ev.shiftKey && !ev.isComposing) { ev.preventDefault(); f.requestSubmit ? f.requestSubmit() : f.dispatchEvent(new Event("submit", {cancelable:true})); } });
+  }
+  hook("#form-main", "#q-main");
+  hook("#form-follow", "#q-follow");
+  document.querySelectorAll(".chip-q").forEach(function(b){ b.addEventListener("click", function(){ ask(b.getAttribute("data-q")); }); });
+
+  // Precarga liviana del programa para el buscador y los capítulos (las investigaciones, recién al preguntar)
+})();
+</script>

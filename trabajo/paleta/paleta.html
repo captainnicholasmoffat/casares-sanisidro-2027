@@ -1,0 +1,126 @@
+<title>Colores del programa en la web</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Spectral:wght@400;500;600;700&display=swap">
+<style>
+:root{--ground:#F5F0E8;--panel:#EFE7DA;--sand:#EAE0CF;--white:#FCFAF6;--ink:#2A211C;--taupe:#6E625A;--ox:#7C2E23;--coral:#DB6B4B;--sage:#5F7057;--amber:#B4863A;--hair:#D9CDBA;--pill-sage:#E4EADF;--pill-amber:#F2E7D4;--pill-coral:#F6E1D8;--card:#FFFFFF;--blue:#2F6DB0;--terra:#D2602F;--rose:#E4C6BC}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ground:#1A1512;--panel:#2E2621;--sand:#3A3029;--white:#211B17;--ink:#EFE7DB;--taupe:#BFB3A6;--ox:#E8A08F;--coral:#F0A184;--sage:#A3B597;--amber:#D9B169;--hair:#3B312A;--pill-sage:#2F3A2C;--pill-amber:#3D3222;--pill-coral:#3A2520;--card:#2A231E;--blue:#5B92D6;--terra:#DD6B3A;--rose:#6B3A30;color-scheme:dark}}
+:root[data-theme="dark"]{--ground:#1A1512;--panel:#2E2621;--sand:#3A3029;--white:#211B17;--ink:#EFE7DB;--taupe:#BFB3A6;--ox:#E8A08F;--coral:#F0A184;--sage:#A3B597;--amber:#D9B169;--hair:#3B312A;--pill-sage:#2F3A2C;--pill-amber:#3D3222;--pill-coral:#3A2520;--card:#2A231E;--blue:#5B92D6;--terra:#DD6B3A;--rose:#6B3A30;color-scheme:dark}
+body{background:var(--ground);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+main{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:flex;flex-direction:column;gap:34px}
+h1,h2,h3{font-family:Spectral,Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.9rem,4vw,2.6rem)} h2{font-size:1.5rem;color:var(--ox)} h3{font-size:1.1rem}
+p{margin:0}.lead{color:var(--taupe);margin-top:6px}
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:14px}
+.s{background:var(--card);border:1px solid var(--hair);border-radius:12px;overflow:hidden}
+.s i{display:block;height:56px}
+.s div{padding:8px 10px;font-size:13px}.s b{display:block;font-size:14px}
+.s span{color:var(--taupe)}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+@media (max-width:720px){.pair{grid-template-columns:minmax(0,1fr)}}
+.col{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.lab{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--taupe)}
+.lab.now{color:var(--taupe)} .lab.new{color:var(--sage)}
+.row{display:flex;flex-direction:column;gap:6px}
+.why{font-size:15px;color:var(--taupe)}
+.kick-old{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.kick-new{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.ans{font-size:16px}.ans .sg{font-weight:600;color:var(--sage)}
+.box{border-radius:10px;padding:12px 14px;font-size:15px}
+.box b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.b-old-hoy{background:#EFE8DC;color:var(--ink)} .b-old-hoy b{color:var(--taupe)}
+.b-old-pro{background:#F8EAE3;box-shadow:inset 4px 0 0 var(--coral)} .b-old-pro b{color:var(--coral)}
+:root[data-theme="dark"] .b-old-hoy{background:var(--panel)} :root[data-theme="dark"] .b-old-pro{background:var(--pill-coral)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .b-old-hoy{background:var(--panel)} :root:not([data-theme="light"]) .b-old-pro{background:var(--pill-coral)}}
+.b-hoy{background:var(--panel);box-shadow:inset 4px 0 0 var(--amber)} .b-hoy b{color:var(--amber)}
+.b-pro{background:var(--pill-coral);box-shadow:inset 4px 0 0 var(--coral)} .b-pro b{color:var(--ox)}
+.b-vig{background:var(--panel);box-shadow:inset 4px 0 0 var(--sage)} .b-vig b{color:var(--sage)}
+.b-case{background:var(--panel);box-shadow:inset 4px 0 0 var(--ox)} .b-case b{color:var(--sage)}
+.pull{border-left:4px solid var(--coral);padding:2px 0 2px 12px}.pull span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}.pull p{font-family:Spectral,Georgia,serif;font-weight:600;font-size:1.15rem;color:var(--ox);margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 10px}
+.t-old{background:var(--panel);color:var(--taupe)}
+.t-a{background:var(--pill-amber);color:var(--amber)} .t-v{background:var(--pill-sage);color:var(--sage)} .t-m{background:var(--pill-coral);color:var(--ox)}
+.th{width:100%;border-collapse:collapse;font-size:14px}
+.th th{text-align:left;padding:7px 10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.th td{padding:7px 10px;border-bottom:1px solid var(--hair)}
+.th.old th{background:var(--white);color:var(--taupe);border-bottom:1px solid var(--hair)}
+.th.new th{background:var(--sand);color:var(--ox)}
+.bars{display:flex;align-items:flex-end;gap:16px;height:120px;padding-top:6px;border-bottom:1px solid var(--hair)}
+.bars div{display:flex;gap:3px;align-items:flex-end;flex:1;justify-content:center}
+.bars i{display:block;width:22px;border-radius:4px 4px 0 0}
+.leg{display:flex;gap:14px;font-size:13px;color:var(--taupe)}
+.leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.opt{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.bad{font-size:14px;color:var(--taupe)}.bad b{color:var(--coral)}
+.rec{background:var(--ox);color:#FBF8F2;border-radius:14px;padding:14px 18px}
+:root[data-theme="dark"] .rec{background:#5E2219}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rec{background:#5E2219}}
+</style>
+<main>
+  <header><h1>Los colores del programa, en la web</h1><p class="lead">Hoy la web usa casi sólo crema y bordó. El PDF usa más. Maqueta: nada de esto está en la web todavía.</p></header>
+
+  <section>
+    <h2>Los colores del PDF</h2>
+    <p class="why">Salen de la hoja de estilo del documento. Los tres que faltan en la web: el verde salvia, el ámbar y la arena.</p>
+    <div class="sw" id="sw"></div>
+  </section>
+
+  <section>
+    <h2>1 · Frases importantes en verde</h2>
+    <p class="why">Como en el PDF: la oración clave, en verde y un poco más gruesa. En el lector ya está; faltaría en las respuestas del chat.</p>
+    <div class="pair">
+      <div class="col"><span class="lab now">Hoy</span><p class="ans">No. El programa no toma deuda nueva en ningún año. Se paga con la tabla nueva y con una parte del gasto flexible.</p></div>
+      <div class="col"><span class="lab new">Propuesta</span><p class="ans"><span class="sg">No. El programa no toma deuda nueva en ningún año.</span> Se paga con la tabla nueva y con una parte del gasto flexible.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2 · Recuadros con el color de su tipo</h2>
+    <p class="why">En el PDF, cada recuadro tiene un filete de color según lo que cuenta: verde para «nuestra propuesta», ámbar para problemas y límites, bordó para casos y pruebas. Las frases destacadas llevan filete coral.</p>
+    <div class="pair">
+      <div class="col"><span class="lab now">Hoy</span><div class="box b-old-hoy"><b>Hoy</b>Ningún barrio decide nada sobre la obra pública.</div><div class="box b-old-pro"><b>Propuesta</b>Los vecinos deciden la mitad de la obra pública en el año 4.</div></div>
+      <div class="col"><span class="lab new">Propuesta</span><div class="box b-hoy"><b>Hoy</b>Ningún barrio decide nada sobre la obra pública.</div><div class="box b-vig"><b>Propuesta</b>Los vecinos deciden la mitad de la obra pública en el año 4.</div><div class="box b-case"><b>Un caso</b>Ya funciona en otro municipio bonaerense.</div><div class="pull"><span>Frase destacada</span><p>Hoy ningún barrio decide nada sobre la obra pública.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3 · Títulos chicos en ámbar y etiquetas de colores</h2>
+    <p class="why">El PDF pone en ámbar los títulos chicos en mayúscula y usa tres pastillas: verde (gestión, reasignación), coral (estimado, crítico) y ámbar (fondos nuevos).</p>
+    <div class="pair">
+      <div class="col"><span class="lab now">Hoy</span><span class="kick-old">Capítulo 4 · El mecanismo</span><div class="tags"><span class="tag t-old">Reasignación</span><span class="tag t-old">Estimado</span><span class="tag t-old">Fondos nuevos</span></div></div>
+      <div class="col"><span class="lab new">Propuesta</span><span class="kick-new">Capítulo 4 · El mecanismo</span><div class="tags"><span class="tag t-v">Reasignación</span><span class="tag t-m">Estimado</span><span class="tag t-a">Fondos nuevos</span></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4 · Tablas con encabezado arena</h2>
+    <div class="pair">
+      <div class="col"><span class="lab now">Hoy</span><table class="th old"><tr><th>Zona</th><th>Índice</th></tr><tr><td>Boulogne</td><td>34,0%</td></tr><tr><td>Béccar</td><td>33,0%</td></tr></table></div>
+      <div class="col"><span class="lab new">Propuesta</span><table class="th new"><tr><th>Zona</th><th>Índice</th></tr><tr><td>Boulogne</td><td>34,0%</td></tr><tr><td>Béccar</td><td>33,0%</td></tr></table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5 · Gráficos de «Las cuentas»</h2>
+    <p class="why">Hoy usan naranja y azul. El azul no está en el PDF.</p>
+    <div class="pair">
+      <div class="col"><span class="lab now">Hoy</span><div class="leg"><span><i style="background:var(--terra)"></i>Programa</span><span><i style="background:var(--blue)"></i>Tabla nueva</span></div>
+        <div class="bars"><div><i style="height:30px;background:var(--terra)"></i><i style="height:30px;background:var(--blue)"></i></div><div><i style="height:66px;background:var(--terra)"></i><i style="height:88px;background:var(--blue)"></i></div><div><i style="height:98px;background:var(--terra)"></i><i style="height:108px;background:var(--blue)"></i></div><div><i style="height:110px;background:var(--terra)"></i><i style="height:110px;background:var(--blue)"></i></div></div></div>
+      <div class="col"><span class="lab new">Propuesta</span><div class="leg"><span><i style="background:var(--ox)"></i>Programa</span><span><i style="background:var(--sage)"></i>Tabla nueva</span></div>
+        <div class="bars"><div><i style="height:30px;background:var(--ox)"></i><i style="height:30px;background:var(--sage)"></i></div><div><i style="height:66px;background:var(--ox)"></i><i style="height:88px;background:var(--sage)"></i></div><div><i style="height:98px;background:var(--ox)"></i><i style="height:108px;background:var(--sage)"></i></div><div><i style="height:110px;background:var(--ox)"></i><i style="height:110px;background:var(--sage)"></i></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Opciones</h2>
+    <div class="pair">
+      <div class="opt"><h3>A · Las cinco cosas</h3><p class="bad"><b>Lo malo:</b> el verde del PDF es apagado; en los gráficos, alguien que no distingue bien los colores se guía por las etiquetas, no por el color.</p></div>
+      <div class="opt"><h3>B · Las cuatro primeras; los gráficos siguen con azul</h3><p class="bad"><b>Lo malo:</b> los gráficos de la web no se ven como los del PDF.</p></div>
+    </div>
+  </section>
+  <p class="rec">Recomiendo A: que la web se vea como el PDF. Cada gráfico ya lleva sus números escritos.</p>
+</main>
+<script>
+[["Crema","#F5F0E8","fondo"],["Panel","#EFE7DA","recuadros"],["Arena","#EAE0CF","encabezados de tablas"],["Bordó","#7C2E23","títulos y botones"],["Coral","#DB6B4B","frases destacadas"],["Verde salvia","#5F7057","frases importantes y propuestas"],["Ámbar","#B4863A","títulos chicos y problemas"],["Pastilla verde","#E4EADF","etiquetas"],["Pastilla ámbar","#F2E7D4","etiquetas"],["Pastilla coral","#F6E1D8","etiquetas"]].forEach(function(c){
+  var d = document.createElement("div"); d.className = "s"; var i = document.createElement("i"); i.style.background = c[1]; d.appendChild(i);
+  var t = document.createElement("div"); var b = document.createElement("b"); b.textContent = c[0]; t.appendChild(b); var s = document.createElement("span"); s.textContent = c[1] + " · " + c[2]; t.appendChild(s); d.appendChild(t); document.getElementById("sw").appendChild(d); });
+</script>

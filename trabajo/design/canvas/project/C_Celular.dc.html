@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>C. El mapa primero, celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+</style>
+</helmet>
+<div style="width: 390px; height: 1720px; overflow: hidden; box-sizing: border-box; background: #F5F0E8; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border-bottom: 1px solid #DCD2C3">
+    <a href="#" style="text-decoration: none; color: #2A211C; font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 21px">San Isidro 2027</a>
+    <button type="button" aria-label="Abrir el menú" style="font: inherit; font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; padding: 10px 14px; min-height: 44px; border: 1px solid #BFB3A1; border-radius: 999px; background: transparent; color: #2A211C">
+      <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="#2A211C" stroke-width="1.6" fill="none"></path></svg>Menú</button>
+  </header>
+
+  <section style="padding: 24px 16px 20px; display: flex; flex-direction: column; gap: 14px">
+    <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 32px; line-height: 1.08">Los vecinos de cada zona van a decidir la mitad de la obra pública.</h1>
+    <p style="margin: 0; font-size: 16px; color: #5E534B">Una fórmula escrita, y no el intendente, va a repartir el dinero entre las zonas, según la población y la necesidad de cada una.</p>
+  </section>
+
+  <figure style="margin: 0 16px; display: flex; flex-direction: column; gap: 8px">
+    <div style="background: #EFE8DC; border: 1px solid #DCD2C3; border-radius: 10px; padding: 10px">
+      <img src="/_blob/d0d40cbdc9922221631df185df868474" alt="Mapa en relieve de las seis zonas de San Isidro, más altas cuanto más obra deciden sus vecinos." style="width: 100%; display: block">
+    </div>
+    <figcaption style="font-size: 12px; color: #5E534B">Altura: obra que van a decidir los vecinos por año, desde el cuarto año, en millones de pesos (4.4, gráfico 23). Tocá una zona para ver sus datos.</figcaption>
+  </figure>
+
+  <section style="padding: 20px 16px 28px; display: flex; flex-direction: column; gap: 14px">
+    <div role="group" aria-label="Elegí una zona" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px">
+      <button type="button" aria-pressed="true" style="flex-shrink: 0; font: inherit; font-weight: 600; font-size: 15px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #7C2E23; background: #7C2E23; color: #FBF8F2">Boulogne Sur Mer</button>
+      <button type="button" aria-pressed="false" style="flex-shrink: 0; font: inherit; font-size: 15px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C">Béccar</button>
+      <button type="button" aria-pressed="false" style="flex-shrink: 0; font: inherit; font-size: 15px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C">Villa Adelina</button>
+      <button type="button" aria-pressed="false" style="flex-shrink: 0; font: inherit; font-size: 15px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #BFB3A1; background: transparent; color: #2A211C">San Isidro</button>
+    </div>
+    <div style="background: #FBF8F2; border: 1px solid #DCD2C3; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+      <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.1">Boulogne Sur Mer</h2>
+      <dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px">
+        <div style="border-top: 2px solid #7C2E23; padding-top: 8px"><dt style="font-size: 13px; color: #5E534B">Obra que deciden sus vecinos, por año, desde el cuarto año</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 24px; font-weight: 600">8.569 M</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 8px"><dt style="font-size: 13px; color: #5E534B">Personas</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 24px; font-weight: 600">74.832</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 8px"><dt style="font-size: 13px; color: #5E534B">Hogares sin cloaca</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 24px; font-weight: 600">2.295</dd></div>
+        <div style="border-top: 2px solid #DCD2C3; padding-top: 8px"><dt style="font-size: 13px; color: #5E534B">Hogares sin gas de red</dt><dd style="margin: 4px 0 0; font-family: Spectral, Georgia, serif; font-size: 24px; font-weight: 600">6.947</dd></div>
+      </dl>
+      <a href="#" style="font-weight: 600; font-size: 15px">Qué propone el programa para tu zona</a>
+    </div>
+  </section>
+
+  <section style="background: #FBF8F2; border-top: 1px solid #DCD2C3; padding: 28px 16px; display: flex; flex-direction: column; gap: 12px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.1">Qué proponemos hacer</h2>
+    <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px">
+      <li style="border-top: 2px solid #7C2E23; padding-top: 10px; display: flex; gap: 12px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">1</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.35">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</a></li>
+      <li style="border-top: 2px solid #7C2E23; padding-top: 10px; display: flex; gap: 12px; align-items: baseline"><span style="font-family: Spectral, Georgia, serif; font-weight: 600; color: #7C2E23">2</span><a href="#" style="color: #2A211C; text-decoration: none; font-family: Spectral, Georgia, serif; font-size: 18px; line-height: 1.35">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</a></li>
+    </ol>
+    <a href="#" style="font-weight: 600; padding: 10px 0">Ver los nueve puntos</a>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

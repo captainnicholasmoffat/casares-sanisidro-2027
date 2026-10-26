@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>B2. La pregunta primero, con tarjetas, celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.card{background:#FFFFFF;border:1px solid #DCD2C3;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:200px;object-fit:cover;object-position:center 40%;display:block}
+.card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px}
+.num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#7C2E23;color:#FBF8F2;font-family:Spectral,Georgia,serif;font-weight:600;font-size:16px}
+.lead{font-family:Spectral,Georgia,serif;font-size:20px;line-height:1.3}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #EAE2D5;padding-top:12px;font-size:14px}
+.askit{font:inherit;font-size:14px;font-weight:600;min-height:44px;padding:9px 14px;border-radius:999px;border:1px solid #7C2E23;background:transparent;color:#7C2E23}
+</style>
+</helmet>
+<div style="width: 390px; height: 2400px; overflow: hidden; box-sizing: border-box; background: #F5F0E8; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+  <div style="background: #7C2E23; color: #FBF8F2">
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 14px 16px">
+      <a href="#" style="text-decoration: none; color: #FBF8F2; font-family: Spectral, Georgia, serif; font-weight: 600; font-size: 21px">San Isidro 2027</a>
+      <button type="button" aria-label="Abrir el menú" style="font: inherit; font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; padding: 10px 14px; min-height: 44px; border: 1px solid #C98F82; border-radius: 999px; background: transparent; color: #FBF8F2">
+        <svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><path d="M0 1h16M0 6h16M0 11h16" stroke="#FBF8F2" stroke-width="1.6" fill="none"></path></svg>Menú</button>
+    </header>
+    <section style="padding: 16px 16px 28px; display: flex; flex-direction: column; gap: 14px">
+      <h1 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 38px; line-height: 1.04">¿Qué te preocupa de San Isidro?</h1>
+      <p style="margin: 0; font-size: 16px; color: #F1E3DC">Preguntale al programa. Te responde con lo que proponemos y te dice en qué capítulo y en qué hoja está.</p>
+      <form style="display: flex; flex-direction: column; gap: 8px">
+        <label for="q-b2m" style="font-size: 14px; color: #F1E3DC">Tu pregunta</label>
+        <textarea id="q-b2m" rows="3" placeholder="Por ejemplo: tengo un café en Martínez y me hicieron una inspección injusta" style="font: inherit; font-size: 17px; padding: 14px 16px; border: 0; border-radius: 10px; background: #FFFFFF; color: #2A211C; resize: none"></textarea>
+        <button type="submit" style="font: inherit; font-weight: 600; font-size: 17px; padding: 15px 20px; border: 0; border-radius: 10px; background: #DB6B4B; color: #2A211C">Preguntar</button>
+      </form>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2">Vivo en Boulogne y no tengo cloaca</button>
+        <button type="button" style="font: inherit; font-size: 14px; padding: 10px 14px; min-height: 44px; border-radius: 999px; border: 1px solid #C98F82; background: transparent; color: #FBF8F2">¿Cómo se paga todo esto?</button>
+      </div>
+    </section>
+  </div>
+
+  <section style="padding: 28px 16px; display: flex; flex-direction: column; gap: 16px">
+    <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 32px; line-height: 1.05">Qué proponemos hacer</h2>
+    <p style="margin: 0; font-size: 15px; color: #5E534B">Nueve puntos. Tocá «Leer más» para ver el punto completo, o preguntale al programa sobre ese tema.</p>
+    <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px">
+      <li class="card">
+        <img src="/_blob/368b8de8114846726fbeeecd922a7c93" alt="Asamblea vecinal. Ilustración.">
+        <div class="card-body"><span class="num">1</span><span class="lead">Los vecinos van a decidir la mitad de la obra pública, en cuatro años.</span>
+          <p style="margin: 0; font-family: Spectral, Georgia, serif; font-size: 17px; line-height: 1.5; color: #4A403A">Hoy no deciden ninguna obra pública. Van a decidir el 12,5% el primer año y la mitad al cuarto año, que son 28.908 millones por año. Una fórmula escrita, y no el intendente, va a repartir el dinero entre las zonas, según la población y la necesidad de cada una. Por eso la mayor parte va a ir a Boulogne Sur Mer y a Béccar. El dinero de cada zona va a quedar reservado por ordenanza, para que no se pueda usar en otra cosa.</p>
+          <span style="font-size: 13px; color: #5F7057">Capítulo 4</span>
+          <div class="foot"><a href="#" style="font-weight: 600">Cerrar</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+      </li>
+      <li class="card">
+        <img src="/_blob/4d3905e80c5fe7bc5a4f94aecd761bab" alt="Formación laboral. Ilustración.">
+        <div class="card-body"><span class="num">2</span><span class="lead">La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San Isidro.</span>
+          <div class="foot"><a href="#" style="font-weight: 600">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+      </li>
+      <li class="card">
+        <img src="/_blob/51273961a182d407b798654293e090e2" alt="La tecnicatura en inteligencia artificial. Ilustración.">
+        <div class="card-body"><span class="num">3</span><span class="lead">Vamos a formar a la gente acá, en lo que mejor paga: inteligencia artificial y tecnología.</span>
+          <div class="foot"><a href="#" style="font-weight: 600">Leer más</a><button type="button" class="askit">Preguntale sobre esto</button></div></div>
+      </li>
+    </ol>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

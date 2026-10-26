@@ -1,0 +1,22 @@
+Preparás los datos geográficos y las imágenes para el sitio web del programa de gobierno «San Isidro 2027» (Municipio de San Isidro, Provincia de Buenos Aires). El programa está TERMINADO: la versión final es el commit c462fcf.
+
+REPOSITORIO (sólo lectura): /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/repo
+- Usá sólo `git -C <repo> show c462fcf:<ruta>`, `git -C <repo> ls-tree ...` y `git -C <repo> grep ... c462fcf`; para archivos binarios, `git show c462fcf:<ruta> > /tmp/...` dentro de una carpeta de trabajo tuya (/tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/geo). Prohibido: push, commit, checkout, fetch, modificar el repo, o imprimir la URL del remoto (tiene una credencial).
+- Fuentes útiles: 01_raw/censo2022/radios-censales-2022-shp.zip (radios censales), doc/charts.py (cómo el documento armó el mapa de zonas y asignó radios a localidades), assets/svg/g_mapa_zonas.svg y g_mapa_radios.svg, doc/content*.py (texto final), assets/doc/f_*.jpg (fotos aprobadas).
+- Texto final ya extraído: /tmp/claude-0/-home-claude/ac2c9a6e-772e-5575-a5d3-16a61434e961/scratchpad/v21/pj.txt (pantalla) y .../v21/t/<hoja>.txt (A4).
+- Instalá lo que haga falta con pip (--break-system-packages), por ejemplo pyshp, shapely, pillow. Si algo de internet no se puede bajar, no insistas: trabajá con lo que hay en el repo.
+
+SALIDA 1 · /home/claude/proyecto/web/data/zonas.geojson
+Las seis localidades de San Isidro como polígonos (Boulogne Sur Mer, Béccar, Villa Adelina, San Isidro, Martínez, Acassuso), en longitud/latitud WGS84, armadas con los radios censales con el mismo criterio que usó el documento (mirá doc/charts.py). Simplificadas para que el archivo pese menos de 150 KB sin perder la forma. Propiedad "nombre" en cada una. Si podés, sumá también el contorno de todo el partido y una línea de la costa del río como features aparte (propiedad "tipo").
+
+SALIDA 2 · /home/claude/proyecto/web/data/zonas_datos.json
+Por zona, todas las cifras que el programa final da por localidad: población, hogares, % de hogares con NBI, sin cloaca, sin gas de red, hacinamiento, el reparto del dinero de obra que deciden los vecinos (año 1 y año 4, total y por habitante), los lugares de formación por zona (315 Boulogne, 307 Béccar, etc.), chicos y personas mayores por zona, y cualquier otra cifra por zona. Cada cifra con "fuente": id del apartado o número de cuadro/gráfico del programa final. Sólo cifras que estén en el texto final (c462fcf): no calcules ni inventes nada nuevo. Agregá el promedio de San Isidro cuando el programa lo dé.
+
+SALIDA 3 · Imágenes en /home/claude/proyecto/web/img/
+- Convertí las fotos aprobadas assets/doc/f_*.jpg a WebP: una de 1600 px de ancho (calidad 78) y una de 800 px (calidad 72), con nombres f_xxx-1600.webp y f_xxx-800.webp.
+- No incluyas las dos fotos que se sacaron del programa: «Plaza de barrio, un sábado» y «Trabajo sobre el mapa del partido» (buscá en doc/content*.py qué archivos eran).
+- /home/claude/proyecto/web/img/fotos.json: por foto, el archivo, el epígrafe exacto que lleva en el programa final, y el apartado donde aparece. Si una foto no aparece en el programa final, marcala "en_programa": false.
+
+SALIDA 4 · /home/claude/proyecto/web/data/GEO_INFORME.md: en castellano llano, cómo armaste las zonas, qué controles hiciste (por ejemplo, que la población sumada por zona coincida con la del programa), y cualquier problema.
+
+Cuando termines, respondé sólo con «Listo» y un resumen de 5 líneas.

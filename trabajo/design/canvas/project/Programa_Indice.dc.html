@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El programa completo, índice</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7C2E23}a:hover{color:#5E2219}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{background:#FFFFFF;border:1px solid #DCD2C3;border-radius:10px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:#2A211C}
+.tile:hover{border-color:#7C2E23}
+.tag{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;color:#5F7057}
+.tt{font-family:Spectral,Georgia,serif;font-size:22px;line-height:1.2;font-weight:500}
+.ld{font-family:Spectral,Georgia,serif;font-size:16px;line-height:1.45;color:#5E534B;flex-grow:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#5E534B;border-top:1px solid #EAE2D5;padding-top:10px}
+.meta b{color:#7C2E23;font-weight:600;font-size:14px}
+.chapter .tag{color:#7C2E23}
+@media (max-width:1100px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.tiles{grid-template-columns:minmax(0,1fr)}}
+</style>
+</helmet>
+<div style="background: #F5F0E8; color: #2A211C; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55; padding: 64px 0 72px">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 32px">
+      <div style="display: flex; flex-direction: column; gap: 8px; max-width: 640px">
+        <h2 style="margin: 0; font-family: Spectral, Georgia, serif; font-weight: 500; font-size: 48px; line-height: 1.05">El programa completo</h2>
+        <p style="margin: 0; font-size: 17px; color: #5E534B">Elegí un capítulo para leerlo entero. Adentro podés pasar de un apartado al siguiente.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; flex: 0 1 420px; min-width: 0">
+        <label for="buscar-i" style="font-size: 14px; color: #5E534B">Buscar en el programa</label>
+        <input id="buscar-i" type="search" placeholder="Por ejemplo: cloacas, multas, costa" style="font: inherit; padding: 13px 16px; border: 1px solid #BFB3A1; border-radius: 8px; background: #FFFFFF; color: #2A211C">
+      </div>
+    </div>
+    <div class="tiles">
+      <a href="#" class="tile"><span class="tag">Hoja 5</span><span class="tt">Introducción</span><span class="ld">Según el Censo 2022, en San Isidro hay 25.165 hogares sin gas de red y 6.488 que no tienen cloaca.</span><span class="meta"><span>La pregunta</span><b>Leer</b></span></a>
+      <a href="#" class="tile"><span class="tag">Hojas 6 y 7</span><span class="tt">Qué proponemos hacer</span><span class="ld">Nueve puntos, y los primeros cien días.</span><span class="meta"><span>9 puntos</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 1</span><span class="tt">Diagnóstico</span><span class="ld">San Isidro invierte en obra pública más que el 96% de los municipios de la provincia de Buenos Aires.</span><span class="meta"><span>6 apartados · hojas 8 a 12</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 2</span><span class="tt">El gobierno actual, medido</span><span class="ld">Medimos el plan de gobierno 2024–2025 contra sus propias metas y con los documentos del propio Municipio.</span><span class="meta"><span>4 apartados · hojas 13 a 17</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 3</span><span class="tt">Los fondos</span><span class="ld">El Municipio cerró 2025 con un déficit de 6.051 millones.</span><span class="meta"><span>7 apartados · hojas 18 a 29</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 4</span><span class="tt">El mecanismo</span><span class="ld">En la Provincia de Buenos Aires, lo que vota una asamblea de vecinos no puede obligar al Municipio.</span><span class="meta"><span>13 apartados · hojas 30 a 48</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 5</span><span class="tt">Qué hacemos en cada área</span><span class="ld">Área por área: qué hay hoy, qué proponemos y de dónde sale.</span><span class="meta"><span>15 apartados · hojas 49 a 100</span><b>Leer</b></span></a>
+      <a href="#" class="tile chapter"><span class="tag">Capítulo 6</span><span class="tt">El plan, con fechas</span><span class="ld">Este capítulo fija veinte metas para los cuatro años de gobierno.</span><span class="meta"><span>7 apartados · hojas 101 a 114</span><b>Leer</b></span></a>
+      <a href="#" class="tile"><span class="tag">Hoja 115</span><span class="tt">Para cerrar</span><span class="ld">Nuestra propuesta tiene dos partes.</span><span class="meta"><span>Cierre</span><b>Leer</b></span></a>
+      <a href="#" class="tile"><span class="tag">Anexo</span><span class="tt">Las ordenanzas que proponemos</span><span class="ld">Las promesas de este programa necesitan normas, y acá están escritas.</span><span class="meta"><span>16 ordenanzas · hojas 116 a 126</span><b>Leer</b></span></a>
+      <a href="#" class="tile"><span class="tag">Glosario</span><span class="tt">Cuarenta palabras, explicadas</span><span class="ld">Cuarenta palabras técnicas y siglas que aparecen en el texto, explicadas como se las explicaría a un vecino.</span><span class="meta"><span>Hojas 127 y 128</span><b>Leer</b></span></a>
+      <a href="#" class="tile"><span class="tag">Nota de método</span><span class="tt">Cómo está construido</span><span class="ld">Cómo está construido este documento, de dónde sale cada cifra y qué límites tiene.</span><span class="meta"><span>Hojas 129 a 140</span><b>Leer</b></span></a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
