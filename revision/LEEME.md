@@ -4,7 +4,7 @@ Rama `web-sanisidro`. Es la copia de trabajo de la web publicada en https://sani
 
 ## Qué hace
 
-El día 1 de cada mes, una tarea programada abre una sesión nueva y sigue `revision/INSTRUCCIONES_CORRIDA.md`:
+El día 1 de cada mes, a las 8:48 (hora de Buenos Aires), una tarea programada abre una sesión nueva y sigue `revision/INSTRUCCIONES_CORRIDA.md`. La tarea es «Revisión mensual de la web de San Isidro» (`trig_01R81X8evAzB59m9k8xSk4p7`) y su primera corrida es el 1 de diciembre de 2026. Pasos:
 
 1. Baja de la base D1 (`sanisidro2027`) las preguntas, los «¿Le faltó algo?» y los mensajes de «Escribinos» desde la corrida anterior, con `revision/extraer.py`. Las pruebas automáticas se excluyen.
 2. Revisa que la web ande: cada página y una pregunta real al chat.
