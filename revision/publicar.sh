@@ -9,6 +9,7 @@ export CLOUDFLARE_ACCOUNT_ID=b9ff0a47e862fc50eccca51708ec9fc7 WRANGLER_SEND_METR
 WRANGLER=${WRANGLER:-"npx --yes wrangler@4"}
 
 (cd proyecto/web && python3 -I build_site.py ../../trabajo/nueve.json)
+node revision/temas.mjs   # gratis: cada tema típico tiene que encontrar su sección; si no, no se publica
 
 (cd proyecto/sitio && $WRANGLER pages deploy ./public --project-name sanisidro2027 --branch anticipo --commit-dirty=true)
 sleep 20

@@ -31,6 +31,7 @@ Si dudás entre A y B, es B.
 - Una pieza rota de la web se arregla en su plantilla, en `proyecto/web/`.
 - Nunca toques `programa.json`, `cuentas.json`, `investigaciones.json`, el plan de despliegue ni las reglas de escritura del programa.
 - Por cada corrección, sumá a `revision/pruebas.json` la pregunta que falló, con lo que tiene que decir.
+- Si la gente pregunta por un tema que no está en `revision/temas.json`, sumalo ahí, con la sección donde lo trata el programa.
 
 ## 4 · Publicar
 `bash revision/publicar.sh`

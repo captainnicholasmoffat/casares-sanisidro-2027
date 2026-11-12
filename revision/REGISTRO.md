@@ -33,3 +33,12 @@ Primera corrida, hecha a mano por el coordinador del programa. Cubre desde el 12
 **Ya corregido antes de esta corrida:** el 12/10, antes de las 06:30, el chat se negaba en segunda persona («sólo respondés…»). Se arregló ese mismo día.
 
 **Decisiones de Nick del mes anterior:** no hay; es la primera corrida.
+
+### Agregado el 2026-11-12: prueba por temas
+- Prueba nueva, `revision/temas.mjs`, gratis: 48 preguntas típicas, una por tema. Mira si la sección correcta está entre los 14 pasajes que recibe la IA.
+- Con el sitio del 11/11 (ya con el arreglo del Bajo) encontraban su sección 47 de 48.
+  - Faltaba «los perros de la calle»: el programa no lo trata, así que no es un error del chat. Queda como tema posible para Nick.
+- Mejorado «me robaron»: la búsqueda no unía «robaron» con «robo».
+  - Arreglo: sinónimos robaron, roban, asaltaron, asalto, afanaron → robo, delito; inseguridad → seguridad, delito.
+  - La sección de Seguridad pasó del fondo de la lista al primer lugar.
+- `publicar.sh` corre esta prueba antes de publicar. Publicado y probado: 47 de 47 temas, 4 de 4 preguntas en el anticipo y en el link principal.
