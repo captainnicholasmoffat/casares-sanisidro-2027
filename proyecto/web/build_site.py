@@ -14,6 +14,19 @@ SITE = WEB.parent / "sitio"
 data = json.loads(Path(sys.argv[1]).read_text())
 tpl = (WEB / "index_b.tpl.html").read_text()
 
+# 0) Ajustes del chat de la revisión mensual (revision/LEEME.md): sinónimos para la búsqueda y
+# reglas extra. Sólo cambian cómo contesta el chat, nunca el programa. Van a la página y al servidor.
+aj_path = WEB / "ajustes_chat.json"
+if aj_path.exists():
+    aj = json.loads(aj_path.read_text())
+    syn_i = tpl.index("  var SYN = {"); syn_end = tpl.index("};\n", syn_i)
+    extra_syn = "".join(", " + json.dumps(k) + ":" + json.dumps(v, ensure_ascii=False) for k, v in aj.get("sinonimos", {}).items())
+    tpl = tpl[:syn_end] + extra_syn + tpl[syn_end:]
+    fmt = '    "FORMATO: '
+    assert tpl.count(fmt) == 1, "no encontré la regla FORMATO"
+    extra_rules = "".join("    " + json.dumps("Ajuste " + str(n) + ". " + r, ensure_ascii=False) + ",\n" for n, r in enumerate(aj.get("reglas", []), 1))
+    tpl = tpl.replace(fmt, extra_rules + fmt)
+
 # 1) El chat pasa a la función propia
 start = tpl.index("  var sampleP = null, history = [], busy = false, ctl = null;")
 end_marker = "      document.querySelectorAll(\".go,.chip-q,.ask-it\").forEach(function(b){ b.disabled = true; });\n    }\n  });\n"
