@@ -46,8 +46,11 @@ def ultima_corrida():
     return max(fechas) if fechas else "2026-10-12"
 
 
+UA = {"user-agent": "Mozilla/5.0 (revision-mensual-sanisidro2027)"}
+
+
 def get(url, data=None, headers=None):
-    req = urllib.request.Request(url, data=data, headers=headers or {})
+    req = urllib.request.Request(url, data=data, headers={**UA, **(headers or {})})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.status, r.read().decode("utf-8", "replace")
 

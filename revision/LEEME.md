@@ -33,9 +33,11 @@ La frase de la web «Cada cambio lo revisa una persona antes de publicarse» que
 ## Dónde está cada cosa
 
 - `proyecto/web/ajustes_chat.json`: lo único que cambian las correcciones del chat.
-  - **Sinónimos:** amplían la búsqueda de pasajes.
+  - **Sinónimos:** se suman a la pregunta y a los pasajes. Sólo para palabras con un único sentido.
+  - **Frases:** se suman sólo a la pregunta. Sirven para palabras con dos sentidos, como «el bajo»: el barrio, no el adjetivo.
   - **Reglas extra:** se suman a las del chat.
   - `build_site.py` los mete en la página y en el servidor.
+- `revision/contexto.mjs`: muestra qué pasajes encuentra la búsqueda para una pregunta, sin llamar a la IA y sin costo. Sirve para probar una corrección antes de publicarla.
 - `revision/extraer.py`: baja los datos de la base y prueba la web.
 - `revision/probar.py` y `revision/pruebas.json`: preguntas de prueba. Cada corrección suma la pregunta que falló, con lo que tiene que decir.
 - `revision/publicar.sh`: arma, publica en el anticipo, prueba y recién entonces publica en el link principal.

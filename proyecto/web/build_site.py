@@ -22,6 +22,10 @@ if aj_path.exists():
     syn_i = tpl.index("  var SYN = {"); syn_end = tpl.index("};\n", syn_i)
     extra_syn = "".join(", " + json.dumps(k) + ":" + json.dumps(v, ensure_ascii=False) for k, v in aj.get("sinonimos", {}).items())
     tpl = tpl[:syn_end] + extra_syn + tpl[syn_end:]
+    fr = "  var FRASES = {"
+    assert tpl.count(fr) == 1, "no encontré FRASES"
+    extra_fr = ", ".join(json.dumps(k) + ":" + json.dumps(v, ensure_ascii=False) for k, v in aj.get("frases", {}).items())
+    tpl = tpl.replace(fr, fr + extra_fr)
     fmt = '    "FORMATO: '
     assert tpl.count(fmt) == 1, "no encontré la regla FORMATO"
     extra_rules = "".join("    " + json.dumps("Ajuste " + str(n) + ". " + r, ensure_ascii=False) + ",\n" for n, r in enumerate(aj.get("reglas", []), 1))

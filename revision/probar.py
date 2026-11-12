@@ -15,7 +15,8 @@ PALABRAS_PROHIBIDAS = ["plata", "mafia", "sobreprecio"]
 def preguntar(base, q):
     req = urllib.request.Request(base.rstrip("/") + "/api/ask",
                                  data=json.dumps({"question": "[PRUEBA AUTOMATICA] " + q}).encode(),
-                                 headers={"content-type": "application/json", "origin": base.rstrip("/")})
+                                 headers={"content-type": "application/json", "origin": base.rstrip("/"),
+                                          "user-agent": "Mozilla/5.0 (revision-mensual-sanisidro2027)"})
     with urllib.request.urlopen(req, timeout=180) as r:
         body = r.read().decode("utf-8", "replace")
     texto, fin = "", False

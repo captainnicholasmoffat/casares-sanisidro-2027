@@ -24,7 +24,9 @@ Si dudás entre A y B, es B.
 
 ## 3 · Corregir lo A
 - El chat se corrige sólo en `proyecto/web/ajustes_chat.json`:
-  - **Sinónimos**, para que la búsqueda encuentre el pasaje. La clave va en minúscula y sin tildes.
+  - **Sinónimos**, para que la búsqueda encuentre el pasaje. La clave va en minúscula y sin tildes. Sólo para palabras con un único sentido.
+  - **Frases**, si la palabra tiene dos sentidos (por ejemplo «el bajo»). Se suman sólo a la pregunta.
+  - Antes de publicar, armá el sitio y mirá con `revision/contexto.mjs` que la pregunta encuentre los pasajes correctos. Además, mirá que otras preguntas parecidas no empeoren.
   - **Reglas extra**, para cómo contesta. Una regla nueva sólo si un sinónimo no alcanza.
 - Una pieza rota de la web se arregla en su plantilla, en `proyecto/web/`.
 - Nunca toques `programa.json`, `cuentas.json`, `investigaciones.json`, el plan de despliegue ni las reglas de escritura del programa.

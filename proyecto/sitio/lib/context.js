@@ -3,6 +3,9 @@ var CH_P = [], CH_I = [], DF_P = {}, DF_I = {}, AVG_P = 1, AVG_I = 1, READY = nu
   var STOP = {};
   ("a al algo algun alguna algunas alguno algunos ante antes aqui asi aun cada como con contra cual cuales cuando de del desde donde dos e el ella ellas ellos en entre era es esa esas ese eso esos esta estan estas este esto estos fue fueron ha hace han hasta hay la las le les lo los mas me mi mis muy ni no nos o otra otras otro otros para pero poco por porque que quien se sea segun ser si sin sobre son su sus tambien tan te tiene tienen todo todos tu tus un una unas uno unos y ya yo vos voy va van tengo tenes puede pueden programa proponen propone propuesta qué cómo the of and to in is for what how does do about my i").split(" ").forEach(function(w){ STOP[w] = 1; });
   var SYN = {plata:"dinero fondos", laburo:"trabajo empleo", chorro:"robo seguridad", chorros:"robo seguridad", afanaron:"robo seguridad", kiosco:"comercio", negocio:"comercio", local:"comercio habilitacion", cafe:"comercio", cafeteria:"comercio", bondi:"colectivo transporte", impuestos:"tasa", abl:"tasa", municipalidad:"municipio", policia:"seguridad camaras", cana:"seguridad", pibes:"jovenes", chicos:"ninez jovenes", jubilados:"personas mayores", ia:"inteligencia artificial", plaza:"plazas espacio publico", rio:"costa", clausuraron:"clausura inspeccion", inspector:"inspeccion"};
+  // Frases que sólo se suman a la pregunta, no a los pasajes (por ejemplo «el bajo»: el barrio, no el adjetivo).
+  var FRASES = {"el bajo":"costa ribera cuenca rio", "del bajo":"costa ribera cuenca rio", "al bajo":"costa ribera cuenca rio"};
+  function frases(q){ var n = " " + norm(q) + " ", extra = ""; for (var f in FRASES) if (n.indexOf(" " + f + " ") >= 0) extra += " " + FRASES[f]; return q + extra; }
   function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " "); }
   function stem(w){ if (w.length > 5 && /es$/.test(w)) w = w.slice(0, -2); else if (w.length > 4 && /s$/.test(w)) w = w.slice(0, -1); return w.length > 7 ? w.slice(0, 7) : w; }
   function toks(s){
@@ -25,7 +28,7 @@ var CH_P = [], CH_I = [], DF_P = {}, DF_I = {}, AVG_P = 1, AVG_I = 1, READY = nu
     return tot / (list.length || 1);
   }
   function bm25(list, df, avg, q, k){
-    var N = list.length, qt = toks(q), seen = {}, terms = [];
+    var N = list.length, qt = toks(frases(q)), seen = {}, terms = [];
     qt.forEach(function(w){ if (!seen[w]) { seen[w] = 1; terms.push(w); } });
     if (!terms.length) return [];
     var res = [];
