@@ -1,10 +1,12 @@
 """Prueba el chat de una dirección del sitio con las preguntas de revision/pruebas.json.
 
-Uso: python3 -I revision/probar.py <dirección>   (por ejemplo https://anticipo.sanisidro2027.pages.dev)
+Uso: python3 -I revision/probar.py <dirección> [--todas]   (por ejemplo https://anticipo.sanisidro2027.pages.dev)
+Sin --todas corre sólo los casos fijos: los que no dicen "fijo": false.
 Cada pregunta va marcada «[PRUEBA AUTOMATICA]» para que la revisión mensual no la cuente como de la gente.
 Cuesta unos 3 centavos de dólar por pregunta. Sale con error si alguna falla.
 """
 import json
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -40,6 +42,7 @@ def main():
         raise SystemExit(__doc__)
     base = sys.argv[1]
     casos = json.loads((Path(__file__).resolve().parent / "pruebas.json").read_text())
+    casos = [c for c in casos if "--todas" in sys.argv[2:] or c.get("fijo", True)]
     fallas = 0
     for c in casos:
         try:
@@ -52,7 +55,8 @@ def main():
             problemas.append("no terminó de contestar")
         problemas += ["dice «" + p + "»" for p in PALABRAS_PROHIBIDAS if p in respuesta.split()]
         problemas += ["no menciona «" + p + "»" for p in c.get("debe_decir", []) if p.lower() not in respuesta]
-        problemas += ["dice «" + p + "»" for p in c.get("no_debe_decir", []) if p.lower() in respuesta]
+        # Desde el comienzo de una palabra: «pendiente» no tiene que saltar con «independiente».
+        problemas += ["dice «" + p + "»" for p in c.get("no_debe_decir", []) if re.search(r"(?<!\w)" + re.escape(p.lower()), respuesta)]
         fallas += bool(problemas)
         print(("FALLA " if problemas else "ok    ") + c["pregunta"][:70] + ("  →  " + "; ".join(problemas) if problemas else ""))
     print(f"{len(casos) - fallas} de {len(casos)} bien")

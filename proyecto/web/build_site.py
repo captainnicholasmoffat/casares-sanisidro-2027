@@ -71,10 +71,10 @@ export function ready(env, origin) {
       function push(t){ if (t.trim()) CH_P.push({e: e, text: t.trim(), search: e.titulo + " " + e.titulo + " " + t, boost: /^glosario-/.test(e.id) ? .7 : 1}); }
       paras.forEach(function(p){ if ((buf + "\\n\\n" + p).length > 1500 && buf) { push(buf); buf = p; } else buf = buf ? buf + "\\n\\n" + p : p; });
       push(buf);
-      (e.cuadros || []).forEach(function(c){ push((c.titulo || "Cuadro") + "\\n" + String(c.texto || "").slice(0, 2200)); });
+      (e.cuadros || []).forEach(function(c){ cuadroPartes(c).forEach(push); });
     });
     AVG_P = indexChunks(CH_P, DF_P);
-    (inv || []).forEach(function(x){ CH_I.push({x: x, text: String(x.texto || "").slice(0, 1900), search: (x.seccion || "") + " " + (x.temas || []).join(" ") + " " + x.texto, boost: x.descartado ? .6 : 1}); });
+    (inv || []).forEach(function(x){ var t = invParaChat(x); if (t) CH_I.push({x: x, text: t.slice(0, 1900), search: seccionChat(x.seccion) + " " + (x.temas || []).join(" ") + " " + t, boost: 1}); });
     AVG_I = indexChunks(CH_I, DF_I);
     return true;
   })().catch((e) => { READY = null; CH_P = []; CH_I = []; DF_P = {}; DF_I = {}; throw e; });

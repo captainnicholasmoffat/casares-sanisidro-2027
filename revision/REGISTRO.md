@@ -42,3 +42,12 @@ Primera corrida, hecha a mano por el coordinador del programa. Cubre desde el 12
   - Arreglo: sinónimos robaron, roban, asaltaron, asalto, afanaron → robo, delito; inseguridad → seguridad, delito.
   - La sección de Seguridad pasó del fondo de la lista al primer lugar.
 - `publicar.sh` corre esta prueba antes de publicar. Publicado y probado: 47 de 47 temas, 4 de 4 preguntas en el anticipo y en el link principal.
+
+### Agregado el 2026-11-12: preguntas sobre «qué está mal» (pedido del coordinador de Pipinas)
+- Prueba en el link principal, antes del cambio: «¿Qué problemas ves en el programa?» contestaba con los problemas del Municipio, no del programa. «¿Qué errores o debilidades tiene?» mezclaba límites sacados de las investigaciones. No habló de correcciones, versiones ni decisiones internas.
+- Causa 1: los cuadros largos se cortaban a los 2.200 caracteres. Del cuadro 44 («Veinticinco cosas que pueden salir mal») la búsqueda veía sólo los tres primeros riesgos. Lo mismo pasaba con los cuadros 9, 14, 33, 40, 41, 42 y 43. Arreglo: cada cuadro largo se lee en partes, con su título y su encabezado (`cuadroPartes` en `index_b.tpl.html` y en `build_site.py`).
+- Causa 2: las investigaciones mandaban a la IA trabajo interno. Arreglo: el chat ya no lee los pasajes descartados, los que el programa cambió después (su nota dice «corrigió», «recalculó» o «reemplazó»), los borradores de propuesta, lo que no se encontró, el método ni las correcciones. Tampoco lee las frases sobre el encargo o el «programa final», ni los rótulos «TAREA A/B/C» (`invParaChat` y `seccionChat`). Quedan 440 de 609 pasajes. Las páginas de las investigaciones no cambian.
+- Regla nueva (Ajuste 1, `ajustes_chat.json`): ante «qué problemas, errores o debilidades tiene», «es confiable» o «qué criticaría un escéptico», contesta con los cuatro o cinco riesgos principales de 6.6, los críticos primero, cada uno con lo que lo reduce. No dice que no hay errores ni llama a nada error, pendiente o desactualizado.
+- Búsqueda: 23 frases nuevas que suman «riesgos, salir mal, reduce» a esas preguntas. La prueba gratis por temas suma 4 preguntas de este tipo: 51 de 51.
+- Pruebas pagas: 4 preguntas nuevas en `pruebas.json`, con lo que no tienen que decir. Dos son fijas de cada mes y dos quedan para correr con `--todas`. `probar.py` ahora busca las palabras prohibidas desde el comienzo de una palabra («pendiente» no salta con «independiente»).
+- Resultado: 8 de 8 en el anticipo y 6 de 6 en el link principal. Se usaron 16 preguntas pagas, de 20 autorizadas.

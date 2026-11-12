@@ -598,6 +598,23 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
     return res.slice(0, k || 10);
   }
   function hojaTxt(e){ return e.hoja_a4 ? (e.hoja_a4_fin && e.hoja_a4_fin !== e.hoja_a4 ? "hojas " + e.hoja_a4 + " a " + e.hoja_a4_fin : "hoja " + e.hoja_a4) : ""; }
+  // Los cuadros largos se leen en partes, cada una con su título y su encabezado (antes se cortaban a los 2.200 caracteres).
+  function cuadroPartes(c){
+    var filas = String(c.texto || "").split("\n"), cab = filas.shift() || "", tit = c.titulo || "Cuadro", out = [], buf = "";
+    filas.forEach(function(f){ if (buf && (buf + "\n" + f).length > 1500) { out.push(buf); buf = f; } else buf = buf ? buf + "\n" + f : f; });
+    if (buf || !out.length) out.push(buf);
+    return out.map(function(b){ return tit + "\n" + cab + (b ? "\n" + b : ""); });
+  }
+  // De las investigaciones, el chat no lee el trabajo interno: lo descartado, lo que el programa cambió después,
+  // los borradores, lo que no se encontró, el método ni las correcciones. Las páginas de las investigaciones no cambian.
+  var INV_SECCION_FUERA = /(no (lo |se )?(encontr|pudo)|sin verificar|no est[aá] verificado|d[oó]nde busqu|borrador|se descart|correcci[oó]n|notas cr[ií]ticas|verificaci[oó]n del cuadro|(^|› )m[eé]todo)/i;
+  var FRASE_INTERNA = /(encargo|premisa|grepe|este informe|este borrador|informe \d+[a-z ]*(actualiz|corrigi|aclar|recalcul|encontr)|programa final|\bNick\b)/i;
+  function invParaChat(x){
+    if (x.descartado || (x.nota && !/coincide en lo central|se sostuvieron/i.test(x.nota)) || INV_SECCION_FUERA.test(x.seccion || "")) return null;
+    var t = String(x.texto || "").split("\n").map(function(l){ return l.replace(/([.!?])\s+/g, "$1\u0001").split("\u0001").filter(function(o){ return !FRASE_INTERNA.test(o); }).join(" "); }).filter(function(l){ return l.trim(); }).join("\n");
+    return t.trim() ? t : null;
+  }
+  function seccionChat(s){ return String(s || "").replace(/TAREA [A-Z]\s*[·:]\s*/g, "").replace(/\s*\((re)?verificaci[oó]n\)/gi, ""); }
   function cleanInforme(s){ return String(s || "").replace(/^Informe\s+[0-9]+[a-z ]*\s*·\s*/i, ""); }
 
   function loadProg(){
@@ -613,7 +630,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
         function push(t){ if (t.trim()) CH_P.push({e: e, text: t.trim(), search: e.titulo + " " + e.titulo + " " + t, boost: /^glosario-/.test(e.id) ? .7 : 1}); }
         paras.forEach(function(p){ if ((buf + "\n\n" + p).length > 1500 && buf) { push(buf); buf = p; } else buf = buf ? buf + "\n\n" + p : p; });
         push(buf);
-        (e.cuadros || []).forEach(function(c){ push((c.titulo || "Cuadro") + "\n" + String(c.texto || "").slice(0, 2200)); });
+        (e.cuadros || []).forEach(function(c){ cuadroPartes(c).forEach(push); });
       });
       AVG_P = indexChunks(CH_P, DF_P);
       return d;
@@ -624,7 +641,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
     if (invP) return invP;
     invP = fetch("data/investigaciones.json").then(function(r){ if (!r.ok) throw new Error("inv"); return r.json(); }).then(function(d){
       INV = d;
-      d.forEach(function(x){ INVID[x.id] = x; CH_I.push({x: x, text: String(x.texto || "").slice(0, 1900), search: (x.seccion || "") + " " + (x.temas || []).join(" ") + " " + x.texto, boost: x.descartado ? .6 : 1}); });
+      d.forEach(function(x){ INVID[x.id] = x; var t = invParaChat(x); if (t) CH_I.push({x: x, text: t.slice(0, 1900), search: seccionChat(x.seccion) + " " + (x.temas || []).join(" ") + " " + t, boost: 1}); });
       AVG_I = indexChunks(CH_I, DF_I);
       return d;
     }).catch(function(){ INV = []; return []; });
@@ -1095,7 +1112,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
     used = 0; out += "INVESTIGACIONES (sólo para explicar de dónde sale algo)\n";
     hi.forEach(function(h, i){
       var x = h.c.x, code = "I" + (i + 1);
-      var block = "[" + code + "] " + cleanInforme(x.informe) + (x.seccion ? " · " + x.seccion : "") + (x.descartado ? " · DESCARTADO" + (x.nota ? ": " + x.nota : "") : (x.nota ? " · Nota: " + x.nota : "")) + "\n" + h.c.text + "\n\n";
+      var block = "[" + code + "] " + cleanInforme(x.informe) + (x.seccion ? " · " + seccionChat(x.seccion) : "") + "\n" + h.c.text + "\n\n";
       if (used + block.length > LIM_I) return;
       used += block.length; out += block; refs[code] = {kind:"i", x: x};
     });

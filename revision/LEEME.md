@@ -40,7 +40,7 @@ La frase de la web «Cada cambio lo revisa una persona antes de publicarse» que
 - `revision/contexto.mjs`: muestra qué pasajes encuentra la búsqueda para una pregunta, sin llamar a la IA y sin costo. Sirve para probar una corrección antes de publicarla.
 - `revision/temas.mjs` y `revision/temas.json`: 47 preguntas típicas, una por tema. Para cada una prueba que entre los 14 pasajes que recibe la IA esté la sección correcta. Es gratis y corre antes de cada publicación.
 - `revision/extraer.py`: baja los datos de la base y prueba la web.
-- `revision/probar.py` y `revision/pruebas.json`: preguntas de prueba. Cada corrección suma la pregunta que falló, con lo que tiene que decir.
+- `revision/probar.py` y `revision/pruebas.json`: preguntas de prueba. Cada corrección suma la pregunta que falló, con lo que tiene que decir. Por defecto corre sólo los casos fijos; los que dicen `"fijo": false` corren con `--todas`.
 - `revision/publicar.sh`: arma, publica en el anticipo, prueba y recién entonces publica en el link principal.
 - `revision/REGISTRO.md`: el historial de corridas. Lleva temas y números, nunca el texto de las preguntas de la gente.
 - `revision/INSTRUCCIONES_CORRIDA.md`: lo que sigue la sesión de cada mes.
