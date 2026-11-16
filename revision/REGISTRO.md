@@ -51,3 +51,11 @@ Primera corrida, hecha a mano por el coordinador del programa. Cubre desde el 12
 - Búsqueda: 23 frases nuevas que suman «riesgos, salir mal, reduce» a esas preguntas. La prueba gratis por temas suma 4 preguntas de este tipo: 51 de 51.
 - Pruebas pagas: 4 preguntas nuevas en `pruebas.json`, con lo que no tienen que decir. Dos son fijas de cada mes y dos quedan para correr con `--todas`. `probar.py` ahora busca las palabras prohibidas desde el comienzo de una palabra («pendiente» no salta con «independiente»).
 - Resultado: 8 de 8 en el anticipo y 6 de 6 en el link principal. Se usaron 16 preguntas pagas, de 20 autorizadas.
+
+### Agregado el 2026-11-16: los temas para Nick salieron de sus propias pruebas
+- Nick avisó que hizo él, probando la web, las 16 preguntas de los temas B de la corrida del 11/11 y de otros parecidos, entre el 12/10 y el 3/11.
+  - Temas B: salud mental, capacitación de la patrulla, el Bajo, oficios como plomero, terminar la secundaria.
+  - Otros: artistas, una inspección a un café, el Parque del Águila, la costa.
+- Esos temas sirven para probar el chat, pero no son pedidos de vecinos.
+- Cuenta corregida del período: 34 preguntas; 12 pruebas a mano del coordinador, 16 pruebas de Nick y 6 que pueden ser de vecinos (no se sabe).
+- Para las próximas corridas falta una forma de marcar las pruebas de Nick. La propuesta espera su OK.
