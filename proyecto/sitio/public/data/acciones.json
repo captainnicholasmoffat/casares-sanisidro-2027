@@ -225,7 +225,7 @@
   "dur": 10,
   "start": "2027-12-10",
   "finish": "2027-12-24",
-  "float": 40,
+  "float": 39,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -244,18 +244,18 @@
  },
  {
   "code": "M03",
-  "task": "Primera ronda de asambleas en las seis zonas: informar y anotar qué necesita cada zona (compromiso 11)",
+  "task": "Primera ronda de asambleas en las seis zonas: informar, elegir las obras del año 1 y contar los terrenos sin uso (compromiso 11)",
   "stream": "1 Mecanismo vecinal y obra pública",
   "owner": "Intendente",
   "team": "Intendencia",
   "dur": 15,
   "start": "2028-02-10",
   "finish": "2028-03-02",
-  "float": 6,
+  "float": 5,
   "critical": false,
   "milestone": false,
   "decision": "",
-  "steps": "Se informa a los vecinos y se completa el diagnóstico de cada zona. Las actas y los asistentes se pueden consultar. Cómo se comprueba: «Actas y asistentes: se le preguntan a la inteligencia artificial del Municipio.»",
+  "steps": "Se informa a los vecinos y se eligen las obras del año: un voto por persona desde los 16 años, en la asamblea o por internet. El primer año las hace el Ejecutivo, porque las comisiones todavía se están formando. Se cuentan los baldíos, las ruinas y las obras paradas (5.4). Cómo se comprueba: «Actas y asistentes: se le preguntan a la inteligencia artificial del Municipio.»",
   "moves": "",
   "sne": "2028-02-10",
   "needs": [
@@ -265,8 +265,34 @@
     "lag": 0
    }
   ],
-  "note": "Calendario del programa: mes 3, del 10 de febrero de 2028 al 9 de marzo de 2028. Duración estimada. La primera ronda informa. Las obras se eligen en la segunda (6.1).",
+  "note": "Calendario del programa: mes 3, del 10 de febrero de 2028 al 9 de marzo de 2028. Duración estimada. Cambio del 16/11/2026: las obras de cada año se eligen en la primera ronda, para que tengan tiempo de licitarse y terminarse en el mismo año (6.1).",
   "fuente": "6.4"
+ },
+ {
+  "code": "M24",
+  "task": "El Ejecutivo responde por escrito a cada obra elegida en la primera ronda, con sus razones",
+  "stream": "1 Mecanismo vecinal y obra pública",
+  "owner": "Intendente",
+  "team": "Intendencia",
+  "dur": 22,
+  "start": "2028-03-02",
+  "finish": "2028-04-03",
+  "float": 5,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "Toda persona puede ver cada respuesta desde el día en que sale. Ningún silencio reemplaza la respuesta.",
+  "moves": "",
+  "sne": "2028-02-10",
+  "needs": [
+   {
+    "code": "M03",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 3 a 4, del 10 de febrero de 2028 al 9 de abril de 2028. Duración del programa: treinta días corridos, unos 22 días hábiles.",
+  "fuente": "anexo.1"
  },
  {
   "code": "M22",
@@ -438,7 +464,7 @@
   "dur": 20,
   "start": "2028-03-31",
   "finish": "2028-04-28",
-  "float": 28,
+  "float": 31,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -518,15 +544,46 @@
   "fuente": "6.4"
  },
  {
+  "code": "M25",
+  "task": "Licitar y adjudicar las obras del año 1",
+  "stream": "1 Mecanismo vecinal y obra pública",
+  "owner": "Secretaría de Obras",
+  "team": "Secretarías",
+  "dur": 66,
+  "start": "2028-04-14",
+  "finish": "2028-07-17",
+  "float": 34,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "Cada obra se licita por separado, con su precio y su plazo.",
+  "moves": "",
+  "sne": "",
+  "needs": [
+   {
+    "code": "M24",
+    "type": "FS",
+    "lag": 0
+   },
+   {
+    "code": "P09",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Duración del programa: cada licitación se adjudica tres meses después del llamado (nota del cuadro 42).",
+  "fuente": "6.4"
+ },
+ {
   "code": "M08",
-  "task": "Segunda ronda de asambleas: los vecinos eligen las obras de su zona",
+  "task": "Segunda ronda de asambleas: los vecinos siguen las obras del año y preparan las del año siguiente",
   "stream": "1 Mecanismo vecinal y obra pública",
   "owner": "Comisiones vecinales",
   "team": "Vecinos",
   "dur": 40,
   "start": "2028-05-10",
   "finish": "2028-07-05",
-  "float": 20,
+  "float": 26,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -597,14 +654,14 @@
  },
  {
   "code": "M09",
-  "task": "El Ejecutivo responde por escrito a cada decisión de las zonas, con sus razones",
+  "task": "El Ejecutivo responde por escrito a cada pedido de la segunda ronda, con sus razones",
   "stream": "1 Mecanismo vecinal y obra pública",
   "owner": "Intendente",
   "team": "Intendencia",
   "dur": 22,
   "start": "2028-07-05",
   "finish": "2028-08-04",
-  "float": 20,
+  "float": 26,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -620,6 +677,37 @@
   ],
   "note": "Calendario del programa: meses 6 a 9, del 10 de mayo de 2028 al 9 de septiembre de 2028. Duración del programa: treinta días corridos, unos 22 días hábiles.",
   "fuente": "anexo.1"
+ },
+ {
+  "code": "M10",
+  "task": "Contratar y hacer las obras elegidas del año 1: el 12,5% de la obra pública, unos 7.227 millones",
+  "stream": "1 Mecanismo vecinal y obra pública",
+  "owner": "Secretaría de Obras con las comisiones vecinales",
+  "team": "Secretarías",
+  "dur": 70,
+  "start": "2028-07-17",
+  "finish": "2028-10-23",
+  "float": 34,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "Tres vecinos que elige la asamblea reciben cada obra y la firman. Nadie que eligió una obra cobra por ella. El 1,5% de la partida paga el cuidado de los chicos, los honorarios y la administración.",
+  "moves": "",
+  "sne": "2028-03-10",
+  "needs": [
+   {
+    "code": "M25",
+    "type": "FS",
+    "lag": 0
+   },
+   {
+    "code": "P09",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: dentro del año 1, hasta el mes 12, del 10 de marzo de 2028 al 9 de diciembre de 2028. Duración estimada. El año 1 sirve para probar que las seis comisiones pueden formarse, elegir obras y justificar cada peso (6.2).",
+  "fuente": "6.2"
  },
  {
   "code": "M14",
@@ -679,39 +767,8 @@
   "fuente": "6.4"
  },
  {
-  "code": "M10",
-  "task": "Contratar y hacer las obras elegidas del año 1: el 12,5% de la obra pública, unos 7.227 millones",
-  "stream": "1 Mecanismo vecinal y obra pública",
-  "owner": "Secretaría de Obras con las comisiones vecinales",
-  "team": "Secretarías",
-  "dur": 70,
-  "start": "2028-08-04",
-  "finish": "2028-11-10",
-  "float": 20,
-  "critical": false,
-  "milestone": false,
-  "decision": "",
-  "steps": "Tres vecinos que elige la asamblea reciben cada obra y la firman. Nadie que eligió una obra cobra por ella. El 1,5% de la partida paga el cuidado de los chicos, los honorarios y la administración.",
-  "moves": "",
-  "sne": "2028-05-10",
-  "needs": [
-   {
-    "code": "M09",
-    "type": "FS",
-    "lag": 0
-   },
-   {
-    "code": "P09",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Calendario del programa: dentro del año 1, hasta el mes 12, del 10 de mayo de 2028 al 9 de diciembre de 2028. Duración estimada. El año 1 sirve para probar que las seis comisiones pueden formarse, elegir obras y justificar cada peso (6.2).",
-  "fuente": "6.2"
- },
- {
   "code": "M11",
-  "task": "Año 1 de la rampa, cumplido",
+  "task": "Termina el año 1 de la rampa: el escalón se cuenta por ejercicio, que cierra el 31 de diciembre",
   "stream": "1 Mecanismo vecinal y obra pública",
   "owner": "Intendente",
   "team": "Intendencia",
@@ -769,6 +826,37 @@
    }
   ],
   "note": "Calendario del programa: meses 13 a 24, del 10 de diciembre de 2028 al 9 de diciembre de 2029. Duración del programa: un año.",
+  "fuente": "6.2"
+ },
+ {
+  "code": "M26",
+  "task": "La auditoría externa certifica que se cumplió el año 1, y se libera el escalón del año 2",
+  "stream": "1 Mecanismo vecinal y obra pública",
+  "owner": "Secretaría de Hacienda",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2029-02-12",
+  "finish": "2029-02-12",
+  "float": 40,
+  "critical": false,
+  "milestone": true,
+  "decision": "¿Se ejecutó y justificó todo el escalón? Si el Tribunal de Cuentas objeta después un año, se congela el escalón siguiente.",
+  "steps": "",
+  "moves": "",
+  "sne": "2029-02-10",
+  "needs": [
+   {
+    "code": "M11",
+    "type": "FS",
+    "lag": 0
+   },
+   {
+    "code": "I17",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 15 a 16, del 10 de febrero de 2029 al 9 de abril de 2029. Decisión del 16/11/2026: el presupuesto incluye el escalón siguiente, y el dinero se libera con la certificación, hacia marzo.",
   "fuente": "6.2"
  },
  {
@@ -1046,7 +1134,7 @@
  },
  {
   "code": "C24",
-  "task": "Revisión legal de las once ordenanzas que faltan: la 2, la 4, la 6, la 8, la 10, la 11, la 12, la 13, la 14, la 17 y la 18",
+  "task": "Revisión legal de las trece ordenanzas que faltan: la 2, la 4, la 6, la 8, la 10, la 11, la 12, la 13, la 14, la 17, la 18, la 20 y la 21",
   "stream": "2 Concejo y ordenanzas",
   "owner": "Abogado especialista en municipios",
   "team": "Externos",
@@ -1072,7 +1160,7 @@
  },
  {
   "code": "C52",
-  "task": "Redactar la ordenanza de foodtrucks y el cambio del artículo 9 de la Ordenanza 5824",
+  "task": "Revisar la Ordenanza 19 del anexo: foodtrucks y cambio del artículo 9 de la Ordenanza 5824",
   "stream": "2 Concejo y ordenanzas",
   "owner": "Intendente",
   "team": "Intendencia",
@@ -1093,8 +1181,8 @@
     "lag": 0
    }
   ],
-  "note": "Duración estimada. El anexo dice que estos dos cambios menores se redactan en los meses 4 a 6.",
-  "fuente": "5.5"
+  "note": "Duración estimada. Desde el 17/11/2026 su texto está en el anexo (Ordenanza 19).",
+  "fuente": "anexo.19"
  },
  {
   "code": "C59",
@@ -1317,7 +1405,7 @@
   "dur": 22,
   "start": "2028-03-01",
   "finish": "2028-03-31",
-  "float": 28,
+  "float": 31,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -1343,7 +1431,7 @@
   "dur": 22,
   "start": "2028-03-01",
   "finish": "2028-03-31",
-  "float": 28,
+  "float": 31,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -2094,6 +2182,32 @@
   "fuente": "6.4"
  },
  {
+  "code": "C57",
+  "task": "Tratamiento del cambio de la Ordenanza 5824 en el Concejo",
+  "stream": "2 Concejo y ordenanzas",
+  "owner": "Concejo Deliberante",
+  "team": "Concejo",
+  "dur": 22,
+  "start": "2028-03-10",
+  "finish": "2028-04-11",
+  "float": 936,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "El proyecto pasa por las comisiones del Concejo y se vota en sesión.",
+  "moves": "",
+  "sne": "",
+  "needs": [
+   {
+    "code": "C56",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Duración estimada: 22 días hábiles, lo que tardó la única reforma de las reglas de urbanismo que pasó por el Concejo, la Ordenanza 9432 (5.5).",
+  "fuente": "5.5"
+ },
+ {
   "code": "C61",
   "task": "Entra la Ordenanza 18, de compras al comercio de San Isidro y de donación de alimentos",
   "stream": "2 Concejo y ordenanzas",
@@ -2117,6 +2231,32 @@
    }
   ],
   "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028.",
+  "fuente": "anexo.18"
+ },
+ {
+  "code": "C62",
+  "task": "Tratamiento de la Ordenanza 18 en el Concejo",
+  "stream": "2 Concejo y ordenanzas",
+  "owner": "Concejo Deliberante",
+  "team": "Concejo",
+  "dur": 22,
+  "start": "2028-03-10",
+  "finish": "2028-04-11",
+  "float": 956,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "El proyecto pasa por las comisiones del Concejo y se vota en sesión.",
+  "moves": "",
+  "sne": "",
+  "needs": [
+   {
+    "code": "C61",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Duración estimada: 22 días hábiles, lo que tardó la única reforma de las reglas de urbanismo que pasó por el Concejo, la Ordenanza 9432 (5.5).",
   "fuente": "anexo.18"
  },
  {
@@ -2146,58 +2286,6 @@
   "fuente": "anexo.17"
  },
  {
-  "code": "C57",
-  "task": "Tratamiento del cambio de la Ordenanza 5824 en el Concejo",
-  "stream": "2 Concejo y ordenanzas",
-  "owner": "Concejo Deliberante",
-  "team": "Concejo",
-  "dur": 22,
-  "start": "2028-03-10",
-  "finish": "2028-04-11",
-  "float": 936,
-  "critical": false,
-  "milestone": false,
-  "decision": "",
-  "steps": "El proyecto pasa por las comisiones del Concejo y se vota en sesión.",
-  "moves": "",
-  "sne": "",
-  "needs": [
-   {
-    "code": "C56",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Duración estimada: 22 días hábiles, lo que tardó la única reforma de las reglas de urbanismo que pasó por el Concejo, la Ordenanza 9432 (5.5).",
-  "fuente": "5.5"
- },
- {
-  "code": "C62",
-  "task": "Tratamiento de la Ordenanza 18 en el Concejo",
-  "stream": "2 Concejo y ordenanzas",
-  "owner": "Concejo Deliberante",
-  "team": "Concejo",
-  "dur": 22,
-  "start": "2028-03-10",
-  "finish": "2028-04-11",
-  "float": 946,
-  "critical": false,
-  "milestone": false,
-  "decision": "",
-  "steps": "El proyecto pasa por las comisiones del Concejo y se vota en sesión.",
-  "moves": "",
-  "sne": "",
-  "needs": [
-   {
-    "code": "C61",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Duración estimada: 22 días hábiles, lo que tardó la única reforma de las reglas de urbanismo que pasó por el Concejo, la Ordenanza 9432 (5.5).",
-  "fuente": "anexo.18"
- },
- {
   "code": "C65",
   "task": "Tratamiento de la Ordenanza 17 en el Concejo, como ordenanza preparatoria",
   "stream": "2 Concejo y ordenanzas",
@@ -2206,7 +2294,7 @@
   "dur": 22,
   "start": "2028-03-10",
   "finish": "2028-04-11",
-  "float": 935,
+  "float": 945,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -2232,7 +2320,7 @@
   "dur": 0,
   "start": "2028-03-31",
   "finish": "2028-03-31",
-  "float": 28,
+  "float": 31,
   "critical": false,
   "milestone": true,
   "decision": "Aprobarla o no. Hacen falta trece votos de veinticuatro, y ningún bloque llega solo (4.7).",
@@ -2258,7 +2346,7 @@
   "dur": 0,
   "start": "2028-03-31",
   "finish": "2028-03-31",
-  "float": 28,
+  "float": 31,
   "critical": false,
   "milestone": true,
   "decision": "Aprobarla o no. Hacen falta trece votos de veinticuatro, y ningún bloque llega solo (4.7). Sin acuerdo, la partida no arranca, y no hay plan por decreto.",
@@ -2700,7 +2788,7 @@
   "dur": 0,
   "start": "2028-04-11",
   "finish": "2028-04-11",
-  "float": 946,
+  "float": 956,
   "critical": false,
   "milestone": true,
   "decision": "Aprobarla o no. Hacen falta trece votos de veinticuatro, y ningún bloque llega solo (4.7).",
@@ -2726,7 +2814,7 @@
   "dur": 0,
   "start": "2028-04-11",
   "finish": "2028-04-11",
-  "float": 935,
+  "float": 945,
   "critical": false,
   "milestone": true,
   "decision": "Aprobarla o no como ordenanza preparatoria: alcanza la mayoría simple (Ley Orgánica de las Municipalidades, artículo 29).",
@@ -2752,7 +2840,7 @@
   "dur": 11,
   "start": "2028-04-11",
   "finish": "2028-04-26",
-  "float": 935,
+  "float": 945,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -2766,7 +2854,7 @@
     "lag": 0
    }
   ],
-  "note": "Ley Orgánica de las Municipalidades, artículos 29 y 98. La lista de mayores contribuyentes vigente vence el 30 de abril (artículo 94).",
+  "note": "Duración del programa: la Asamblea se cita dentro de los quince días de aprobada la ordenanza preparatoria. Ley Orgánica de las Municipalidades, artículos 29 y 98. La lista de mayores contribuyentes vigente vence el 30 de abril (artículo 94).",
   "fuente": "anexo.17"
  },
  {
@@ -2778,7 +2866,7 @@
   "dur": 0,
   "start": "2028-04-26",
   "finish": "2028-04-26",
-  "float": 935,
+  "float": 945,
   "critical": false,
   "milestone": true,
   "decision": "Aprobarla o no, con la mayoría que pide la Constitución de la Provincia (artículo 193, inciso 2).",
@@ -3069,7 +3157,7 @@
   "dur": 10,
   "start": "2028-03-31",
   "finish": "2028-04-14",
-  "float": 100,
+  "float": 34,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -3653,6 +3741,32 @@
   "fuente": "6.4"
  },
  {
+  "code": "I19",
+  "task": "Pagar el uso de la inteligencia artificial con compras chicas, sin licitación pública, mientras corre la primera licitación",
+  "stream": "4 Inteligencia artificial del Municipio",
+  "owner": "Ciencia y Técnica",
+  "team": "Equipo de la IA",
+  "dur": 55,
+  "start": "2027-12-10",
+  "finish": "2028-02-25",
+  "float": 10,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "",
+  "moves": "",
+  "sne": "2027-12-10",
+  "needs": [
+   {
+    "code": "T07",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 1 a 3, del 10 de diciembre de 2027 al 9 de marzo de 2028. Duración estimada. Ley Orgánica de las Municipalidades, artículo 151; montos actualizados por la Resolución 248/2026. Decisión del 16/11/2026.",
+  "fuente": "6.4"
+ },
+ {
   "code": "I06",
   "task": "Recibir de la Nación el certificado de firma digital",
   "stream": "4 Inteligencia artificial del Municipio",
@@ -3713,7 +3827,7 @@
   "dur": 66,
   "start": "2028-01-07",
   "finish": "2028-04-10",
-  "float": 957,
+  "float": 260,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -4387,7 +4501,7 @@
   "dur": 30,
   "start": "2028-02-10",
   "finish": "2028-03-23",
-  "float": 186,
+  "float": 56,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -4457,32 +4571,6 @@
   "fuente": "5.3"
  },
  {
-  "code": "E38",
-  "task": "Abre el segundo centro de apoyo escolar",
-  "stream": "5 Empleo y formación",
-  "owner": "Educación (área municipal)",
-  "team": "Secretarías",
-  "dur": 0,
-  "start": "2028-03-23",
-  "finish": "2028-03-23",
-  "float": 186,
-  "critical": false,
-  "milestone": true,
-  "decision": "",
-  "steps": "Un lugar que ya existe, abierto a la tarde, y docentes pagos.",
-  "moves": "",
-  "sne": "2027-12-10",
-  "needs": [
-   {
-    "code": "E37",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Calendario del programa: año 1 (meses 1 a 12), del 10 de diciembre de 2027 al 9 de diciembre de 2028. Supuesto: abre antes de la prueba del profesor digital, que se hace «en los primeros centros» (mes 7).",
-  "fuente": "6.4"
- },
- {
   "code": "E30",
   "task": "Empiezan a funcionar las cinco sedes fijas de formación laboral y la sede móvil de Acassuso",
   "stream": "5 Empleo y formación",
@@ -4532,6 +4620,32 @@
    }
   ],
   "note": "Calendario del programa: mes 6, del 10 de mayo de 2028 al 9 de junio de 2028.",
+  "fuente": "6.4"
+ },
+ {
+  "code": "E38",
+  "task": "Abre el segundo centro de apoyo escolar",
+  "stream": "5 Empleo y formación",
+  "owner": "Educación (área municipal)",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2028-05-10",
+  "finish": "2028-05-10",
+  "float": 22,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "Un lugar que ya existe, abierto a la tarde, y docentes pagos.",
+  "moves": "",
+  "sne": "2028-05-10",
+  "needs": [
+   {
+    "code": "E37",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: mes 6, del 10 de mayo de 2028 al 9 de junio de 2028. El calendario lo pone en el mes 6, antes de la prueba del profesor digital en los primeros centros (mes 7).",
   "fuente": "6.4"
  },
  {
@@ -4955,6 +5069,32 @@
   "fuente": "6.4"
  },
  {
+  "code": "E42",
+  "task": "La partida de empleo empieza a pagar la contratación de desarrollos, con prioridad para los egresados",
+  "stream": "5 Empleo y formación",
+  "owner": "Secretaría de Hacienda",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2030-01-01",
+  "finish": "2030-01-01",
+  "float": 506,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "Con la partida de empleo, el Municipio contrata los equipos de sus desarrollos: la plataforma de la inteligencia artificial del Municipio, el análisis de video de seguridad, las habilitaciones de comercios y los turnos de salud. Los egresados tienen prioridad, y al menos el 75% del personal vive en San Isidro (5.3 y anexo, Ordenanza 10).",
+  "moves": "",
+  "sne": "2030-01-01",
+  "needs": [
+   {
+    "code": "P19",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Los dos primeros años, toda la partida de empleo se usa en la formación (4.11). Desde el tercero, también paga la contratación de desarrollos. Fecha y montos del modelo fiscal (hoja Programas): desde enero de 2030, 1.421,9 millones en 2030 y 1.855,4 millones en 2031.",
+  "fuente": "5.3"
+ },
+ {
   "code": "E16",
   "task": "Egresan los primeros 231, con el título de la UNSO y un año de trabajo real",
   "stream": "5 Empleo y formación",
@@ -5265,32 +5405,6 @@
   "fuente": "6.3"
  },
  {
-  "code": "E42",
-  "task": "La partida de empleo empieza a pagar la contratación de desarrollos, con prioridad para los egresados",
-  "stream": "5 Empleo y formación",
-  "owner": "Secretaría de Hacienda",
-  "team": "Secretarías",
-  "dur": 0,
-  "start": "2030-01-01",
-  "finish": "2030-01-01",
-  "float": 506,
-  "critical": false,
-  "milestone": true,
-  "decision": "",
-  "steps": "Con la partida de empleo, el Municipio contrata los equipos de sus desarrollos: la plataforma de la inteligencia artificial del Municipio, el análisis de video de seguridad, las habilitaciones de comercios y los turnos de salud. Los egresados tienen prioridad, y al menos el 75% del personal vive en San Isidro (5.3 y anexo, Ordenanza 10).",
-  "moves": "",
-  "sne": "2030-01-01",
-  "needs": [
-   {
-    "code": "P19",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Los dos primeros años, toda la partida de empleo se usa en la formación (4.11). Desde el tercero, también paga la contratación de desarrollos. Fecha y montos del modelo fiscal (hoja Programas): desde enero de 2030, 1.421,9 millones en 2030 y 1.855,4 millones en 2031.",
-  "fuente": "5.3"
- },
- {
   "code": "V01",
   "task": "Medir la conexión a internet en cada zona durante la primera ronda de asambleas, primero en La Cava y en Boulogne",
   "stream": "6 Vivienda",
@@ -5314,6 +5428,58 @@
    }
   ],
   "note": "Calendario del programa: mes 3, del 10 de febrero de 2028 al 9 de marzo de 2028. Duración estimada.",
+  "fuente": "5.4"
+ },
+ {
+  "code": "V06",
+  "task": "Presentar la Ordenanza 20 (garantía de alquiler) y la 21 (viviendas en el lote y terrenos sin uso)",
+  "stream": "6 Vivienda",
+  "owner": "Intendente",
+  "team": "Intendencia",
+  "dur": 0,
+  "start": "2028-03-10",
+  "finish": "2028-03-10",
+  "float": 65,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "",
+  "moves": "",
+  "sne": "2028-03-10",
+  "needs": [
+   {
+    "code": "C24",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028.",
+  "fuente": "6.4"
+ },
+ {
+  "code": "V07",
+  "task": "Tratamiento de las Ordenanzas 20 y 21 en el Concejo",
+  "stream": "6 Vivienda",
+  "owner": "Concejo Deliberante",
+  "team": "Concejo",
+  "dur": 22,
+  "start": "2028-03-10",
+  "finish": "2028-04-11",
+  "float": 154,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "",
+  "moves": "",
+  "sne": "",
+  "needs": [
+   {
+    "code": "V06",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Duración estimada: 22 días hábiles, lo que tardó la única reforma de las reglas de urbanismo que pasó por el Concejo, la Ordenanza 9432 (5.5).",
   "fuente": "5.4"
  },
  {
@@ -5341,6 +5507,63 @@
   ],
   "note": "Duración estimada.",
   "fuente": "anexo.13"
+ },
+ {
+  "code": "V08",
+  "task": "Empieza la garantía de alquiler del Municipio, con su fondo propio y sin dinero del Municipio",
+  "stream": "6 Vivienda",
+  "owner": "Secretaría de Hacienda",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2028-06-12",
+  "finish": "2028-06-12",
+  "float": 129,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "Comisión del 3% por mes de cada lado, depósito del 12% de un mes, alquiler hasta el 40% del ingreso, freno si la mora es alta.",
+  "moves": "",
+  "sne": "2028-06-10",
+  "needs": [
+   {
+    "code": "V07",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 7 a 12, del 10 de junio de 2028 al 9 de diciembre de 2028.",
+  "fuente": "5.4"
+ },
+ {
+  "code": "V09",
+  "task": "Notificar a los dueños de los terrenos sin uso contados en la primera ronda: desde ahí corren sus tres años",
+  "stream": "6 Vivienda",
+  "owner": "Secretaría de Obras",
+  "team": "Secretarías",
+  "dur": 20,
+  "start": "2028-06-12",
+  "finish": "2028-07-10",
+  "float": 110,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "",
+  "moves": "",
+  "sne": "2028-06-10",
+  "needs": [
+   {
+    "code": "V07",
+    "type": "FS",
+    "lag": 0
+   },
+   {
+    "code": "M03",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 7 a 12, del 10 de junio de 2028 al 9 de diciembre de 2028. Duración estimada. Ley 14.449: los plazos no cambian aunque el terreno se venda, y la obligación se anota en la escritura.",
+  "fuente": "5.4"
  },
  {
   "code": "V04",
@@ -5672,6 +5895,32 @@
    }
   ],
   "note": "Calendario del programa: meses 4 a 9, del 10 de marzo de 2028 al 9 de septiembre de 2028. Duración estimada.",
+  "fuente": "6.4"
+ },
+ {
+  "code": "S14",
+  "task": "Empieza la formación de los primeros acompañantes terapéuticos, entre empleados cuyo trabajo ya hace la inteligencia artificial",
+  "stream": "7 Salud",
+  "owner": "Secretaría de Salud",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2028-06-12",
+  "finish": "2028-06-12",
+  "float": 129,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "",
+  "moves": "",
+  "sne": "2028-06-10",
+  "needs": [
+   {
+    "code": "I04",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 7 a 12, del 10 de junio de 2028 al 9 de diciembre de 2028. Con la formación que fija la Provincia (Resolución 592/2022). No suma sueldos.",
   "fuente": "6.4"
  },
  {
@@ -8128,7 +8377,7 @@
   "critical": false,
   "milestone": true,
   "decision": "",
-  "steps": "La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa y, si hay delito, a la fiscalía. Nunca sólo al jefe del denunciado. Con la misma prueba sellada se puede denunciar un ruido. Cómo se comprueba: «Cuántas denuncias hay y en qué están se le pregunta a la inteligencia artificial del Municipio.»",
+  "steps": "La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa y, si hay delito, a la fiscalía. Hasta que se contrata la auditoría externa, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. Mientras no llega el certificado de firma digital, cada grabación se guarda con su fecha, su hora y su huella. Nunca sólo al jefe del denunciado. Con la misma prueba sellada se puede denunciar un ruido. Cómo se comprueba: «Cuántas denuncias hay y en qué están se le pregunta a la inteligencia artificial del Municipio.»",
   "moves": "",
   "sne": "2027-12-10",
   "needs": [

@@ -1,5 +1,12 @@
   /* ---------- Preguntale al programa: versión sitio propio (responde la función /api/ask) ---------- */
   var history = [], busy = false, ctl = null;
+  // Palabras que el programa nunca usa: si el modelo igual las escribe, se cambian antes de mostrarlas.
+  // Sólo «plata» en minúscula (dinero): «Río de la Plata» y «La Plata» quedan como están.
+  var CAMBIOS = [[/\b([Dd]e) la plata\b/g, "$1l dinero"], [/\b([Aa]) la plata\b/g, "$1l dinero"], [/\bla plata\b/g, "el dinero"],
+    [/\b([Ee]s)a plata\b/g, "$1e dinero"], [/\b([Ee]st)a plata\b/g, "$1e dinero"], [/\b([Mm]uch|[Pp]oc)a plata\b/g, "$1o dinero"],
+    [/\bplata\b/g, "dinero"], [/\b[Ll]as mafias\b/g, "las redes de corrupción"], [/\bmafias\b/g, "redes de corrupción"],
+    [/\bMafia\b/g, "Corrupción"], [/\bmafia\b/g, "corrupción"], [/\bsobreprecios\b/g, "precios inflados"], [/\bsobreprecio\b/g, "precio inflado"]];
+  function limpiar(t){ CAMBIOS.forEach(function(c){ t = t.replace(c[0], c[1]); }); return t; }
   function readSSE(r, opts){
     var reader = r.body.getReader(), dec = new TextDecoder(), buf = "", text = "", truncated = false;
     function handle(ev){
@@ -9,7 +16,7 @@
       if (j.type === "refs") { if (opts.onRefs) opts.onRefs(j.refs || {}, j.qid || null); return; }
       if (j.type === "content_block_delta" && j.delta && j.delta.type === "text_delta") {
         text += j.delta.text;
-        if (opts.onText) opts.onText({text: text, delta: j.delta.text});
+        if (opts.onText) opts.onText({text: limpiar(text), delta: j.delta.text});
       } else if (j.type === "message_delta" && j.delta && j.delta.stop_reason === "max_tokens") {
         truncated = true;
       } else if (j.type === "error") {
@@ -19,7 +26,7 @@
     }
     function pump(){
       return reader.read().then(function(x){
-        if (x.done) { if (buf.trim()) handle(buf); if (!text.trim()) throw {code: "empty_completion"}; return {text: text, truncated: truncated}; }
+        if (x.done) { if (buf.trim()) handle(buf); if (!text.trim()) throw {code: "empty_completion"}; return {text: limpiar(text), truncated: truncated}; }
         buf += dec.decode(x.value, {stream: true});
         var parts = buf.split(/\r?\n\r?\n/); buf = parts.pop();
         parts.forEach(handle);
