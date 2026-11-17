@@ -90,6 +90,32 @@ export function context(search) {
 # 4) Datos de las nueve tarjetas
 nueve = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 tpl = tpl.replace("{{NUEVE_JSON}}", nueve).replace("{{INTRO}}", html.escape(data["intro"]))
+
+# 3 bis) Descargas: los dos PDF del programa (A4 y pantalla) y el Excel de las cuentas. Páginas y tamaño se leen de los
+# archivos, nunca a mano; la versión, de docs/descargas.json (se cambia junto con los PDF).
+import subprocess as _sp
+_dl = json.loads((WEB / "docs" / "descargas.json").read_text())
+def _mb(p):
+    return f"{p.stat().st_size / 1e6:.1f}".replace(".", ",") + "\u00a0MB" if p.stat().st_size > 1e6 else f"{round(p.stat().st_size / 1e3)}\u00a0KB"
+def _pags(p):
+    try:
+        out = _sp.run(["pdfinfo", str(p)], capture_output=True, text=True, check=True).stdout
+        return int(re.search(r"^Pages:\s+(\d+)", out, re.M).group(1))
+    except Exception:
+        return None
+_items = []
+for arch, titulo, cuantas, ext in [("programa-san-isidro-2027-a4.pdf", "El programa, para imprimir", "hojas A4", "PDF"),
+                                   ("programa-san-isidro-2027-pantalla.pdf", "El programa, para leer en pantalla", "páginas", "PDF")]:
+    p = WEB / "docs" / arch; n = _pags(p)
+    det = " · ".join(x for x in [f"{n} {cuantas}" if n else "", _mb(p), "versión del " + _dl["version"]] if x)
+    _items.append(f'<a class="tile" href="/docs/{arch}" download><span class="ic">{ext}</span><span><span class="tt">{titulo}</span>'
+                  f'<span class="sm">{html.escape(det)}</span></span><b>Bajar</b></a>')
+_xl = WEB / "cuentas" / "modelo_fiscal.xlsx"
+_items.append('<a class="tile" href="/data/modelo-fiscal-san-isidro-2028-2035.xlsx" download><span class="ic x">XLSX</span><span>'
+              '<span class="tt">Las cuentas, en Excel</span><span class="sm">' + html.escape("Modelo fiscal 2028–2035 · con sus fórmulas · " + _mb(_xl))
+              + '</span></span><b>Bajar</b></a>')
+assert tpl.count("{{DESCARGAS}}") == 1
+tpl = tpl.replace("{{DESCARGAS}}", "".join(_items))
 assert "{{" not in tpl
 
 # 5) Documento completo
@@ -124,6 +150,9 @@ for f in json.loads((WEB / "img" / "fotos.json").read_text())["fotos"]:
 for g in (WEB / "img").glob("g_*.webp"):
     shutil.copy(g, pub / "img" / g.name)
 shutil.copy(WEB / "img" / "og.jpg", pub / "img" / "og.jpg")
+(pub / "docs").mkdir(exist_ok=True)
+for _f in ("programa-san-isidro-2027-a4.pdf", "programa-san-isidro-2027-pantalla.pdf"):
+    shutil.copy(WEB / "docs" / _f, pub / "docs" / _f)
 (pub / "panel").mkdir(exist_ok=True)
 shutil.copy(WEB / "panel.tpl.html", pub / "panel" / "index.html")
 (pub / "contacto").mkdir(exist_ok=True)
@@ -160,7 +189,7 @@ for a in _acc:
     "  X-Content-Type-Options: nosniff\n"
     "  Referrer-Policy: strict-origin-when-cross-origin\n"
     "/panel/*\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-store\n"
-    "/data/*\n  Cache-Control: public, max-age=3600\n/img/*\n  Cache-Control: public, max-age=86400\n/data/*.xlsx\n  Content-Disposition: attachment\n")
+    "/data/*\n  Cache-Control: public, max-age=3600\n/img/*\n  Cache-Control: public, max-age=86400\n/data/*.xlsx\n  Content-Disposition: attachment\n/docs/*\n  Cache-Control: public, max-age=3600\n")
 # Las cuentas: todo sale del Excel del modelo fiscal
 import subprocess
 CU = WEB / "cuentas"

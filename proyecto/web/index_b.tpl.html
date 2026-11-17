@@ -173,6 +173,9 @@ figcaption{font-size:13px;color:var(--ink-2)}
 .tile .tt{font-family:var(--serif);font-size:19px;line-height:1.2;display:block}
 .tile .sm{font-size:13px;color:var(--ink-2);display:block;margin-top:3px}
 .tile b{color:var(--link);font-size:14px;font-weight:600}
+.dl a.tile{text-decoration:none}
+.dl .ic{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.04em}
+.dl .ic.x{background:var(--pill-sage);color:var(--sage)}
 
 /* Lector */
 .lector{position:fixed;inset:0;z-index:20;background:var(--paper);overflow-y:auto;overscroll-behavior:contain}
@@ -462,6 +465,8 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
       <div class="chs" id="chs"><p style="color:var(--ink-2)">Cargando el programa…</p></div>
       <h3 class="more-h">Al final del programa</h3>
       <div class="tiles" id="tiles-b"></div>
+      <h3 class="more-h" id="descargas">Para bajar</h3>
+      <div class="tiles dl">{{DESCARGAS}}</div>
     </div>
   </section>
 </main>
@@ -469,7 +474,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
 <footer class="foot">
   <div class="wrap foot-in">
     <a class="brand" href="#inicio"><b>San Isidro 2027</b><span>Programa de gobierno</span></a>
-    <nav aria-label="Secciones"><a href="#inicio">Preguntale al programa</a><a href="#propuestas">Qué proponemos</a><a href="#programa">El programa completo</a><a href="/cuentas/">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></nav>
+    <nav aria-label="Secciones"><a href="#inicio">Preguntale al programa</a><a href="#propuestas">Qué proponemos</a><a href="#programa">El programa completo</a><a href="/cuentas/">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a><a href="#descargas">Descargas</a><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></nav>
     <p>Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro. Las imágenes son ilustraciones del programa. Los gráficos y los cuadros son los de la versión A4.</p>
   </div>
 </footer>
