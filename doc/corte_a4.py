@@ -287,6 +287,10 @@ def html_capitulo(cap, caps, plan_fotos):
         if s["id"] == "fuentes2":
             assert h.startswith(content._F_CAB), h[:200]
             h = h[len(content._F_CAB):]
+            h = h[:h.rindex("</table>")]             # dispatch 21: las fuentes siguen en una tercera pagina
+        if s["id"] == "fuentes3":
+            assert h.startswith(content._F_CAB), h[:200]
+            h = h[len(content._F_CAB):]
         if s["id"] == "cap6b2":                      # el calendario tambien vuelve a ser un solo cuadro
             h = h[:h.rindex("</table>")]
         if s["id"] == "cap6b3":

@@ -102,8 +102,13 @@ Ministerio de Seguridad bonaerense; Ley 25.326, art&iacute;culos 5, 6 y 11; las 
 <ul class="b">
 <li><b>3.6.</b> El fallo de la Corte Suprema sobre la tasa de seguridad e higiene de Pergamino, y lo que significa para la tasa de San Isidro: lo tiene que estudiar un abogado tributarista.</li>
 <li><b>4.11.</b> La prohibici&oacute;n de propaganda partidaria en los espacios que la inteligencia artificial del Municipio les da a las asociaciones.</li>
+<li><b>4.11.</b> Pagarles a vecinos y a empleados del Municipio una parte de lo que su aviso hace cobrar o ahorrar: la base legal, c&oacute;mo se paga y c&oacute;mo se declara.</li>
+<li><b>4.11.</b> Presentar con firma digital, sin ir en persona, la denuncia que deja lista la inteligencia artificial del Municipio, en las fiscal&iacute;as de San Isidro.</li>
+<li><b>4.11.</b> Mostrarle a cada vecino historias seg&uacute;n lo que usa, con aviso y bot&oacute;n para apagarlo, sin un permiso aparte (Ley 25.326, art&iacute;culo 5).</li>
 <li><b>5.3.</b> El camino para que un egresado vaya a trabajar a Estados Unidos: la visa de pasante.</li>
 <li><b>5.3.</b> La firma del convenio del puente por el rector de la UNSO y el intendente, con permiso del Concejo Deliberante (Ley Org&aacute;nica de las Municipalidades, art&iacute;culo 41).</li>
+<li><b>5.4.</b> El descuento del alquiler garantizado del sueldo de quien cobra del Municipio, y el fondo de la garant&iacute;a (Ordenanza 20 del anexo).</li>
+<li><b>5.4.</b> La edificaci&oacute;n obligatoria y la segunda y tercera vivienda en el lote (Ordenanza 21 del anexo; Ley 14.449).</li>
 <li><b>5.5.</b> El concurso para que las cooperativas de trabajo de San Isidro vac&iacute;en las rejas y las barreras de los desag&uuml;es, con un contrato que paga por cada boca vaciada.</li>
 <li><b>5.5.</b> El permiso del due&ntilde;o de la d&aacute;rsena para anclar la barrera de Alto Per&uacute;.</li>
 <li><b>5.5.</b> Hacer el acta a la moto sin silenciador sin medir decibeles, porque el art&iacute;culo 81 de la Ordenanza 5182 pide avisarle antes al infractor, de manera formal.</li>
@@ -116,6 +121,7 @@ Ministerio de Seguridad bonaerense; Ley 25.326, art&iacute;culos 5, 6 y 11; las 
 <li><b>5.5.</b> El tipo de convenio con los clubes y centros culturales donde se hacen los shows bajo techo.</li>
 <li><b>5.5.</b> La cl&aacute;usula del contrato de los shows que se cancelan por lluvia (C&oacute;digo Civil y Comercial, art&iacute;culo 1261).</li>
 <li><b>5.5.</b> La excepci&oacute;n de los shows autorizados, que no van a contar como ruido molesto para la Ordenanza 5182 (art&iacute;culo 81) ni para la Ordenanza General 27.</li>
+<li><b>5.6.</b> Que la inteligencia artificial del Municipio acompa&ntilde;e a un vecino en salud mental bajo un profesional responsable, y el resumen que le pasa al acompa&ntilde;ante.</li>
 <li><b>5.8.</b> El informe del profesor digital al docente: que decida siempre el docente y que el chico y su familia vean lo mismo (Ley 25.326, art&iacute;culo 20, y Resoluci&oacute;n 9/2025 de la Provincia).</li>
 <li><b>5.8.</b> Los datos de los chicos en el profesor digital: que se procesen en Europa, que el proveedor no los use para entrenar sus programas y que las conversaciones se borren a los pocos d&iacute;as. Tambi&eacute;n la base de datos del profesor digital en la Ordenanza 2 del anexo (Ley 25.326, art&iacute;culos 20 y 22).</li>
 <li><b>5.9.</b> El convenio con el banco que paga los sueldos para que los agentes compren el tel&eacute;fono en 24 cuotas, con el riesgo a cargo del banco.</li>
@@ -134,11 +140,6 @@ Ministerio de Seguridad bonaerense; Ley 25.326, art&iacute;culos 5, 6 y 11; las 
 <li><b>5.11.</b> Qui&eacute;n lleva el registro de donantes de alimentos que pide la Ley 25.989 (Ordenanza 18 del anexo).</li>
 <li><b>5.13.</b> El resguardo de los datos de las v&iacute;ctimas que piden ayuda a la inteligencia artificial del Municipio (Ordenanza 6 del anexo).</li>
 <li><b>Anexo.</b> La base de datos de las cuotas de las multas, que usa el ingreso y el hogar (Ordenanza 16; Ley 25.326, art&iacute;culos 20 y 22).</li>
-<li>4.11. Pagarles a vecinos y a empleados del Municipio una parte de lo que su aviso hace cobrar o ahorrar: la base legal, c&oacute;mo se paga y c&oacute;mo se declara.</li>
-<li>4.11. Presentar con firma digital, sin ir en persona, la denuncia que deja lista la inteligencia artificial del Municipio, en las fiscal&iacute;as de San Isidro.</li>
-<li>4.11. Mostrarle a cada vecino historias seg&uacute;n lo que usa, con aviso y bot&oacute;n para apagarlo, sin un permiso aparte (Ley 25.326, art&iacute;culo 5).</li>
-<li>5.4. El descuento del alquiler garantizado del sueldo de quien cobra del Municipio, y el fondo de la garant&iacute;a (Ordenanza 20 del anexo).</li>
-<li>5.4. La edificaci&oacute;n obligatoria y la segunda y tercera vivienda en el lote (Ordenanza 21 del anexo; Ley 14.449).</li>
-<li>5.6. Que la inteligencia artificial del Municipio acompa&ntilde;e a un vecino en salud mental bajo un profesional responsable, y el resumen que le pasa al acompa&ntilde;ante.</li>
+
 </ul>
 """

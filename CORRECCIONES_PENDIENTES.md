@@ -3490,3 +3490,29 @@ repitiendo arriba su título con «(sigue)».
   Anexo 119, Glosario 131, Nota de método 133.
 - Textos nuevos: «Y» y «Que» al empezar, 0; dos oraciones que empiezan igual en un párrafo, 0. Excel sin cambios.
   Cinco tests OK.
+
+## DISPATCH 21 · ACTUALIZACIÓN DEL 17/11 · APLICADO
+Hecho en la sesión del programa, sin dispatch pegado (pedido de Nick, 17/11): el documento se trae de la web sola.
+- Texto: todo lo que cambió en la web entre d2aa2c7 y la rama web-sanisidro de hoy, con 03_scripts/web_a_doc.py (busca
+  cada pieza vieja por su texto y la cambia; agrega párrafos, recuadros, filas, ordenanzas y fuentes donde los pone la
+  web). Control: 03_scripts/comparar_web.py; las únicas piezas que no aparecen letra por letra son las 49 de siempre
+  (diagramas en imagen, etiquetas de riesgo, notas con otro formato), las mismas que antes de hoy.
+- Nuevo: recuadros 4.11 (reclamos y denuncias, power users, historias cortas), 5.4 (garantía de alquiler, más lugares
+  para alquilar, terrenos sin uso), 5.6 (salud mental), 5.9 (le mostrás un lugar); Ordenanzas 19, 20 y 21; cuadros 20,
+  40 a 44; fuentes de 4.11, 5.4, 5.6 y 5.9; seis puntos para el abogado, en orden de sección.
+- Modelo: los 60 agentes de marzo de 2026 suman 1.011,4 millones por año desde 2028, como en el Excel
+  (03_scripts/modelo.py y parametros_modelo.py). Resultado 2028 a 2031: 565, 4.574, 6.739 y 9.225 millones (si nada
+  cambia: 565, 3.336, 6.222 y 9.225). Rehechos g_escenarios y g_reformista. Excel: el de la web, con el control del
+  cuadro 20 en cero. Tests: los cinco OK.
+- Páginas nuevas: el 5.4 en página propia; los tres recuadros nuevos del 4.11 abren la página del 4.12; el 5.6 corta en
+  los tomógrafos; el 6.2 va con el 6.3 y el 6.6 con el 6.7; las Ordenanzas 19 a 21 en una sexta página del anexo, con
+  su entrada en el índice; las fuentes en tres páginas.
+- A4: corte_a4.py ahora deshace la foto que al crecer desborda su hoja, vuelve a cortar el capítulo que desborda con las
+  decisiones finales, y une la tercera página de fuentes en un solo cuadro.
+- Pantalla: 62 páginas, la más alta 2688.2 pt; sin viudas; fuentes sin sustituciones. A4: 151 hojas; texto contra la
+  pantalla sin faltantes. Capítulos: Introducción 5, Qué proponemos hacer 6, 1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 50,
+  6 → 108, Para cerrar 123, Anexo 124, Glosario 137, Nota de método 139.
+- Queda: las hojas 106 y 107 de la A4 (final del capítulo 5) quedan con 54% y 43% en blanco: el capítulo creció y su
+  final no se puede llenar sin una foto más.
+- Revisión independiente: un agente que no hizo los cambios comparó texto, marcas, orden, índice, cifras y palabras
+  prohibidas, y miró las hojas; lo que encontró está corregido.
