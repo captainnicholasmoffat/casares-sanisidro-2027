@@ -332,7 +332,7 @@ footer{padding-block:48px 56px;color:var(--ink-3);font-size:14px}
     <div class="panel">
       <div class="legend"><span><i style="background:var(--s-new)"></i>Peor que lo previsto</span><span><i style="background:var(--s-base)"></i>Mejor que lo previsto</span></div>
       <div class="chart" id="ch-peor"></div>
-      <p class="note">La línea del medio es lo previsto: +10.236 M en 2031. A la izquierda del cero, el año termina en déficit.</p>
+      <p class="note">La línea del medio es lo previsto: <span id="peor-base">+9.225 M</span> en 2031. A la izquierda del cero, el año termina en déficit.</p>
     </div>
     <p class="src">Fuente: modelo fiscal, hoja Escenarios (la misma sensibilidad del 3.2 y el 3.6 del programa).</p>
   </section>
@@ -524,6 +524,7 @@ var D = /*DATA*/null;
   [["b", "0", "pesos de deuda nueva en todo el mandato"], ["", M(D.flotante[3], 0), "de deuda flotante en 2031: facturas que se pagan con el atraso normal de cada mes"]].forEach(function(f){ var d = el("div", {"class": "fact " + f[0]}); d.appendChild(el("b", {"class": "tnum"}, f[1])); d.appendChild(el("span", null, f[2])); $("#side-deuda").appendChild(d); });
   // 10 · Si sale peor (tornado)
   var SN = D.sensibilidad, base = SN[0].v[1].res;
+  $("#peor-base").textContent = (base > 0 ? "+" : "") + M(base, 0);
   var NAMES = ["Lo que recauda el Municipio", "La coparticipación de la Provincia", "Qué parte de lo que se factura se cobra"];
   function variant(i, w){ var v = SN[i].v; return i === 0 ? (w ? "crece " + pct(v[0].x, 2) + " por año, un punto menos" : "crece " + pct(v[2].x, 2) + " por año, un punto más") : i === 1 ? (w ? "cae " + pct(-v[2].x, 1) + " por año" : "cae " + pct(-v[0].x, 1) + " por año") : (w ? "se cobra el " + pct(v[0].x, 2) + ", tres puntos menos" : "se cobra el " + pct(v[2].x, 2) + ", tres puntos más"); }
   function drawPeor(){

@@ -4,8 +4,8 @@ Datos del plan de despliegue del programa de gobierno, sacados del texto final (
 
 ## 1. Qué hay en acciones.json
 
-- 311 acciones, de las cuales 143 son hitos (duración 0).
-- 14 acciones críticas y 22 casi críticas (holgura de 1 a 5 días hábiles).
+- 310 acciones, de las cuales 143 son hitos (duración 0).
+- 18 acciones críticas y 20 casi críticas (holgura de 1 a 5 días hábiles).
 - Desde el 24 de octubre de 2027 (elección, fecha estimada) hasta el 10 de diciembre de 2031 (fin del mandato).
 - Trece líneas de trabajo: «0 Transición» y las doce del pedido.
 - Los mismos campos del ejemplo (code, task, stream, owner, team, dur, start, finish, float, critical, milestone, decision, steps, moves, sne, needs, note), más «fuente». El campo «moves» va vacío.
@@ -15,8 +15,8 @@ Datos del plan de despliegue del programa de gobierno, sacados del texto final (
 | Línea de trabajo | Acciones |
 |---|---|
 | 0 Transición | 7 |
-| 1 Mecanismo vecinal y obra pública | 26 |
-| 2 Concejo y ordenanzas | 68 |
+| 1 Mecanismo vecinal y obra pública | 28 |
+| 2 Concejo y ordenanzas | 65 |
 | 3 Presupuesto y tasas | 29 |
 | 4 Inteligencia artificial del Municipio | 19 |
 | 5 Empleo y formación | 42 |
@@ -100,16 +100,16 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | K36 | Licitar las cámaras que cuentan gente en los accesos de los 21 playones de la costa | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 | M09 | El Ejecutivo responde por escrito a cada pedido de la segunda ronda, con sus razones | 22 | treinta días corridos, unos 22 días hábiles |
 | M14 | El Ejecutivo responde al panel en público, por escrito y con sus razones | 22 | treinta días corridos, unos 22 días hábiles |
-| M15 | Año 2 de la rampa (25%): las asociaciones hacen ellas mismas la obra, por contrato directo | 259 | un año |
-| M18 | Año 3 de la rampa (37,5%), con el registro de asociaciones vecinales ya renovado | 260 | un año |
-| M20 | Año 4 de la rampa: los vecinos deciden la mitad de la obra pública | 260 | un año |
+| M15 | Año 2 de la rampa (25%): las asociaciones hacen ellas mismas la obra, por contrato directo | 230 | el ejercicio 2029, desde que la auditoría externa libera el escalón (6 |
+| M18 | Año 3 de la rampa (37,5%), con el registro de asociaciones vecinales ya renovado | 231 | el ejercicio 2030, desde que la auditoría externa libera el escalón (6 |
+| M20 | Año 4 de la rampa: los vecinos deciden la mitad de la obra pública | 216 | hasta el fin del mandato, desde que la auditoría externa libera el escalón (6 |
 | M24 | El Ejecutivo responde por escrito a cada obra elegida en la primera ronda, con sus razones | 22 | treinta días corridos, unos 22 días hábiles |
 | M25 | Licitar y adjudicar las obras del año 1 | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 | P05 | Aviso de la convocatoria a la asamblea, con los ocho días que pide la Ley Orgánica (artículo 98) | 6 | ocho días corridos, unos seis días hábiles |
 | S05 | Licitar los dos tomógrafos, o tomarlos con el leasing de la Provincia, mientras sigue el contrato actual | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 | U03 | Licitación pública de los equipos de sonido propios | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 
-### 3.2 Duraciones estimadas (140)
+### 3.2 Duraciones estimadas (139)
 
 | Código | Acción | Días hábiles | Base |
 |---|---|---|---|
@@ -131,9 +131,8 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | C44 | Tratamiento de la Ordenanza 12 en el Concejo | 22 | precedente de la Ordenanza 9432 |
 | C47 | Tratamiento de la Ordenanza 13 en el Concejo | 22 | precedente de la Ordenanza 9432 |
 | C50 | Tratamiento de la Ordenanza 14 en el Concejo | 22 | precedente de la Ordenanza 9432 |
-| C52 | Revisar la Ordenanza 19 del anexo: foodtrucks y cambio del artículo 9 de la Ordenanza 5824 | 15 | estimación propia |
-| C54 | Tratamiento de la ordenanza de foodtrucks en el Concejo | 22 | precedente de la Ordenanza 9432 |
-| C57 | Tratamiento del cambio de la Ordenanza 5824 en el Concejo | 22 | precedente de la Ordenanza 9432 |
+| C52 | Revisión legal de la Ordenanza 19 del anexo: foodtrucks y cambio del artículo 9 de la Ordenanza 5824 | 15 | estimación propia |
+| C54 | Tratamiento de la Ordenanza 19 en el Concejo | 22 | precedente de la Ordenanza 9432 |
 | C62 | Tratamiento de la Ordenanza 18 en el Concejo | 22 | precedente de la Ordenanza 9432 |
 | C65 | Tratamiento de la Ordenanza 17 en el Concejo, como ordenanza preparatoria | 22 | precedente de la Ordenanza 9432 |
 | E01 | Firmar el convenio con la UNSO para la tecnicatura | 20 | estimación propia |
@@ -161,7 +160,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | G15 | Pedir a la Provincia seis cambios en las multas, y a la Legislatura la licencia por puntos (compromiso 18) | 10 | estimación propia |
 | G16 | Inscripción en línea para pagar en cuotas y plan sin interés para la deuda vieja (lo destraba la Ordenanza 15) | 20 | estimación propia |
 | G17 | Inscribir la base de datos de las cuotas ante la autoridad de datos personales (lo destraba la Ordenanza 16) | 10 | estimación propia |
-| G18 | La inteligencia artificial propone dónde poner cámaras de multas, sólo donde se supera un mínimo publicado de choques | 30 | estimación propia |
+| G18 | La inteligencia artificial del Municipio propone dónde poner cámaras de multas, sólo donde se supera un mínimo publicado de choques | 30 | estimación propia |
 | G19 | Cada comisión de zona elige entre una cámara o un reductor de velocidad | 30 | estimación propia |
 | G20 | La Provincia autoriza cada cámara (Disposiciones 14/2020 y 43/2021) | 40 | estimación propia |
 | G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista | 10 | estimación propia |
@@ -173,7 +172,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | H05 | Acordar con los trabajadores municipales la compensación por usar el teléfono propio (Ley 14.656, artículo 75) | 40 | estimación propia |
 | H06 | Construir la grabación sellada del turno: huella al grabar, corte por inspección y base por comercio o domicilio | 60 | estimación propia |
 | H10 | Organizar la atención del sábado con el personal que elige ese horario | 20 | estimación propia |
-| H12 | Habilitaciones en la inteligencia artificial: consulta previa con la cámara del teléfono, inspección con fecha fija y aviso de inspecciones fuera de lo normal | 60 | estimación propia |
+| H12 | Habilitaciones en la inteligencia artificial del Municipio: consulta previa con la cámara del teléfono, inspección con fecha fija y aviso de inspecciones fuera de lo normal | 60 | estimación propia |
 | I01 | Armar el equipo que construye la inteligencia artificial del Municipio, con gente de San Isidro | 20 | estimación propia |
 | I02 | Construir las tres primeras partes: la que responde consultas, la que saca el turno médico conversando y la que escucha a los vecinos | 35 | estimación propia |
 | I03 | Revisión de seguridad por las universidades de San Isidro antes de abrir al público | 5 | estimación propia |
@@ -183,7 +182,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | I09 | Construir las tres partes siguientes: la partida vecinal, el seguimiento de cada obra y el espacio de cada asociación | 60 | estimación propia |
 | I15 | Transmitir y pasar a texto las asambleas, para buscarlas y consultarlas | 60 | estimación propia |
 | I18 | Centros con computadoras y mesa de ayuda en cada zona, para quien no tiene teléfono o conexión | 40 | estimación propia |
-| I19 | Pagar el uso de la inteligencia artificial con compras chicas, sin licitación pública, mientras corre la primera licitación | 55 | estimación propia |
+| I19 | Pagar el uso de la inteligencia artificial del Municipio con compras chicas, sin licitación pública, mientras corre la primera licitación | 55 | estimación propia |
 | K01 | Pedir a AySA que diga si se pueden conectar a la cloaca los baños de los seis lugares de la costa | 5 | estimación propia |
 | K02 | AySA confirma qué baños se pueden hacer | 60 | estimación propia |
 | K03 | Reconocer las primeras asociaciones de parque: Parque del Águila y Bosque Alegre | 15 | estimación propia |
@@ -198,8 +197,8 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | K21 | Contratar los guardavidas del tramo: uno cada 80 metros, mínimo dos, y un bote | 20 | estimación propia |
 | K23 | Año 2: abren el tercer y el cuarto puesto náutico y dos baños más | 120 | estimación propia |
 | K24 | Año 3: abren los dos últimos puestos náuticos y los dos últimos baños | 120 | estimación propia |
-| K25 | Foodtrucks al borde de cada puesto, con canon y 75% de empleo local (lo destraba la ordenanza de foodtrucks) | 20 | estimación propia |
-| K26 | Centro de foodtrucks y actividades en el Bosque Alegre (lo destraba el cambio de la Ordenanza 5824) | 20 | estimación propia |
+| K25 | Foodtrucks al borde de cada puesto, con canon y 75% de empleo local (lo destraba la Ordenanza 19) | 20 | estimación propia |
+| K26 | Centro de foodtrucks y actividades en el Bosque Alegre (lo destraba la Ordenanza 19) | 20 | estimación propia |
 | K27 | Preparar las clases gratis del Municipio en las plazas donde ya dan clase los instructores registrados | 20 | estimación propia |
 | K29 | Pedir a la Provincia la ley que protege la ribera y los parques principales | 10 | estimación propia |
 | K30 | Congelar y revisar la lista de trabajadores de la recolección al llamar a licitación | 20 | estimación propia |
@@ -211,9 +210,9 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | M04 | Reconocer como comisión de su zona a cada asociación vecinal en condiciones | 20 | estimación propia |
 | M05 | Volver a armar el registro de asociaciones vecinales, consultable por cualquiera | 20 | estimación propia |
 | M06 | En las zonas sin una asociación en condiciones: asamblea abierta y ayuda para formar una | 90 | estimación propia |
-| M08 | Segunda ronda de asambleas: los vecinos siguen las obras del año y preparan las del año siguiente | 40 | dos meses, como el ciclo de la Ciudad de Buenos Aires que cita el 6 |
+| M08 | Segunda ronda de asambleas: los vecinos siguen las obras del año y preparan las del año siguiente | 40 | dos meses, como el ciclo de la Ciudad de Buenos Aires que cita la nota del capítulo 4 |
 | M10 | Contratar y hacer las obras elegidas del año 1: el 12,5% de la obra pública, unos 7.227 millones | 70 | estimación propia |
-| M12 | Sortear el primer panel de vecinos, apenas se aprueba la Ordenanza 12 | 15 | estimación propia |
+| M12 | Sortear el primer panel de vecinos, una vez aprobada la Ordenanza 12 | 15 | estimación propia |
 | M13 | El primer panel se reúne y da su recomendación, con razones, sobre la obra en la costa | 20 | cuatro reuniones, una por semana |
 | M16 | Revisión del Tribunal de Cuentas sobre la obra que hicieron las asociaciones | 60 | estimación propia |
 | P01 | Convocar al Concejo a sesión extraordinaria (Ley Orgánica, artículo 68, inciso 5) | 1 | estimación propia |
@@ -242,7 +241,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | T06 | Preparar la convocatoria a la sesión extraordinaria de diciembre, con la ordenanza preparatoria de la tabla en primer lugar | 3 | estimación propia |
 | U01 | Preparar el decreto de prueba de los espectáculos al aire libre de lunes a jueves | 15 | estimación propia |
 | U04 | Armar los tres grupos de producción y el control de los equipos | 20 | estimación propia |
-| U05 | Los vecinos proponen en la inteligencia artificial a qué artistas nuevos de San Isidro quieren ver | 20 | estimación propia |
+| U05 | Los vecinos proponen en la inteligencia artificial del Municipio a qué artistas nuevos de San Isidro quieren ver | 20 | estimación propia |
 | U06 | Convenio con cuatro clubes o centros culturales para los shows bajo techo | 30 | estimación propia |
 | U08 | Sumar al cuadro de usos la categoría de la Ley 15.302: hasta 300 personas y 500 metros cuadrados (lo destraba la Ordenanza 7) | 20 | estimación propia |
 | V01 | Medir la conexión a internet en cada zona durante la primera ronda de asambleas, primero en La Cava y en Boulogne | 15 | estimación propia |
@@ -254,7 +253,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | X04 | Cargar en qué se gastó el Fondo Educativo, obra por obra | 30 | estimación propia |
 | X06 | Anotar cada gasto del Municipio con la zona donde se hace | 260 | estimación propia |
 
-### 3.3 Fechas estimadas y otros supuestos (23)
+### 3.3 Fechas estimadas y otros supuestos (21)
 
 Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota de cada una.
 
@@ -263,8 +262,6 @@ Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota d
 | C01 | Entra al Concejo el proyecto que deroga los artículos 8 a 10 de la Ordenanza 6045 (compromiso 1) | 15/12/2027 |
 | C02 | Tratamiento de la derogación en el Concejo | 01/03/2028 |
 | C05 | Tratamiento de la Ordenanza 1 en el Concejo | 01/03/2028 |
-| C09 | Tratamiento de la Ordenanza 5 en el Concejo | 01/03/2028 |
-| C12 | Tratamiento de la Ordenanza 7 en el Concejo | 01/03/2028 |
 | C15 | Tratamiento de la Ordenanza 9 en el Concejo | 01/03/2028 |
 | C59 | Cambia la mitad del Concejo | 10/12/2027 |
 | C60 | Cambia la otra mitad del Concejo | 10/12/2029 |
@@ -276,10 +273,10 @@ Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota d
 | P15 | El Concejo vota el presupuesto 2029 | 13/11/2028 |
 | P16 | La Asamblea de Concejales y Mayores Contribuyentes aprueba la ordenanza impositiva 2029 | 13/11/2028 |
 | P17 | El Ejecutivo presenta al Concejo el presupuesto 2030 y la ordenanza fiscal e impositiva 2030 | 01/10/2029 |
-| P19 | El Concejo vota el presupuesto 2030 | 07/12/2029 |
+| P19 | El Concejo vota el presupuesto 2030 | 12/11/2029 |
 | P20 | La Asamblea de Concejales y Mayores Contribuyentes aprueba la ordenanza impositiva 2030 | 12/11/2029 |
 | P21 | El Ejecutivo presenta al Concejo el presupuesto 2031 y la ordenanza fiscal e impositiva 2031 | 01/10/2030 |
-| P23 | El Concejo vota el presupuesto 2031 | 09/12/2030 |
+| P23 | El Concejo vota el presupuesto 2031 | 12/11/2030 |
 | P24 | La Asamblea de Concejales y Mayores Contribuyentes aprueba la ordenanza impositiva 2031 | 12/11/2030 |
 | T01 | Elección general de intendente y concejales | 24/10/2027 |
 | U06 | Convenio con cuatro clubes o centros culturales para los shows bajo techo | 10/12/2027 |
@@ -296,11 +293,15 @@ Las acciones críticas no se pueden atrasar ni un día hábil sin romper una fec
 | C18 | Entra la Ordenanza 15, de las cuotas de las multas de tránsito (compromiso 19) | 01/03/2028 | 01/03/2028 |
 | C21 | Entra la Ordenanza 16, de la base de datos de las cuotas (compromiso 20) | 01/03/2028 | 01/03/2028 |
 | M22 | Cien días: los veintiún compromisos, a la vista | 19/03/2028 | 19/03/2028 |
-| M15 | Año 2 de la rampa (25%): las asociaciones hacen ellas mismas la obra, por contrato directo | 11/12/2028 | 07/12/2029 |
-| M17 | Año 2 de la rampa, cumplido | 07/12/2029 | 07/12/2029 |
-| M18 | Año 3 de la rampa (37,5%), con el registro de asociaciones vecinales ya renovado | 10/12/2029 | 09/12/2030 |
-| M19 | Año 3 de la rampa, cumplido | 09/12/2030 | 09/12/2030 |
-| M20 | Año 4 de la rampa: los vecinos deciden la mitad de la obra pública | 10/12/2030 | 09/12/2031 |
+| M11 | Termina el año 1 de la rampa: el escalón se cuenta por ejercicio, que cierra el 31 de diciembre | 29/12/2028 | 29/12/2028 |
+| M15 | Año 2 de la rampa (25%): las asociaciones hacen ellas mismas la obra, por contrato directo | 12/02/2029 | 31/12/2029 |
+| M26 | La auditoría externa certifica que se cumplió el año 1, y se libera el escalón del año 2 | 12/02/2029 | 12/02/2029 |
+| M17 | Año 2 de la rampa, cumplido | 31/12/2029 | 31/12/2029 |
+| M18 | Año 3 de la rampa (37,5%), con el registro de asociaciones vecinales ya renovado | 11/02/2030 | 31/12/2030 |
+| M27 | La auditoría externa certifica que se cumplió el año 2, y se libera el escalón del año 3 | 11/02/2030 | 11/02/2030 |
+| M19 | Año 3 de la rampa, cumplido | 31/12/2030 | 31/12/2030 |
+| M20 | Año 4 de la rampa: los vecinos deciden la mitad de la obra pública | 10/02/2031 | 09/12/2031 |
+| M28 | La auditoría externa certifica que se cumplió el año 3, y se libera el escalón del año 4 | 10/02/2031 | 10/02/2031 |
 | M21 | Los vecinos deciden la mitad de la obra pública (meta 4) | 09/12/2031 | 09/12/2031 |
 | V03 | En Boulogne y Béccar, los hogares sin cloaca se reducen a la mitad (meta 1) | 09/12/2031 | 09/12/2031 |
 | M23 | Termina el mandato | 10/12/2031 | 10/12/2031 |
@@ -322,8 +323,6 @@ Casi críticas (holgura de 1 a 5 días hábiles). Casi todas caen en los primero
 | C07 | Entra la Ordenanza 3, que actualiza la tabla de valores de 2008 (compromiso 3) | 1 | 15/12/2027 |
 | P02 | Tratamiento de la ordenanza preparatoria de la tabla, primera en la convocatoria | 1 | 15/12/2027 |
 | P03 | El Concejo vota la ordenanza preparatoria de la tabla | 1 | 20/12/2027 |
-| P19 | El Concejo vota el presupuesto 2030 | 1 | 07/12/2029 |
-| P23 | El Concejo vota el presupuesto 2031 | 1 | 09/12/2030 |
 | P05 | Aviso de la convocatoria a la asamblea, con los ocho días que pide la Ley Orgánica (artículo 98) | 3 | 20/12/2027 |
 | P06 | La Asamblea de Concejales y Mayores Contribuyentes aprueba la tabla nueva | 3 | 28/12/2027 |
 | T04 | Explicar el mecanismo a los bloques del Concejo, también a los concejales que asumen en diciembre | 4 | 25/10/2027 |
@@ -335,7 +334,7 @@ Casi críticas (holgura de 1 a 5 días hábiles). Casi todas caen en los primero
 | I04 | Empiezan a funcionar las tres primeras partes de la inteligencia artificial del Municipio (compromiso 14) | 4 | 03/03/2028 |
 | G02 | Cualquier vecino puede preguntar por el patrullaje, las cámaras y el 911 municipal (compromiso 9) | 4 | 03/03/2028 |
 | U02 | Empieza la prueba por decreto y abre el registro gratis de instructores y artistas (compromiso 21) | 4 | 03/03/2028 |
-| H07 | El comerciante ya puede denunciar coimas, presiones y amenazas ante la inteligencia artificial, con grabación sellada (compromiso 16) | 4 | 03/03/2028 |
+| H07 | El comerciante ya puede denunciar coimas, presiones y amenazas ante la inteligencia artificial del Municipio, con grabación sellada (compromiso 16) | 4 | 03/03/2028 |
 | X02 | Cualquier vecino puede preguntar por cada pedido de informes del Concejo y su respuesta (compromiso 10) | 4 | 03/03/2028 |
 | M03 | Primera ronda de asambleas en las seis zonas: informar, elegir las obras del año 1 y contar los terrenos sin uso (compromiso 11) | 5 | 10/02/2028 |
 | M24 | El Ejecutivo responde por escrito a cada obra elegida en la primera ronda, con sus razones | 5 | 02/03/2028 |

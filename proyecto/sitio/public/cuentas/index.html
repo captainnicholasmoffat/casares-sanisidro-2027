@@ -346,7 +346,7 @@ footer{padding-block:48px 56px;color:var(--ink-3);font-size:14px}
     <div class="panel">
       <div class="legend"><span><i style="background:var(--s-new)"></i>Peor que lo previsto</span><span><i style="background:var(--s-base)"></i>Mejor que lo previsto</span></div>
       <div class="chart" id="ch-peor"></div>
-      <p class="note">La línea del medio es lo previsto: +10.236 M en 2031. A la izquierda del cero, el año termina en déficit.</p>
+      <p class="note">La línea del medio es lo previsto: <span id="peor-base">+9.225 M</span> en 2031. A la izquierda del cero, el año termina en déficit.</p>
     </div>
     <p class="src">Fuente: modelo fiscal, hoja Escenarios (la misma sensibilidad del 3.2 y el 3.6 del programa).</p>
   </section>
@@ -1659,7 +1659,7 @@ var D = {
 "como": "Ejecución por programa. La matrícula por sede se le pregunta a la inteligencia artificial del Municipio"
 },
 {
-"meta": "Llevar la forma de trabajar del Centro de Formación Laboral (CFL) 404 Barrio La Cava, de Béccar, a las seis zonas, con cinco sedes fijas y una sede móvil en Acassuso. Se suma una tecnicatura de la UNSO, que es una carrera universitaria corta, de dos años. En el segundo año, los alumnos trabajan como pasantes: seis meses en el Municipio y seis en una empresa de San Isidro. Desde el mes 27, cada seis meses egresa un grupo de alumnos con un año de trabajo real. Durante todo el mandato egresan 1.286 personas, y cuando la formación funcione completa van a ser 928 por año. La meta es que de 250 a 300 egresados por año consigan empleo pago En esta hoja, la columna del año 4 da los egresados acumulados, y la del año 8, los egresados de ese año.",
+"meta": "Llevar la forma de trabajar del Centro de Formación Laboral (CFL) 404 Barrio La Cava, de Béccar, a las seis zonas, con cinco sedes fijas y una sede móvil en Acassuso. Se suma una tecnicatura de la UNSO, que es una carrera universitaria corta, de dos años. En el segundo año, los alumnos trabajan como pasantes: seis meses en el Municipio y seis en una empresa de San Isidro. Desde el mes 27, cada seis meses egresa un grupo de alumnos con un año de trabajo real. Durante todo el mandato egresan 1.286 personas, y cuando la formación funcione completa van a ser 928 por año. La meta es que de 250 a 300 egresados por año consigan empleo pago. En esta hoja, la columna del año 4 da los egresados acumulados, y la del año 8, los egresados de ese año.",
 "hoy": "Hoy hay una sola sede de formación laboral, la del Barrio La Cava. No se publica cuántos alumnos hay ni cuántos consiguen trabajo. El primer registro que se haga va a dar esos dos números, como punto de partida",
 "a4": 1286,
 "a8": 928,
@@ -1687,7 +1687,7 @@ var D = {
 "como": "Se le pregunta a la inteligencia artificial del Municipio: cuántas denuncias hubo, en qué están y cuántas llegaron a la fiscalía"
 },
 {
-"meta": "Doscientos shows por año, de artistas nuevos de San Isidro. Las bandas tienen prioridad: como máximo, el 10% de los shows son de solistas, y al menos la mitad, de bandas de cuatro músicos o más. Además, espectáculos al aire libre todas las semanas, de lunes a jueves, en los parques y plazas de San Isidro",
+"meta": "Doscientos shows por año, de artistas nuevos de San Isidro. Las bandas tienen prioridad: como máximo, el 10% de los shows son de solistas, y al menos la mitad, de bandas de cuatro músicos o más. Además, espectáculos todas las semanas, de lunes a jueves: al aire libre en los parques y plazas de San Isidro de septiembre a abril, y bajo techo el resto del año",
 "hoy": "En 2026, un solo espectáculo en un día hábil en la costa, según el Municipio",
 "a4": "No la proyecta el modelo",
 "a8": "No la proyecta el modelo",
@@ -1720,7 +1720,7 @@ var D = {
 "UNIDAD": "Pesos constantes de diciembre de 2025. Sin supuesto de inflación: todo crecimiento que aparece es real.",
 "AÑO BASE": "2025 es la ejecución real, no una estimación: los estados de ejecución de recursos y de gastos, acumulado anual, y el Estado de Situación Económico-Financiera 2025. Reproduce la cuenta oficial con diferencia cero: el control está al pie de la hoja Resumen anual.",
 "LA CUENTA": "Ingresos por lo percibido y gastos por lo devengado, como la cuenta Ahorro-Inversión oficial: 2025 cerró en −6.051 M. La amortización de la deuda y los activos financieros van debajo de la línea, igual que en la cuenta oficial.",
-"QUÉ CRECE": "Lo que recauda el Municipio crece 1,95% real por año. La coparticipación, el 82,4% de lo provincial, cae 2,196% por año; el resto de lo provincial, lo nacional y los recursos de capital quedan constantes. El gasto queda constante en términos reales —cero recomposición salarial y cero servicios nuevos—, salvo el programa.",
+"QUÉ CRECE": "Lo que recauda el Municipio crece 1,95% real por año. La coparticipación, el 82,4% de lo provincial, cae 2,196% por año; el resto de lo provincial, lo nacional y los recursos de capital quedan constantes. El gasto queda constante en términos reales —cero recomposición salarial y cero servicios nuevos—, salvo el programa y, desde 2028, los 60 agentes que se sumaron a la patrulla en 2026: 1.011,4 M por año (Supuestos, fila 304).",
 "EL PROGRAMA": "Empleo y vivienda pasan de 505,7 M a 7.730,9 M en cuatro años desde 2028 (25%, 50%, 75% y 100% de lo que falta): 7.225,2 M más por año, 60% a empleo —gasto corriente— y 40% a vivienda —gasto de capital—. Los dos primeros años la formación usa toda la partida de empleo: dos ingresos por año y 1.286 egresados en el mandato.",
 "CÓMO SE PAGA": "Con la base de valuación actualizada, escenario B: la escala de ARBA 10,9% por encima de la neutral y un tope de 25% de suba por boleta y por año, cobrada como se cobra el ABL: 73,97%, el peor caso del rango de 74% a 82%. Cobra 1.637, 4.851 y 5.936 M los tres primeros años y 5.983 M desde el cuarto; entre 5.946 y 5.983 M según cuántas subas frene el mínimo. Lo que falta cada año sale del gasto flexible: 170 M el año 1 y 1.242 M desde el cuarto, el 1,4%. La cobranza no paga el programa.",
 "EL BONO": "El bono de 30.000 M de agosto de 2026 entra en la deuda y en la caja, no en el resultado: su capital va debajo de la línea, en siete cuotas trimestrales entre 2028 y 2029, y su interés no se proyecta porque la tasa es nominal y variable. El documento lo trata igual (3.5 y 3.6).",
@@ -1889,6 +1889,7 @@ var D = {
   [["b", "0", "pesos de deuda nueva en todo el mandato"], ["", M(D.flotante[3], 0), "de deuda flotante en 2031: facturas que se pagan con el atraso normal de cada mes"]].forEach(function(f){ var d = el("div", {"class": "fact " + f[0]}); d.appendChild(el("b", {"class": "tnum"}, f[1])); d.appendChild(el("span", null, f[2])); $("#side-deuda").appendChild(d); });
   // 10 · Si sale peor (tornado)
   var SN = D.sensibilidad, base = SN[0].v[1].res;
+  $("#peor-base").textContent = (base > 0 ? "+" : "") + M(base, 0);
   var NAMES = ["Lo que recauda el Municipio", "La coparticipación de la Provincia", "Qué parte de lo que se factura se cobra"];
   function variant(i, w){ var v = SN[i].v; return i === 0 ? (w ? "crece " + pct(v[0].x, 2) + " por año, un punto menos" : "crece " + pct(v[2].x, 2) + " por año, un punto más") : i === 1 ? (w ? "cae " + pct(-v[2].x, 1) + " por año" : "cae " + pct(-v[0].x, 1) + " por año") : (w ? "se cobra el " + pct(v[0].x, 2) + ", tres puntos menos" : "se cobra el " + pct(v[2].x, 2) + ", tres puntos más"); }
   function drawPeor(){

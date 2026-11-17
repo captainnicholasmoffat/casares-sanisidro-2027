@@ -2,7 +2,7 @@
 TRAT = "El proyecto pasa por las comisiones del Concejo y se vota en sesión."
 APR = "Votación en sesión. Después, el intendente la promulga y se publica en el Boletín Oficial."
 STEPS = {
-    "T06": "La lista de los seis proyectos del mes 1 (cuadro 42). La revisión del abogado (T02).",
+    "T06": "La lista de los seis proyectos del mes 1 (cuadro 42), con la revisión del abogado (T02).",
     "T07": "El mismo día, el intendente convoca al Concejo a sesión extraordinaria (P01).",
     "M06": "El Municipio convoca a una asamblea abierta y acompaña a los vecinos (4.6).",
     "M16": "Las cuentas de cada año las rinde el Municipio y las aprueba el Tribunal de Cuentas (5.10).",
@@ -47,13 +47,13 @@ STEPS = {
     "E41": "Un lugar que ya existe en cada localidad, abierto a la tarde, y docentes pagos (5.8).",
     "S06": "Las salas del Central y de Boulogne. Preparar cada sala suma un 15% al precio del equipo (cuadro 36).",
     "S07": "Once puestos de técnico, mantenimiento, informes y contraste (cuadro 36).",
-    "S09": "La plataforma de turnos del Municipio y la parte de la inteligencia artificial que saca el turno conversando (I04).",
+    "S09": "La plataforma de turnos del Municipio y la parte de la inteligencia artificial del Municipio que saca el turno conversando (I04).",
     "G01": "Los datos que ya produce el Municipio. El resto se le pide a la Provincia (G03).",
     "G06": "Los hechos que registra el Municipio, con su lugar exacto (5.7).",
     "G11": "Ayuda a quien sufre estafas, grooming o acoso por internet, y junta pruebas. No censura ni baja contenidos (nota de método).",
     "G20": "Cada lugar donde la comisión eligió una cámara (G19).",
     "G22": "Si una cámara no sirve, se saca (5.11).",
-    "G26": "La inteligencia artificial arma el caso y lo pasa a la defensa legal gratuita que ya existe (5.13).",
+    "G26": "La inteligencia artificial del Municipio arma el caso y lo pasa a la defensa legal gratuita que ya existe (5.13).",
     "K02": "Los pedidos a AySA (K01).",
     "K05": "Las muestras se comparan con los niveles guía nacionales. Después de una lluvia, la bandera marca el agua como no apta (Ordenanza 11).",
     "K06": "Seis lugares: Parque del Águila, Sáenz Peña, Del Barco Centenera, la dársena del Puerto, 33 Orientales y Pacheco (5.5).",
@@ -82,9 +82,9 @@ STEPS = {
     "X04": "El Fondo de Financiamiento Educativo: 3.931 millones en 2025 (5.8).",
 }
 TRAT_CODES = ["C02", "C05", "C09", "C12", "C15", "C19", "C22", "C26", "C29", "C32", "C35", "C38", "C41", "C44",
-              "C47", "C50", "C54", "C57", "P14", "P18", "P22"]
+              "C47", "C50", "C54", "P14", "P18", "P22"]
 APR_CODES = ["C03", "C06", "C10", "C13", "C16", "C20", "C23", "C27", "C30", "C33", "C36", "C39", "C42", "C45",
-             "C48", "C51", "C55", "C58"]
+             "C48", "C51", "C55"]
 for c in TRAT_CODES:
     STEPS[c] = TRAT
 for c in APR_CODES:

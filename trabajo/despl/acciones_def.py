@@ -120,9 +120,10 @@ act("T04", "Explicar el mecanismo a los bloques del Concejo, también a los conc
     note="Riesgo crítico del 6.6: el Concejo no acompaña.")
 act("T05", "Dictamen del abogado sobre las propuestas que lo necesitan antes de aplicarse",
     "Abogado especialista en municipios", dur=20, est=True, needs=["T01"], fuente="nota de método",
-    steps=("El convenio con el banco de los sueldos. La compensación del teléfono propio. Quién ve cada grabación. "
-           "El registro de instructores y artistas. Los shows que no cuentan como ruido molesto. Los datos de los chicos "
-           "en el profesor digital. Las cuotas de las multas."),
+    steps=("Entre otras: el convenio con el banco de los sueldos, la compensación del teléfono propio, quién ve cada grabación, "
+           "el registro de instructores y artistas, los shows que no cuentan como ruido molesto, los datos de los chicos en el profesor digital, "
+           "las cuotas de las multas, la garantía de alquiler y el descuento del sueldo, las viviendas en el lote y los terrenos sin uso (Ordenanza 21), "
+           "el pago a los power users, las denuncias con firma digital, las historias según lo que usa cada vecino, la salud mental y la consulta de lugares."),
     note="La nota de método lista estas propuestas en «Lo que tiene que confirmar un abogado».")
 act("T06", "Preparar la convocatoria a la sesión extraordinaria de diciembre, con la ordenanza preparatoria de la tabla en primer lugar",
     "Intendente electo", dur=3, est=True, needs=["T02"], fuente="6.6",
@@ -156,13 +157,17 @@ act("C08", "Entra la Ordenanza 5, de las asociaciones de parque (compromiso 4)",
     needs=["C01", "T02"], win=DIC, fuente="anexo.5",
     steps="Se empieza por las asociaciones del Parque del Águila y el Bosque Alegre.")
 act("C09", "Tratamiento de la Ordenanza 5 en el Concejo", "Concejo Deliberante", dur=22, est=True,
-    sne=D(2028, 3, 1), needs=["C08"], fuente="anexo.5", note=TRAT + " " + RECESO)
+    needs=["C08"], fuente="anexo.5",
+    note=TRAT + " Para cumplir el compromiso 4, el intendente pide tratarla en la sesión extraordinaria (Ley Orgánica, artículo 68, inciso 5). "
+         "Si el Concejo no la aprueba antes del 19 de marzo, el compromiso se cumple cuando la apruebe (cuadro 40).")
 act("C10", "El Concejo aprueba la Ordenanza 5", "Concejo Deliberante", ms=True, needs=["C09"], fuente="anexo.5",
     decision=TRECE)
 act("C11", "Entra la Ordenanza 7, la adhesión a la Ley provincial 15.302 de espacios culturales (compromiso 5)",
     "Intendente", ms=True, needs=["C01", "T02"], win=DIC, fuente="anexo.7")
 act("C12", "Tratamiento de la Ordenanza 7 en el Concejo", "Concejo Deliberante", dur=22, est=True,
-    sne=D(2028, 3, 1), needs=["C11"], fuente="anexo.7", note=TRAT + " " + RECESO)
+    needs=["C11"], fuente="anexo.7",
+    note=TRAT + " Para cumplir el compromiso 5, el intendente pide tratarla en la sesión extraordinaria (Ley Orgánica, artículo 68, inciso 5). "
+         "Si el Concejo no la aprueba antes del 19 de marzo, el compromiso se cumple cuando la apruebe (cuadro 40).")
 act("C13", "El Concejo aprueba la Ordenanza 7", "Concejo Deliberante", ms=True, needs=["C12"], fuente="anexo.7",
     decision=TRECE)
 act("C14", "Entra la Ordenanza 9, del pliego de la recolección de residuos (compromiso 6)", "Intendente", ms=True,
@@ -184,7 +189,7 @@ act("C20", "El Concejo aprueba la Ordenanza 15", "Concejo Deliberante", ms=True,
     decision=TRECE)
 act("C21", "Entra la Ordenanza 16, de la base de datos de las cuotas (compromiso 20)", "Intendente", ms=True,
     needs=["C17", ("C18", "SS", 0)], win=MAR1, fuente="anexo.16",
-    steps="Guarda el ingreso y cuántas personas viven en el hogar. Se usa sólo para las multas. Se presenta junto con la Ordenanza 15.")
+    steps="Guarda el ingreso y cuántas personas viven en el hogar, sólo para las multas. Se presenta junto con la Ordenanza 15.")
 act("C22", "Tratamiento de la Ordenanza 16 en el Concejo", "Concejo Deliberante", dur=22, est=True,
     needs=["C21"], fuente="anexo.16", note=TRAT)
 act("C23", "El Concejo aprueba la Ordenanza 16", "Concejo Deliberante", ms=True, needs=["C22"], fuente="anexo.16",
@@ -221,22 +226,16 @@ for code, n, que, pasos in NUEVE:
     act(f"C{k+2:02d}", f"El Concejo aprueba la Ordenanza {n}", "Concejo Deliberante", ms=True,
         needs=[f"C{k+1:02d}"], fuente=f"anexo.{n}", decision=TRECE)
 
-act("C52", "Revisar la Ordenanza 19 del anexo: foodtrucks y cambio del artículo 9 de la Ordenanza 5824", "Intendente",
+act("C52", "Revisión legal de la Ordenanza 19 del anexo: foodtrucks y cambio del artículo 9 de la Ordenanza 5824", "Abogado especialista en municipios",
     dur=15, est=True, needs=["T07"], fuente="anexo.19",
     note="Desde el 17/11/2026 su texto está en el anexo (Ordenanza 19).")
-act("C53", "Entra la ordenanza de foodtrucks: canon por mes y 75% de empleo local", "Intendente", ms=True,
+act("C53", "Entra la Ordenanza 19: foodtrucks, con canon por mes y 75% de empleo local, y cambio del artículo 9 de la Ordenanza 5824", "Intendente", ms=True,
     needs=["C52"], win=W(4, 6), fuente="6.4",
     steps="Canon como el de Tigre: 201.350 pesos por mes por vehículo (5.5).")
-act("C54", "Tratamiento de la ordenanza de foodtrucks en el Concejo", "Concejo Deliberante", dur=22, est=True,
-    needs=["C53"], fuente="5.5", note=TRAT)
-act("C55", "El Concejo aprueba la ordenanza de foodtrucks", "Concejo Deliberante", ms=True, needs=["C54"],
-    fuente="5.5", decision=TRECE)
-act("C56", "Entra el cambio del artículo 9 de la Ordenanza 5824, que hoy sólo permite vender bebidas en kioscos en el Bosque Alegre",
-    "Intendente", ms=True, needs=["C52"], win=W(4, 6), fuente="6.4")
-act("C57", "Tratamiento del cambio de la Ordenanza 5824 en el Concejo", "Concejo Deliberante", dur=22, est=True,
-    needs=["C56"], fuente="5.5", note=TRAT)
-act("C58", "El Concejo aprueba el cambio de la Ordenanza 5824", "Concejo Deliberante", ms=True, needs=["C57"],
-    fuente="5.5", decision=TRECE)
+act("C54", "Tratamiento de la Ordenanza 19 en el Concejo", "Concejo Deliberante", dur=22, est=True,
+    needs=["C53"], fuente="anexo.19", note=TRAT)
+act("C55", "El Concejo aprueba la Ordenanza 19", "Concejo Deliberante", ms=True, needs=["C54"],
+    fuente="anexo.19", decision=TRECE)
 act("C59", "Cambia la mitad del Concejo", "Concejo Deliberante", ms=True, sne=D(2027, 12, 10), needs=["T01"],
     fuente="4.7",
     note="Fecha estimada. El programa dice que la composición del Concejo cambia en diciembre de 2027 (cuadro 26).")
@@ -272,8 +271,7 @@ act("P08", "La tabla nueva se cobra desde enero de 2028", "Secretaría de Hacien
     note="El primer año, la tabla aporta 1.637 millones y el programa necesita 1.806. Faltan 170, que salen del gasto flexible (3.5).")
 act("P09", "Reservar la partida de obra vecinal del primer año, unos 7.227 millones, con recursos afectados (Ley Orgánica, artículo 119)",
     "Secretaría de Hacienda", dur=10, est=True, needs=["C06"], fuente="4.9",
-    note=("El programa no dice cómo entra el 12,5% en el presupuesto de 2028. "
-          "El 4.9 dice que con recursos afectados el Ejecutivo puede crear la partida sin volver al Concejo."))
+    note="El de 2028 lo presenta el gobierno que termina, y la partida del año 1 se crea con el artículo 119 (6.2 y 4.9).")
 act("P10", "Adelantar unos 335 millones para empezar por la costa, de lo que ceden otros programas", "Secretaría de Hacienda",
     dur=10, est=True, needs=["T07"], win=AÑO1, fuente="6.4",
     steps="Pagan el diagnóstico de Perú, el tramo de arena, las muestras y la primera temporada de guardavidas (5.5).")
@@ -300,8 +298,9 @@ for y, c, año, pct, prev, gate, pasos in CICLOS:
     act(f"P{k+1}", f"Tratamiento del presupuesto {y} en el Concejo", "Concejo Deliberante", dur=30, est=True,
         needs=[c], fuente="3.5")
     act(f"P{k+2}", f"El Concejo vota el presupuesto {y}", "Concejo Deliberante", ms=True,
-        needs=[f"P{k+1}", gate], win=(D(y - 1, 11, 1), D(y - 1, 12, 31), f"antes de que empiece {y}"), win_est=True, fuente="anexo",
-        decision=f"Subir la partida de obra vecinal al {pct} sólo si el escalón anterior se ejecutó y justificó entero (Ordenanza 1, artículo 1).",
+        needs=[f"P{k+1}"], win=(D(y - 1, 11, 1), D(y - 1, 12, 31), f"antes de que empiece {y}"), win_est=True, fuente="anexo",
+        decision=(f"Incluir la partida de obra vecinal al {pct}. Ese dinero se libera cuando la auditoría externa certifica que se cumplió "
+                  "el escalón anterior, hacia marzo, y se congela si después el Tribunal de Cuentas objeta un año (6.2; Ordenanza 1, artículo 1)."),
         note="El presupuesto es anual: rige de enero a diciembre.")
     act(f"P{k+3}", f"La Asamblea de Concejales y Mayores Contribuyentes aprueba la ordenanza impositiva {y}",
         "Asamblea de Concejales y Mayores Contribuyentes", ms=True, needs=[f"P{k+1}"],
@@ -334,7 +333,7 @@ act("M02", "Convocar a la primera ronda de asambleas en las seis zonas", "Intend
 act("M03", "Primera ronda de asambleas en las seis zonas: informar, elegir las obras del año 1 y contar los terrenos sin uso (compromiso 11)",
     "Intendente", dur=15, est=True, needs=["M02"], win=W(3), fuente="6.4",
     steps=("Se informa a los vecinos y se eligen las obras del año: un voto por persona desde los 16 años, en la asamblea o por internet. "
-           "El primer año las hace el Ejecutivo, porque las comisiones todavía se están formando. Se cuentan los baldíos, las ruinas y las obras paradas (5.4)."),
+           "El primer año las hace el Ejecutivo, porque las comisiones todavía se están formando. También se cuentan los baldíos, las ruinas y las obras paradas (5.4)."),
     note="Cambio del 16/11/2026: las obras de cada año se eligen en la primera ronda, para que tengan tiempo de licitarse y terminarse en el mismo año (6.1).")
 act("M04", "Reconocer como comisión de su zona a cada asociación vecinal en condiciones", "Intendente",
     dur=20, est=True, needs=["C06", "C03", "M03"], win=W(4, 6), fuente="6.4",
@@ -351,8 +350,8 @@ act("M07", "Comisiones formadas en las seis zonas", "Intendente", ms=True, needs
 act("M08", "Segunda ronda de asambleas: los vecinos siguen las obras del año y preparan las del año siguiente", "Comisiones vecinales",
     dur=40, est=True, needs=["M04"], win=W(6, 9), fuente="6.4",
     steps=("Un voto por persona desde los 16 años, en la asamblea o por internet con identidad verificada. "
-           "Cada proyecto se revisa antes de votar. Cada comisión decide si el tendido de internet de su barrio entra en el dinero de su zona (5.4)."),
-    note="Duración estimada: dos meses, como el ciclo de la Ciudad de Buenos Aires que cita el 6.1.")
+           "Cada proyecto se revisa antes de votar, y cada comisión decide si el tendido de internet de su barrio entra en el dinero de su zona (5.4)."),
+    note="Duración estimada: dos meses, como el ciclo de la Ciudad de Buenos Aires que cita la nota del capítulo 4.")
 act("M09", "El Ejecutivo responde por escrito a cada pedido de la segunda ronda, con sus razones", "Intendente",
     dur=22, needs=["M08"], win=W(6, 9), fuente="anexo.1", durnote=TREINTA,
     steps="Toda persona puede ver cada respuesta desde el día en que sale. Ningún silencio reemplaza la respuesta.")
@@ -362,10 +361,11 @@ act("M10", "Contratar y hacer las obras elegidas del año 1: el 12,5% de la obra
     steps=("Tres vecinos que elige la asamblea reciben cada obra y la firman. Nadie que eligió una obra cobra por ella. "
            "El 1,5% de la partida paga el cuidado de los chicos, los honorarios y la administración."),
     note="El año 1 sirve para probar que las seis comisiones pueden formarse, elegir obras y justificar cada peso (6.2).")
-act("M11", "Termina el año 1 de la rampa: el escalón se cuenta por ejercicio, que cierra el 31 de diciembre", "Intendente", ms=True, needs=["M10", "M07"], win=W(12), fuente="6.4",
+act("M11", "Termina el año 1 de la rampa: el escalón se cuenta por ejercicio, que cierra el 31 de diciembre", "Intendente", ms=True, needs=["M10", "M07"],
+    win=(D(2028, 12, 29), D(2028, 12, 31), "cierre del ejercicio 2028, en el mes 13"), fuente="6.4",
     decision=("¿Se ejecutó y justificó todo? Si no, la rampa no sube y el saldo queda para la misma zona (Ordenanza 1, artículos 1 y 9). "
-              "Si una comisión falla, el Ejecutivo la interviene y llama a una nueva asamblea en treinta días (6.6)."))
-act("M12", "Sortear el primer panel de vecinos, apenas se aprueba la Ordenanza 12", "Organización independiente que sortea el panel",
+              "Cuando una comisión falla, el Ejecutivo la interviene y llama a una nueva asamblea en treinta días (6.6)."))
+act("M12", "Sortear el primer panel de vecinos, una vez aprobada la Ordenanza 12", "Organización independiente que sortea el panel",
     dur=15, est=True, needs=["C45"], win=W(7, 12), fuente="6.4",
     steps=("Invitación por correo a varios cientos de personas al azar. Unos cuarenta vecinos que se parezcan a San Isidro por localidad, edad, "
            "género y estudios. Entra también quien usa la costa aunque viva en otro lado."),
@@ -377,23 +377,29 @@ act("M13", "El primer panel se reúne y da su recomendación, con razones, sobre
 act("M14", "El Ejecutivo responde al panel en público, por escrito y con sus razones", "Intendente",
     dur=22, needs=["M13"], win=W(7, 12), fuente="anexo.12", durnote=TREINTA)
 act("M15", "Año 2 de la rampa (25%): las asociaciones hacen ellas mismas la obra, por contrato directo",
-    "Comisiones vecinales con la Secretaría de Obras", span=(M(13), E(24)), cierre=True, needs=["M11", "P15"], win=W(13, 24), fuente="6.2",
-    steps="Contrato directo con la firma del 60% de los vecinos beneficiados (Ley Orgánica, artículo 132). Unos 14.454 millones.",
-    durnote="Duración del programa: un año.")
+    "Comisiones vecinales con la Secretaría de Obras", span=(M(15), D(2029, 12, 31)), cierre=True, needs=["M26", "P15"],
+    win=(M(15), D(2029, 12, 31), "ejercicio 2029, desde que se libera el escalón (meses 15 a 25)"), fuente="6.2",
+    steps="La primera ronda de asambleas del año elige las obras, en el mes 15; la segunda, entre los meses 18 y 21, las sigue y prepara las del año siguiente (cuadro 42). Contrato directo con la firma del 60% de los vecinos beneficiados (Ley Orgánica, artículo 132). Unos 14.454 millones.",
+    durnote="Duración del programa: el ejercicio 2029, desde que la auditoría externa libera el escalón (6.2).")
 act("M16", "Revisión del Tribunal de Cuentas sobre la obra que hicieron las asociaciones", "Tribunal de Cuentas de la Provincia",
     dur=60, est=True, needs=["M15"], fuente="6.2",
     note="El programa pide que no haya objeciones en el año 2, pero no dice cuándo se conoce ese resultado.")
-act("M17", "Año 2 de la rampa, cumplido", "Intendente", ms=True, needs=["M15"], win=W(24), fuente="6.4",
+act("M17", "Año 2 de la rampa, cumplido", "Intendente", ms=True, needs=["M15"],
+    win=(D(2029, 12, 31), D(2029, 12, 31), "cierre del ejercicio 2029, en el mes 25"), fuente="6.4",
     decision="¿Las asociaciones hicieron la obra y justificaron cada peso, sin objeciones del Tribunal de Cuentas? Si no, la rampa se queda en 25% (6.2).")
 act("M18", "Año 3 de la rampa (37,5%), con el registro de asociaciones vecinales ya renovado",
-    "Comisiones vecinales con la Secretaría de Obras", span=(M(25), E(36)), cierre=True, needs=["M17", "M05", "P19"], win=W(25, 36),
-    fuente="6.2", steps="Unos 21.681 millones.", durnote="Duración del programa: un año.")
-act("M19", "Año 3 de la rampa, cumplido", "Intendente", ms=True, needs=["M18"], win=W(36), fuente="6.4",
+    "Comisiones vecinales con la Secretaría de Obras", span=(M(27), D(2030, 12, 31)), cierre=True, needs=["M27", "M05", "P19"],
+    win=(M(27), D(2030, 12, 31), "ejercicio 2030, desde que se libera el escalón (meses 27 a 37)"),
+    fuente="6.2", steps="La primera ronda de asambleas del año elige las obras, en el mes 27; la segunda, entre los meses 30 y 33, las sigue y prepara las del año siguiente (cuadro 42). Unos 21.681 millones.",
+    durnote="Duración del programa: el ejercicio 2030, desde que la auditoría externa libera el escalón (6.2).")
+act("M19", "Año 3 de la rampa, cumplido", "Intendente", ms=True, needs=["M18"],
+    win=(D(2030, 12, 31), D(2030, 12, 31), "cierre del ejercicio 2030, en el mes 37"), fuente="6.4",
     decision="¿Se ejecutó y justificó todo? Si no, la rampa se queda en 37,5% (Ordenanza 1, artículo 1).")
 act("M20", "Año 4 de la rampa: los vecinos deciden la mitad de la obra pública", "Comisiones vecinales con la Secretaría de Obras",
-    span=(M(37), E(48)), cierre=True, needs=["M19", "P23"], win=W(37, 48), fuente="6.2",
-    steps="Unos 28.908 millones por año. La otra mitad, la obra que sirve a varias zonas, sigue en manos del Ejecutivo y del Concejo.",
-    durnote="Duración del programa: un año.")
+    span=(M(39), E(48)), cierre=True, needs=["M28", "P23"], win=W(39, 48, "año 4, desde que se libera el escalón (meses 39 a 48)"), fuente="6.2",
+    steps=("La primera ronda de asambleas del año elige las obras, en el mes 39; la segunda, entre los meses 42 y 45, las sigue y prepara las del año siguiente (cuadro 42). Unos 28.908 millones por año; "
+           "la otra mitad, la obra que sirve a varias zonas, sigue en manos del Ejecutivo y del Concejo."),
+    durnote="Duración del programa: hasta el fin del mandato, desde que la auditoría externa libera el escalón (6.2).")
 act("M21", "Los vecinos deciden la mitad de la obra pública (meta 4)", "Intendente", ms=True, needs=["M20"], win=W(48),
     fuente="6.4", note="Hoy deciden el 0% (cuadro 41).")
 act("M22", "Cien días: los veintiún compromisos, a la vista", "Intendente", ms=True, fixed=D(2028, 3, 19),
@@ -401,7 +407,8 @@ act("M22", "Cien días: los veintiún compromisos, a la vista", "Intendente", ms
            "E04", "E05", "E36", "I07", "I04", "G05", "H01", "H07", "G14", "G15", "C18", "C21", "U02"],
     fuente="6.1",
     steps="Cada compromiso se prueba con un documento público o se le pregunta a la inteligencia artificial del Municipio (cuadro 40).",
-    note="Fecha del programa: los cien días se cumplen el 19 de marzo de 2028. Es domingo: todo lo anterior termina el viernes 17.")
+    note=("Fecha del programa: los cien días se cumplen el 19 de marzo de 2028. Es domingo: todo lo anterior termina el viernes 17. "
+          "Los compromisos 4 y 5 dependen de que el Concejo apruebe a tiempo las Ordenanzas 5 y 7 (C10 y C13)."))
 act("M23", "Termina el mandato", "Intendente", ms=True, fixed=D(2031, 12, 10),
     needs=["M21", "V03", "P27", "I16", "G13", "G23", "G27", "U10", "H13", "X09", "E34"], fuente="6.1",
     note="El mandato es de cuatro años, desde el 10 de diciembre de 2027.")
@@ -424,7 +431,7 @@ act("I05", "Pedir gratis a la Nación el certificado de firma digital para progr
     dur=5, est=True, needs=["T07"], win=W(1, 3), fuente="6.4",
     steps="Con ese certificado se sellan las grabaciones de las inspecciones y las de los vecinos que denuncian (5.5 y 5.9).")
 act("I06", "Recibir de la Nación el certificado de firma digital", "Nación", dur=30, est=True, needs=["I05"], fuente="5.5",
-    note="El programa no dice cuánto tarda la Nación. Sin el certificado no se pueden sellar las grabaciones.")
+    note="El programa no dice cuánto tarda la Nación. Mientras llega, cada grabación se guarda con su fecha, su hora y su huella (cuadro 42).")
 act("I07", "Prueba a ciegas de un mes de las caras del profesor digital, antes de pagar nada", "Educación (área municipal)",
     span=(M(3), E(3)), needs=["I01"], win=W(3), fuente="6.4",
     steps="Quienes evalúan no saben de qué empresa es cada cara. Se comparan la calidad y el precio.",
@@ -489,7 +496,7 @@ act("E10", "Preparar los lugares de pasantía en las áreas: equipos de diez pas
     dur=40, est=True, needs=["E07"], fuente="5.3",
     steps="El supervisor es un empleado que cambia de tarea y no pierde su sueldo. Sólo proyectos nuevos, nunca puestos de trabajo.")
 act("E11", "El primer grupo termina de cursar y empieza su primera pasantía, en el Municipio", "Áreas del Municipio", ms=True,
-    needs=["E06", "E07", "E09", "E10"], win=W(15), fuente="6.4")
+    needs=["E06", "E07", "E10"], win=W(15), fuente="6.4")
 act("E12", "Primer grupo: primera pasantía, seis meses en proyectos de las áreas del Municipio", "Áreas del Municipio",
     span=(M(15), E(20)), needs=["E11"], fuente="5.3",
     steps="240.000 $ por mes por 20 horas semanales, con ART y obra social. Paga el área.",
@@ -547,7 +554,7 @@ act("E33", "Las ofertas de trabajo se pueden consultar en la inteligencia artifi
     "Equipo de la inteligencia artificial del Municipio", dur=20, est=True, needs=["I04", "E31"], win=W(18, 24), fuente="6.4")
 act("E34", "Entre 250 y 300 egresados por año consiguen empleo pago (meta 13)", "Intendente", ms=True,
     needs=["E28", "E31", "E30", "E40"], win=FIN, fuente="6.3",
-    note="El número sale del registro de inserción laboral. El primer registro da el punto de partida (cuadro 41).")
+    note="Lo da el registro de inserción laboral, y su primer dato es el punto de partida (cuadro 41).")
 act("E35", "Elegir con el índice de necesidad el lugar del primer centro de apoyo escolar y contratar a sus docentes",
     "Educación (área municipal)", dur=30, est=True, needs=["T07"], win=W(1, 3), fuente="5.8",
     steps="No se construye nada: se abre a la tarde un lugar que ya existe y se pagan docentes.")
@@ -614,7 +621,7 @@ act("S10", "Turno médico por internet en los tres hospitales, el odontológico 
 act("S11", "En la inteligencia artificial del Municipio: turnos, gente en las guardias, insumos que hay y faltan, y comparación de cada compra (meta 8)",
     "Secretaría de Salud con el equipo de la inteligencia artificial", dur=60, est=True, needs=["S10", "S03"],
     win=W(12, 18), fuente="6.4",
-    steps="La espera de la guardia se muestra como un número, por gravedad, nunca como imagen. La comparación avisa cuando algo se sale de lo normal.")
+    steps="La espera de la guardia se muestra como un número, por gravedad, nunca como imagen. Cuando algo se sale de lo normal, la comparación avisa.")
 act("S12", "Contratar a cien cuidadores a domicilio, formados en el curso de operador de cuidados del CFL 404",
     "Desarrollo Social", dur=40, est=True, needs=["T07"], fuente="5.13",
     steps="Curso gratuito de 380 horas, distinto de la tecnicatura.")
@@ -643,7 +650,7 @@ act("G07", "La patrulla municipal empieza a recorrer los pocos lugares donde se 
 act("G08", "Preparar la constancia para quien es acusado en público sin una causa judicial", "Gobierno y Legal y Técnica",
     dur=20, est=True, needs=["I04"], fuente="5.7",
     steps="Dice qué registros se consultaron, en qué fecha, qué consta y qué no. Sin adjetivos ni conclusiones.")
-act("G09", "Empieza la constancia: la pide sólo la persona acusada y la inteligencia artificial la resuelve en horas",
+act("G09", "Empieza la constancia: la pide sólo la persona acusada y la inteligencia artificial del Municipio la resuelve en horas",
     "Gobierno y Legal y Técnica", ms=True, needs=["G08"], win=W(6, 9), fuente="6.4")
 act("G10", "Los datos de seguridad pasan a estar al día, con las órdenes de juez recibidas y cumplidas",
     "Seguridad (Centro de Operaciones Municipal)", dur=40, est=True, needs=["G02", "C27"], win=W(12, 18), fuente="6.4")
@@ -664,11 +671,11 @@ act("G15", "Pedir a la Provincia seis cambios en las multas, y a la Legislatura 
            "Una sola multa por las pasadas antes del aviso. Permiso para trabajar durante la suspensión. Tope a la deuda por multas."))
 act("G16", "Inscripción en línea para pagar en cuotas y plan sin interés para la deuda vieja (lo destraba la Ordenanza 15)",
     "Tránsito y Juzgado de Faltas", dur=20, est=True, needs=["C20", "I04"], fuente="anexo.15",
-    steps="Se depuran las multas prescriptas. La inteligencia artificial avisa a cada vecino cuánto debe y hasta cuándo.")
+    steps="Se depuran las multas prescriptas. La inteligencia artificial del Municipio avisa a cada vecino cuánto debe y hasta cuándo.")
 act("G17", "Inscribir la base de datos de las cuotas ante la autoridad de datos personales (lo destraba la Ordenanza 16)",
     "Gobierno y Legal y Técnica", dur=10, est=True, needs=["C23"], fuente="anexo.16",
     steps="Una persona fija cada cuota, y el vecino puede pedir que se revise.")
-act("G18", "La inteligencia artificial propone dónde poner cámaras de multas, sólo donde se supera un mínimo publicado de choques",
+act("G18", "La inteligencia artificial del Municipio propone dónde poner cámaras de multas, sólo donde se supera un mínimo publicado de choques",
     "Tránsito y Juzgado de Faltas", dur=30, est=True, needs=["I04"], win=W(6, 12), fuente="6.4")
 act("G19", "Cada comisión de zona elige entre una cámara o un reductor de velocidad", "Comisiones vecinales", dur=30, est=True,
     needs=["G18", "M04"], win=W(6, 12), fuente="6.4",
@@ -707,7 +714,7 @@ act("K03", "Reconocer las primeras asociaciones de parque: Parque del Águila y 
     steps="Cada asociación opina antes de cualquier obra en su parque, participa del diseño y firma la recepción de la obra.")
 act("K04", "Diagnóstico del desagüe de la calle Perú: marcador de ADN humano y unos veinte sensores caño arriba", "Ambiente",
     dur=60, est=True, needs=["P10"], win=AÑO1, fuente="6.4",
-    steps="Abarca los tres municipios por donde pasa el desagüe. Si es la red de AySA, se le exige el arreglo. Si son casas, orden formal y ayuda para pagar el arreglo (5.5).")
+    steps="Abarca los tres municipios por donde pasa el desagüe. Si es la red de AySA, se le exige el arreglo; si son casas, orden formal y ayuda para pagar el arreglo (5.5).")
 act("K05", "Empezar las muestras de agua en cada tramo, dos veces por semana, y la bandera sanitaria de cada día", "Ambiente",
     dur=20, est=True, needs=["P10"], win=AÑO1, fuente="6.4")
 act("K06", "Proyecto de los puestos náuticos, los baños y el tramo de arena, con su costo y sus planos",
@@ -750,11 +757,11 @@ act("K23", "Año 2: abren el tercer y el cuarto puesto náutico y dos baños má
     needs=["K13", "K17"], win=W(13, 24, "año 2 (meses 13 a 24)"), fuente="6.4")
 act("K24", "Año 3: abren los dos últimos puestos náuticos y los dos últimos baños", "Deportes", dur=120, est=True,
     needs=["K23"], win=W(25, 36, "año 3 (meses 25 a 36)"), fuente="6.4")
-act("K25", "Foodtrucks al borde de cada puesto, con canon y 75% de empleo local (lo destraba la ordenanza de foodtrucks)",
+act("K25", "Foodtrucks al borde de cada puesto, con canon y 75% de empleo local (lo destraba la Ordenanza 19)",
     "Habilitaciones y Agencia de Control", dur=20, est=True, needs=["C55", "K13"], fuente="5.5",
     steps="En la calle o en playones, nunca sobre el pasto. Ofertas de lunes a jueves.")
-act("K26", "Centro de foodtrucks y actividades en el Bosque Alegre (lo destraba el cambio de la Ordenanza 5824)",
-    "Habilitaciones y Agencia de Control", dur=20, est=True, needs=["C58", "K25"], fuente="5.5",
+act("K26", "Centro de foodtrucks y actividades en el Bosque Alegre (lo destraba la Ordenanza 19)",
+    "Habilitaciones y Agencia de Control", dur=20, est=True, needs=["C55", "K25"], fuente="5.5",
     steps="Sobre la calle ancha y el lote de ripio del Centro de Exposiciones, sin entrar al bosque.")
 act("K27", "Preparar las clases gratis del Municipio en las plazas donde ya dan clase los instructores registrados", "Deportes",
     dur=20, est=True, needs=["U02"], fuente="5.5")
@@ -774,7 +781,7 @@ act("K33", "Se adjudica la recolección por licitación pública (meta 9)", "Int
     win=W(9), fuente="6.4", note="Desde 2004 se llamó a cuatro licitaciones, y ninguna terminó en un contrato (cuadro 41).")
 act("K34", "Pedir por convenio a Trenes Argentinos dónde está cada tren del Mitre y del Tren de la Costa", "Intendente",
     dur=30, est=True, needs=["T07"], fuente="5.5")
-act("K35", "La inteligencia artificial dice dónde está cada tren y cuánto falta, y se ponen carteles de cada estación al río",
+act("K35", "La inteligencia artificial del Municipio dice dónde está cada tren y cuánto falta, y se ponen carteles de cada estación al río",
     "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["K34", "I04"], win=W(6, 9), fuente="6.4")
 act("K36", "Licitar las cámaras que cuentan gente en los accesos de los 21 playones de la costa", "Ambiente", dur=66,
     needs=["P11"], win=W(12, 18), fuente="6.4", durnote=LIC, steps="Se pagan con el aumento del gasto en ambiente.")
@@ -797,7 +804,7 @@ act("U03", "Licitación pública de los equipos de sonido propios", "Cultura", d
 act("U04", "Armar los tres grupos de producción y el control de los equipos", "Cultura", dur=20, est=True, needs=["U03"],
     win=AÑO1, fuente="5.5",
     steps="Ocho personas nuevas. Patrimonio hace un control sorpresa cada mes. Remitos con código QR, rastreador GPS y seguro.")
-act("U05", "Los vecinos proponen en la inteligencia artificial a qué artistas nuevos de San Isidro quieren ver", "Cultura",
+act("U05", "Los vecinos proponen en la inteligencia artificial del Municipio a qué artistas nuevos de San Isidro quieren ver", "Cultura",
     dur=20, est=True, needs=["I04"], fuente="5.5",
     steps="Artistas con menos de 50.000 oyentes por mes. Al menos un 30% de mujeres (Ley 27.539).")
 act("U06", "Convenio con cuatro clubes o centros culturales para los shows bajo techo", "Cultura", dur=30, est=True,
@@ -811,7 +818,7 @@ act("U08", "Sumar al cuadro de usos la categoría de la Ley 15.302: hasta 300 pe
     steps="La comisión de la zona opina sobre horarios y lugar.")
 act("U09", "El registro de instructores y artistas pasa a ser permanente (lo destraba la Ordenanza 14)", "Cultura", ms=True,
     needs=["C51", "U02"], fuente="anexo.14", steps="El 75% de los lugares de instructores, para vecinos de San Isidro con un año de domicilio.")
-act("U10", "Doscientos shows por año de artistas nuevos de San Isidro, y espectáculos al aire libre todas las semanas, de lunes a jueves (meta 17)",
+act("U10", "Doscientos shows por año de artistas nuevos de San Isidro, y espectáculos todas las semanas, de lunes a jueves: al aire libre de septiembre a abril, y bajo techo el resto del año (meta 17)",
     "Cultura", ms=True, needs=["U07", "U04", "U09"], win=FIN, fuente="6.3",
     note="En 2026 hubo un solo espectáculo en un día hábil en la costa, según el Municipio (cuadro 41).")
 
@@ -824,14 +831,14 @@ act("H03", "Compra de soportes y baterías: adjudicación y entrega", "Habilitac
     needs=["H02"], fuente="6.4", durnote=LIC)
 act("H04", "Convenio con el banco que paga los sueldos: teléfonos aptos en 24 cuotas sin interés",
     "Secretaría de Hacienda con el banco que paga los sueldos", dur=20, est=True, needs=["T07", "T05"], win=W(1, 3),
-    fuente="6.4", steps="El Municipio no adelanta dinero. El riesgo de cobro lo toma el banco.")
+    fuente="6.4", steps="El Municipio no adelanta dinero: el riesgo de cobro lo toma el banco.")
 act("H05", "Acordar con los trabajadores municipales la compensación por usar el teléfono propio (Ley 14.656, artículo 75)",
     "Intendente con los trabajadores municipales", dur=40, est=True, needs=["H01", "T05"], fuente="5.9")
 act("H06", "Construir la grabación sellada del turno: huella al grabar, corte por inspección y base por comercio o domicilio",
-    "Equipo de la inteligencia artificial del Municipio", dur=60, est=True, needs=["I04", "I06"], fuente="5.9",
+    "Equipo de la inteligencia artificial del Municipio", dur=60, est=True, needs=["I04"], fuente="5.9",
     steps="Avisa si una grabación sellada no se sube. Difumina las caras de quienes no son parte del acto antes de mostrarlo.")
-act("H07", "El comerciante ya puede denunciar coimas, presiones y amenazas ante la inteligencia artificial, con grabación sellada (compromiso 16)",
-    "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["I04", "I06", "H01"], win=W(1, 3), fuente="6.4",
+act("H07", "El comerciante ya puede denunciar coimas, presiones y amenazas ante la inteligencia artificial del Municipio, con grabación sellada (compromiso 16)",
+    "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["I04", "H01"], win=W(1, 3), fuente="6.4",
     steps=("La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa y, si hay delito, a la fiscalía. "
            "Hasta que se contrata la auditoría externa, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. "
            "Mientras no llega el certificado de firma digital, cada grabación se guarda con su fecha, su hora y su huella. "
@@ -848,7 +855,7 @@ act("H10", "Organizar la atención del sábado con el personal que elige ese hor
     steps="Trabaja las mismas horas en otros días y descansa otro día de la semana. Es optativo.")
 act("H11", "Atención los siete días: las delegaciones, el Juzgado de Faltas y los turnos de salud por teléfono abren el sábado a la mañana",
     "Intendente", ms=True, needs=["H10"], win=W(4, 6), fuente="6.4", steps="Las delegaciones abren rotando por zona.")
-act("H12", "Habilitaciones en la inteligencia artificial: consulta previa con la cámara del teléfono, inspección con fecha fija y aviso de inspecciones fuera de lo normal",
+act("H12", "Habilitaciones en la inteligencia artificial del Municipio: consulta previa con la cámara del teléfono, inspección con fecha fija y aviso de inspecciones fuera de lo normal",
     "Habilitaciones con el equipo de la inteligencia artificial", dur=60, est=True, needs=["I10", "H08"], win=W(18, 24),
     fuente="6.4", steps="Empieza por la habilitación comercial. Después siguen las obras particulares (5.9).")
 act("H13", "Cada denuncia de un comerciante tiene respuesta, y la que es delito llega a la fiscalía (meta 16)", "Intendente",
@@ -878,7 +885,7 @@ act("X07", "Cualquier vecino puede preguntar cuánto se gastó en su zona (meta 
 act("X08", "Rige el Sistema de Información Municipal: cada dato se registra el día en que se genera (lo destraba la Ordenanza 2)",
     "Gobierno y Legal y Técnica", ms=True, needs=["C27"], fuente="anexo.2",
     steps="Entran la espera por especialidad, la matrícula por sede, las órdenes de juez y la inserción laboral (artículo 2).")
-act("X09", "Cada funcionario contesta, dentro del plazo, lo que los vecinos le plantean a la inteligencia artificial (meta 15)",
+act("X09", "Cada funcionario contesta, dentro del plazo, lo que los vecinos le plantean a la inteligencia artificial del Municipio (meta 15)",
     "Intendente", ms=True, needs=["I04", "X08"], win=FIN, fuente="6.3",
     note="Hoy no hay forma pública de saber cuánto tarda el Municipio en responder un reclamo (cuadro 41).")
 
@@ -893,20 +900,20 @@ act("M26", "La auditoría externa certifica que se cumplió el año 1, y se libe
     ms=True, needs=["M11", "I17"], win=W(15, 16), fuente="6.2",
     decision="¿Se ejecutó y justificó todo el escalón? Si el Tribunal de Cuentas objeta después un año, se congela el escalón siguiente.",
     note="Decisión del 16/11/2026: el presupuesto incluye el escalón siguiente, y el dinero se libera con la certificación, hacia marzo.")
-act("I19", "Pagar el uso de la inteligencia artificial con compras chicas, sin licitación pública, mientras corre la primera licitación",
+act("I19", "Pagar el uso de la inteligencia artificial del Municipio con compras chicas, sin licitación pública, mientras corre la primera licitación",
     "Ciencia y Técnica", dur=55, est=True, needs=["T07"], win=W(1, 3), fuente="6.4",
     note="Ley Orgánica de las Municipalidades, artículo 151; montos actualizados por la Resolución 248/2026. Decisión del 16/11/2026.")
 act("V06", "Presentar la Ordenanza 20 (garantía de alquiler) y la 21 (viviendas en el lote y terrenos sin uso)", "Intendente",
     ms=True, needs=["C24"], win=W(4, 6), fuente="6.4")
 act("V07", "Tratamiento de las Ordenanzas 20 y 21 en el Concejo", "Concejo Deliberante", dur=22, est=True, needs=["V06"],
-    fuente="5.4", note=TRAT)
+    fuente="5.4", note=TRAT, steps="Antes de votar la 21, el Concejo hace una audiencia pública (5.4).")
 act("V08", "Empieza la garantía de alquiler del Municipio, con su fondo propio y sin dinero del Municipio", "Secretaría de Hacienda",
-    ms=True, needs=["V07"], win=W(7, 12), fuente="5.4",
+    ms=True, needs=["V07", "T05"], win=W(7, 12), fuente="5.4",
     steps="Comisión del 3% por mes de cada lado, depósito del 12% de un mes, alquiler hasta el 40% del ingreso, freno si la mora es alta.")
 act("V09", "Notificar a los dueños de los terrenos sin uso contados en la primera ronda: desde ahí corren sus tres años", "Secretaría de Obras",
     dur=20, est=True, needs=["V07", "M03"], win=W(7, 12), fuente="5.4",
     note="Ley 14.449: los plazos no cambian aunque el terreno se venda, y la obligación se anota en la escritura.")
-act("S14", "Empieza la formación de los primeros acompañantes terapéuticos, entre empleados cuyo trabajo ya hace la inteligencia artificial",
+act("S14", "Empieza la formación de los primeros acompañantes terapéuticos, entre empleados cuyo trabajo ya hace la inteligencia artificial del Municipio",
     "Secretaría de Salud", ms=True, needs=["I04"], win=W(7, 12), fuente="6.4",
     note="Con la formación que fija la Provincia (Resolución 592/2022). No suma sueldos.")
 
@@ -929,3 +936,13 @@ act("C68", "La Asamblea aprueba la Ordenanza 17: rige el tope de la tasa para el
     ms=True, needs=["C67"], decision="Aprobarla o no, con la mayoría que pide la Constitución de la Provincia (artículo 193, inciso 2).", steps="Después, el intendente la promulga y se publica en el Boletín Oficial.", fuente="anexo.17")
 act("E42", "La partida de empleo empieza a pagar la contratación de desarrollos, con prioridad para los egresados", "Secretaría de Hacienda",
     ms=True, needs=["P19"], sne=D(2030, 1, 1), steps="Con la partida de empleo, el Municipio contrata los equipos de sus desarrollos: la plataforma de la inteligencia artificial del Municipio, el análisis de video de seguridad, las habilitaciones de comercios y los turnos de salud. Los egresados tienen prioridad, y al menos el 75% del personal vive en San Isidro (5.3 y anexo, Ordenanza 10).", note="Los dos primeros años, toda la partida de empleo se usa en la formación (4.11). Desde el tercero, también paga la contratación de desarrollos. Fecha y montos del modelo fiscal (hoja Programas): desde enero de 2030, 1.421,9 millones en 2030 y 1.855,4 millones en 2031.", fuente="5.3")
+
+# ---------------------------------------------------------------- Revisión completa del 17/11/2026
+act("M27", "La auditoría externa certifica que se cumplió el año 2, y se libera el escalón del año 3", "Secretaría de Hacienda",
+    ms=True, needs=["M17", "I17"], win=W(27, 28), fuente="6.2",
+    decision="¿Se ejecutó y justificó todo el escalón? Si el Tribunal de Cuentas objeta después un año, se congela el escalón siguiente.",
+    note="Decisión del 16/11/2026: el presupuesto incluye el escalón siguiente, y el dinero se libera con la certificación, hacia marzo.")
+act("M28", "La auditoría externa certifica que se cumplió el año 3, y se libera el escalón del año 4", "Secretaría de Hacienda",
+    ms=True, needs=["M19", "I17"], win=W(39, 40), fuente="6.2",
+    decision="¿Se ejecutó y justificó todo el escalón? Si el Tribunal de Cuentas objeta después un año, se congela el escalón siguiente.",
+    note="Decisión del 16/11/2026: el presupuesto incluye el escalón siguiente, y el dinero se libera con la certificación, hacia marzo.")
