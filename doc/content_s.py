@@ -25,13 +25,7 @@ den ellos el servicio. Las universidades de San Isidro los van a acompa&ntilde;a
 licitaci&oacute;n p&uacute;blica, <span class="sg">una parte del trabajo va a quedar para las pymes de San Isidro</span>.
 <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Vamos a formar a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
-La formaci&oacute;n ser&aacute; una tecnicatura de la universidad nacional que tiene sede en San Isidro, para que lo aprendido sirva
-tambi&eacute;n fuera del Municipio. Con la formaci&oacute;n completa, van a entrar <b>928 personas</b> por a&ntilde;o. Los alumnos van a estudiar el primer a&ntilde;o, y el segundo
-van a trabajar como pasantes, seis meses en el Municipio y seis en una empresa de San Isidro. <span class="sg">El presupuesto
-de empleo y vivienda se va a multiplicar por quince.</span> Tambi&eacute;n proponemos <b>un centro de apoyo escolar en cada localidad</b>.
-Hoy hay apenas cinco espacios peque&ntilde;os de apoyo escolar, todos en B&eacute;ccar y Boulogne. A ellos van unos cien alumnos. En las
-otras cuatro localidades no hay ninguno. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Vamos a formar a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b> La formaci&oacute;n ser&aacute; una tecnicatura de la universidad nacional que tiene sede en San Isidro, para que lo aprendido sirva tambi&eacute;n fuera del Municipio. Con la formaci&oacute;n completa, van a entrar <b>928 personas</b> por a&ntilde;o. Los alumnos van a estudiar el primer a&ntilde;o, y el segundo van a trabajar como pasantes, seis meses en el Municipio y seis en una empresa de San Isidro. <span class="sg">El presupuesto de empleo y vivienda se va a multiplicar por quince.</span> Para que los j&oacute;venes puedan quedarse, quien no consigue garant&iacute;a para alquilar va a tener la del Municipio, y va a haber m&aacute;s lugares para alquilar en las casas que ya existen. Tambi&eacute;n proponemos <b>un centro de apoyo escolar en cada localidad</b>. Hoy hay apenas cinco espacios peque&ntilde;os de apoyo escolar, todos en B&eacute;ccar y Boulogne. A ellos van unos cien alumnos. En las otras cuatro localidades no hay ninguno. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Las personas que se forman en la tecnicatura van a construir la inteligencia artificial del Municipio.</b> Va a ser
 una inteligencia artificial propia, y cualquier vecino le va a poder preguntar lo que necesita. No va a ser una
@@ -39,12 +33,7 @@ aplicaci&oacute;n m&aacute;s. La van a hacer docentes y t&eacute;cnicos de San I
 Se va a pagar con el dinero que el presupuesto municipal ya reserva para Ciencia y T&eacute;cnica, que son 8.155 millones por
 a&ntilde;o: no hacen falta fondos nuevos. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</b> El vecino le va a
-poder preguntar lo que necesite sobre el Municipio, y ella siempre le va a mostrar de d&oacute;nde sac&oacute; cada dato. Antes de la
-asamblea de su zona, tambi&eacute;n podr&aacute; consultarle por cada tema que se va a votar, con su historia y su contexto. As&iacute;
-llegar&aacute; a la reuni&oacute;n entendiendo de qu&eacute; se trata. <span class="sg">Hoy el Municipio tiene una
-aplicaci&oacute;n de reclamos muy mal puntuada: sus propios usuarios le ponen 1,84 sobre 5. Nuestra propuesta es la
-respuesta a esas quejas.</span> <i>(Cap&iacute;tulo 4)</i></li>
+<li><b>La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</b> El vecino le va a poder preguntar lo que necesite sobre el Municipio, y ella siempre le va a mostrar de d&oacute;nde sac&oacute; cada dato. Antes de la asamblea de su zona, tambi&eacute;n podr&aacute; consultarle por cada tema que se va a votar, con su historia y su contexto. As&iacute; llegar&aacute; a la reuni&oacute;n entendiendo de qu&eacute; se trata. Si necesita reclamar o denunciar algo, ella lo va a ayudar a hacerlo. Quien la use para mejorar el Municipio va a cobrar una parte de lo que le haga ganar o ahorrar. <span class="sg">Hoy el Municipio tiene una aplicaci&oacute;n de reclamos muy mal puntuada: sus propios usuarios le ponen 1,84 sobre 5. Nuestra propuesta es la respuesta a esas quejas.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
 <li><b>Las c&aacute;maras van a detectar y avisar, y no s&oacute;lo grabar.</b> Si una c&aacute;mara ve un hecho violento
 mientras est&aacute; pasando, va a avisar en el momento al patrullero que est&aacute; a tres cuadras, para que llegue a tiempo.
@@ -71,13 +60,6 @@ que necesita este programa es de 7.225,2 millones por a&ntilde;o, para empleo y 
 con la que hoy se cobra esa tasa, y el resto, de reordenar gastos del Municipio. Lo dem&aacute;s ya se gasta hoy. En la obra
 p&uacute;blica, por ejemplo, s&oacute;lo cambia qui&eacute;n decide qu&eacute; obra se hace. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
-<p><b>Los primeros cien d&iacute;as.</b> El nuevo gobierno asume el <b>10 de diciembre de 2027</b>. Ese mismo mes, el
-intendente va a mandar al Concejo Deliberante las primeras ordenanzas. Una va a apartar el dinero de obra que le toca a
-cada zona, para que no se pueda usar en otra cosa. Otra va a actualizar los valores de 2008 con los que hoy se cobra la
-tasa de servicios generales. Durante los meses siguientes empezar&aacute; a funcionar la inteligencia artificial del Municipio:
-ya se le podr&aacute; preguntar, sacar un turno m&eacute;dico y hacerle llegar un reclamo. Al mismo tiempo abrir&aacute; el primer centro de
-apoyo escolar y empezar&aacute; el primer grupo de la formaci&oacute;n laboral. Para el <b>19 de marzo de 2028</b>, a los cien d&iacute;as,
-todos los vecinos ya van a estar convocados a la primera asamblea de su zona. <span class="sg">En total son veinti&uacute;n
-compromisos con fecha. Todos est&aacute;n explicados, uno por uno, en el cap&iacute;tulo 6.</span></p>
+<p><b>Los primeros cien d&iacute;as.</b> El nuevo gobierno asume el <b>10 de diciembre de 2027</b>. Ese mismo mes, el intendente va a mandar al Concejo Deliberante las primeras ordenanzas. Una va a apartar el dinero de obra que le toca a cada zona, para que no se pueda usar en otra cosa. Otra va a actualizar los valores de 2008 con los que hoy se cobra la tasa de servicios generales. Durante los meses siguientes empezar&aacute; a funcionar la inteligencia artificial del Municipio: ya se le podr&aacute; preguntar, sacar un turno m&eacute;dico y hacerle llegar un reclamo. Al mismo tiempo abrir&aacute; el primer centro de apoyo escolar y empezar&aacute; el primer grupo de la formaci&oacute;n laboral. Para el <b>19 de marzo de 2028</b>, a los cien d&iacute;as, la primera asamblea de cada zona ya se va a haber hecho. <span class="sg">En total son veinti&uacute;n compromisos con fecha. Todos est&aacute;n explicados, uno por uno, en el cap&iacute;tulo 6.</span></p>
 
 """)

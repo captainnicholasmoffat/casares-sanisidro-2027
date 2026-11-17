@@ -271,8 +271,39 @@ def percepcion(anio=2025):
 
 
 # --------------------------------------------------------------------------
+# e) Los 60 agentes de seguridad que entraron en marzo de 2026
+# --------------------------------------------------------------------------
+#
+# La patrulla queda estable en la cantidad de agentes que haya al asumir (5.7).
+# Los 60 agentes que entraron en marzo de 2026 no estan en la base de 2025: su
+# costo se suma al personal desde 2028, como en el Excel (Supuestos, fila 304).
+# El costo por cargo sale del programa 46.01 del presupuesto 2026 (Ordenanza
+# 9422), que no esta en data/: es el unico numero escrito a mano. Los cargos
+# salen del F6 y el IPC de noviembre y diciembre de 2025, de la serie del INDEC
+# con un decimal, como lo publica el INDEC (2,5% y 2,8%).
 
-def escribir(rp, cop, rig, perc):
+PROGRAMA_PATRULLAJE_2026 = Decimal("5743108868")   # programa 46.01, Ordenanza 9422
+AGENTES_MARZO_2026 = 60
+
+
+def agentes_seguridad_2026():
+    cargos = [int(r["cargos_subtotal"]) for r in _leer("data/f6_cargos_2026.csv")
+              if r["programa"] == "SERVICIOS DE PATRULLAJE MUNICIPAL"]
+    if len(cargos) != 1:
+        raise ErrorDeParametros("el F6 2026 no tiene una sola fila de patrullaje")
+    ipc = {(int(r["anio"]), int(r["mes"])): Decimal(r["variacion_mensual"])
+           for r in _leer("data/ipc_indec_mensual.csv")}
+    nov, dic = _q(ipc[(2025, 11)], 1), _q(ipc[(2025, 12)], 1)
+    costo = (PROGRAMA_PATRULLAJE_2026 / cargos[0] * AGENTES_MARZO_2026
+             * (1 + nov / 100) * (1 + dic / 100))
+    return {"cargos": cargos[0], "agentes": AGENTES_MARZO_2026,
+            "ipc_nov_2025": nov, "ipc_dic_2025": dic,
+            "costo_anual": _q(costo, 0)}
+
+
+# --------------------------------------------------------------------------
+
+def escribir(rp, cop, rig, perc, seg):
     ruta = os.path.join(DATA, "parametros_modelo.csv")
     filas = []
 
@@ -304,6 +335,12 @@ def escribir(rp, cop, rig, perc):
     add("percepcion_recursos_corrientes", perc["percepcion_pct"], "%",
         "percibido sobre devengado de recursos corrientes, %d" % perc["anio"],
         "quedaron sin cobrar %s" % perc["sin_cobrar"].quantize(Decimal("1")))
+    add("personal_seguridad_agentes_2026", seg["costo_anual"], "pesos dic-2025 por anio",
+        "programa 46.01 del presupuesto 2026 (Ordenanza 9422), %s pesos por %d "
+        "cargos (F6), por %d agentes; IPC INDEC nov %s%% y dic %s%% de 2025"
+        % (PROGRAMA_PATRULLAJE_2026, seg["cargos"], seg["agentes"],
+           seg["ipc_nov_2025"], seg["ipc_dic_2025"]),
+        "los agentes de marzo de 2026, fuera de la base 2025; personal desde 2028")
 
     with open(ruta, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["parametro", "valor", "unidad",
@@ -355,7 +392,8 @@ def main():
     cop = coeficiente_coparticipacion()
     rig = rigidez()
     perc = percepcion()
-    rutas = escribir(rp, cop, rig, perc)
+    seg = agentes_seguridad_2026()
+    rutas = escribir(rp, cop, rig, perc, seg)
     return rp, cop, rig, perc, rutas
 
 
@@ -394,6 +432,9 @@ if __name__ == "__main__":
     print("  percibido  %s" % perc["percibido"])
     print("  sin cobrar %s  ->  percepcion %s%%"
           % (perc["sin_cobrar"], perc["percepcion_pct"]))
+    print()
+    print("e) LOS 60 AGENTES DE SEGURIDAD DE MARZO DE 2026: %s por anio"
+          % agentes_seguridad_2026()["costo_anual"])
     print()
     for r in rutas:
         print("  -> %s" % os.path.relpath(r, REPO))

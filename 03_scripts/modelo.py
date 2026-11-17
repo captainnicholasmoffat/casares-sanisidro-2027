@@ -319,6 +319,7 @@ def _pot(base, tasa, n):
 
 
 def proyectar(b, esc, hasta=FIN_LARGO):
+    seguridad_2026 = P.agentes_seguridad_2026()["costo_anual"]
     perc_base = b["percepcion_pct"] / 100
     filas = []
     stock = b["stock_deuda"]
@@ -405,6 +406,12 @@ def proyectar(b, esc, hasta=FIN_LARGO):
                                - del_flexible * PARTE_EMPLEO)
                     g_cap += (prog * (1 - PARTE_EMPLEO) - b["gasto_vivienda"]
                               - del_flexible * (1 - PARTE_EMPLEO))
+
+        # Los 60 agentes de seguridad de marzo de 2026, que no estan en la base
+        # de 2025 (5.7): personal desde 2028, como en el Excel (Supuestos, fila
+        # 304). Se suma despues del programa, asi que no mueve su 2,5%.
+        if anio >= ANIO_INICIO_PROGRAMA:
+            g_ctes += _pot(seguridad_2026, esc.g_gasto_corriente, n)
 
         g_totales = g_ctes + g_cap
         resultado = ing_totales - g_totales
@@ -700,6 +707,10 @@ def main():
         f.write("# anio 1 y 1.242 desde el cuarto. Esos anios el resultado es el\n")
         f.write("# del base; en los anios 2 y 3 la tabla cobra mas de lo que pide\n")
         f.write("# la rampa y queda arriba.\n")
+        f.write("#\n")
+        f.write("# Desde 2028 los gastos corrientes de todos los escenarios llevan\n")
+        f.write("# el personal de los 60 agentes de seguridad de marzo de 2026\n")
+        f.write("# (data/parametros_modelo.csv, personal_seguridad_agentes_2026).\n")
         w = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
         w.writeheader()
         for x in todas:

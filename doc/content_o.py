@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; Las ordenanzas que proponemos</h1>
-<div class="stand">Las promesas de este programa necesitan normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal (el dinero que el presupuesto reserva para la obra que deciden los vecinos), y diecisiete cortas. Se van a votar por separado, porque son discusiones distintas. Ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar. Faltan dos cambios menores, que se redactan en los meses 4 a 6 (cuadro 42): la ordenanza de los foodtrucks y el cambio del art&iacute;culo 9 de la Ordenanza 5824.</div>
+<div class="stand">Las promesas de este programa necesitan normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal (el dinero que el presupuesto reserva para la obra que deciden los vecinos), y veinte cortas. Se van a votar por separado, porque son discusiones distintas. Ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar.</div>
 
 <div class="callout a">
 <div class="clabel">Borrador para que lo revise un abogado</div>
@@ -13,12 +13,7 @@ ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h2>1 &middot; Ordenanza de la Partida de Obra Vecinal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n y escala</h3>
-<p class="tight">Cr&eacute;ase la Partida de Obra Vecinal, integrada por un porcentaje del cr&eacute;dito
-presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la siguiente escala anual:
-doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta
-y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La
-progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue
-ejecutado y justificado en su totalidad.</p>
+<p class="tight">Cr&eacute;ase la Partida de Obra Vecinal, integrada por un porcentaje del cr&eacute;dito presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la siguiente escala anual: doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue ejecutado y justificado en su totalidad. El cr&eacute;dito del escal&oacute;n siguiente se incluye en el presupuesto, y se libera cuando la auditor&iacute;a externa certifica que el anterior se cumpli&oacute;. Si el Honorable Tribunal de Cuentas formula observaciones sobre un ejercicio, no se libera el escal&oacute;n que sigue hasta que se resuelvan.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Distribuci&oacute;n por zona</h3>
 <p class="tight">La Partida se distribuye entre las seis zonas del Partido de San Isidro en dos mitades iguales: la
@@ -199,12 +194,7 @@ avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una
 infracci&oacute;n constatada. Cualquier clausura puede reclamarse.</p>
 
 <h3>Art&iacute;culo 6 &mdash; Denuncia de coimas, presiones y amenazas</h3>
-<p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero,
-la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de
-Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo
-al superior del denunciado. Se reserva la identidad del denunciante. Mientras se investiga, el comercio no es
-inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. Quien
-denuncie en falso recibe una sanci&oacute;n.</p>
+<p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero, la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo al superior del denunciado. Se reserva la identidad del denunciante. Mientras se investiga, el comercio no es inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. Quien denuncie en falso recibe una sanci&oacute;n. Hasta que se contrata la auditor&iacute;a externa, la denuncia se remite a la Comisi&oacute;n y, si hay delito, a la fiscal&iacute;a; al empezar, la auditor&iacute;a recibe todas las anteriores.</p>
 
 <h3>Art&iacute;culo 7 &mdash; El tel&eacute;fono</h3>
 <p class="tight">Los inspectores y los agentes de tr&aacute;nsito graban con un tel&eacute;fono propio, apto seg&uacute;n la
@@ -334,6 +324,8 @@ servicio y sus penalidades.</p>
 antig&uuml;edad y sus derechos</b> (Ley de Contrato de Trabajo, art&iacute;culos 225 y 228). Ese padr&oacute;n se congela a la fecha
 del llamado, se audita y no puede superar el promedio de los tres meses anteriores. La antig&uuml;edad acumulada hasta
 el traspaso la paga el Municipio, previa auditor&iacute;a, cuando corresponda pagarla; la posterior, el adjudicatario.</p>
+<h3>Art&iacute;culo 4 &mdash; Empleo local</h3>
+<p class="tight">El pliego exige subcontratar al menos el veinte por ciento (20%) del servicio con pymes con domicilio en el Partido de San Isidro y, dentro de esa parte, el cinco por ciento (5%) del valor total con empresas de San Isidro de menos de cinco (5) a&ntilde;os, conforme a la Ordenanza 10. Desde que existen empresas del semillero, las subcontrataciones nuevas les dan prioridad.</p>
 
 <h2>10 &middot; Ordenanza de empleo local y del semillero de empresas</h2>
 
@@ -544,6 +536,54 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 
 <h3>Art&iacute;culo 5 &mdash; Control</h3>
 <p class="tight">Cada compra se publica como manda el art&iacute;culo 2 de la Ordenanza 2. Adem&aacute;s, la inteligencia artificial del Municipio marca los precios que se salen de lo normal. La asociaci&oacute;n vecinal de cada zona ve las compras de su zona y puede objetarlas por escrito, y el Departamento Ejecutivo le responde con sus razones.</p>
+
+<h2>19 &middot; Ordenanza de los foodtrucks y del Bosque Alegre</h2>
+
+<h3>Art&iacute;culo 1 &mdash; D&oacute;nde</h3>
+<p class="tight">Los foodtrucks funcionan en la calle o en playones pavimentados o de ripio, al borde de cada puesto n&aacute;utico de la costa y en el Bosque Alegre, nunca sobre el pasto (Ordenanza 14). La inteligencia artificial del Municipio asigna cada lugar y muestra qu&eacute; foodtrucks hay cada d&iacute;a.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Canon</h3>
+<p class="tight">Cada foodtruck paga un canon mensual por veh&iacute;culo, que fija la Ordenanza Impositiva y reemplaza el derecho por ocupaci&oacute;n del espacio p&uacute;blico. En la costa de tenencia provincial se aplica el reparto del convenio aprobado por la Ordenanza 9430. La parte del Municipio se usa en la costa.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Empleo local y ofertas</h3>
+<p class="tight">Rige el setenta y cinco por ciento (75%) de empleo local de la Ordenanza 10. Cada foodtruck ofrece descuentos de lunes a jueves.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Bosque Alegre</h3>
+<p class="tight">Modif&iacute;case el art&iacute;culo 9 de la Ordenanza 5824: en el Bosque Alegre se admite la venta de comidas y bebidas en foodtrucks sobre la calle y en el lote de ripio del Centro de Exposiciones, sin entrar al bosque.</p>
+
+<h2>20 &middot; Ordenanza de la garant&iacute;a de alquiler</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Garant&iacute;a del Municipio</h3>
+<p class="tight">Cr&eacute;ase la garant&iacute;a de alquiler del Municipio para quien alquila en San Isidro una vivienda, una parte de una vivienda o una habitaci&oacute;n, y no consigue otra garant&iacute;a. Tienen prioridad las personas de 18 a 29 a&ntilde;os y quienes trabajan o estudian en los programas del Municipio.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Fondo</h3>
+<p class="tight">La garant&iacute;a se paga con un fondo propio, separado del resto del presupuesto. Lo forman una comisi&oacute;n mensual del tres por ciento (3%) del alquiler a cargo del inquilino, otra igual a cargo del propietario, un dep&oacute;sito &uacute;nico del doce por ciento (12%) de un mes de alquiler a cargo del inquilino, lo que se cobre por el gravamen de la Ordenanza 21 y lo que asigne el Departamento Ejecutivo de la contribuci&oacute;n por valorizaci&oacute;n de la Ordenanza 13. El fondo no recibe otros recursos del Municipio.</p>
+
+<h3>Art&iacute;culo 3 &mdash; L&iacute;mite</h3>
+<p class="tight">El alquiler garantizado no supera el cuarenta por ciento (40%) del ingreso del inquilino o del grupo que alquila. Si el ingreso no tiene recibo, se declara bajo juramento ante la inteligencia artificial del Municipio, y lo aprueba un agente municipal. A quien cobra del Municipio, el alquiler se le descuenta del sueldo, con su conformidad.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Freno</h3>
+<p class="tight">Si el fondo baja del piso que fija la reglamentaci&oacute;n, no se otorgan garant&iacute;as nuevas hasta que se recupere. El estado del fondo se consulta en el Sistema de Informaci&oacute;n Municipal.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Recupero</h3>
+<p class="tight">Cuando el fondo le paga al propietario por un inquilino, el Municipio le reclama al inquilino lo pagado.</p>
+
+<h2>21 &middot; Ordenanza de las viviendas en el lote y de los terrenos sin uso</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Segunda y tercera vivienda</h3>
+<p class="tight">En toda parcela con destino residencial se admiten una segunda y una tercera unidad de vivienda, dentro de la ocupaci&oacute;n y la altura que fija el C&oacute;digo de Ordenamiento Urbano para esa parcela. La reglamentaci&oacute;n fija la superficie m&iacute;nima de cada unidad y su conexi&oacute;n a los servicios.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Alquilar una parte de la casa</h3>
+<p class="tight">Alquilar una habitaci&oacute;n o una parte de la vivienda, por plazo largo o temporario, no requiere habilitaci&oacute;n municipal ni cambia la tasa del inmueble. Quien hoy alquila sin registrar se puede regularizar sin multa.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Edificaci&oacute;n obligatoria</h3>
+<p class="tight">Conforme a los art&iacute;culos 84 a 88 del Decreto-Ley 8912/77, seg&uacute;n la Ley 14.449, se declara la edificaci&oacute;n obligatoria de los terrenos bald&iacute;os, de los inmuebles declarados inhabitables y de las obras paralizadas hace m&aacute;s de cinco (5) a&ntilde;os. El propietario tiene tres (3) a&ntilde;os desde la notificaci&oacute;n para empezar la obra, y un (1) a&ntilde;o como m&aacute;ximo desde la aprobaci&oacute;n del proyecto. Para terminarla, el plazo lo calcula la inteligencia artificial del Municipio seg&uacute;n la superficie, con la regla que publica la reglamentaci&oacute;n. Los plazos no cambian aunque el inmueble se venda, y la obligaci&oacute;n se hace constar en la escritura.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Gravamen y expropiaci&oacute;n</h3>
+<p class="tight">Vencido el plazo, se aplica el gravamen especial progresivo del art&iacute;culo 86 del Decreto-Ley 8912/77: sube cada a&ntilde;o durante cinco (5) a&ntilde;os hasta el cincuenta por ciento (50%) de la tasa de alumbrado, barrido y limpieza, sin exenciones. Lo recaudado va al fondo de la Ordenanza 20. Cumplidos cinco a&ntilde;os de gravamen, el inmueble queda sujeto a expropiaci&oacute;n (art&iacute;culo 87).</p>
+
+
+
 
 <div class="hairline"></div>
 <h2>Lo que estas ordenanzas no dicen, y por qu&eacute;</h2>

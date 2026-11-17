@@ -166,6 +166,7 @@ def test_parametros_desde_datos():
         "coparticipacion_caida_anual": P.coeficiente_coparticipacion()["caida_anual_pct"],
         "rigidez_nucleo": P.rigidez()["nucleo_pct"],
         "percepcion_recursos_corrientes": P.percepcion()["percepcion_pct"],
+        "personal_seguridad_agentes_2026": P.agentes_seguridad_2026()["costo_anual"],
     }
     errores = []
     for clave, valor in calculados.items():

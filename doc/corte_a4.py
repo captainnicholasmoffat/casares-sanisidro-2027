@@ -918,25 +918,30 @@ def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
 def rellenar(dib, cap, caps, rep, m, hojas, at, registro, umbral=0.15):
     """Ya sin huecos de mas de un tercio: en cada hoja con mas de 15% en blanco que tenga una foto, la foto se
     muestra mas alta hasta llenarla (no mueve nada de las otras hojas)."""
+    tope = {}   # dispatch 21: alto con el que una foto ya desbordo su hoja; la proxima vez crece menos
     for vuelta in range(40):
-        cambio = False
+        cambio = None
         for s, h in enumerate(hojas):
             if h["blanco"] <= umbral or (s == len(hojas) - 1 and caps.index(cap) == len(caps) - 1):
                 continue
             espacio = LIM - h["uso"]
             for g in sorted(_fotos_en(h, at), key=lambda g: -g["top"]):
                 f = rep.foto(g["foto"])
-                nuevo = f.ajustar(rep.fotos[g["foto"]] + espacio - 1.0)
+                quiero = rep.fotos[g["foto"]] + espacio - 1.0
+                if g["foto"] in tope:
+                    quiero = min(quiero, tope[g["foto"]] - 6)
+                nuevo = f.ajustar(quiero)
                 if nuevo and nuevo > rep.fotos[g["foto"]] + 3:
                     registro.append(f"{cap['id']}: hoja {s + 1} ({h['blanco']:.0%} en blanco): {g['foto']} de "
                                     f"{rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt")
+                    cambio = (g["foto"], rep.fotos[g["foto"]], nuevo)
                     rep.fotos[g["foto"]] = nuevo
-                    cambio = True
                     break
             if cambio:
                 break
         if not cambio:
             return m, hojas, at
+        antes = (m, hojas, at)
         cortes = [(h["i"], h["j"], h["primera"]) for h in hojas]
         body = html_capitulo(cap, caps, rep.plan())
         m, _ = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap))
@@ -946,7 +951,11 @@ def rellenar(dib, cap, caps, rep, m, hojas, at, registro, umbral=0.15):
         at = at2
         hojas = [_hoja(at, i, j, p) for i, j, p in cortes]      # los mismos cortes: solo crece esa hoja
         if any(h["uso"] > LIM + 0.5 for h in hojas):
-            raise RuntimeError(f"{cap['id']}: llenar con una foto desbordo una hoja")
+            # al crecer, la foto corrio el texto y desbordo la hoja: vuelve a su alto y la proxima vez crece menos
+            foto, alto_antes, alto_nuevo = cambio
+            rep.fotos[foto] = alto_antes; tope[foto] = alto_nuevo
+            registro[-1] += " (desbordaba: se deshace)"
+            m, hojas, at = antes
     return m, hojas, at
 
 
@@ -1182,14 +1191,28 @@ def plan_completo():
                         "cortes": [(h["i"], h["j"], h["primera"]) for h in hojas]})
         # el capitulo anterior pudo llevarse la foto de apertura de este despues de cortarlo: se rehacen todos
         # con las decisiones finales, y se comprueba que el corte no cambia
-        for k, r in enumerate(res):
-            cap = r["cap"]
-            body = html_capitulo(cap, caps, rep.plan())
-            m, doc = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap), pdf=True)
-            at, partidos = atomos(m)
-            hojas = [_hoja(at, i, j, p) for i, j, p in r["cortes"]]      # los cortes ya decididos
-            assert all(h["uso"] <= LIM + 0.5 for h in hojas), cap["id"]
-            r.update(m=m, hojas=hojas, doc=doc, partidos=partidos)
+        # dispatch 21: si con las decisiones finales una hoja ya cortada desborda (pasa cuando otro capitulo se
+        # llevo una foto), ese capitulo se vuelve a cortar con esas decisiones, y se controlan todos de nuevo
+        for vuelta in range(4):
+            rehecho = False
+            for k, r in enumerate(res):
+                cap = r["cap"]
+                body = html_capitulo(cap, caps, rep.plan())
+                m, doc = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap), pdf=True)
+                at, partidos = atomos(m)
+                hojas = [_hoja(at, i, j, p) for i, j, p in r["cortes"]]      # los cortes ya decididos
+                if not all(h["uso"] <= LIM + 0.5 for h in hojas):
+                    registro.append(f"{cap['id']}: con las decisiones finales desbordaba; se vuelve a cortar")
+                    m, hojas, at, modo = armar_capitulo(dib, cap, caps, rep, k == len(caps) - 1, registro)
+                    m, hojas, at = rellenar(dib, cap, caps, rep, m, hojas, at, registro)
+                    r.update(modo=modo, cortes=[(h["i"], h["j"], h["primera"]) for h in hojas])
+                    rehecho = True
+                    continue
+                r.update(m=m, hojas=hojas, doc=doc, partidos=partidos)
+            if not rehecho:
+                break
+        else:
+            raise RuntimeError("los cortes de la A4 no se estabilizan")
         # el indice: primero con numeros de prueba, para saber cuantas hojas lleva
         n_idx = sum(1 for x in CA._IDX if x[0] == "i")
         m_ind, _ = dib.dibujar(body_indice(["000"] * n_idx, 999), "a4_indice")

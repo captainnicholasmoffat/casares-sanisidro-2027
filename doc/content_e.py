@@ -10,8 +10,7 @@ CIERRE = dict(id="cierre", runhead=RH, html="""
 <p>Adem&aacute;s, el pr&oacute;ximo gobierno ya no va a empezar desde el mismo lugar. En agosto de 2026, el Municipio se endeud&oacute; con un bono por 30.000 millones de pesos. Ese bono se devuelve en ocho cuotas, sin contar los intereses. <span class="sg">Siete de esas cuotas las va a pagar el gobierno que asuma en diciembre de 2027.</span></p>
 </div>
 <div class="pull"><div class="plabel">Por d&oacute;nde empieza</div>
-<p>El 10 de diciembre de 2027 asume el intendente. Para el 19 de marzo de 2028, a los cien d&iacute;as, la primera asamblea de cada
-zona ya va a estar convocada.</p></div>
+<p>El 10 de diciembre de 2027 asume el intendente. Para el 19 de marzo de 2028, a los cien d&iacute;as, la primera asamblea de cada zona ya se va a haber hecho.</p></div>
 """ + fig("f_calle", "San Isidro, a primera hora. Ilustraci&oacute;n."))
 # Correccion 132: la firma de Casares sale hasta que el candidato apruebe el
 # documento. Para reponerla, despues del pull de "Por donde empieza" va:

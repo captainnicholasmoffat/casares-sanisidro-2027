@@ -470,7 +470,7 @@ s_row(220, "Año 1: lo que cobra menos lo que necesita el programa", formula="=C
       note="−616 M, en vez de −170 M")
 s_row(221, "Resultado 2028 con el programa, si la tabla cobra desde abril",
       formula="='Resumen anual'!C33-MAX(0,C134-C219)+MAX(0,C218-C219)",
-      note="+1.576 M: el mismo que sin el programa, porque lo que falta sale del gasto flexible")
+      note="+565 M: el mismo que sin el programa, porque lo que falta sale del gasto flexible")
 s_row(222, "Resultado 2028 si nada cambia, para comparar", formula="='Resumen anual'!C68")
 s_row(223, "Año 1: lo que sale del gasto flexible si la tabla cobra desde abril", formula="=MAX(0,C219-C218)",
       note="616 M en vez de 170 M: el 0,7% del gasto flexible. Desde 2029 no cambia nada")
@@ -1080,8 +1080,8 @@ for r, t, oficial, modelo in ctrl:
 
 # control 2: los mismos numeros que el documento (cuadro 20, hoja 29 de la A4; dispatch 17: el libro es publico,
 # ya no compara con archivos internos)
-DOC_BASE = [1576e6, 4347e6, 7233e6, 10236e6]          # cuadro 20, «Si nada cambia», 2028 a 2031
-DOC_PROG = [1576e6, 5585e6, 7751e6, 10236e6]          # cuadro 20, «Con este programa, pagado con la tabla nueva»
+DOC_BASE = [565e6, 3336e6, 6222e6, 9225e6]             # cuadro 20, «Si nada cambia», 2028 a 2031
+DOC_PROG = [565e6, 4574e6, 6739e6, 9225e6]             # cuadro 20, «Con este programa, pagado con la tabla nueva»
 DOC_DIF = [0, 1238e6, 517e6, 0]                       # cuadro 20, «Diferencia»
 put(RA, "B66", "CONTROL · LOS MISMOS NÚMEROS QUE EL DOCUMENTO (cuadro 20, hoja 29 de la A4)", font(9, True),
     fill=F_SEC)
@@ -1163,9 +1163,9 @@ sens = [
      "Lo único de los tres que no depende del Municipio"),
     (18, "", -0.025, "=" + BASE31 + "+Supuestos!$C$115*Supuestos!$C$118*((1+C{r})^6-(1+Supuestos!$C$32)^6)", ""),
     (19, "", -0.035, "=" + BASE31 + "+Supuestos!$C$115*Supuestos!$C$118*((1+C{r})^6-(1+Supuestos!$C$32)^6)",
-     "Si cae 3,5% por año, 2031 queda en +5.342 M (3.2)"),
+     "Si cae 3,5% por año, 2031 queda en +4.331 M (3.2)"),
     (20, "Qué parte de lo facturado se cobra", 0.8632,
-     "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", "Tres puntos menos: −426 M en 2031 (3.6)"),
+     "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", "Tres puntos menos: −1.437 M en 2031 (3.6)"),
     (21, "", "=Supuestos!C34", None, "La de 2025, de todos los ingresos: 89,32%"),
     (22, "", 0.9232, "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", ""),
 ]

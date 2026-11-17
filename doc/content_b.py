@@ -144,7 +144,7 @@ Econ&oacute;mico-Financiera 2025, cuenta Ahorro-Inversi&oacute;n-Financiamiento.
 </div>
 <div class="callout g">
 <div class="clabel">Pesa m&aacute;s lo que recauda el Municipio que lo que manda la Provincia</div>
-<p>Supongamos que lo que manda la Provincia cae 3,5% por a&ntilde;o, en vez de 2,196%. En ese caso, en 2031 sobran 5.342 millones, en lugar de 10.236. Duele. Ahora supongamos que lo que recauda el Municipio crece 0,95% por a&ntilde;o por encima de la inflaci&oacute;n, en vez de 1,95%. Entonces, en 2031, en lugar de sobrar 10.236 millones, <b>faltan 3.044 millones</b>. El mandato termina en d&eacute;ficit.</p>
+<p>Supongamos que lo que manda la Provincia cae 3,5% por a&ntilde;o, en vez de 2,196%. En ese caso, en 2031 sobran 4.331 millones, en lugar de 9.225. Duele. Ahora supongamos que lo que recauda el Municipio crece 0,95% por a&ntilde;o por encima de la inflaci&oacute;n, en vez de 1,95%. Entonces, en 2031, en lugar de sobrar 9.225 millones, <b>faltan 4.055 millones</b>. El mandato termina en d&eacute;ficit.</p>
 <p><b>Un punto menos de crecimiento en lo que recauda el Municipio hace m&aacute;s da&ntilde;o que una ca&iacute;da igual en lo que manda la Provincia.</b> Por eso, un intendente tiene que poner la energ&iacute;a en administrar bien lo propio, y no en reclamarle al gobierno de la Provincia.</p>
 </div>
 
@@ -315,13 +315,13 @@ Ley 12.462). El cuadro no incluye el bono de 30.000 millones de agosto de 2026, 
 <h2><span class="n">3.6</span>Qu&eacute; habr&iacute;a que vigilar</h2>
 <ol class="n">
 <li><b>Puede que lo que recauda el Municipio crezca menos de 1,2% por a&ntilde;o por encima de la inflaci&oacute;n.</b> Ese 1,2% es el l&iacute;mite. Si crece menos, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
-<li><b>El Municipio podr&iacute;a cobrar una parte menor de lo que factura.</b> Hoy cobra el 89,32%. Si cobrara tres puntos menos, las cuentas de 2031 quedar&iacute;an pr&aacute;cticamente en cero: faltar&iacute;an 426 millones.</li>
+<li><b>El Municipio podr&iacute;a cobrar una parte menor de lo que factura.</b> Hoy cobra el 89,32%. Si cobrara tres puntos menos, las cuentas de 2031 quedar&iacute;an en d&eacute;ficit: faltar&iacute;an 1.437 millones.</li>
 <li><b>La coparticipaci&oacute;n, lo que la Provincia le manda a San Isidro, podr&iacute;a caer m&aacute;s r&aacute;pido.</b> Es el menos grave de los tres primeros. Tambi&eacute;n es el &uacute;nico de ellos que no depende del Municipio.</li>
 <li><b>La tasa de inter&eacute;s del bono de 30.000 millones de 2026 podr&iacute;a subir.</b> Es el riesgo m&aacute;s concreto de los cuatro primeros. Esa tasa es <b>variable</b>: TAMAR, la tasa de inter&eacute;s de referencia de los bancos, m&aacute;s 7 puntos. Adem&aacute;s, el capital se paga casi entero en 2028 y 2029.</li>
 <li><b>La tasa de seguridad e higiene puede traer juicios por un fallo de la Corte Suprema.</b> Es el fallo del 10 de septiembre de 2026 sobre la tasa de Pergamino. Dice que lo que se cobra no puede pasar de &laquo;una parte importante &mdash;por ejemplo, hasta el doble&mdash; del costo&raquo; del servicio, y que el Municipio tiene que probar que inspecciona. En 2026, San Isidro espera cobrar 96.593 millones por esta tasa, casi 35 veces lo que cuesta su Agencia de Fiscalizaci&oacute;n y Control, que inspecciona comercios y obras. Esa tasa es el 29% de lo que entra al Municipio. Este riesgo existe con o sin este programa. Nuestra propuesta para el comercio chico (5.11) no cambia esa cuenta, porque el Municipio cobra lo mismo en total. Las inspecciones grabadas y con fecha fija (5.9) son la prueba de servicio que pide la Corte, aunque no alcanzan para llegar al doble del costo. Lo tiene que estudiar un abogado tributarista.</li>
 </ol>
 """ + ex("g", "Las cuentas de 2031 dependen sobre todo de cu&aacute;nto crece lo que recauda el propio Municipio",
-     "Cu&aacute;nto cambia lo que sobra en 2031 si se mueve una sola de estas tres cifras: lo que crece la recaudaci&oacute;n del Municipio, la parte de lo facturado que se cobra y la ca&iacute;da de la coparticipaci&oacute;n. Las otras dos quedan como est&aacute;n. Si nada cambia, ese a&ntilde;o sobran 10.236 millones.",
+     "Cu&aacute;nto cambia lo que sobra en 2031 si se mueve una sola de estas tres cifras: lo que crece la recaudaci&oacute;n del Municipio, la parte de lo facturado que se cobra y la ca&iacute;da de la coparticipaci&oacute;n. Las otras dos quedan como est&aacute;n. Si nada cambia, ese a&ntilde;o sobran 9.225 millones.",
      "ex12.png",
      "cuentas de este programa, moviendo una cifra por vez.",
      "el bono no aparece en las barras porque para 2031 ya est&aacute; pagado. Pesa en 2028 y 2029, los dos primeros a&ntilde;os del mandato, y no se proyecta ac&aacute;. Las cuentas de este programa usan pesos de valor constante, es decir, con la inflaci&oacute;n descontada. TAMAR, en cambio, es una tasa que incluye la inflaci&oacute;n. Por eso, cu&aacute;nto cuesta de verdad el bono depende de una inflaci&oacute;n que todav&iacute;a no se conoce.") + """
@@ -335,8 +335,8 @@ Ley 12.462). El cuadro no incluye el bono de 30.000 millones de agosto de 2026, 
 <table>
 <colgroup><col style="width:210pt"><col><col><col><col></colgroup>
 <tr class="hd"><th></th><th class="r">2028</th><th class="r">2029</th><th class="r">2030</th><th class="r">2031</th></tr>
-<tr><td class="l">Si nada cambia</td><td class="n">1.576</td><td class="n">4.347</td><td class="n">7.233</td><td class="n">10.236</td></tr>
-<tr><td class="l">Con este programa, pagado con la tabla nueva</td><td class="n">1.576</td><td class="n">5.585</td><td class="n">7.751</td><td class="n">10.236</td></tr>
+<tr><td class="l">Si nada cambia</td><td class="n">565</td><td class="n">3.336</td><td class="n">6.222</td><td class="n">9.225</td></tr>
+<tr><td class="l">Con este programa, pagado con la tabla nueva</td><td class="n">565</td><td class="n">4.574</td><td class="n">6.739</td><td class="n">9.225</td></tr>
 <tr class="hi"><td class="l">Diferencia</td><td class="n"><b>0</b></td><td class="n"><b>+1.238</b></td><td class="n"><b>+517</b></td><td class="n"><b>0</b></td></tr>
 <tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">0</td><td class="n">+1.203</td><td class="n">+480</td><td class="n">0</td></tr>
 </table>
