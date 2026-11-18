@@ -4,7 +4,7 @@ Datos del plan de despliegue del programa de gobierno, sacados del texto final (
 
 ## 1. Qué hay en acciones.json
 
-- 325 acciones, de las cuales 151 son hitos (duración 0).
+- 327 acciones, de las cuales 152 son hitos (duración 0).
 - 24 acciones críticas y 15 casi críticas (holgura de 1 a 5 días hábiles).
 - Desde el 24 de octubre de 2027 (elección, fecha estimada) hasta el 10 de diciembre de 2031 (fin del mandato).
 - Trece líneas de trabajo: «0 Transición» y las doce del pedido.
@@ -21,7 +21,7 @@ Datos del plan de despliegue del programa de gobierno, sacados del texto final (
 | 4 Inteligencia artificial del Municipio | 28 |
 | 5 Empleo y formación | 42 |
 | 6 Vivienda | 10 |
-| 7 Salud | 14 |
+| 7 Salud | 16 |
 | 8 Seguridad | 31 |
 | 9 Costa y espacio público | 38 |
 | 10 Cultura y espectáculos | 10 |
@@ -105,7 +105,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | M20 | Año 4 de la rampa: los vecinos deciden la mitad de la obra pública | 216 | hasta el fin del mandato, desde que la auditoría externa de la obra libera el escalón (6 |
 | M24 | El Ejecutivo responde por escrito a cada obra elegida en la primera ronda, con sus razones | 22 | treinta días corridos, unos 22 días hábiles |
 | M25 | Licitar y adjudicar las obras del año 1 | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
-| M29 | Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe sus denuncias | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
+| M29 | Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe las denuncias sobre la obra vecinal | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 | P05 | Aviso de la convocatoria a la asamblea, con los ocho días que pide la Ley Orgánica (artículo 98) | 6 | ocho días corridos, unos seis días hábiles |
 | S05 | Licitar los dos tomógrafos, o tomarlos con el leasing de la Provincia, mientras sigue el contrato actual | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
 | U03 | Licitación pública de los equipos de sonido propios | 66 | cada licitación se adjudica tres meses después del llamado (nota del cuadro 42) |
@@ -167,7 +167,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista | 10 | estimación propia |
 | G24 | Organizar los días fijos de la dirección de género en lugares que ya existen en cada zona | 20 | estimación propia |
 | G26 | Pedir lugar en la red provincial de hogares y firmar los convenios de patrocinio jurídico gratuito (lo destraba la Ordenanza 6) | 30 | estimación propia |
-| G28 | Decreto de funciones: la patrulla municipal sólo previene y busca el delito, y los agentes de tránsito sólo ordenan el tránsito | 10 | estimación propia |
+| G28 | Instrucción: la patrulla municipal deja los controles de tránsito y sólo previene y busca el delito | 5 | estimación propia |
 | G29 | Formar en el Centro de Formación Santa Rita a los agentes de tránsito que pasan a la patrulla | 40 | dos meses, como el curso de la patrulla de marzo de 2026 |
 | G31 | Relevar cuántos agentes de tránsito hacen falta para ordenar el tránsito: salidas de las escuelas, accidentes y cortes | 20 | estimación propia |
 | H01 | Firmar el decreto que ordena grabar cada inspección con el teléfono del agente (compromiso 16) | 10 | estimación propia |
@@ -188,7 +188,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | I18 | Centros con computadoras y mesa de ayuda en cada zona, para quien no tiene teléfono o conexión | 40 | estimación propia |
 | I19 | Pagar el uso de la inteligencia artificial del Municipio con compras chicas, sin licitación pública, mientras corre la primera licitación | 55 | estimación propia |
 | I20 | Firmar con el RENAPER el Convenio Único de Confronte de Datos, por TAD, para verificar el DNI y la foto de quien vota | 20 | el programa no la da |
-| I21 | Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona | 20 | estimación propia |
+| I21 | Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona o la más cercana | 20 | estimación propia |
 | I24 | Estudiar las reglas de detalle de la tercera fórmula de los power users | 20 | estimación propia |
 | K01 | Pedir a AySA que diga si se pueden conectar a la cloaca los baños de los seis lugares de la costa | 5 | estimación propia |
 | K02 | AySA confirma qué baños se pueden hacer | 60 | estimación propia |
@@ -260,7 +260,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | X04 | Cargar en qué se gastó el Fondo Educativo, obra por obra | 30 | estimación propia |
 | X06 | Anotar cada gasto del Municipio con la zona donde se hace | 260 | estimación propia |
 
-### 3.3 Fechas estimadas y otros supuestos (21)
+### 3.3 Fechas estimadas y otros supuestos (23)
 
 Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota de cada una.
 
@@ -284,6 +284,8 @@ Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota d
 | P21 | El Ejecutivo presenta al Concejo el presupuesto 2031 y la ordenanza fiscal e impositiva 2031 | 01/10/2030 |
 | P23 | El Concejo vota el presupuesto 2031 | 12/11/2030 |
 | P24 | La Asamblea de Concejales y Mayores Contribuyentes aprueba la ordenanza impositiva 2031 | 12/11/2030 |
+| S14 | Empieza la formación de los primeros acompañantes terapéuticos, entre los empleados cuyas tareas empieza a liberar la automatización | 11/03/2030 |
+| S15 | Empiezan a acompañar los primeros acompañantes terapéuticos, asesorados y controlados por profesionales | 10/12/2030 |
 | T01 | Elección general de intendente y concejales | 24/10/2027 |
 | U06 | Convenio con cuatro clubes o centros culturales para los shows bajo techo | 10/12/2027 |
 | V10 | Empieza el recargo a los terrenos notificados que siguen sin construir | 10/06/2031 |

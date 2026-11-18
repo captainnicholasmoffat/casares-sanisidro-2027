@@ -339,6 +339,7 @@ act("M03", "Primera ronda de asambleas en las seis zonas: informar, elegir las o
     steps=("Se informa a los vecinos y se eligen las obras del año: un voto por persona desde los 16 años, por celular con el DNI y la foto "
            "verificados contra el RENAPER, o en las tablets que lleva el personal del Municipio a cada asamblea y a la delegación de la zona. "
            "Si la votación por celular se atrasa, esa ronda se vota sólo en las tablets de la asamblea. "
+           "Cuando falla la validación del RENAPER, el personal del Municipio mira el DNI contra el padrón. "
            "El primer año la convoca el Municipio y las obras las hace el Ejecutivo, porque las comisiones todavía se están formando; "
            "desde el año 2 convoca la comisión de cada zona. También se cuentan los baldíos, las ruinas y las obras paradas (5.4)."),
     note=("Cambio del 16/11/2026: las obras de cada año se eligen en la primera ronda, para que tengan tiempo de licitarse y terminarse en el mismo año (6.1). "
@@ -445,10 +446,12 @@ act("I20", "Firmar con el RENAPER el Convenio Único de Confronte de Datos, por 
     steps=("Es el trámite que pide el RENAPER a quien quiere usar sus servicios de validación de identidad: datos del DNI y foto. "
            "Cada validación cuesta 60 pesos por los datos del DNI y 70 por la prueba de vida (cuadro tarifario del RENAPER, 26/2/2026): "
            "unos 3,1 millones por año si validan 25.000 personas."),
-    note="Duración estimada: el programa no la da. Si el convenio se atrasa, esa ronda se vota sólo en las tablets (I04).")
-act("I21", "Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona",
+    note=("Duración estimada: el programa no la da. Si el convenio se atrasa, esa ronda se vota sólo en las tablets (I04). "
+          "Cuando la validación falla, el personal del Municipio mira el DNI contra el padrón."))
+act("I21", "Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona o la más cercana",
     "Ciencia y Técnica", dur=20, est=True, needs=["T07"], win=W(1, 3), fuente="4.6",
-    steps="Compra chica, sin licitación pública (Ley Orgánica de las Municipalidades, artículo 151). Quien no tiene celular vota en la tablet, con ayuda.",
+    steps=("Compra chica, sin licitación pública (Ley Orgánica de las Municipalidades, artículo 151). Quien no tiene celular vota en la tablet, con ayuda. "
+           "Acassuso no tiene delegación propia: comparte la Subdelegación Martínez Este y Acassuso."),
     note=("Duración estimada. El programa no dice cuántas tablets: con una por asamblea y una por delegación, 12, cuestan unos "
           "4,3 millones una vez, con el precio de la tienda oficial de Samsung del 18/11/2026."))
 act("I05", "Pedir gratis a la Nación el certificado de firma digital para programas", "Gobierno y Legal y Técnica",
@@ -489,7 +492,7 @@ act("I16", "La inteligencia artificial del Municipio funcionando, con la partida
 act("I17", "Licitar y contratar la auditoría externa de la plataforma de la inteligencia artificial del Municipio", "Ciencia y Técnica",
     dur=66, needs=["I01"], fuente="6.6", durnote=LIC,
     note=("Riesgo del 6.6: la inteligencia artificial del Municipio contesta mal. La auditoría externa de la plataforma está en el cuadro 28. "
-          "Certificar cada escalón de la partida vecinal es otro contrato (M29)."))
+          "Certificar cada escalón de la partida vecinal es otro contrato (M29). Recibe las denuncias graves, salvo las de la obra vecinal."))
 act("I18", "Centros con computadoras y mesa de ayuda en cada zona, para quien no tiene teléfono o conexión",
     "Equipo de la inteligencia artificial del Municipio", dur=40, est=True, needs=["V01", "I04"], fuente="6.6",
     note="Riesgo del 6.6: queda afuera el que no tiene teléfono o conexión. El programa no le pone fecha.")
@@ -731,10 +734,9 @@ act("G27", "Género con partida propia y atención en cada zona (meta 11)", "Dir
     needs=["G25", "P29", "G26"], win=FIN, fuente="6.3",
     note="Hoy género no tiene partida propia y tiene una sola sede (cuadro 41).")
 
-act("G28", "Decreto de funciones: la patrulla municipal sólo previene y busca el delito, y los agentes de tránsito sólo ordenan el tránsito",
-    "Intendente", dur=10, est=True, needs=["T07", "T05"], fuente="5.7",
-    steps=("La patrulla no hace controles de tránsito ni para a nadie por papeles. Los agentes de tránsito que quedan ordenan la salida "
-           "de las escuelas, los accidentes y los cortes, sin parar a nadie para multar. Ningún vehículo se retiene por una falta menor: "
+act("G28", "Instrucción: la patrulla municipal deja los controles de tránsito y sólo previene y busca el delito",
+    "Intendente", dur=5, est=True, needs=["T07", "T05"], win=W(1), fuente="5.7",
+    steps=("La patrulla no hace controles de tránsito ni para a nadie por papeles. Ningún vehículo se retiene por una falta menor: "
            "la patente floja se ajusta en el lugar y el auto sigue. Las cámaras quedan todas, con tolerancia y aviso previo, y se suman donde haga falta."),
     note=("Se redefinen funciones, no se perdona la ley: el Municipio no puede crear un régimen más benigno (Ley 24.449, artículo 2). "
           "Cuántos de los 120 agentes de tránsito pasan a la patrulla lo fija el relevamiento (G31)."))
@@ -743,13 +745,15 @@ act("G31", "Relevar cuántos agentes de tránsito hacen falta para ordenar el tr
     steps="De los 120 agentes de tránsito de hoy, el resto pasa a la patrulla.",
     note="Duración estimada. El programa no le pone fecha.")
 act("G29", "Formar en el Centro de Formación Santa Rita a los agentes de tránsito que pasan a la patrulla", "Seguridad (Centro de Operaciones Municipal)",
-    dur=40, est=True, needs=["G28", "G31"], fuente="5.7",
+    dur=40, est=True, needs=["G28", "G31"], win=W(4, 6), fuente="5.7",
     steps=("Pasan con el mismo sueldo y conservan su compensación de inspector de tránsito (Ley 14.656, artículo 8). "
            "Formarlos cuesta de 0,15 a 0,92 millones por agente, una vez: de 9,2 a 55,0 millones por cada grupo de hasta 60, "
            "con el presupuesto de Seguridad (programa 47.01)."),
     note="Duración estimada: dos meses, como el curso de la patrulla de marzo de 2026.")
 act("G30", "Los agentes formados pasan a la patrulla, que sólo previene y busca el delito", "Seguridad (Centro de Operaciones Municipal)",
-    ms=True, needs=["G29"], fuente="5.7")
+    ms=True, needs=["G29"], win=W(4, 6), fuente="5.7",
+    steps=("Los agentes de tránsito que quedan ordenan la salida de las escuelas, los accidentes y los cortes, sin parar a nadie para multar. "
+           "Se redefinen funciones, no se perdona la ley (Ley 24.449, artículo 2)."))
 
 # ---------------------------------------------------------------- 9 Costa y espacio público
 act("K01", "Pedir a AySA que diga si se pueden conectar a la cloaca los baños de los seis lugares de la costa", "Ambiente",
@@ -886,8 +890,8 @@ act("H06", "Construir la grabación sellada del turno: huella al grabar, corte p
     steps="Avisa si una grabación sellada no se sube. Difumina las caras de quienes no son parte del acto antes de mostrarlo.")
 act("H07", "El comerciante ya puede denunciar coimas, presiones y amenazas ante la inteligencia artificial del Municipio, con grabación sellada (compromiso 16)",
     "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["I04", "H01"], win=W(1, 3), fuente="6.4",
-    steps=("La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa y, si hay delito, a la fiscalía. "
-           "Hasta que se contrata la auditoría externa, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. "
+    steps=("La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa de la plataforma (I17) y, si hay delito, a la fiscalía. "
+           "Hasta que se contrata esa auditoría, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. "
            "Mientras no llega el certificado de firma digital, cada grabación se guarda con su fecha, su hora y su huella. "
            "Nunca sólo al jefe del denunciado. Con la misma prueba sellada se puede denunciar un ruido."),
     note="Riesgo del 6.6: represalias contra el comerciante que denuncia.")
@@ -962,18 +966,30 @@ act("V09", "Notificar a los dueños de los terrenos sin uso contados en la prime
     steps=("Quien no construye en tres años paga el recargo de la Ley 14.449 sobre la tasa más alta para baldíos y obras paradas, "
            "sin planes ni perdones (Decreto-Ley 8912, artículo 86). Si no paga, cobro judicial con embargo y remate del terreno (Ley 13.406). "
            "Vender no lo salva: la obligación queda anotada en el Registro, con los mismos plazos (artículo 85). Comprarse el propio remate "
-           "tampoco: lo que paga cancela la deuda, la obligación de construir sigue, y el remate tiene base del 80% y del 60% (Ley 13.406, artículo 16)."),
+           "tampoco: lo que paga cancela la deuda, la obligación de construir sigue, y el remate tiene base del 80% y del 60% (Ley 13.406, artículo 16). "
+           "Cuando el segundo remate queda desierto, el Municipio pide la venta sin base (mismo artículo)."),
     note="Ley 14.449: los plazos no cambian aunque el terreno se venda, y la obligación se anota en la escritura.")
 act("V10", "Empieza el recargo a los terrenos notificados que siguen sin construir", "Secretaría de Hacienda",
     ms=True, needs=[("V09", "FS", 750)], win=W(43, 48), fuente="5.4",
-    steps="Sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones. Si no paga, cobro judicial con embargo y remate (Ley 13.406).",
+    steps=("Sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones. Si no paga, cobro judicial con embargo y remate "
+           "(Ley 13.406). Cuando el segundo remate queda desierto, el Municipio pide la venta sin base (artículo 16)."),
     note="Supuesto: tres años desde la notificación (Ley 14.449) son unos 750 días hábiles.")
 act("S14", "Empieza la formación de los primeros acompañantes terapéuticos, entre los empleados cuyas tareas empieza a liberar la automatización",
-    "Secretaría de Salud", ms=True, needs=["E18"], win=W(27), fuente="5.6",
+    "Secretaría de Salud", ms=True, needs=["E18"], win=W(28), fuente="5.6",
     steps=("Es una opción entre varias para quien queda liberado: también el programa de empleo tecnológico, los equipos de las plazas, "
-           "deportes, arte y las demás áreas del programa. Se forman con lo que fija la Provincia (Resolución 592/2022)."),
+           "deportes, arte y las demás áreas del programa. Se forman gratis en un instituto superior público de la Provincia, "
+           "con lo que fija la Provincia (Resolución 592/2022)."),
     note=("Decisión del 18/11/2026: el primer año es de absorción y nadie queda liberado. La automatización empieza a liberar "
-          "tareas en el mes 27 (5.3). No suma sueldos."))
+          "tareas en el mes 27 (5.3). Supuesto: empiezan con el año lectivo que sigue al mes 27, en el mes 28. No suma sueldos."))
+act("S16", "Los primeros acompañantes cursan el curso de 640 horas en un instituto superior público de la Provincia",
+    "Secretaría de Salud", span=(M(28), E(36)), needs=["S14"], fuente="5.6",
+    steps=("El curso equivale al primer año de la Tecnicatura en Acompañamiento Terapéutico (Resolución DGCyE 1221/15) y es gratis. "
+           "Mientras cursan no acompañan: siguen en sus tareas."),
+    durnote="Duración: un año lectivo.")
+act("S15", "Empiezan a acompañar los primeros acompañantes terapéuticos, asesorados y controlados por profesionales",
+    "Secretaría de Salud", ms=True, needs=["S16"], win=W(37), fuente="5.6",
+    steps="Casos leves, como una depresión leve o un autismo leve. Los graves van siempre a profesionales, en una institución.",
+    note="Fecha estimada: al terminar el año lectivo de su curso.")
 
 # ---------------------------------------------------------------- Ordenanzas 17 y 18 y la partida de empleo (antes sólo en acciones.json)
 act("C61", "Entra la Ordenanza 18, de compras al comercio de San Isidro y de donación de alimentos", "Intendente",
@@ -1009,7 +1025,8 @@ act("M28", "La auditoría externa de la obra certifica que se cumplió el año 3
 CUADRO28 = "Lo que usa del modelo, las imágenes y el video entra en infraestructura y licencias (cuadro 28)."
 act("I22", "Suman las denuncias y las cartas documento: la inteligencia artificial del Municipio explica la ley, junta la prueba sellada y las redacta",
     "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["I04", "T05"], win=W(6, 9), fuente="4.11",
-    steps=("El vecino manda la carta documento él mismo, por el servicio electrónico del Correo Argentino. Cuesta unos 4,7 millones por año. " + CUADRO28),
+    steps=("El vecino manda la carta documento él mismo, por el servicio electrónico del Correo Argentino. Cuesta unos 4,7 millones por año. " + CUADRO28 +
+           " Las denuncias sobre la obra vecinal van a la auditoría de la obra (M29); las demás, a la de la plataforma (I17)."),
     note="Fecha decidida el 18/11/2026: después de la parte que recibe reclamos y del dictamen del abogado.")
 act("I23", "Suman las historias cortas, también en video, para aprender a usar la inteligencia artificial del Municipio",
     "Equipo de la inteligencia artificial del Municipio", ms=True, needs=["I04", "T05"], win=W(6, 9), fuente="4.11",
@@ -1042,7 +1059,7 @@ act("I28", "Suma la consulta de lugares: mostrarle un lugar con la cámara del t
     steps=("Lee el Código de Ordenamiento Urbano y el catastro, y dibuja sobre el video del vecino cómo quedaría, marcado como ilustración. "
            "Cuesta unos 15,9 millones por año. " + CUADRO28),
     note="Fecha decidida el 18/11/2026: con las habilitaciones (H12).")
-act("M29", "Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe sus denuncias",
+act("M29", "Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe las denuncias sobre la obra vecinal",
     "Secretaría de Hacienda", dur=66, needs=["C06"], win=W(7, 12), fuente="6.2", durnote=LIC,
     steps=("Es otro contrato, aparte del de la plataforma (I17). Cuesta de 15,7 millones el año 1 a 62,7 millones el año 4, con la "
            "auditoría de un programa de obra pública comparable. Se paga con lo que sobra del 1,5% de funcionamiento de la partida. "

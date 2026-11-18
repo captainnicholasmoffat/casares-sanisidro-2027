@@ -106,7 +106,7 @@
   "dur": 20,
   "start": "2027-10-25",
   "finish": "2027-11-22",
-  "float": 59,
+  "float": 30,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -255,7 +255,7 @@
   "critical": true,
   "milestone": false,
   "decision": "",
-  "steps": "Se informa a los vecinos y se eligen las obras del año: un voto por persona desde los 16 años, por celular con el DNI y la foto verificados contra el RENAPER, o en las tablets que lleva el personal del Municipio a cada asamblea y a la delegación de la zona. Si la votación por celular se atrasa, esa ronda se vota sólo en las tablets de la asamblea. El primer año la convoca el Municipio y las obras las hace el Ejecutivo, porque las comisiones todavía se están formando; desde el año 2 convoca la comisión de cada zona. También se cuentan los baldíos, las ruinas y las obras paradas (5.4). Cómo se comprueba: «Actas y asistentes: se le preguntan a la inteligencia artificial del Municipio.»",
+  "steps": "Se informa a los vecinos y se eligen las obras del año: un voto por persona desde los 16 años, por celular con el DNI y la foto verificados contra el RENAPER, o en las tablets que lleva el personal del Municipio a cada asamblea y a la delegación de la zona. Si la votación por celular se atrasa, esa ronda se vota sólo en las tablets de la asamblea. Cuando falla la validación del RENAPER, el personal del Municipio mira el DNI contra el padrón. El primer año la convoca el Municipio y las obras las hace el Ejecutivo, porque las comisiones todavía se están formando; desde el año 2 convoca la comisión de cada zona. También se cuentan los baldíos, las ruinas y las obras paradas (5.4). Cómo se comprueba: «Actas y asistentes: se le preguntan a la inteligencia artificial del Municipio.»",
   "moves": "",
   "sne": "2028-02-10",
   "needs": [
@@ -638,7 +638,7 @@
  },
  {
   "code": "M29",
-  "task": "Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe sus denuncias",
+  "task": "Licitar y contratar la auditoría externa que certifica cada escalón de la partida vecinal y recibe las denuncias sobre la obra vecinal",
   "stream": "1 Mecanismo vecinal y obra pública",
   "owner": "Secretaría de Hacienda",
   "team": "Secretarías",
@@ -3794,12 +3794,12 @@
     "lag": 0
    }
   ],
-  "note": "Calendario del programa: meses 1 a 3, del 10 de diciembre de 2027 al 9 de marzo de 2028. Duración estimada: el programa no la da. Si el convenio se atrasa, esa ronda se vota sólo en las tablets (I04).",
+  "note": "Calendario del programa: meses 1 a 3, del 10 de diciembre de 2027 al 9 de marzo de 2028. Duración estimada: el programa no la da. Si el convenio se atrasa, esa ronda se vota sólo en las tablets (I04). Cuando la validación falla, el personal del Municipio mira el DNI contra el padrón.",
   "fuente": "4.6"
  },
  {
   "code": "I21",
-  "task": "Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona",
+  "task": "Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona o la más cercana",
   "stream": "4 Inteligencia artificial del Municipio",
   "owner": "Ciencia y Técnica",
   "team": "Equipo de la IA",
@@ -3810,7 +3810,7 @@
   "critical": false,
   "milestone": false,
   "decision": "",
-  "steps": "Compra chica, sin licitación pública (Ley Orgánica de las Municipalidades, artículo 151). Quien no tiene celular vota en la tablet, con ayuda.",
+  "steps": "Compra chica, sin licitación pública (Ley Orgánica de las Municipalidades, artículo 151). Quien no tiene celular vota en la tablet, con ayuda. Acassuso no tiene delegación propia: comparte la Subdelegación Martínez Este y Acassuso.",
   "moves": "",
   "sne": "2027-12-10",
   "needs": [
@@ -3929,7 +3929,7 @@
     "lag": 0
    }
   ],
-  "note": "Duración del programa: cada licitación se adjudica tres meses después del llamado (nota del cuadro 42). Riesgo del 6.6: la inteligencia artificial del Municipio contesta mal. La auditoría externa de la plataforma está en el cuadro 28. Certificar cada escalón de la partida vecinal es otro contrato (M29).",
+  "note": "Duración del programa: cada licitación se adjudica tres meses después del llamado (nota del cuadro 42). Riesgo del 6.6: la inteligencia artificial del Municipio contesta mal. La auditoría externa de la plataforma está en el cuadro 28. Certificar cada escalón de la partida vecinal es otro contrato (M29). Recibe las denuncias graves, salvo las de la obra vecinal.",
   "fuente": "6.6"
  },
  {
@@ -4152,7 +4152,7 @@
   "critical": false,
   "milestone": true,
   "decision": "",
-  "steps": "El vecino manda la carta documento él mismo, por el servicio electrónico del Correo Argentino. Cuesta unos 4,7 millones por año. Lo que usa del modelo, las imágenes y el video entra en infraestructura y licencias (cuadro 28).",
+  "steps": "El vecino manda la carta documento él mismo, por el servicio electrónico del Correo Argentino. Cuesta unos 4,7 millones por año. Lo que usa del modelo, las imágenes y el video entra en infraestructura y licencias (cuadro 28). Las denuncias sobre la obra vecinal van a la auditoría de la obra (M29); las demás, a la de la plataforma (I17).",
   "moves": "",
   "sne": "2028-05-10",
   "needs": [
@@ -5846,7 +5846,7 @@
   "critical": false,
   "milestone": false,
   "decision": "",
-  "steps": "Quien no construye en tres años paga el recargo de la Ley 14.449 sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones (Decreto-Ley 8912, artículo 86). Si no paga, cobro judicial con embargo y remate del terreno (Ley 13.406). Vender no lo salva: la obligación queda anotada en el Registro, con los mismos plazos (artículo 85). Comprarse el propio remate tampoco: lo que paga cancela la deuda, la obligación de construir sigue, y el remate tiene base del 80% y del 60% (Ley 13.406, artículo 16).",
+  "steps": "Quien no construye en tres años paga el recargo de la Ley 14.449 sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones (Decreto-Ley 8912, artículo 86). Si no paga, cobro judicial con embargo y remate del terreno (Ley 13.406). Vender no lo salva: la obligación queda anotada en el Registro, con los mismos plazos (artículo 85). Comprarse el propio remate tampoco: lo que paga cancela la deuda, la obligación de construir sigue, y el remate tiene base del 80% y del 60% (Ley 13.406, artículo 16). Cuando el segundo remate queda desierto, el Municipio pide la venta sin base (mismo artículo).",
   "moves": "",
   "sne": "2028-06-10",
   "needs": [
@@ -5939,7 +5939,7 @@
   "critical": false,
   "milestone": true,
   "decision": "",
-  "steps": "Sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones. Si no paga, cobro judicial con embargo y remate (Ley 13.406).",
+  "steps": "Sobre la tasa más alta para baldíos y obras paradas, sin planes ni perdones. Si no paga, cobro judicial con embargo y remate (Ley 13.406). Cuando el segundo remate queda desierto, el Municipio pide la venta sin base (artículo 16).",
   "moves": "",
   "sne": "2031-06-10",
   "needs": [
@@ -6343,15 +6343,15 @@
   "owner": "Secretaría de Salud",
   "team": "Secretarías",
   "dur": 0,
-  "start": "2030-02-25",
-  "finish": "2030-02-25",
-  "float": 9,
+  "start": "2030-03-11",
+  "finish": "2030-03-11",
+  "float": 21,
   "critical": false,
   "milestone": true,
   "decision": "",
-  "steps": "Es una opción entre varias para quien queda liberado: también el programa de empleo tecnológico, los equipos de las plazas, deportes, arte y las demás áreas del programa. Se forman con lo que fija la Provincia (Resolución 592/2022).",
+  "steps": "Es una opción entre varias para quien queda liberado: también el programa de empleo tecnológico, los equipos de las plazas, deportes, arte y las demás áreas del programa. Se forman gratis en un instituto superior público de la Provincia, con lo que fija la Provincia (Resolución 592/2022).",
   "moves": "",
-  "sne": "2030-02-10",
+  "sne": "2030-03-10",
   "needs": [
    {
     "code": "E18",
@@ -6359,7 +6359,59 @@
     "lag": 0
    }
   ],
-  "note": "Calendario del programa: mes 27, del 10 de febrero de 2030 al 9 de marzo de 2030. Decisión del 18/11/2026: el primer año es de absorción y nadie queda liberado. La automatización empieza a liberar tareas en el mes 27 (5.3). No suma sueldos.",
+  "note": "Calendario del programa: mes 28, del 10 de marzo de 2030 al 9 de abril de 2030. Decisión del 18/11/2026: el primer año es de absorción y nadie queda liberado. La automatización empieza a liberar tareas en el mes 27 (5.3). Supuesto: empiezan con el año lectivo que sigue al mes 27, en el mes 28. No suma sueldos.",
+  "fuente": "5.6"
+ },
+ {
+  "code": "S16",
+  "task": "Los primeros acompañantes cursan el curso de 640 horas en un instituto superior público de la Provincia",
+  "stream": "7 Salud",
+  "owner": "Secretaría de Salud",
+  "team": "Secretarías",
+  "dur": 196,
+  "start": "2030-03-11",
+  "finish": "2030-12-10",
+  "float": 22,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "El curso equivale al primer año de la Tecnicatura en Acompañamiento Terapéutico (Resolución DGCyE 1221/15) y es gratis. Mientras cursan no acompañan: siguen en sus tareas.",
+  "moves": "",
+  "sne": "",
+  "needs": [
+   {
+    "code": "S14",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Duración: un año lectivo.",
+  "fuente": "5.6"
+ },
+ {
+  "code": "S15",
+  "task": "Empiezan a acompañar los primeros acompañantes terapéuticos, asesorados y controlados por profesionales",
+  "stream": "7 Salud",
+  "owner": "Secretaría de Salud",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2030-12-10",
+  "finish": "2030-12-10",
+  "float": 22,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "Casos leves, como una depresión leve o un autismo leve. Los graves van siempre a profesionales, en una institución.",
+  "moves": "",
+  "sne": "2030-12-10",
+  "needs": [
+   {
+    "code": "S16",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: mes 37, del 10 de diciembre de 2030 al 9 de enero de 2031. Fecha estimada: al terminar el año lectivo de su curso.",
   "fuente": "5.6"
  },
  {
@@ -6525,20 +6577,20 @@
  },
  {
   "code": "G28",
-  "task": "Decreto de funciones: la patrulla municipal sólo previene y busca el delito, y los agentes de tránsito sólo ordenan el tránsito",
+  "task": "Instrucción: la patrulla municipal deja los controles de tránsito y sólo previene y busca el delito",
   "stream": "8 Seguridad",
   "owner": "Intendente",
   "team": "Intendencia",
-  "dur": 10,
+  "dur": 5,
   "start": "2027-12-10",
-  "finish": "2027-12-24",
-  "float": 993,
+  "finish": "2027-12-17",
+  "float": 16,
   "critical": false,
   "milestone": false,
   "decision": "",
-  "steps": "La patrulla no hace controles de tránsito ni para a nadie por papeles. Los agentes de tránsito que quedan ordenan la salida de las escuelas, los accidentes y los cortes, sin parar a nadie para multar. Ningún vehículo se retiene por una falta menor: la patente floja se ajusta en el lugar y el auto sigue. Las cámaras quedan todas, con tolerancia y aviso previo, y se suman donde haga falta.",
+  "steps": "La patrulla no hace controles de tránsito ni para a nadie por papeles. Ningún vehículo se retiene por una falta menor: la patente floja se ajusta en el lugar y el auto sigue. Las cámaras quedan todas, con tolerancia y aviso previo, y se suman donde haga falta.",
   "moves": "",
-  "sne": "",
+  "sne": "2027-12-10",
   "needs": [
    {
     "code": "T07",
@@ -6551,7 +6603,7 @@
     "lag": 0
    }
   ],
-  "note": "Duración estimada. Se redefinen funciones, no se perdona la ley: el Municipio no puede crear un régimen más benigno (Ley 24.449, artículo 2). Cuántos de los 120 agentes de tránsito pasan a la patrulla lo fija el relevamiento (G31).",
+  "note": "Calendario del programa: mes 1, del 10 de diciembre de 2027 al 9 de enero de 2028. Duración estimada. Se redefinen funciones, no se perdona la ley: el Municipio no puede crear un régimen más benigno (Ley 24.449, artículo 2). Cuántos de los 120 agentes de tránsito pasan a la patrulla lo fija el relevamiento (G31).",
   "fuente": "5.7"
  },
  {
@@ -6563,7 +6615,7 @@
   "dur": 20,
   "start": "2027-12-10",
   "finish": "2028-01-07",
-  "float": 983,
+  "float": 70,
   "critical": false,
   "milestone": false,
   "decision": "",
@@ -6578,37 +6630,6 @@
    }
   ],
   "note": "Duración estimada. El programa no le pone fecha.",
-  "fuente": "5.7"
- },
- {
-  "code": "G29",
-  "task": "Formar en el Centro de Formación Santa Rita a los agentes de tránsito que pasan a la patrulla",
-  "stream": "8 Seguridad",
-  "owner": "Seguridad (Centro de Operaciones Municipal)",
-  "team": "Secretarías",
-  "dur": 40,
-  "start": "2028-01-07",
-  "finish": "2028-03-03",
-  "float": 983,
-  "critical": false,
-  "milestone": false,
-  "decision": "",
-  "steps": "Pasan con el mismo sueldo y conservan su compensación de inspector de tránsito (Ley 14.656, artículo 8). Formarlos cuesta de 0,15 a 0,92 millones por agente, una vez: de 9,2 a 55,0 millones por cada grupo de hasta 60, con el presupuesto de Seguridad (programa 47.01).",
-  "moves": "",
-  "sne": "",
-  "needs": [
-   {
-    "code": "G28",
-    "type": "FS",
-    "lag": 0
-   },
-   {
-    "code": "G31",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "Duración estimada: dos meses, como el curso de la patrulla de marzo de 2026.",
   "fuente": "5.7"
  },
  {
@@ -6721,32 +6742,6 @@
   "fuente": "5.7"
  },
  {
-  "code": "G30",
-  "task": "Los agentes formados pasan a la patrulla, que sólo previene y busca el delito",
-  "stream": "8 Seguridad",
-  "owner": "Seguridad (Centro de Operaciones Municipal)",
-  "team": "Secretarías",
-  "dur": 0,
-  "start": "2028-03-03",
-  "finish": "2028-03-03",
-  "float": 983,
-  "critical": false,
-  "milestone": true,
-  "decision": "",
-  "steps": "",
-  "moves": "",
-  "sne": "",
-  "needs": [
-   {
-    "code": "G29",
-    "type": "FS",
-    "lag": 0
-   }
-  ],
-  "note": "",
-  "fuente": "5.7"
- },
- {
   "code": "G06",
   "task": "Armar el mapa de los hechos que registra el Municipio",
   "stream": "8 Seguridad",
@@ -6797,6 +6792,37 @@
   ],
   "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028.",
   "fuente": "6.4"
+ },
+ {
+  "code": "G29",
+  "task": "Formar en el Centro de Formación Santa Rita a los agentes de tránsito que pasan a la patrulla",
+  "stream": "8 Seguridad",
+  "owner": "Seguridad (Centro de Operaciones Municipal)",
+  "team": "Secretarías",
+  "dur": 40,
+  "start": "2028-03-10",
+  "finish": "2028-05-05",
+  "float": 25,
+  "critical": false,
+  "milestone": false,
+  "decision": "",
+  "steps": "Pasan con el mismo sueldo y conservan su compensación de inspector de tránsito (Ley 14.656, artículo 8). Formarlos cuesta de 0,15 a 0,92 millones por agente, una vez: de 9,2 a 55,0 millones por cada grupo de hasta 60, con el presupuesto de Seguridad (programa 47.01).",
+  "moves": "",
+  "sne": "2028-03-10",
+  "needs": [
+   {
+    "code": "G28",
+    "type": "FS",
+    "lag": 0
+   },
+   {
+    "code": "G31",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028. Duración estimada: dos meses, como el curso de la patrulla de marzo de 2026.",
+  "fuente": "5.7"
  },
  {
   "code": "G16",
@@ -6906,6 +6932,32 @@
   ],
   "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028.",
   "fuente": "6.4"
+ },
+ {
+  "code": "G30",
+  "task": "Los agentes formados pasan a la patrulla, que sólo previene y busca el delito",
+  "stream": "8 Seguridad",
+  "owner": "Seguridad (Centro de Operaciones Municipal)",
+  "team": "Secretarías",
+  "dur": 0,
+  "start": "2028-05-05",
+  "finish": "2028-05-05",
+  "float": 25,
+  "critical": false,
+  "milestone": true,
+  "decision": "",
+  "steps": "Los agentes de tránsito que quedan ordenan la salida de las escuelas, los accidentes y los cortes, sin parar a nadie para multar. Se redefinen funciones, no se perdona la ley (Ley 24.449, artículo 2).",
+  "moves": "",
+  "sne": "2028-03-10",
+  "needs": [
+   {
+    "code": "G29",
+    "type": "FS",
+    "lag": 0
+   }
+  ],
+  "note": "Calendario del programa: meses 4 a 6, del 10 de marzo de 2028 al 9 de junio de 2028.",
+  "fuente": "5.7"
  },
  {
   "code": "G09",
@@ -8811,7 +8863,7 @@
   "critical": false,
   "milestone": true,
   "decision": "",
-  "steps": "La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa y, si hay delito, a la fiscalía. Hasta que se contrata la auditoría externa, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. Mientras no llega el certificado de firma digital, cada grabación se guarda con su fecha, su hora y su huella. Nunca sólo al jefe del denunciado. Con la misma prueba sellada se puede denunciar un ruido. Cómo se comprueba: «Cuántas denuncias hay y en qué están se le pregunta a la inteligencia artificial del Municipio.»",
+  "steps": "La denuncia va a la Comisión de Obras y Servicios Públicos del Concejo, a la auditoría externa de la plataforma (I17) y, si hay delito, a la fiscalía. Hasta que se contrata esa auditoría, va a la Comisión y a la fiscalía, y la auditoría recibe después las anteriores. Mientras no llega el certificado de firma digital, cada grabación se guarda con su fecha, su hora y su huella. Nunca sólo al jefe del denunciado. Con la misma prueba sellada se puede denunciar un ruido. Cómo se comprueba: «Cuántas denuncias hay y en qué están se le pregunta a la inteligencia artificial del Municipio.»",
   "moves": "",
   "sne": "2027-12-10",
   "needs": [
