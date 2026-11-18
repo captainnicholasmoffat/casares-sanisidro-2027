@@ -37,7 +37,7 @@ w = L.append
 
 w("# Plan de despliegue «San Isidro 2027» · Revisión")
 w("")
-w("Datos del plan de despliegue del programa de gobierno, sacados del texto final (commit c462fcf). "
+w("Datos del plan de despliegue del programa de gobierno, sacados del texto final (versión del 18 de noviembre de 2026). "
   "La página todavía no está armada. Este archivo explica cómo se armaron los datos de `acciones.json`, "
   "qué supuestos se tomaron, cuál es el camino crítico y qué huecos o contradicciones aparecieron en el programa.")
 w("")
@@ -183,10 +183,13 @@ for o in sorted(crit, key=lambda o: (o["start"], o["code"])):
 w("")
 w("Cómo se lee:")
 w("")
-w("- La columna vertebral es la rampa de la obra vecinal desde el año 2: M15, M17, M18, M19, M20 y M21, hasta el fin del mandato (M23). "
-  "Cada año de la rampa dura lo que dice el programa, un año, y el siguiente empieza el día después. "
-  "Si un año se atrasa, el 50% no llega al mes 48. Con la rampa también queda crítica la meta de las cloacas en Boulogne y Béccar (V03).")
-w("- Antes del año 2 no hay acciones críticas en la rampa. El año 1 (M11) tiene unos 20 días hábiles de margen antes del mes 13.")
+w("- La columna vertebral es la rampa: cada año va desde que la auditoría externa de la obra libera su escalón (M26, M27 y M28, hacia marzo) "
+  "hasta el cierre del ejercicio (M11, M17 y M19, el 31 de diciembre), y el año 4 hasta el fin del mandato (M23). "
+  "Si un año se atrasa, el 50% no llega al mes 48." + (" Con la rampa también queda crítica la meta de las cloacas en Boulogne y Béccar (V03)." if O["V03"]["critical"] else ""))
+if O["M03"]["critical"]:
+    w("- La primera ronda de asambleas (M03) es crítica: se vota con la cuarta parte de la inteligencia artificial del Municipio, que llega con "
+      f"las otras tres el {f(O['I04']['start'])} (I01 a I04). Por eso las asambleas empiezan antes, informando, y la votación de cada zona "
+      "entra en los últimos días del mes 3 (supuesto de M03). De la primera ronda dependen la respuesta del Ejecutivo (M24) y los cien días (M22).")
 w("- La prueba a ciegas del profesor digital (I07) es crítica porque dura un mes y el calendario le da exactamente el mes 3.")
 w("- Las dos ordenanzas de las multas (C18 y C21) son críticas porque el programa las fija el 1 de marzo de 2028.")
 w("- La elección (T01), la asunción (T07), los cien días (M22) y el fin del mandato (M23) son fechas fijas.")
@@ -200,9 +203,13 @@ for o in sorted(casi, key=lambda o: (o["float"], o["start"])):
 w("")
 w("- La sesión extraordinaria de diciembre tiene un día de margen: convocatoria, entrada de los proyectos y voto de la ordenanza preparatoria antes del 22 de diciembre. "
   "Si el aviso de la asamblea se cuenta en días hábiles y no corridos, el margen de la asamblea baja de tres días a uno.")
-w("- La inteligencia artificial del Municipio tiene cuatro días de margen para estar en el mes 3. "
-  "De ella dependen, además del compromiso 14, otros cuatro compromisos de los cien días: G02, U02, H07 y X02.")
-w("- Los presupuestos 2030 y 2031 tienen un día de margen, porque se votan entre el cierre de un año de la rampa y el inicio del siguiente.")
+w(("- La inteligencia artificial del Municipio no tiene margen para estar en el mes 3: es crítica (I04). " if O["I04"]["float"] == 0 else
+   f"- La inteligencia artificial del Municipio tiene {O['I04']['float']} días de margen para estar en el mes 3. ") +
+  "De ella dependen, además del compromiso 14 y la votación de la primera ronda, otros cuatro compromisos de los cien días: "
+  f"G02, U02, H07 y X02, con {min(O[c]['float'] for c in ('G02', 'U02', 'H07', 'X02'))} días de margen.")
+_pf = [O[c]["float"] for c in ("P15", "P19", "P23")]
+w("- Los presupuestos se votan a mediados de noviembre, con el escalón siguiente incluido: ya no esperan que se cumpla el anterior, "
+  f"y tienen de {min(_pf)} a {max(_pf)} días hábiles de margen.")
 w("")
 HUECOS = open("huecos.md").read()
 w(HUECOS.strip())

@@ -24,7 +24,7 @@ STEPS = {
     "I08": "El resultado de la prueba a ciegas (I07).",
     "I12": "En los centros de apoyo escolar, con horario fijo y un docente (5.8).",
     "I15": "Cada asamblea queda escrita y se puede buscar, también las de años anteriores (4.11).",
-    "I17": "La auditoría externa cuesta 135,4 millones por año (cuadro 28).",
+    "I17": "La auditoría externa de la plataforma cuesta 135,4 millones por año (cuadro 28).",
     "I18": "La medición de la conexión del 5.4 dice cuán grande es el problema. Seis empleados del Municipio atienden, uno en cada zona (5.3).",
     "E06": "Primer año común: arquitectura de agentes, programar con asistentes de código, evaluar lo que produce la inteligencia artificial e inglés (cuadro 32).",
     "E07": "Un convenio y un acuerdo individual para cada tramo, que firma la UNSO (5.3).",
