@@ -32,7 +32,7 @@ Datos del plan de despliegue del programa de gobierno, sacados del texto final (
 
 **Los meses del programa.** El mes n empieza el día 10 y termina el día 9 del mes siguiente. El mes 1 va del 10 de diciembre de 2027 al 9 de enero de 2028. El mes 3 va del 10 de febrero al 9 de marzo de 2028. El mes 12 va del 10 de noviembre al 9 de diciembre de 2028. El mes 48 va del 10 de noviembre al 9 de diciembre de 2031. Es la única regla que deja el 1 de marzo dentro del mes 3, como dice el calendario (cuadro 42). Con meses de calendario, el 1 de marzo caería en el mes 4. Se aplica igual a todo el plan.
 
-**Días hábiles.** Se cuentan de lunes a viernes. No se descuentan feriados nacionales, provinciales ni municipales. Tampoco se descuenta el receso del Concejo, salvo donde el programa lo nombra: las sesiones ordinarias abren el 1 de marzo (6.6). Por eso las ordenanzas que entran en diciembre se tratan desde el 1 de marzo.
+**Días hábiles.** Se cuentan de lunes a viernes. No se descuentan feriados nacionales, provinciales ni municipales. Tampoco se descuenta el receso del Concejo, salvo donde el programa lo nombra: las sesiones ordinarias abren el 1 de marzo (6.6). Por eso las ordenanzas que entran en diciembre se tratan desde el 1 de marzo, salvo la derogación y la Ordenanza 1: el intendente las incluye en la sesión extraordinaria, para que la primera ronda vote con la partida ya creada (C02 y C05, supuesto del 18/11/2026).
 
 **Inicio y fin.** «start» es el primer día de trabajo. «finish» es el primer día hábil después del último día de trabajo, como en el ejemplo. Un hito tiene el mismo inicio y fin.
 
@@ -187,7 +187,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | I15 | Transmitir y pasar a texto las asambleas, para buscarlas y consultarlas | 60 | estimación propia |
 | I18 | Centros con computadoras y mesa de ayuda en cada zona, para quien no tiene teléfono o conexión | 40 | estimación propia |
 | I19 | Pagar el uso de la inteligencia artificial del Municipio con compras chicas, sin licitación pública, mientras corre la primera licitación | 55 | estimación propia |
-| I20 | Firmar con el RENAPER el Convenio Único de Confronte de Datos, por TAD, para verificar el DNI y la foto de quien vota | 20 | el programa no la da |
+| I20 | Firmar con el RENAPER el Convenio Único de Confronte de Datos, por TAD, para validar el DNI de quien vota y hacerle la prueba de vida | 20 | el programa no la da |
 | I21 | Comprar las tablets y preparar al personal del Municipio que acompaña la votación en cada asamblea y en la delegación de cada zona o la más cercana | 20 | estimación propia |
 | I24 | Estudiar las reglas de detalle de la tercera fórmula de los power users | 20 | estimación propia |
 | K01 | Pedir a AySA que diga si se pueden conectar a la cloaca los baños de los seis lugares de la costa | 5 | estimación propia |
@@ -260,19 +260,22 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | X04 | Cargar en qué se gastó el Fondo Educativo, obra por obra | 30 | estimación propia |
 | X06 | Anotar cada gasto del Municipio con la zona donde se hace | 260 | estimación propia |
 
-### 3.3 Fechas estimadas y otros supuestos (23)
+### 3.3 Fechas estimadas y otros supuestos (26)
 
 Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota de cada una.
 
 | Código | Acción | Fecha en el plan |
 |---|---|---|
 | C01 | Entra al Concejo el proyecto que deroga los artículos 8 a 10 de la Ordenanza 6045 (compromiso 1) | 15/12/2027 |
+| C02 | Tratamiento de la derogación en el Concejo | 15/12/2027 |
+| C05 | Tratamiento de la Ordenanza 1 en el Concejo | 15/12/2027 |
 | C15 | Tratamiento de la Ordenanza 9 en el Concejo | 01/03/2028 |
 | C59 | Cambia la mitad del Concejo | 10/12/2027 |
 | C60 | Cambia la otra mitad del Concejo | 10/12/2029 |
 | E41 | Preparar el quinto y el sexto centro de apoyo escolar | 10/10/2029 |
 | G21 | Desde el presupuesto del año 2, el dinero de las multas va a un fondo de seguridad vial | 02/01/2029 |
 | G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista | 12/09/2029 |
+| I02 | Construir las cuatro primeras partes: la que responde consultas, la que saca el turno médico conversando, la que escucha a los vecinos y la votación | 07/01/2028 |
 | I14 | El profesor digital llega a todos los chicos de primaria y secundaria, desde el año escolar siguiente | 01/03/2029 |
 | M03 | Primera ronda de asambleas en las seis zonas: informar, elegir las obras del año 1 y contar los terrenos sin uso (compromiso 11) | 17/02/2028 |
 | P13 | El Ejecutivo presenta al Concejo el presupuesto 2029 y la ordenanza fiscal e impositiva 2029 | 02/10/2028 |

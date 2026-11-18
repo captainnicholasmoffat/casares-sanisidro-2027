@@ -72,7 +72,8 @@ w("**Los meses del programa.** El mes n empieza el día 10 y termina el día 9 d
 w("")
 w("**Días hábiles.** Se cuentan de lunes a viernes. No se descuentan feriados nacionales, provinciales ni municipales. "
   "Tampoco se descuenta el receso del Concejo, salvo donde el programa lo nombra: las sesiones ordinarias abren el 1 de marzo (6.6). "
-  "Por eso las ordenanzas que entran en diciembre se tratan desde el 1 de marzo.")
+  "Por eso las ordenanzas que entran en diciembre se tratan desde el 1 de marzo, salvo la derogación y la Ordenanza 1: el intendente "
+  "las incluye en la sesión extraordinaria, para que la primera ronda vote con la partida ya creada (C02 y C05, supuesto del 18/11/2026).")
 w("")
 w("**Inicio y fin.** «start» es el primer día de trabajo. «finish» es el primer día hábil después del último día de trabajo, "
   "como en el ejemplo. Un hito tiene el mismo inicio y fin.")
