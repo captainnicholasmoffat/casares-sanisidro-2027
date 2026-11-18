@@ -17,3 +17,12 @@ Any work on a web page or a web app (HTML, CSS, client-side JavaScript) follows 
 always its current version. Before writing that code, run `npx -y modern-web-guidance@latest search "<2-5 words naming
 the task>"`, read the guide it names with `npx -y modern-web-guidance@latest retrieve "<guide id>"`, and follow it. It
 does not apply to backend code, scripts, data or tests. Source: github.com/GoogleChrome/modern-web-guidance (Apache 2.0).
+
+## Look before you deliver (the owner of this repo, 18 Nov 2026)
+
+Never hand the owner anything you have not looked at yourself. Before you send it, open it the way
+he will: render a page or a design on a phone (390 px) and on a desktop (1440 px) and look at the
+screenshots, open a document or file, run the code, read the text back. Compare it with what was
+asked and with the work it must match, fix what is wrong, and only then deliver. If you cannot look
+at it, say so plainly instead of sending it. This holds even when a tool's own instructions say not
+to check the result.
