@@ -276,7 +276,7 @@ def percepcion(anio=2025):
 #
 # La patrulla queda estable en la cantidad de agentes que haya al asumir (5.7).
 # Los 60 agentes que entraron en marzo de 2026 no estan en la base de 2025: su
-# costo se suma al personal desde 2028, como en el Excel (Supuestos, fila 304).
+# costo se suma al personal desde marzo de 2026, como en el Excel.
 # El costo por cargo sale del programa 46.01 del presupuesto 2026 (Ordenanza
 # 9422), que no esta en data/: es el unico numero escrito a mano. Los cargos
 # salen del F6 y el IPC de noviembre y diciembre de 2025, de la serie del INDEC
@@ -340,7 +340,8 @@ def escribir(rp, cop, rig, perc, seg):
         "cargos (F6), por %d agentes; IPC INDEC nov %s%% y dic %s%% de 2025"
         % (PROGRAMA_PATRULLAJE_2026, seg["cargos"], seg["agentes"],
            seg["ipc_nov_2025"], seg["ipc_dic_2025"]),
-        "los agentes de marzo de 2026, fuera de la base 2025; personal desde 2028")
+        "los agentes de marzo de 2026, fuera de la base 2025; personal desde marzo de 2026 "
+        "(en 2026, diez meses: %s)" % (seg["costo_anual"] * 10 / 12).quantize(Decimal("1")))
 
     with open(ruta, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["parametro", "valor", "unidad",

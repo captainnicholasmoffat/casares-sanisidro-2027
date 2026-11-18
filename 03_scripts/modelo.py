@@ -408,9 +408,14 @@ def proyectar(b, esc, hasta=FIN_LARGO):
                               - del_flexible * (1 - PARTE_EMPLEO))
 
         # Los 60 agentes de seguridad de marzo de 2026, que no estan en la base
-        # de 2025 (5.7): personal desde 2028, como en el Excel (Supuestos, fila
-        # 304). Se suma despues del programa, asi que no mueve su 2,5%.
-        if anio >= ANIO_INICIO_PROGRAMA:
+        # de 2025 (5.7): personal desde marzo de 2026 (decision del 18/11/2026),
+        # como en el Excel: diez meses en 2026 y el anio entero en 2027. Desde
+        # 2028 se suma despues del programa, asi que no mueve su 2,5%.
+        if anio == 2026:
+            g_ctes += seguridad_2026 * 10 / 12
+        elif anio == 2027:
+            g_ctes += seguridad_2026
+        elif anio >= ANIO_INICIO_PROGRAMA:
             g_ctes += _pot(seguridad_2026, esc.g_gasto_corriente, n)
 
         g_totales = g_ctes + g_cap
@@ -708,9 +713,10 @@ def main():
         f.write("# del base; en los anios 2 y 3 la tabla cobra mas de lo que pide\n")
         f.write("# la rampa y queda arriba.\n")
         f.write("#\n")
-        f.write("# Desde 2028 los gastos corrientes de todos los escenarios llevan\n")
-        f.write("# el personal de los 60 agentes de seguridad de marzo de 2026\n")
-        f.write("# (data/parametros_modelo.csv, personal_seguridad_agentes_2026).\n")
+        f.write("# Desde marzo de 2026 los gastos corrientes de todos los escenarios\n")
+        f.write("# llevan el personal de los 60 agentes de seguridad que entraron ese\n")
+        f.write("# mes: 842,8 millones en 2026 (diez meses) y 1.011,4 por anio desde\n")
+        f.write("# 2027 (data/parametros_modelo.csv, personal_seguridad_agentes_2026).\n")
         w = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
         w.writeheader()
         for x in todas:
