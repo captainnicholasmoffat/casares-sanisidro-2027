@@ -26,20 +26,23 @@ C4A, C4A2 = split_at(C.C4A, '<h2><span class="n">4.4</span>', "cap4a2",
 # el capitulo 4 entra en siete paginas: la aplicacion (4.11) es seccion
 # propia y se lleva una entera.
 _c4 = C.C4B
-C4B,    _c4 = split_at(_c4, '<h3>Qu&eacute; no va a decidir una comisi&oacute;n zonal</h3>', "cap4bb", "")
+# dispatch 22: con la votacion y la primera ronda el 4.6 pasaba de 2.700 pt: quien decide y quien cobra abre la pagina siguiente
+C4B,    _c4 = split_at(_c4, '<h3>Qui&eacute;n decide y qui&eacute;n cobra no pueden ser la misma persona</h3>', "cap4bb", "")
 C4B_B,  _c4 = split_at(_c4, '<h2><span class="n">4.7</span>', "cap4bb2", "")
 C4B_B2, _c4 = split_at(_c4, '<h2><span class="n">4.9</span>', "cap4b2", "")
 # dispatch 21: los tres recuadros nuevos del 4.11 (reclamos y denuncias, power users, historias) abren la pagina del 4.12
 C4B2,  C4B_C = split_at(_c4, '<div class="callout g">\n<div class="clabel">Nuestra propuesta: la inteligencia artificial del Municipio, del lado del vecino cuando', "cap4bc", "")
 # (dispatch 3, A12): la inteligencia artificial que escucha y el espacio de las asociaciones llevan el resto del 4.11 a otra pagina
-C4B2, C4B2B = split_at(C4B2, '<h3>Escucha a los vecinos, les hace el seguimiento y les responde</h3>', "cap4b2b", "")
+# dispatch 22: con la IA neutral y el cuadro 28 la pagina pasaba de 2.700 pt: lo que escucha vuelve a la pagina del 4.11
+C4B2, C4B2B = split_at(C4B2, '<h3>Un espacio propio para cada asociaci&oacute;n</h3>', "cap4b2b", "")
 C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 # (dispatch 11) con el texto en lenguaje llano el 3.4 no entra en una pagina: lo que cuesta administrar pasa a la siguiente
 C3B_A, C3B_B = split_at(B.C3B, '<h3>Cu&aacute;nto cuesta que los vecinos participen</h3>', "cap3b2",
                         H_CONT.format(n=3, t="Los fondos"))
 C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
-C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.2</span>', "cap2b",
+# dispatch 22: con las filas nuevas del cuadro 9 la pagina del 2.2 al 2.4 pasaba de 2.700 pt: el 2.2 va con el 2.1
+C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.3</span>', "cap2b",
                      H_CONT.format(n=2, t="El gobierno actual, medido"))
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
@@ -73,7 +76,8 @@ C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
 # los resumenes de cada capitulo (dispatch 3, A13) crecieron: el 5.14 y el 5.15 van en pagina propia
 C5B3, C5B3B = split_at(C5B3, '<h2><span class="n">5.14</span>', "cap5b3b", "")
 # las multas de transito (dispatch 1, 03/10) no entran con el 5.10 y el 5.11: van con el 5.12 en la pagina siguiente
-C5B2B, C5B2C = split_at(C5B2B, '<h3>Multas de tr&aacute;nsito:', "cap5b2c", "")
+# dispatch 22: con el fondo vial la pagina de las multas y el 5.12 pasaba de 2.700 pt: el comienzo de las multas va con los cuatro recuadros
+C5B2B, C5B2C = split_at(C5B2B, '<div class="callout g">\n<div class="clabel">Nuestra propuesta: la inteligencia artificial del Municipio, del lado del vecino</div>', "cap5b2c", "")
 # 5.8 y 5.9 ya no entran juntas: la inspeccion grabada se mudo al 5.9
 C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
 # dispatch 11: con el lenguaje llano el 6.4 crece, y el 6.5 pasa a la pagina del 6.6
@@ -85,37 +89,45 @@ C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
 # el calendario pasa de 2.700 pt: sigue en otra pagina desde el mes 12, con el encabezado del cuadro repetido
 _CAL_CAB = ('<table>\n<colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>\n'
             '<tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>\n')
-C6B_A2, C6B_A3 = split_at(C6B_A2, '<tr class="hi"><td class="l">Mes 12</td><td>Termina el a&ntilde;o 1 de la rampa', "cap6b3", _CAL_CAB)
+# dispatch 22: con las funciones nuevas de la IA, la seguridad y la salud mental, el corte sube a los meses 7 a 12
+C6B_A2, C6B_A3 = split_at(C6B_A2, '<tr><td class="l">Meses 7&ndash;12</td><td>Una vez aprobada la Ordenanza 12', "cap6b3", _CAL_CAB)
 C6B_A2 = dict(C6B_A2, html=C6B_A2["html"] + "</table>\n")
 
 # nota de metodo y notas de cada capitulo en una pagina; las fuentes del texto, en la
 # siguiente, la ultima del documento (correccion 138, respuesta 6; la 40 pasaba de 2.700 pt)
 # (dispatch 1 y 2, 03/10): con las filas de multas y de la costa las fuentes no entran en una pagina; la
 # primera parte vuelve a la de la nota de metodo y el resto sigue en la ultima
-_F_CORTE = F.FUENTES_HTML.index('<tr><td class="l">5.5 &middot; Catalejo y Barisidro')
 _F_CAB = ('<table>\n<colgroup><col style="width:158pt"><col></colgroup>\n'
           '<tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>\n')
 # (dispatch 3, A9): las notas de cada capitulo crecieron con el detalle que salio de abajo de los cuadros; la nota de
 # metodo vuelve a ir sola y las fuentes del texto van en dos paginas
 # (dispatch 6): con las ciudades y las fuentes del 23 quater la segunda pasaba de 2.700 pt; el corte baja a «la costa toda la semana»
 METODO = dict(A.METODO)
-FUENTES = dict(id="fuentes", runhead=A.RH,
-               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)[:F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1).index('<tr><td class="l">5.5 &middot; Catalejo y Barisidro')] + "</table>\n")
-FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
+_F_HTML = F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)
 
 # dispatch 15: con el lenguaje llano y los tomografos, tres paginas del capitulo 5 pasaban de 2.700 pt
 C5A3, C5A3B = split_at(C5A3, '<h3>Un puente con las empresas de inteligencia artificial</h3>', "cap5a3b", "")
 C5B, C5B_REC = split_at(C5B, '<h3>Recolecci&oacute;n de residuos:', "cap5brec", "")
 # dispatch 21: con la salud mental el 5.6 pasaba de 2.700 pt: el corte baja a los tomografos
 C5B_B, C5B_B2 = split_at(C5B_B, '<h3>Los tom&oacute;grafos, del Municipio</h3>', "cap5bb2", "")
+# dispatch 22: con la patrulla y los agentes de transito el 5.7 pasaba de 2.700 pt: va en dos paginas
+C5B_C, C5B_C2 = split_at(C5B_C, '<h3>3. Estafas por internet', "cap5bc2", "")
 
 # dispatch 15: el 6.7 y las dos listas finales (lo que no hace y lo que confirma un abogado) van en pagina propia
 # dispatch 21: el cuadro 43 sumo tres filas: el 6.6 pasa a la pagina del 6.7
 C6B_B, C6B_C = split_at(C6B_B, '<h2><span class="n">6.6</span>', "cap6d", "")
 # dispatch 21: con las fuentes nuevas (4.11, 5.4, 5.6 y 5.9) las dos paginas pasaban de 2.700 pt: la primera corta en
 # Catalejo y la segunda en el comercio de cercania, que abre la tercera con las dos listas
-FUENTES2, FUENTES3 = split_at(FUENTES2, '<tr><td class="l">5.11 &middot; el comercio de cercan&iacute;a', "fuentes3", _F_CAB)
+# dispatch 22: con las fuentes del RENAPER, la seguridad, los terrenos y las notas del capitulo 4 las fuentes pasaban de
+# 2.700 pt en dos paginas: van en tres (cortes en la costa del 5.5 y en el recorrido por los hospitales del 5.6), y
+# las dos listas finales en una cuarta
+FUENTES = dict(id="fuentes", runhead=A.RH,
+               html=_F_HTML[:_F_HTML.index('<tr><td class="l">5.5 &middot; la costa: Per&uacute;')] + "</table>\n")
+FUENTES2 = dict(id="fuentes2", runhead=A.RH,
+                html=_F_CAB + _F_HTML[_F_HTML.index('<tr><td class="l">5.5 &middot; la costa: Per&uacute;'):])
+FUENTES2, FUENTES3 = split_at(FUENTES2, '<tr><td class="l">5.6 &middot; el recorrido por los hospitales', "fuentes3", _F_CAB)
 FUENTES2 = dict(FUENTES2, html=FUENTES2["html"] + "</table>\n")
+FUENTES3, FUENTES4 = split_at(FUENTES3, '<h2>Lo que este programa no hace</h2>', "fuentes4", "")
 
 # el anexo articulado entra en cuatro paginas (C1: crecieron la II, la VI y llegaron la XV y la XVI)
 ORD_A, ORD_B = split_at(O.ORDENANZA,
@@ -134,7 +146,7 @@ C5B2B, C5B2B2 = split_at(C5B2B, '<div class="callout g">\n<div class="clabel">Nu
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
-            C5A, C5A2, C5A3, C5A3B, C5A4, C5A5, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B2, C5B2A2, C5B2B, C5B2B2, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_A3, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, ORD_E, ORD_F, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3]
+            C5A, C5A2, C5A3, C5A3B, C5A4, C5A5, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B_C2, C5B2, C5B2A2, C5B2B, C5B2B2, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_A3, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, ORD_E, ORD_F, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3, FUENTES4]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

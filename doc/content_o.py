@@ -13,7 +13,7 @@ ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h2>1 &middot; Ordenanza de la Partida de Obra Vecinal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n y escala</h3>
-<p class="tight">Cr&eacute;ase la Partida de Obra Vecinal, integrada por un porcentaje del cr&eacute;dito presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la siguiente escala anual: doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue ejecutado y justificado en su totalidad. El cr&eacute;dito del escal&oacute;n siguiente se incluye en el presupuesto, y se libera cuando la auditor&iacute;a externa certifica que el anterior se cumpli&oacute;. Si el Honorable Tribunal de Cuentas formula observaciones sobre un ejercicio, no se libera el escal&oacute;n que sigue hasta que se resuelvan.</p>
+<p class="tight">Cr&eacute;ase la Partida de Obra Vecinal, integrada por un porcentaje del cr&eacute;dito presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la siguiente escala anual: doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue ejecutado y justificado en su totalidad. El cr&eacute;dito del escal&oacute;n siguiente se incluye en el presupuesto, y se libera cuando la auditor&iacute;a externa de la obra certifica que el anterior se cumpli&oacute;. Si el Honorable Tribunal de Cuentas formula observaciones sobre un ejercicio, no se libera el escal&oacute;n que sigue hasta que se resuelvan.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Distribuci&oacute;n por zona</h3>
 <p class="tight">La Partida se distribuye entre las seis zonas del Partido de San Isidro en dos mitades iguales: la
@@ -25,12 +25,7 @@ cloacal; hogares sin gas de red; y hogares en condiciones de hacinamiento. Los c
 computan en cantidad de hogares y no en porcentajes sobre la zona.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Qui&eacute;n vota</h3>
-<p class="tight">La asamblea de zona es abierta y vota con <b>un voto por persona</b>. Tiene derecho a
-voto toda persona mayor de diecis&eacute;is (16) a&ntilde;os que resida en la zona, y toda persona que
-desarrolle en ella su actividad principal, comercial o comunitaria, acredit&aacute;ndola. Se vota en la
-asamblea o en forma digital, con identidad verificada, en el Sistema de Informaci&oacute;n Municipal, y
-nadie vota dos veces. No se vota por hogar, por unidad funcional ni por padr&oacute;n de asociados. Toda
-persona puede consultar la n&oacute;mina de asistentes y de votantes.</p>
+<p class="tight">La asamblea de zona es abierta y vota con <b>un voto por persona</b>. Tiene derecho a voto toda persona mayor de diecis&eacute;is (16) a&ntilde;os que resida en la zona, y toda persona que desarrolle en ella su actividad principal, comercial o comunitaria, acredit&aacute;ndola. Se vota en la asamblea o en forma digital, con identidad verificada, en el Sistema de Informaci&oacute;n Municipal, y nadie vota dos veces. Los datos de identidad se verifican con el Registro Nacional de las Personas. En cada asamblea y en la delegaci&oacute;n municipal de la zona o la m&aacute;s cercana, el Departamento Ejecutivo pone a disposici&oacute;n dispositivos y personal para votar en forma digital. Si la verificaci&oacute;n no es posible, el personal municipal coteja el documento con el padr&oacute;n de la zona. No se vota por hogar, por unidad funcional ni por padr&oacute;n de asociados. Toda persona puede consultar la n&oacute;mina de asistentes y de votantes.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Priorizaci&oacute;n y respuesta obligatoria</h3>
 <p class="tight">Cada comisi&oacute;n zonal definir&aacute; en asamblea el destino de la partida
@@ -71,22 +66,22 @@ con car&aacute;cter provisorio. Antes de la finalizaci&oacute;n del mandato debe
 referencia territorial.</p>
 
 <h3>Art&iacute;culo 10 &mdash; Funcionamiento de las comisiones</h3>
-<p class="tight">Af&eacute;ctase el <b>uno coma cinco por ciento (1,5%)</b> de la partida de cada zona al
-funcionamiento de su comisi&oacute;n: el cuidado infantil durante las asambleas; un honorario por obra para cada
-uno de los tres vecinos que suscriben la recepci&oacute;n, fijado como fracci&oacute;n del salario de la categor&iacute;a de
-ingreso de la escala municipal vigente; y la administraci&oacute;n de las obras que ejecute la asociaci&oacute;n
-vecinal, comprendidos sus registros contables, seguros y la justificaci&oacute;n del gasto.</p>
+<p class="tight">Af&eacute;ctase el <b>uno coma cinco por ciento (1,5%)</b> de la partida de cada zona al funcionamiento de su comisi&oacute;n: el cuidado infantil durante las asambleas; un honorario por obra para cada uno de los tres vecinos que suscriben la recepci&oacute;n, fijado como fracci&oacute;n del salario de la categor&iacute;a de ingreso de la escala municipal vigente; y la administraci&oacute;n de las obras que ejecute la asociaci&oacute;n vecinal, comprendidos sus registros contables, seguros y la justificaci&oacute;n del gasto. El remanente se aplica a la auditor&iacute;a externa que certifica el cumplimiento de cada escal&oacute;n conforme el art&iacute;culo 1; si no alcanza, el Departamento Ejecutivo completa su costo con recursos de libre disponibilidad.</p>
 
 <h3>Art&iacute;culo 11 &mdash; Registro de asociaciones vecinales</h3>
-<p class="tight">El Departamento Ejecutivo repondr&aacute; y mantendr&aacute; al d&iacute;a el registro de las
-asociaciones vecinales de la Ordenanza 6045, con su zona, sus autoridades y su domicilio. Toda persona
-puede consultarlo en el Sistema de Informaci&oacute;n Municipal.</p>
+<p class="tight">El Departamento Ejecutivo repondr&aacute; y mantendr&aacute; al d&iacute;a el registro de las asociaciones vecinales de la Ordenanza 6045, con su zona, sus autoridades y su domicilio. Toda persona puede consultarlo en el Sistema de Informaci&oacute;n Municipal. Para inscribirse, cada asociaci&oacute;n vecinal acepta que los vecinos de su zona se asocien en l&iacute;nea, en ese mismo sistema.</p>
 
 <h3>Art&iacute;culo 12 &mdash; Espacio propio en la inteligencia artificial del Municipio</h3>
 <p class="tight">Cada asociaci&oacute;n vecinal registrada y cada comisi&oacute;n zonal tiene, gratis, un espacio propio en la
 inteligencia artificial del Municipio para organizarse, priorizar y controlar la partida de su zona. El Municipio no lee
 ni filtra ese espacio. Su uso se limita a los fines de la asociaci&oacute;n o de la comisi&oacute;n y excluye la propaganda
 partidaria.</p>
+
+<h3>Art&iacute;culo 13 &mdash; Comisi&oacute;n zonal y alcance</h3>
+<p class="tight">Es comisi&oacute;n zonal la asociaci&oacute;n vecinal registrada de cada zona; si hay m&aacute;s de una, act&uacute;an como una sola comisi&oacute;n, con una sola partida. Donde no hay ninguna en condiciones, el Departamento Ejecutivo convoca a una asamblea abierta y ayuda a los vecinos a formar una. Mientras tanto, los vecinos de la zona priorizan igual en asamblea, y el Departamento Ejecutivo ejecuta la obra en esa misma zona. La comisi&oacute;n zonal prioriza s&oacute;lo las obras que sirven sobre todo a su zona &mdash;desag&uuml;e cloacal, gas de red, desag&uuml;es pluviales, veredas, alumbrado y calles&mdash;, y no las que sirven a varias zonas a la vez.</p>
+
+<h3>Art&iacute;culo 14 &mdash; Primer ejercicio</h3>
+<p class="tight">En el primer ejercicio, mientras se forman las comisiones, el Departamento Ejecutivo convoca en cada zona la asamblea abierta del art&iacute;culo 3, que prioriza las obras de ese a&ntilde;o, y las ejecuta en esa misma zona. Si el voto digital no est&aacute; disponible para esa asamblea, se vota en ella, en los dispositivos del art&iacute;culo 3. Desde el segundo ejercicio, convoca la comisi&oacute;n zonal.</p>
 <h2>2 &middot; Ordenanza del Sistema de Informaci&oacute;n Municipal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
@@ -176,7 +171,7 @@ actividad del agente. La obligaci&oacute;n empieza por los inspectores que salen
 municipal.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Sellado, base de datos y publicidad</h3>
-<p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base, y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. Cr&eacute;ase la base de datos de los actos de fiscalizaci&oacute;n: la inteligencia artificial corta el turno en una grabaci&oacute;n por acto y la guarda por comercio o domicilio. Decl&aacute;rase de inter&eacute;s general la publicidad de esos actos: toda persona tiene inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, y puede ver la grabaci&oacute;n de cualquier acto, de a una, busc&aacute;ndola por comercio o domicilio, con su fecha y el agente interviniente. Cuando alguien pide ver un acto, la inteligencia artificial difumina las caras de quienes no son parte de &eacute;l, y una persona lo revisa antes de mostrarlo. Lo grabado entre un acto y otro s&oacute;lo lo ven los auditores del Municipio y la auditor&iacute;a externa. Dentro de una vivienda, el acto se graba igual, pero su interior nunca se publica: lo ven s&oacute;lo su titular, los auditores y, si hace falta, un juez. Las grabaciones se guardan dos a&ntilde;os.</p>
+<p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base, y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. Cr&eacute;ase la base de datos de los actos de fiscalizaci&oacute;n: la inteligencia artificial corta el turno en una grabaci&oacute;n por acto y la guarda por comercio o domicilio. Decl&aacute;rase de inter&eacute;s general la publicidad de esos actos: toda persona tiene inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, y puede ver la grabaci&oacute;n de cualquier acto, de a una, busc&aacute;ndola por comercio o domicilio, con su fecha y el agente interviniente. Cuando alguien pide ver un acto, la inteligencia artificial difumina las caras de quienes no son parte de &eacute;l, y una persona lo revisa antes de mostrarlo. Lo grabado entre un acto y otro s&oacute;lo lo ven los auditores del Municipio y la auditor&iacute;a externa de la plataforma. Dentro de una vivienda, el acto se graba igual, pero su interior nunca se publica: lo ven s&oacute;lo su titular, los auditores y, si hace falta, un juez. Las grabaciones se guardan dos a&ntilde;os.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
 <p class="tight"><b>El acta labrada sin grabaci&oacute;n sellada y subida carece de validez. Tampoco tienen validez la clausura ni la habilitaci&oacute;n que surjan de esa inspecci&oacute;n.</b> Esta consecuencia rige desde que el sistema de grabaci&oacute;n sellada funciona en todas las inspecciones.</p>
@@ -194,7 +189,7 @@ avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una
 infracci&oacute;n constatada. Cualquier clausura puede reclamarse.</p>
 
 <h3>Art&iacute;culo 6 &mdash; Denuncia de coimas, presiones y amenazas</h3>
-<p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero, la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo al superior del denunciado. Se reserva la identidad del denunciante. Mientras se investiga, el comercio no es inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. Quien denuncie en falso recibe una sanci&oacute;n. Hasta que se contrata la auditor&iacute;a externa, la denuncia se remite a la Comisi&oacute;n y, si hay delito, a la fiscal&iacute;a; al empezar, la auditor&iacute;a recibe todas las anteriores.</p>
+<p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero, la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa de la plataforma y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo al superior del denunciado. Se reserva la identidad del denunciante. Mientras se investiga, el comercio no es inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. Quien denuncie en falso recibe una sanci&oacute;n. Hasta que se contrata esa auditor&iacute;a, la denuncia se remite a la Comisi&oacute;n y, si hay delito, a la fiscal&iacute;a; al empezar, la auditor&iacute;a recibe todas las anteriores.</p>
 
 <h3>Art&iacute;culo 7 &mdash; El tel&eacute;fono</h3>
 <p class="tight">Los inspectores y los agentes de tr&aacute;nsito graban con un tel&eacute;fono propio, apto seg&uacute;n la
@@ -557,13 +552,13 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 <p class="tight">Cr&eacute;ase la garant&iacute;a de alquiler del Municipio para quien alquila en San Isidro una vivienda, una parte de una vivienda o una habitaci&oacute;n, y no consigue otra garant&iacute;a. Tienen prioridad las personas de 18 a 29 a&ntilde;os y quienes trabajan o estudian en los programas del Municipio.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Fondo</h3>
-<p class="tight">La garant&iacute;a se paga con un fondo propio, separado del resto del presupuesto. Lo forman una comisi&oacute;n mensual del tres por ciento (3%) del alquiler a cargo del inquilino, otra igual a cargo del propietario, un dep&oacute;sito &uacute;nico del doce por ciento (12%) de un mes de alquiler a cargo del inquilino, lo que se cobre por el gravamen de la Ordenanza 21 y lo que asigne el Departamento Ejecutivo de la contribuci&oacute;n por valorizaci&oacute;n de la Ordenanza 13. El fondo no recibe otros recursos del Municipio.</p>
+<p class="tight">La garant&iacute;a se paga con un fondo propio, separado del resto del presupuesto. Lo forman una comisi&oacute;n mensual del tres por ciento (3%) del alquiler a cargo del inquilino, otra igual a cargo del propietario, un dep&oacute;sito &uacute;nico del doce por ciento (12%) de un mes de alquiler a cargo del inquilino, lo que se cobre por el gravamen y por la diferencia de tasa de los art&iacute;culos 4 y 5 de la Ordenanza 21 y lo que asigne el Departamento Ejecutivo de la contribuci&oacute;n por valorizaci&oacute;n de la Ordenanza 13. El fondo no recibe otros recursos del Municipio.</p>
 
 <h3>Art&iacute;culo 3 &mdash; L&iacute;mite</h3>
 <p class="tight">El alquiler garantizado no supera el cuarenta por ciento (40%) del ingreso del inquilino o del grupo que alquila. Si el ingreso no tiene recibo, se declara bajo juramento ante la inteligencia artificial del Municipio, y lo aprueba un agente municipal. A quien cobra del Municipio, el alquiler se le descuenta del sueldo, con su conformidad.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Freno</h3>
-<p class="tight">Si el fondo baja del piso que fija la reglamentaci&oacute;n, no se otorgan garant&iacute;as nuevas hasta que se recupere. El estado del fondo se consulta en el Sistema de Informaci&oacute;n Municipal.</p>
+<p class="tight">Si el fondo baja del piso que fija la reglamentaci&oacute;n, no se otorgan garant&iacute;as nuevas hasta que se recupere. Las garant&iacute;as ya otorgadas se pagan s&oacute;lo con el fondo, en el orden en que se reclaman, a medida que el fondo se repone. El estado del fondo se consulta en el Sistema de Informaci&oacute;n Municipal.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Recupero</h3>
 <p class="tight">Cuando el fondo le paga al propietario por un inquilino, el Municipio le reclama al inquilino lo pagado.</p>
@@ -577,10 +572,17 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 <p class="tight">Alquilar una habitaci&oacute;n o una parte de la vivienda, por plazo largo o temporario, no requiere habilitaci&oacute;n municipal ni cambia la tasa del inmueble. Quien hoy alquila sin registrar se puede regularizar sin multa.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Edificaci&oacute;n obligatoria</h3>
-<p class="tight">Conforme a los art&iacute;culos 84 a 88 del Decreto-Ley 8912/77, seg&uacute;n la Ley 14.449, se declara la edificaci&oacute;n obligatoria de los terrenos bald&iacute;os, de los inmuebles declarados inhabitables y de las obras paralizadas hace m&aacute;s de cinco (5) a&ntilde;os. El propietario tiene tres (3) a&ntilde;os desde la notificaci&oacute;n para empezar la obra, y un (1) a&ntilde;o como m&aacute;ximo desde la aprobaci&oacute;n del proyecto. Para terminarla, el plazo lo calcula la inteligencia artificial del Municipio seg&uacute;n la superficie, con la regla que publica la reglamentaci&oacute;n. Los plazos no cambian aunque el inmueble se venda, y la obligaci&oacute;n se hace constar en la escritura.</p>
+<p class="tight">Conforme a los art&iacute;culos 84 a 88 del Decreto-Ley 8912/77, seg&uacute;n la Ley 14.449, se declara la edificaci&oacute;n obligatoria de los terrenos bald&iacute;os, de los inmuebles declarados inhabitables y de las obras paralizadas hace m&aacute;s de cinco (5) a&ntilde;os. El propietario tiene tres (3) a&ntilde;os desde la notificaci&oacute;n para empezar la obra, y un (1) a&ntilde;o como m&aacute;ximo desde la aprobaci&oacute;n del proyecto. Para terminarla, el plazo lo calcula la inteligencia artificial del Municipio seg&uacute;n la superficie, con la regla que publica la reglamentaci&oacute;n. Los plazos no cambian aunque el inmueble se venda, y la obligaci&oacute;n se hace constar en la escritura y se inscribe en el Registro de la Propiedad Inmueble.</p>
 
-<h3>Art&iacute;culo 4 &mdash; Gravamen y expropiaci&oacute;n</h3>
-<p class="tight">Vencido el plazo, se aplica el gravamen especial progresivo del art&iacute;culo 86 del Decreto-Ley 8912/77: sube cada a&ntilde;o durante cinco (5) a&ntilde;os hasta el cincuenta por ciento (50%) de la tasa de alumbrado, barrido y limpieza, sin exenciones. Lo recaudado va al fondo de la Ordenanza 20. Cumplidos cinco a&ntilde;os de gravamen, el inmueble queda sujeto a expropiaci&oacute;n (art&iacute;culo 87).</p>
+<h3>Art&iacute;culo 4 &mdash; Gravamen</h3>
+<p class="tight">Vencido el plazo, se aplica el gravamen especial progresivo del art&iacute;culo 86 del Decreto-Ley 8912/77: sube cada a&ntilde;o durante cinco (5) a&ntilde;os hasta el cincuenta por ciento (50%) de la Tasa por Alumbrado, Limpieza y Servicios Generales, sin exenciones. Lo recaudado va al fondo de la Ordenanza 20. Cumplidos cinco a&ntilde;os de gravamen, se sigue aplicando la al&iacute;cuota m&aacute;xima hasta que se cumpla la obligaci&oacute;n (art&iacute;culo 86).</p>
+
+<h3>Art&iacute;culo 5 &mdash; Tasa de los inmuebles sin uso</h3>
+<p class="tight">La Ordenanza Impositiva fija para los inmuebles del art&iacute;culo 3 una Tasa por Alumbrado, Limpieza y Servicios Generales mayor que la de los inmuebles edificados de la misma zona. El gravamen del art&iacute;culo 4 se calcula sobre esa tasa. Lo que se recauda por encima de la tasa de los inmuebles edificados de la misma zona va al fondo de la Ordenanza 20.</p>
+
+<h3>Art&iacute;culo 6 &mdash; Cobro</h3>
+<p class="tight">No se conceden exenciones, condonaciones ni planes de pago sobre el gravamen (art&iacute;culo 86 del Decreto-Ley 8912/77). La deuda impaga se cobra por apremio, conforme la Ley 13.406, con embargo y subasta del inmueble. Lo pagado en la subasta cancela la deuda, y la obligaci&oacute;n de edificar subsiste con los mismos plazos, conforme el art&iacute;culo 85, inciso d), del Decreto-Ley 8912/77, aunque el comprador sea el mismo propietario; tambi&eacute;n siguen la tasa del art&iacute;culo 5 y el gravamen del art&iacute;culo 4. Si la segunda subasta fracasa por falta de postores, el Departamento Ejecutivo solicita la venta sin limitaci&oacute;n de precio del art&iacute;culo 16 de la Ley 13.406.</p>
+
 
 
 
@@ -591,11 +593,12 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 <p><b>No hace obligatorio el resultado del voto vecinal.</b> La Constituci&oacute;n provincial no lo permite, y el
 veto de Pinamar de diciembre de 2025 lo confirm&oacute;. S&oacute;lo se vuelven obligatorias la partida y la respuesta, no el proyecto votado. Sobre la obra en la costa, el panel sorteado s&oacute;lo da una recomendaci&oacute;n, y el Ejecutivo le responde en p&uacute;blico, por escrito y con sus razones, dentro de los treinta d&iacute;as. En dos casos, el Departamento Ejecutivo (el intendente y sus secretar&iacute;as, que gobiernan el Municipio) se obliga a no hacer lo que los vecinos rechazan: la obra en un parque y las excepciones urban&iacute;sticas. Ah&iacute; es el Ejecutivo el que se limita a s&iacute; mismo, y el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
 que esta ordenanza sobreviva a un veto.</span></p>
-<p><b>No crea un &oacute;rgano nuevo.</b> Ninguna ordenanza crea una junta, un comit&eacute; permanente o un consejo. Las comisiones zonales son las asociaciones vecinales que ya existen, reconocidas por la propia Ordenanza 6045. El comit&eacute; de vigilancia del art&iacute;culo 7 de la Ordenanza 1 se elige para cada obra y termina con ella. Pasa lo mismo con el panel de la costa de la Ordenanza 12: se sortea para cada caso y se disuelve al dar su recomendaci&oacute;n.</p>
+<p><b>No crea un &oacute;rgano nuevo.</b> Ninguna ordenanza crea una junta, un comit&eacute; permanente o un consejo. Las comisiones zonales son las asociaciones vecinales que ya existen, registradas seg&uacute;n la Ordenanza 6045, a las que la Ordenanza 1 les da ese papel (art&iacute;culo 13). El comit&eacute; de vigilancia del art&iacute;culo 7 de la Ordenanza 1 se elige para cada obra y termina con ella. Pasa lo mismo con el panel de la costa de la Ordenanza 12: se sortea para cada caso y se disuelve al dar su recomendaci&oacute;n.</p>
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> Los art&iacute;culos 60 y 132 de la Ley Org&aacute;nica ya dicen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el municipio, y con qu&eacute; requisito de adhesi&oacute;n, as&iacute; que no hace falta.</p>
 <p><b>No fija montos que este programa no haya costeado</b>, ni presupuestos de &aacute;rea, ni plazos sin
 fundamento. Donde no hay un n&uacute;mero, las ordenanzas mandan fijarlo y publicarlo, que no es lo mismo.</p>
 <p><b>No toca lo que no es municipal.</b> Quedan fuera el recorrido de las l&iacute;neas de colectivo, que autoriza la Provincia, y la estad&iacute;stica criminal. Tambi&eacute;n queda fuera todo lo que exija reformar la Ley Org&aacute;nica, que este programa reclama y no promete.</p>
+<p><b>Todav&iacute;a no regula el pago a los power users.</b> Pagarles a vecinos y a empleados del Municipio una parte de lo que su aviso hace cobrar o ahorrar (4.11) necesita antes el dictamen de un abogado sobre su base legal (Nota de m&eacute;todo).</p>
 <p><b>Adem&aacute;s, deroga s&oacute;lo lo que reemplaza.</b> La Ordenanza 11 deroga la 5304 de 1978, que proh&iacute;be el
 ba&ntilde;o en todo el r&iacute;o, porque pone en su lugar el ba&ntilde;o con guardavidas y la bandera de cada d&iacute;a. Para derogar los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045 hay un proyecto separado, que va a ser el primero en entrar al Concejo. Derogar esos art&iacute;culos y aprobar estas ordenanzas son dos discusiones distintas, y conviene votarlas por separado.</p>
 </div>
@@ -617,8 +620,7 @@ vivo y la reconstrucci&oacute;n de recorrido van a funcionar sobre las c&aacute;
 licencias de an&aacute;lisis de video que ya compr&oacute;, como dice el 5.7. No es una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y el trabajo del Ejecutivo
 se ordena por decreto.</p>
-<p><b>La sexta se resuelve con la ley y los contratos:</b> la Ley 24.449 (art&iacute;culo 85) ya manda que lo cobrado por multas vaya a la seguridad vial. Cuando venza el contrato actual, el contrato nuevo va a decir que nadie cobra por multa
-(5.11).</p>
+<p><b>La sexta se resuelve con la ley y los contratos:</b> la Ley 24.449 (art&iacute;culo 85) ya manda que lo cobrado por multas vaya a la seguridad vial. Cuando venza el contrato actual, el contrato nuevo va a decir que ning&uacute;n proveedor cobra por multa (5.11).</p>
 <p><span class="sg">Para cuatro de esas seis metas, una ordenanza s&iacute; fija c&oacute;mo se comprueban</span>:
 la espera por especialidad, la matr&iacute;cula por sede, las &oacute;rdenes
 judiciales y la inserci&oacute;n laboral entran en el art&iacute;culo 2 de la Ordenanza 2. Una ordenanza no puede atar el monto, pero s&iacute; puede obligar a que el resultado se vea.</p>

@@ -3,8 +3,7 @@ from content_a import RH
 
 GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <h1>Glosario</h1>
-<div class="stand">Cuarenta palabras t&eacute;cnicas y siglas que aparecen en el texto, explicadas como se las
-explicar&iacute;a a un vecino.</div>
+<div class="stand">Cuarenta palabras t&eacute;cnicas y siglas que aparecen en el texto y en las cuentas, explicadas como se las explicar&iacute;a a un vecino.</div>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>
 <tr class="hd"><th>Palabra</th><th>Qu&eacute; quiere decir</th></tr>
@@ -23,7 +22,7 @@ explicar&iacute;a a un vecino.</div>
 <tr><td class="l">NBI</td><td>Necesidades B&aacute;sicas Insatisfechas. Un hogar tiene NBI si le falta alguna condici&oacute;n b&aacute;sica. Por ejemplo, si vive mucha gente en poco espacio, si la vivienda es precaria, si no tiene ba&ntilde;o o si hay chicos que no van a la escuela. En San Isidro es el 3,16% de los hogares.</td></tr>
 <tr><td class="l">&Iacute;ndice de necesidad</td><td>Reparte entre las zonas la mitad del dinero de obra que deciden los vecinos. Mira cuatro cosas: NBI, falta de cloaca, falta de gas de red y hacinamiento, que es cuando vive mucha gente en poco espacio. Para cada una, calcula qu&eacute; parte del total de San Isidro est&aacute; en cada zona. Despu&eacute;s saca el promedio de las cuatro. Cuenta hogares, no porcentajes.</td></tr>
 <tr><td class="l">TAMAR</td><td>La tasa que los bancos pagan por los plazos fijos grandes. El bono con el que el Municipio se endeud&oacute; en 2026 paga de inter&eacute;s la TAMAR m&aacute;s 7 puntos.</td></tr>
-<tr><td class="l">Copyleft</td><td>Un tipo de licencia de software. Obliga a que todo lo que se construya a partir de ese software se publique tambi&eacute;n como libre, para que cualquiera lo pueda usar, copiar y cambiar. Por eso este programa no parte del c&oacute;digo de Decidim, la plataforma de participaci&oacute;n de Barcelona, que tiene esa licencia.</td></tr>
+<tr><td class="l">Copyleft</td><td>Un tipo de licencia de software, como la AGPL (4.11). Obliga a que todo lo que se construya a partir de ese software se publique tambi&eacute;n como libre, para que cualquiera lo pueda usar, copiar y cambiar. Por eso este programa no parte del c&oacute;digo de Decidim, la plataforma de participaci&oacute;n de Barcelona, que tiene esa licencia.</td></tr>
 <tr><td class="l">Silencio positivo</td><td>Cuando la ley dice que no contestar equivale a estar de acuerdo. Este programa no lo usa. Si una asociaci&oacute;n de parque no firma la recepci&oacute;n de una obra ni hace observaciones, la obra no se da por aprobada. En ese caso resuelve la Comisi&oacute;n de Obras del Concejo Deliberante.</td></tr>
 <tr><td class="l">Radio censal</td><td>Es la zona m&aacute;s chica para la que el Censo publica datos: unas 300 viviendas. San Isidro tiene 360 radios censales. El cap&iacute;tulo 1 usa los datos de los radios para mirar San Isidro de cerca.</td></tr>
 <tr><td class="l">Fracci&oacute;n censal</td><td>Es un grupo de radios censales. San Isidro tiene 35 fracciones. La fracci&oacute;n 32, en B&eacute;ccar, es la que tiene m&aacute;s hogares con NBI de todo San Isidro.</td></tr>
