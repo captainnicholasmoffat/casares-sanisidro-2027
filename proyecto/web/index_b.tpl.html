@@ -48,6 +48,8 @@ button{font:inherit;cursor:pointer}
 .nav{display:flex;flex-wrap:wrap;gap:6px 24px}
 .nav a{color:var(--ox-ink);text-decoration:none;font-weight:500;padding:6px 0}
 .nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:1100px){.nav{column-gap:16px}}
+#descargas{scroll-margin-top:16px}
 
 /* Pregunta */
 .hero{background:var(--ox);color:var(--ox-ink);padding-block:40px 64px}
@@ -369,6 +371,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
       <a href="#programa">El programa completo</a>
       <a href="/cuentas/">Las cuentas</a>
       <a href="/despliegue/">Plan de despliegue</a>
+      <a href="#descargas">Bajar el programa</a>
     </nav>
   </div>
 </header>
@@ -459,14 +462,14 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
         </div>
       </div>
       <div class="results" id="results" aria-live="polite"></div>
-      <h3 class="more-h" style="margin-top:8px">Para empezar</h3>
+      <h3 class="more-h" id="descargas" style="margin-top:8px">Bajar el programa</h3>
+      <div class="tiles dl">{{DESCARGAS}}</div>
+      <h3 class="more-h">Para empezar</h3>
       <div class="tiles" id="tiles-a"></div>
       <h3 class="more-h">Los seis capítulos</h3>
       <div class="chs" id="chs"><p style="color:var(--ink-2)">Cargando el programa…</p></div>
       <h3 class="more-h">Al final del programa</h3>
       <div class="tiles" id="tiles-b"></div>
-      <h3 class="more-h" id="descargas">Para bajar</h3>
-      <div class="tiles dl">{{DESCARGAS}}</div>
     </div>
   </section>
 </main>
@@ -474,7 +477,7 @@ html.embed #respuesta{padding-block:16px 28px;min-height:100vh}
 <footer class="foot">
   <div class="wrap foot-in">
     <a class="brand" href="#inicio"><b>San Isidro 2027</b><span>Programa de gobierno</span></a>
-    <nav aria-label="Secciones"><a href="#inicio">Preguntale al programa</a><a href="#propuestas">Qué proponemos</a><a href="#programa">El programa completo</a><a href="/cuentas/">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a><a href="#descargas">Descargas</a><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></nav>
+    <nav aria-label="Secciones"><a href="#inicio">Preguntale al programa</a><a href="#propuestas">Qué proponemos</a><a href="#programa">El programa completo</a><a href="/cuentas/">Las cuentas</a><a href="/despliegue/">Plan de despliegue</a><a href="#descargas">Bajar el programa</a><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></nav>
     <p>Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro. Las imágenes son ilustraciones del programa. Los gráficos y los cuadros son los de la versión A4.</p>
   </div>
 </footer>
