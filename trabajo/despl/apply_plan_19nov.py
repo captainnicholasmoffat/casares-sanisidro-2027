@@ -30,7 +30,7 @@ rep('''    steps=("Los agentes de tránsito que quedan ordenan la salida de las 
            "Se redefinen funciones, no se perdona la ley (Ley 24.449, artículo 2)."))''',
     '''    steps=("Los agentes de tránsito que quedan ordenan la salida de las escuelas, los accidentes y los cortes, sin parar a nadie para multar. "
            "Se redefinen funciones, no se perdona la ley (Ley 24.449, artículo 2). "
-           "Los que pasan cobran lo mismo que sus compañeros de la patrulla, con el presupuesto de Seguridad: dejan la compensación de "
+           "Quienes pasan cobran lo mismo que sus compañeros de la patrulla, con el presupuesto de Seguridad: dejan la compensación de "
            "inspector de tránsito y cobran la bonificación de la función que ocupan (Ordenanza 9422, artículo 17). Suma de 62,3 a 504,7 "
            "millones por año, según cuántos pasan y qué función ocupan (5.7)."),
     note="Decisión del 19/11/2026: cobran lo mismo que sus compañeros de la patrulla.")''')
