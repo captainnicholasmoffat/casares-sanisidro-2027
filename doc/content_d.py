@@ -12,7 +12,7 @@ GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <tr><td class="l">Percepci&oacute;n</td><td>Qu&eacute; porcentaje de lo devengado termin&oacute; entrando a la caja.</td></tr>
 <tr><td class="l">Partida</td><td>El dinero que el presupuesto reserva para algo. Por ejemplo, la partida vecinal es el dinero de obra que deciden los vecinos de cada zona.</td></tr>
 <tr><td class="l">Gasto r&iacute;gido</td><td>La parte del gasto que no se puede dejar de pagar dentro del a&ntilde;o: sueldos, deuda y contratos ya firmados. En San Isidro es el 73,1%.</td></tr>
-<tr><td class="l">Gasto flexible</td><td>La parte del presupuesto que queda y s&iacute; se puede decidir cada a&ntilde;o, porque no est&aacute; atada a sueldos, deudas ni contratos firmados. Son 87.326 millones, el 26,9%. Este programa ocupa el 51,8% de esa parte (3.4).</td></tr>
+<tr><td class="l">Gasto flexible</td><td>La parte del presupuesto que queda y s&iacute; se puede decidir cada a&ntilde;o, porque no est&aacute; atada a sueldos, deudas ni contratos firmados. Son 87.326 millones, el 26,9%. Este programa ocupa el 51,9% de esa parte (3.4).</td></tr>
 <tr><td class="l">Ahorro corriente</td><td>El dinero que sobra despu&eacute;s de pagar el funcionamiento diario, antes de invertir en obra.</td></tr>
 <tr><td class="l">Resultado financiero</td><td>El dinero que queda al final del a&ntilde;o, despu&eacute;s de pagar todos los gastos, incluida la obra. En 2025 fue de &minus;6.051 millones. Ese a&ntilde;o, el Municipio gast&oacute; m&aacute;s de lo que recibi&oacute;.</td></tr>
 <tr><td class="l">Bienes de uso</td><td>Es el nombre contable de la obra p&uacute;blica y del equipamiento. A diferencia de otros gastos, la obra y los equipos quedan y se siguen usando despu&eacute;s de pagarlos.</td></tr>
