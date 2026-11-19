@@ -721,7 +721,7 @@ act("G21", "Desde el presupuesto del año 2, el dinero de las multas va a un fon
     steps=("Renglón propio en el presupuesto. No se puede usar para otra cosa, salvo la parte del vecino que avisó la falta, "
            "sólo sobre lo que efectivamente se cobra (4.11; Ley 24.449, artículo 85)."),
     note="Fecha estimada: el presupuesto del año 2 rige desde enero de 2029.")
-act("G22", "Revisar cada cámara de multas una vez por año, con sus datos a la vista", "Tránsito y Juzgado de Faltas",
+act("G22", "Revisar cada cámara de multas una vez por año, con sus datos a la vista, y mudar la que ya no baja los choques a otro lugar con choques; la cantidad de cámaras nunca baja (5.11)", "Tránsito y Juzgado de Faltas",
     dur=10, est=True, needs=[("G20", "FS", 250)], fuente="6.6",
     note="Riesgo del 6.6: las cámaras se ponen para recaudar. Supuesto: la primera revisión es un año después de la autorización.")
 act("G23", "Ningún proveedor ni empleado gana dinero por cada multa: los proveedores cobran sólo los equipos y su mantenimiento, a precio fijo (meta 20)",

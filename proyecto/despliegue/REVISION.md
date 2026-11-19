@@ -164,7 +164,7 @@ Toda duración que el programa no da es un supuesto. Cada una dice «Duración e
 | G18 | La inteligencia artificial del Municipio propone dónde poner cámaras de multas, sólo donde se supera un mínimo publicado de choques | 30 | estimación propia |
 | G19 | Cada comisión de zona elige entre una cámara o un reductor de velocidad | 30 | estimación propia |
 | G20 | La Provincia autoriza cada cámara (Disposiciones 14/2020 y 43/2021) | 40 | estimación propia |
-| G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista | 10 | estimación propia |
+| G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista, y mudar la que ya no baja los choques a otro lugar con choques; la cantidad de cámaras nunca baja (5.11) | 10 | estimación propia |
 | G24 | Organizar los días fijos de la dirección de género en lugares que ya existen en cada zona | 20 | estimación propia |
 | G26 | Pedir lugar en la red provincial de hogares y firmar los convenios de patrocinio jurídico gratuito (lo destraba la Ordenanza 6) | 30 | estimación propia |
 | G28 | Instrucción: la patrulla municipal deja los controles de tránsito y sólo previene y busca el delito | 5 | estimación propia |
@@ -274,7 +274,7 @@ Acciones cuya fecha o cuyo orden no sale del texto. El motivo está en la nota d
 | C60 | Cambia la otra mitad del Concejo | 10/12/2029 |
 | E41 | Preparar el quinto y el sexto centro de apoyo escolar | 10/10/2029 |
 | G21 | Desde el presupuesto del año 2, el dinero de las multas va a un fondo de seguridad vial | 02/01/2029 |
-| G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista | 12/09/2029 |
+| G22 | Revisar cada cámara de multas una vez por año, con sus datos a la vista, y mudar la que ya no baja los choques a otro lugar con choques; la cantidad de cámaras nunca baja (5.11) | 12/09/2029 |
 | I02 | Construir las cuatro primeras partes: la que responde consultas, la que saca el turno médico conversando, la que escucha a los vecinos y la votación | 07/01/2028 |
 | I14 | El profesor digital llega a todos los chicos de primaria y secundaria, desde el año escolar siguiente | 01/03/2029 |
 | M03 | Primera ronda de asambleas en las seis zonas: informar, elegir las obras del año 1 y contar los terrenos sin uso (compromiso 11) | 17/02/2028 |
