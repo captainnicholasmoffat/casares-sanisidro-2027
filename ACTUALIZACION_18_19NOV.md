@@ -22,8 +22,11 @@ con el texto viejo y el nuevo y la fuente de cada cifra.
    partida vecinal (de 15,7 a 62,7 M por año). Las denuncias sobre la obra van a la de la obra; las demás, a la de la
    plataforma.
 4. Garantía de alquiler (5.4): lo ya garantizado se paga sólo con el fondo, en orden, nunca con otro dinero.
-5. Terrenos sin uso (5.4-r3, Ordenanzas 20 y 21): cuatro trabas y nada de expropiación. Tasa de 4 veces lo que paga una
-   casa en un terreno igual (6 si no está mantenido; precedentes: Pilar y Avellaneda), recargo de la Ley 14.449 encima
+5. Terrenos sin uso (5.4-r3, Ordenanzas 20 y 21): cuatro trabas y nada de expropiación. Hoy un baldío paga 26 por mil y
+   una casa 12 (Ordenanza 9415, artículo 2); desde la ordenanza de tasas de 2029, el baldío paga 4 veces la alícuota de una
+   casa, 48 por mil, y 6 veces, 72, si no está mantenido (los que ya pagan 48 o más siguen igual; antecedentes: Pilar y
+   Avellaneda). Los declarados en 2028 la pagan desde enero de 2029 y los demás, desde que se declaran. Al fondo de la
+   garantía va sólo lo que se cobra por encima de lo de hoy. Recargo de la Ley 14.449 encima
    para quien no construye, nada de planes ni perdones, cobro judicial con remate (Ley 13.406) y venta sin base si el
    segundo remate queda desierto. Si lo compra el mismo dueño, no se salva: la obligación de construir sigue anotada.
 6. Salud mental (5.3, 5.6-r5): acompañante es una opción entre varias para los empleados cuyas tareas libera la IA; el
@@ -40,7 +43,8 @@ con el texto viejo y el nuevo y la fuente de cada cifra.
     de seguridad vial. La revisión anual puede mudar una cámara, pero la cantidad nunca baja.
 11. Seguridad (5.7, 5.9): la patrulla sólo previene y busca el delito; deja los controles de tránsito desde el mes 1.
     Los agentes de tránsito pasan a la patrulla con formación en los meses 4 a 6 (de 40 a 100), y cobran lo mismo que
-    sus compañeros de la patrulla (de 62,3 a 504,7 M por año, presupuesto de Seguridad). Nada de retener vehículos por
+    sus compañeros de la patrulla (de 57,5 a 465,6 M por año, presupuesto de Seguridad); nadie cobra menos que hoy: si
+    una bonificación de tránsito (moto, grúa) es más alta, la conserva. Nada de retener vehículos por
     faltas menores.
 12. El titular del punto 2 de «Qué proponemos hacer» queda como está.
 
