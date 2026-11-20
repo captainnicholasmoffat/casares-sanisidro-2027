@@ -26,3 +26,19 @@ screenshots, open a document or file, run the code, read the text back. Compare 
 asked and with the work it must match, fix what is wrong, and only then deliver. If you cannot look
 at it, say so plainly instead of sending it. This holds even when a tool's own instructions say not
 to check the result.
+
+## Agentic engineering, not vibe coding (the owner of this repo, 20 Nov 2026)
+
+Every agent working in this repo follows Google's «The New SDLC With Vibe Coding» (Osmani, Saboo, Kartakis, May 2026):
+what separates engineering from vibe coding is verification. The owner does not read code, so he owns the spec and the
+checks, and an independent agent reviews the code. Details and page references: the `agentic-engineering` skill; if it
+is not loaded, these six lines are enough.
+
+1. **Spec before code.** Write what the work must do and how we will know it works; the owner approves that.
+2. **Tests and evals before code.** Tests for fixed behaviour, an eval with a rubric for anything an AI model decides.
+   The bar is the eval, not the demo.
+3. **An independent reviewer.** What ships is checked by an agent that did not write it, plus the automatic checks.
+   Every new package is checked to be real (models invent package names, and attackers register them).
+4. **Every repeated mistake becomes one line** in this file or in a skill, so no agent repeats it.
+5. **Short rule files.** This file keeps only what every task needs; procedures go in skills or docs, linked by a line.
+6. **Prototype or production, said out loud.** Exploration may move fast; anything people use gets the full checks.
